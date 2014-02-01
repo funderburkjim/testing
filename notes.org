@@ -23,5 +23,11 @@ change still local.
 Then pressed 'Publish', and the notes.org, and several other things, were
 published on server.
 * Create subfolder:
-In Explorer, created 'subtest' folder
+In Explorer, created 'subtest' folder.
+This empty folder was not visible in GitHub client.
+Created subtest/subtest.txt and wrote small message therein.
+Then, was shown an 'uncommitted change'. Committed it, then 'synced'.
+Now, on server, there is shown a 'subtest' folder, which contains subtest.txt,
+as intended.
+
 
