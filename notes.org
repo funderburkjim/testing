@@ -30,4 +30,6 @@ Then, was shown an 'uncommitted change'. Committed it, then 'synced'.
 Now, on server, there is shown a 'subtest' folder, which contains subtest.txt,
 as intended.
 
+* Modify notes.org on server.
+Let's see how this shows up locally.
 
