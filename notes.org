@@ -1,0 +1,20 @@
+These notes pertain to various things tried in Github in
+the testing repository.
+Begun Jan 31, 2014.
+This file best viewed in emacs org mode.
+I am using the windows Github gui client.
+
+* create testing repository
+ Used github 'create new repository' function
+   This generated a local folder named 'testing' under Documents/GitHub
+   Folder contained three files
+   .git folder
+   .gitattributes file
+   .gitignore file
+
+* created this notes.org file
+Opened the testing repository in 'Explorer'.
+Created this file via 'New...' 
+Began editing in Emacs.
+
+* 
