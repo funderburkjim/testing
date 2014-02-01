@@ -32,4 +32,8 @@ as intended.
 
 * Modify notes.org on server.
 Let's see how this shows up locally.
+I committed on server.
+Then, locally, did a sync.
+That automatically made the local version equal to the server version.
+
 
