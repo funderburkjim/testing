@@ -16,5 +16,12 @@ I am using the windows Github gui client.
 Opened the testing repository in 'Explorer'.
 Created this file via 'New...' 
 Began editing in Emacs.
+Saved file, removed notes.org~ 
+In GitHub client, wrote an informational message for notes.org,
+pressed commit.  At this point, nothing happened at the server level - this
+change still local.
+Then pressed 'Publish', and the notes.org, and several other things, were
+published on server.
+* Create subfolder:
+In Explorer, created 'subtest' folder
 
-* 
