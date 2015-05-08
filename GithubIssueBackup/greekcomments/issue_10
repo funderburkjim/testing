@@ -1,0 +1,83 @@
+https://api.github.com/repos/sanskrit-lexicon/GreekInSanskrit/issues/10
+------------------------------------------------------------------------
+A Google Docs spreadsheet has been made for checking the Perseus Links for the Greek in MW.
+
+@jmigliori @gasyoun You should be able to edit the spreadsheet 
+
+Here is a [link](https://docs.google.com/spreadsheets/d/14dilSv7gS-1jeR-cm4dsFsUUp6r_GdRzXuMHGfuc03E/edit?usp=sharing) that anyone can use to view.
+If anyone else wants to work on this, let me know your gmail address.
+
+The primary idea is to try the perseus link, see if it leads to a useful result. 
+*  If link is ok, Change the `Perseus Status` from  `Todo` to `OK` --- 
+   These are Cases that don't require further attention from Jonathan
+* If link is not useful, Change the `Perseus Status` from  `Todo` to `Problem` --- 
+   These are Cases that require further attention from Jonathan.
+   If you are Jonathan, you can fill in the last column to a 'good' Perseus Link.  It is
+   requested that you use BETA here.
+
+This is the first use of a Google Sheet for this kind of work. I chose it since it was
+easier to create than creating a database update php application. 
+Do others think this is useful enough to carry though for this task?
+
+   ------------------------------------------------------------------------
+@jmigliori   While doing several of the cases in the above spreadsheet by hand, I noticed that some Perseus links return with the phrase 'Sorry, no information found for ...'.
+
+Using the Python requests module, I wrote a program to call the Perseus link for all the cases, and to filter
+out those with the 'Sorry...' phrase returned.  These are presumably the cases that could use the attention
+of a Greek expert to provide an alternate query spelling.   Tomorrow, I'll modify the spreadsheet so these
+cases can be identified.  Probably, the other Perseus links are acceptable.
+
+Out of the 1127 cases in the spreadsheet, 251 are Problems in that they return 
+the 'Sorry, no information found' message.
+
+Note: The PHP curl library could be used to do what the Python requests module does.
+
+------------------------------------------------------------------------
+@funderburkjim Google Sheet is a good enough solution and it's good, because it's quick to make one. 251 / 1127 with scripts is great news, because I'm too lazy to work with Greek while there are still hundreds of unsolved Sanskrit issues :last_quarter_moon_with_face: 
+------------------------------------------------------------------------
+@jmigliori   I see that you've done a few.  I like the way the spreadsheet permits you to make comments.
+
+Today I reloaded all the ones after row 71,  premarking the 'Sorry, No Information' ones as 'Problem'.  It's 
+probably safe for you to just restrict attention to these.
+
+Also, I added a 'Solved' option to the 'Status field', so that when you solve a 'Problem', you can change the
+status to 'Solved'.    I did that on a few that you worked on, but left a couple as 'Problem' because I wasn't sure.  
+
+Does this Google Sheet format work ok for you?
+
+------------------------------------------------------------------------
+Sounds good.
+
+Yes, I'm happy with how this Google Sheet works.
+
+
+
+> On May 1, 2015, at 4:32 PM, funderburkjim <notifications@github.com> wrote:
+> 
+> @jmigliori I see that you've done a few. I like the way the spreadsheet permits you to make comments.
+> 
+> Today I reloaded all the ones after row 71, premarking the 'Sorry, No Information' ones as 'Problem'. It's 
+> probably safe for you to just restrict attention to these.
+> 
+> Also, I added a 'Solved' option to the 'Status field', so that when you solve a 'Problem', you can change the
+> status to 'Solved'. I did that on a few that you worked on, but left a couple as 'Problem' because I wasn't sure.
+> 
+> Does this Google Sheet format work ok for you?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+> 
+
+------------------------------------------------------------------------
+@gasyoun  One 'feature' I noticed regarding the Google Sheet.  When I download the sheet to tsv (tab-separated-values) form,
+something happens to the way the hyperlink cells appear in the downloaded tsv.   Only the 'display text' appears,  the associated url (and the hyperlink function itself) are not shown.
+
+For instance one of the cells has the content:
+```
+=HYPERLINK("http://www.perseus.tufts.edu/hopper/morph?la=greek&l=E%29%2FXI-S","E)/XI-S")
+```
+but when downloaded, only `E)/XI-S` is shown.
+
+Is this usually the way spreadsheets work when you convert them to csv or tsv format (e.g. with Excel)?  
+------------------------------------------------------------------------
+@funderburkjim the problem is that formulas are lost when documents are downloaded from Google Docs. They get broken, it was always so. Such is life.

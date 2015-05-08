@@ -1,0 +1,16 @@
+https://api.github.com/repos/sanskrit-lexicon/GreekInSanskrit/issues/8
+------------------------------------------------------------------------
+In [issue4](https://github.com/sanskrit-lexicon/GreekInSanskrit/issues/4) , there arose a question which I'm putting here so issue 4 can be closed otherwise.
+
+The question, briefly, is whether a Greek letter should be coded as  `2)d)γ)` or `2)d)¹g)` .
+In the first case, the γ would be just a normal Greek letter, without further significance.  In the second
+case the Greek letter is coded as `¹g` which indicates that it should be treated as a section heading.
+
+This question occurs under under headword <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=jamBaka'>jamBaka</a>   
+on page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2254'>2254-2</a> 
+
+@jmigliori  points out that he noticed numerous other cases of the Greek text he input which appears
+similar  -- <number>)<roman-letter>)<greek-letter>) .
+
+I think we need the resolution of this question needs the advice of someone fluent in reading this Sanskrit-German dictionary.------------------------------------------------------------------------
+@funderburkjim I would leave Greek as Greek. Otherwise we get more trouble. I hardly understand the logic, but still.

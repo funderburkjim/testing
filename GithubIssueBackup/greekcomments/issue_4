@@ -1,0 +1,1376 @@
+https://api.github.com/repos/sanskrit-lexicon/GreekInSanskrit/issues/4
+------------------------------------------------------------------------
+There are 166 cases of Greek text in the PW dictionary, Böhtlingk Sanskrit-Wörterbuch in kürzerer Fassung.
+
+This first part has cases 1-60.
+
+The page-column will be useful in locating the text in the scanned image of the page.
+For instance,  1012-3  (for case=2)  indicates that the text is on 3rd column of that page.
+
+These cases are ready to go.
+I'll go ahead and post cases 61-110 on issue 5, and cases 111-166 on issue 6.  
+The reason for splitting cases into different issues is just so the web pages aren't too big.
+
+------------------------------------------------------------------------
+case = 1 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=a'>a</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1001'>1001-1</a> 
+linenum = 7
+
+```
+<H1>000{a}1{a}^1¦ ‹Pron. der 3ten Person. Davon› #{asmE/ , asyE/ , asmA/
+t , asyA/s , asya/ , asmi/n , asyA/m , AByA/m , eBi/s , ABi/s , eBya/s ,
+ ABya/s , ezA/m , AsA/m ezu/ , Asu/} {%Diesem , diesem hier%} ‹u.s.w. Un
+betont •Subst.› {%ihm , ihr%} ‹u.s.w. Vgl.› #{ayam , ayA , idam , ima , 
+iyam , ena , enA}. ƒPage1.001-1ƒ PW1
+
+<H1>000{a}1{a°}^2¦ ‹vor Consonanten› , #{an°} ‹vor Vocalen› = |
+<g>ἀ, ἀν</g>
+ ‹priv.› #{abrAhmaRa} {%kein Brahman%} , #{anaDyAya} {%kein Brahman%} , 
+#{anaDyAya} {%kein Lesen%} , #{asveda} {%schweisslos%} , #{anaNga} {%kör
+perlos%} , #{aSuci} {%unrein%} , #{atarha} {%unwürdig%} , #{akftvA} {%ni
+cht gethan habend%} , #{anarcitum} ‹(selten)› {%nicht ehren%} , #{aspfha
+yanti} {%wie Rühr-†Soma glänzend.%} (¯BHA7G.P.¯C2I2C.15,33) {%sie begehr
+
+<H1>100{a}1{*a}^3¦ •Interj. PW3
+```
+------------------------------------------------------------------------
+case = 2 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=aNgiras'>aNgiras</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1012'>1012-3</a> 
+linenum = 2068
+
+```
+<H1>100{aNgira}1{a/Ngira}¦ •m. ²1) = #{aNgiras} ‹1)3).› ²2) {%*Rebhuhn%}
+ ¯NIGH.PR. PW1029
+
+<H1>100{aNgiras}1{a/Ngiras}¦ •m. ²1) ‹Bez. höherer Wesen , die als Vermi
+ttler zwischen Göttern und Menschen auftreten. †Agni heisst der erste un
+ter ihnen.› ²2) •Pl. ‹Bez.› {%des †Atharvaveda.%} ²3) ‹N.pr. eines †R2sh
+i.› ²4) {%der Stern%} |
+<g>ε</g>
+ {%im grossen Bären%} ¯218,22. ²5) {%der Planet Jupiter%} ¯Ind.St.14,315
+. ²6) #{aNgirasAma yanam} {%ein best. †Sattra%} ¯Ind.St.10,393. PW1030
+
+<H1>100{aNgirasa}1{aNgirasa}¦ •m. = #{aNgiras} ‹3).› PW1031
+```
+------------------------------------------------------------------------
+case = 3 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=atri'>atri</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1027'>1027-3</a> 
+linenum = 4751
+
+```
+<H1>100{atrAsita}1{atrAsita}¦ •Adj. {%nicht erschreckt%} ¯VEN2I7S.96. PW
+2345
+
+<H1>108{atri}1{a/tri}¦ ‹(etym.› #{atri}) ²1) •Adj. {%Alles verzehrend.%}
+ ²2) •m. ³a) ‹N.pr. eines alten †R2shi› ¯11,22. ‹Aus seinen Augen entspr
+ingt der Mond› ¯SPR.7620,7828. •Pl. {%†Atri's Nachkommen.%} ³b) {%der St
+ern 
+<g>δ</g>
+ im grossen Bären%} ¯218,22. ²3) •f. #{atrI} ‹angeblich› {%†Atri's Gatti
+n †Anasu7ja7%} ¯MBH.13,17,38. PW2346
+
+<H1>100{atrikASrama}1{atrikASrama}¦ •n. ‹N.pr. eines †Ti7rtha.› PW2347
+```
+------------------------------------------------------------------------
+case = 4 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=anaPA'>anaPA</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1041'>1041-3</a> 
+linenum = 7118
+
+```
+<H1>100{anapnas}1{anapna/s}¦ •Adj. {%ohne Habe , inops.%} PW3516
+
+<H1>100{anaPA}1{anaPA}¦ •f. ‹--› |
+<g>ἀναφή.</g>
+ PW3517
+
+<H1>100{anaBigata}1{a/naBigata}¦ •Adj. {%nicht aufgefasst , ~ begriffen%
+} ¯C2AT.BR.1,4,5,9.4,6,7,19. PW3518
+```
+------------------------------------------------------------------------
+case = 5 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=ap'>ap</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1068'>1068-3</a> 
+linenum = 11686
+
+```
+<H1>500{ap}1{a/p}^2¦ {%Werk%} •Gen. #{apa/s} ‹(abhängig von› #{Duri/}) ¯
+R2v.1,151,4. ‹Vgl.› #{aptur}. PW5800
+
+<H1>100{ap}1{a/p}^3¦ •f. •Pl. ‹(im †Veda auch •Sg.)› ²1) {%Wasser , Gewä
+sser.%} ²2) {%der Stern 
+<g>δ</g>
+ Virginis.%} ²3) {%*Luft.%} PW5801
+
+<H1>100{apa}1{a/pa}^1¦ •Adv. ²1) {%ab , fort , weg%} ‹(Gegens.› #{upa}) 
+‹in Verbindung mit Verben und Substantiven. *praep. mit› •Abl. {%von -x-
+ weg , mit Ausschluss von.%} ²2) {%hinab%} ‹(› = #{ava} ‹und im Gegens. 
+zu› #{ud}). PW5802
+```
+------------------------------------------------------------------------
+case = 6 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=amfta'>amfta</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1097'>1097-3</a> 
+linenum = 16805
+
+```
+<H1>100{amfRAla}1{*amfRAla}¦ •n. {%die Wurzel von ®Andropogon_muricatus.
+%} PW8357
+
+es.%} ³e) ‹Bein.› ‹der †Da7ksha7jan2i7.› ³f) ‹N.pr.› ¹a) ‹der Mutter des
+ †Pari7kshit.› ¹b) ‹einer Schwester †Amr2todana's.› ²4) •n. ³a) {%Gesamm
+theit der Unsterblichen.%} ³b) {%Welt der Unsterblichkeit , das ewige Re
+ich.%} ³c) {%das Nichtwegsterben%} ¯R2v.1,159,2.7,57,6. ³d) {%Unsterblic
+hkeit.%} ³e) {%die letzte Befreiung.%} ³f) {%Unsterblichkeitstrank%} , |
+<g>ἀμβροσία</g>
+ , {%nektar.%} ‹Häufig so v.a.› {%der Gipfel aller Genüsse.%} ³g) {%Süss
+igkeit%} ¯R.7,7,3. ³h) {%ein best. Heilmittel ; Arzenei%} ‹überh.› ³i) {
+%Ueberbleibsel eines Opfers%} ; ‹vgl.› ¯BHAG.4,31. ³k) {%unerbetteltes A
+lmosen.%} ³l) {%Wasser%} ¯SPR.7806. ‹(zugleich› {%Nektar%} ‹).› ³m) {%Mi
+lch%} ¯SPR.2986. {%*warme Milch.%} ³n) {%*geklärte Butter.%} ³o) {%*geko
+
+<H1>100{amftaka}1{amftaka}¦ •n. {%Unsterblichkeitstrank%} ¯K4HANDOM.144.
+ PW8359
+```
+------------------------------------------------------------------------
+case = 7 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=aharniSa'>aharniSa</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1155'>1155-3</a> 
+linenum = 26589
+
+```
+<H1>100{ahardfS}1{ahardf/S}¦ •Adj. {%den Tag sehend , lebend.%} PW13149
+
+<H1>100{aharniSa}1{aharniSa}¦ ²1) •n. |
+<g>νυχθἠμερον.</g>
+ ²2) #{°m} •Adv. {%Tag und Nacht , beständig.%} PW13150
+
+<H1>100{aharniSivyApaka}1{*aharniSivyApaka}¦ •m. {%Händler%} ¯NIGH.PR. P
+W13151
+```
+------------------------------------------------------------------------
+case = 8 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=ahorAtra'>ahorAtra</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1157'>1157-3</a> 
+linenum = 26917
+
+```
+<H1>100{ahoraTaMtara}1{*ahoraTaMtara}¦ •n. ¯VA7RTT. ‹zu› ¯P.8,2,68. PW13
+313
+
+<H1>100{ahorAtra}1{ahorAtra/}¦ •m. •n. |
+<g>νυχθἠμερον.</g>
+ PW13314
+
+<H1>100{ahorAtravftta}1{ahorAtravftta}¦ •n. {%Tagkreis%} ¯GOLA7DHJ.6,27.
+ PW13315
+```
+------------------------------------------------------------------------
+case = 9 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=Akokera'>Akokera</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1159'>1159-3</a> 
+linenum = 27261
+
+```
+<H1>100{Akenipa}1{Akenipa/}¦ •Adj. ²1) {%in der Nähe%} ‹--› ‹(?).› ²2) ‹
+*› = #{goDAvin}. PW13484
+
+<H1>100{Akokera}1{Akokera}¦ •m. = |
+<g>αἰγόκερως</g>
+ PW13485
+
+<H1>100{Akopa}1{Akopa}¦ •m. {%ein Anflug von Zorn.%} PW13486
+```
+------------------------------------------------------------------------
+case = 10 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=Apa'>Apa</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1176'>1176-1</a> 
+linenum = 30018
+
+```
+<H1>000{Apa}1{Apa}^1¦ ‹in› #{durApa} ‹und› #{manaApa}. PW14844
+
+<H1>100{Apa}1{Apa}^2¦ ²1) •m. ³a) ‹N.pr. eines der 8 †Vasu› ¯VARA7H.BR2H
+.S.53,48,49.51.¯VP.1,15,111.fg. ³b) {%der Stern 
+<g>δ</g>
+ Virginis.%} ²2) •*f. #{I} {%das Mondhaus †Pu7rva7shd2ha7%} ¯H.113. PW14
+845
+
+<H1>000{Apaka}1{*Apaka}¦ , •f. #{I} •gan2a #{gOrAdi}. ƒPage1.176-2ƒ PW14
+846
+```
+------------------------------------------------------------------------
+case = 11 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=Apoklima'>Apoklima</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1177'>1177-2</a> 
+linenum = 30260
+
+```
+<H1>000{Apezam}1{Ape/zam}¦ •Absol. {%mit Berührung%} ¯C2AT.BR.14,5,1,15.
+ PW14965
+
+<H1>100{Apoklima}1{Apoklima}¦ •n. = |
+<g>ἀπόκλιμα.</g>
+ PW14966
+
+<H1>000{Apodevata}1{Apodevata}¦ (¯A7c2v.c2r.5,10,17) ‹und› #{°devatya} ¯
+C2A7N5KH.BR.16,7) •Adj. {%das Wasser zur Gottheit habend.%} PW14967
+```
+------------------------------------------------------------------------
+case = 12 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=Ayus'>Ayus</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1182'>1182-1</a> 
+linenum = 31092
+
+```
+<H1>100{AyuHzwoma}1{AyuHzwoma}¦ •m. {%Lebensfeier%} ‹(eine best. Begehun
+g).› PW15381
+
+Leben.%} ³b) {%lebendige Kraft%} ³c) {%Welt%} ¯R2V.2,28,5.7,90,6. ³d) {%
+Lebenselement%} ¯217,3 ‹(in einer Etymologie).› ³e) {%eine best. Begehun
+g.%} ‹Auch› •m. ³f) #{agneH} ‹und› #{navastoBam} ‹Namen von †Sa7man.› ³g
+) {%das achte astrol. Haus%} ¯Ind.St.14,312. ³h) {%*Speise.%} ²2) •m. ‹N
+.pr. eines Sohnes des †Puru7ravas und der †Urvac2i. Vgl. 1› #{Ayu} ‹2)d)
+<g>β</g>
+)› PW15382
+
+<H1>100{Ayustejas}1{Ayustejas}¦ •m. ‹N.pr. eines †Buddha.› PW15383
+```
+------------------------------------------------------------------------
+case = 13 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=Ara'>Ara</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1182'>1182-2</a> 
+linenum = 31120
+
+```
+<H1>100{Ara}1{Ara}^1¦ ²1) •m. •n. {%Erz.%} ²2) •n. {%*Eisen%} ¯RA7G4AN.1
+3,45. ²3) •m. {%Höhlung.%} ²4) •n. {%Stachel.%} ‹Vgl.› #{ArA}. ²5) •n. {
+%Spitze , Ecke.%} ²6) •m. {%*ein best. Baum.%} ²7) •m. ‹N.pr. eines Sees
+ in †Brahman's Welt› ¯KAUSH.UP.1,3,4. PW15395
+
+<H1>100{Ara}1{Ara}^2¦ •m. ²1) = |
+<g>Ἄρης</g>
+ , {%der Planet Mars.%} ²2) {%*der Planet Saturn.%} PW15396
+
+<H1>000{Ara}1{Ara}^3¦ ¯MBH.1,1498 ‹fehlerhaft für› #{ara} {%Speiche.%} P
+W15397
+```
+------------------------------------------------------------------------
+case = 14 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=AsPujit'>AsPujit</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1195'>1195-3</a> 
+linenum = 33290
+
+```
+<H1>100{AsPAlana}1{AsPAlana}¦ •n. {%das Anprallen , Anschlagen , Anstoss
+en , Zusammenstoss.%} PW16472
+
+<H1>100{AsPujit}1{AsPujit}¦ •m. |
+<g>Ἀφροδίτη</g>
+ , {%der Planet Venus.%} PW16473
+
+<H1>100{AsPowa}1{AsPowa}¦ ²1) •m. ³a) {%das Schütteln , insbes. der Arme
+.%} ³b) {%*eine best. Pflanze.%} ²2) •*f. #{A} = ‹1)a).› PW16474
+```
+------------------------------------------------------------------------
+case = 15 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=itTa'>itTa</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1203'>1203-1</a> 
+linenum = 34054
+
+```
+<H1>100{itkilA}1{*itkilA}¦ •f. {%ein best. Parfum.%} PW16787
+
+<H1>100{itTa}1{itTa}¦ •n. = |
+<g>ἰχθύς</g>
+ , {%die Fische im Thierkreise.%} PW16788
+
+<H1>100{itTaMviDa}1{itTaMviDa}¦ •Adj. {%so geartet , so beschaffen%} ¯SP
+R.5778. PW16789
+```
+------------------------------------------------------------------------
+case = 16 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=indra'>indra</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1204'>1204-3</a> 
+linenum = 34338
+
+```
+<H1>100{indUra}1{*indUra}¦ •m. {%Ratze , Maus.%} PW16923
+
+t. Er ist das Haupt der Götterwelt und Hüter des Ostens.› #{i/ndratama} 
+{%†Indra in höchster Potenz.%} ³b) ‹am Ende eines Comp.› {%der Erste in 
+seiner Art , Fürst , Oberster%} ‹(von Belebtem und Unbelebtem).› ³c) {%d
+as auf dem Stern des rechten Auges sich spiegelnde Bildchen.%} ³d) ‹Bez.
+› {%der Zahl vierzehn%} ‹(14 Manvantra und 14 †Indra).› ³e) {%der Stern 
+<g>γ</g>
+ Pegasi.%} ³f) {%ein best. astrol. †Joga.%} ³g) {%*Seele.%} ³h) {%*Nacht
+.%} ³i) {%*ein best. vegetabilisches Gift%} ‹Auch› •*f. ³k) ‹N.pr.› ¹a) 
+‹eines †A7ditja.› ¹b) ‹eines Grammatikers.› ¹g) ‹eines Arztes.› ¹d) ‹*ei
+nes †Upadvi7pa.› ²2) •*f. #{A} ³a) ‹Indra's› {%Gattin.%} ³b) {%Koloquint
+hengurke%} ¯NIGH.PR. ²3) •f. #{I} ‹N.pr. eines Wesens im Gefolge der †De
+
+<H1>100{indrafzaBa}1{i/ndrafzaBa}¦ •Adj. {%†Indra. zum Befruchter habend
+.%} PW16925
+```
+------------------------------------------------------------------------
+case = 17 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=uttAnapAda'>uttAnapAda</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1223'>1223-2</a> 
+linenum = 37261
+
+```
+<H1>100{uttAnaparRaka}1{*uttAnaparRaka}¦ •m. {%eine best. Pflanze%} ¯GAL
+. PW18298
+
+<H1>100{uttAnapAda}1{uttAnapAda}¦ •m. ²1) ‹N.pr. eines Sohnes des †Vira 
+oder †Manu †Sva7jambhuva und Vaters des †Dhruva's.› #{*°ja} •m. •Patron.
+ ‹†Dhruva's.› ²2) {%der Stern 
+<g>β</g>
+ im kleinen Bären.%} PW18299
+
+<H1>100{uttAnabarhis}1{uttAnabarhis}¦ •m. ‹N.pr. eines Sohnes des †C2rja
+7ti› ¯BHA7G.P.9,3,27. PW18300
+```
+------------------------------------------------------------------------
+case = 18 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=fkzaka'>fkzaka</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1260'>1260-2</a> 
+linenum = 43301
+
+```
+r eine verwandte Species.%} ³f) ‹N.pr.› ¹a) ‹verschiedener Männer.› •Pl.
+ {%ihr Geschlecht.%} ¹b) ‹eines Gebirges.› ²3) •m. •n. {%Stern , Sternbi
+ld , Mondhaus.%} ²4) •f. #{A} ‹N.pr.› ³a) ‹einer Gattin †Ag4ami7d2ha's.›
+ ³b) ‹einer der Mütter› •m. ‹Gefolge †Skanda's.› ²5) •f. #{fkzI} {%Bärin
+.%} ²6) •n. {%ein Zwölftel der Ekliptik , astrologisches Haus.%} PW21281
+
+<H1>100{fkzaka}1{fkzaka}¦ •m. =  ^2. #{fkza} ‹2)f)
+<g>β</g>
+)› ¯VP.^2.2,113. PW21282
+
+<H1>100{fkzaganDA}1{*fkzaganDA}¦ •f. ²1) {%®Argyreia_argentea_Sweet.%} ²
+2) = #{fkzaganDikA}. PW21283
+```
+------------------------------------------------------------------------
+case = 19 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=om'>om</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=1277'>1277-2</a> 
+linenum = 46128
+
+```
+<H1>000{opya}1{o/pya}¦ ‹•Absol. von› #{vap} ‹mit› #{A}. PW22688
+
+<H1>100{om}1{o/m}¦ •Interj. {%der feierlichen Bekräftigung%} ‹und› {%ehr
+furchtsvollen Anerkennung.%} ‹dem Sinne nach oft› |
+<g>ἀμήν</g>
+ ‹entsprechend. Wird im Gottesdienst als ein heiliger Ausruf viel gebrau
+cht und beim Beginn und Schluss der Recitation heiliger Werke , so wie v
+or dem Namen der Gottheit , die angerufen wird , und auch als Gruss ausg
+esprocen , erhält später einen mystischen Charakter und wird zum Gegenst
+and einer religiösen Betrachtung und Vertiefung.› #{omiti bruvan} ‹so v.
+
+<H1>100{oma}1{oma}¦ •m. {%Genosse%} ¯R2V. PW22690
+```
+------------------------------------------------------------------------
+case = 20 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kapardayakza'>kapardayakza</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2014'>2014-1</a> 
+linenum = 49095
+
+```
+<H1>100{kapardaka}1{kapardaka}¦ ²1) •m. •f. ‹(› #{°rdikA}) {%Otterköpfch
+en.%} ²2) •m. {%*aufgewundene Haarflechte.%} ²3) •f. {%*eine Gansart%} ¯
+GAL. PW24164
+
+<H1>100{kapardayakza}1{kapardayakza}¦ •m. ‹N.pr. eines †Jaksha› ¯C2ATR.1
+4,175. ‹Vgl.› #{kapardin} ‹2) b)› |
+<g>β</g>
+) PW24165
+
+<H1>100{kapardikArikA}1{kapardikArikA}¦ •f. •Pl. {%die  †Ka7rika7 des †K
+apardin%} PW24166
+```
+------------------------------------------------------------------------
+case = 21 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAmpilla'>kAmpilla</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2050'>2050-3</a> 
+linenum = 54456
+
+```
+<H1>100{kAmpilyaka}1{kAmpilyaka}¦ •m. ²1) {%ein Bewohner von †Kam5pilja%
+} ¯MAHA7BH.4,71, ‹b.› ²2) = #{kAmpilya} ‹2)› ³b) ¯MA7LATI7M.ED.Bomb.323,
+9, ‹v.l.› PW26710
+
+<H1>100{kAmpilla}1{*kAmpilla}¦ •m. ²1) = #{kAmpilya} ‹2)a)
+<g>α</g>
+).› ²2) = #{kAmpilya} ‹2)b)› PW26711
+
+<H1>100{kAmpillaka}1{kAmpillaka}¦ ²1) •m. = #{kAmpilya} ‹2)b)› ¯MA7LATI7
+M.ED.Bomb.323,9. ²2) •*f. #{°llikA} ‹dass.› ²3) •n. {%ein best. Arzeneis
+toff%} , = #{SuRqArocanikA} ¯RATNAM.163. PW26712
+```
+------------------------------------------------------------------------
+case = 22 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kAlinda'>kAlinda</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2059'>2059-3</a> 
+linenum = 55832
+
+```
+<H1>100{kAlin}1{kAlin}¦ ²1) •m. ‹N.pr. eines Sohnes des †K4aidjaparikara
+› ¯HARIV.1,32,94. ²2) •*f. #{°nI} {%das 6te Mondhaus.%} PW27398
+
+<H1>100{kAlinda}1{kAlinda}¦ ²1) •n. {%Wassermelone.%} ²2) •f. #{I} ³a) {
+%*eine Art Gefäss.%} ³b) {%*eine roth blühende †Trivr2t.%} ³c) ‹N.pr.› ¹
+a) ‹einer Tochter des Sonnengottes und Gattin †Kr2shn2a's.› ¹b) ‹der Mut
+ter †Sagara's.› ¹g) •Patron. ‹der †Jamuna7› ¯HARIV.9512.¯SPR.7809. ‹Wird
+ auch mit c)
+<g>α</g>
+) identificirt.› ²3) •Adj. {%von der †Jamuna7 kommend.%} PW27399
+
+<H1>100{kAlindaka}1{kAlindaka}¦ ²1) •n. {%Wassermelone.%} ²2) •*f. #{°nd
+ikA} = #{kalindikA} ¯GAL. PW27400
+```
+------------------------------------------------------------------------
+case = 23 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kiMnara'>kiMnara</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2065'>2065-1</a> 
+linenum = 56787
+
+```
+<H1>100{kinDin}1{*kinDin}¦ •m. {%Pferd.%} PW27863
+
+ensch halb Thier%} ‹(ursprünglich wohl eine Affenart). Sie werden zu den
+ †Gandharva gezählt und als Sänger gerühmt› ; ‹erscheinen auch im Gefolg
+e †Kubera's. Die †G4aina ordnen sie den †Vijantara unter.› ³b) ‹Bein.› ‹
+und›‹N.pr. verschiedener Personen.› ³c) ‹*N.pr.› ‹einer Oertlichkeit› ; 
+‹vgl.› #{°varza}. ²2) •*f. #{A} {%ein best. Saiteninstrument.%} ‹Vgl.› |
+<g>κινύρα.</g>
+ ²3) •f. #{I} ³a) •f. ‹zu 1) a).› ‹Auch› = #{kiMpuruzI}. ³b) {%*die Laut
+e der †K4a7n2d2a7la.%} PW27864
+
+<H1>100{kiMnarakaRWa}1{kiMnarakaRWa}¦ •Adj. (•f. #{I}) {%wie ein †Kimnar
+a singend%} ¯Ind.St.8,418.¯VIDDH.84,4. PW27865
+```
+------------------------------------------------------------------------
+case = 24 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kimpala'>kimpala</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2065'>2065-3</a> 
+linenum = 56847
+
+```
+<H1>100{kiMparivAra}1{kiMparivAra}¦ •Adj. {%was im Gefolge habend%} ¯DAC
+2AK.52,6. PW27893
+
+<H1>100{kimpala}1{kimpala}¦ {%ein best. musikalisches Instrument%} ¯LALI
+T.252,1.258,8. ‹Vgl.› |
+<g>κύμβαλον.</g>
+ ƒPage2.066-1ƒ PW27894
+
+<H1>100{kiMpAka}1{kiMpAka}¦ ²1) •*Adj. {%unreif , unwissend , dumm.%} ²2
+) •m. ³a) {%eine Gurkenart ; •n. die Frucht%} ¯PRASANNAR.135,11. ³b) {%®
+*Strychnos_nux vomica%} ¯RA7G4AN.9,149' ‹vgl.› ¯Mat.med.198. PW27895
+```
+------------------------------------------------------------------------
+case = 25 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kfzRatva'>kfzRatva</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2096'>2096-1</a> 
+linenum = 61889
+
+```
+<H1>100{kfzRatrivftA}1{*kfzRatrivftA}¦ •f. {%eine Art Ipomoea.%} PW30377
+
+<H1>100{kfzRatva}1{kfzRatva}¦ •n. ²1) {%Schwärze.%} ²2) •Nom.abstr. ‹von
+› #{kfzRa} ‹2)b)
+<g>β</g>
+).› PW30378
+
+<H1>100{kfzRadatta}1{kfzRadatta}¦ •m. ‹N.pr. eines Lehrers.› PW30379
+```
+------------------------------------------------------------------------
+case = 26 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kemadruma'>kemadruma</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2099'>2099-1</a> 
+linenum = 62458
+
+```
+<H1>100{kepi}1{ke/pi}¦ •Adj. ²1) {%zitternd , zappelnd.%} ²2) {%*unrein.
+%} PW30661
+
+<H1>100{kemadruma}1{kemadruma}¦ •m. = |
+<g>κενοδρομος.</g>
+ PW30662
+
+<H1>100{kemuka}1{kemuka}¦ •m. {%®Colocasia_antiquorum%} ¯BHA7VAPR.1,291.
+4,18(zu…verbessern).36. ‹Nach› ¯Mat.Med.304 {%®Costus_speciosus.%} PW306
+63
+```
+------------------------------------------------------------------------
+case = 27 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kesari'>kesari</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2101'>2101-2</a> 
+linenum = 62856
+
+```
+<H1>100{kesarAla}1{kesarAla}¦ •Adj. {%reich an Staubfäden.%} PW30860
+
+<H1>100{kesari}1{kesari}¦ •m. = #{kesarin} ‹2)h)
+<g>α</g>
+)› PW30861
+
+<H1>100{kesarikA}1{*kesarikA}¦ •f. {%®Sida_rhomboides%} ¯RA7G4AN.4,100. 
+PW30862
+```
+------------------------------------------------------------------------
+case = 28 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kOSikatA'>kOSikatA</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2109'>2109-2</a> 
+linenum = 64230
+
+```
+<H1>100{kOSika}1{kOSika}^5¦ •Adj. {%von einer Eule herkommend.%} PW31547
+
+<H1>100{kOSikatA}1{kOSika/tA}¦ •f. •Nom.abstr. ‹zu 1.› #{kOSika} ‹und zu
+gleich zu 2.› #{kOSika} ‹2)b)
+<g>β</g>
+).› PW31548
+
+<H1>100{kOSikatva}1{kOSikatva/}¦ •n. •Nom.abstr. ²1) ‹zu 1.› #{kOSika} ¯
+MAITR.S.4,5,7 ‹(hier zugleich zu 2.› #{kOSika} ‹2)b)<g>a</g>)› ²2) ‹zu 2
+.› #{kOSika} ‹2)a) und b)<g>a</g>).› PW31549
+```
+------------------------------------------------------------------------
+case = 29 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kOSikatva'>kOSikatva</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2109'>2109-2</a> 
+linenum = 64232
+
+```
+<H1>100{kOSikatA}1{kOSika/tA}¦ •f. •Nom.abstr. ‹zu 1.› #{kOSika} ‹und zu
+gleich zu 2.› #{kOSika} ‹2)b)<g>b</g>).› PW31548
+
+<H1>100{kOSikatva}1{kOSikatva/}¦ •n. •Nom.abstr. ²1) ‹zu 1.› #{kOSika} ¯
+MAITR.S.4,5,7 ‹(hier zugleich zu 2.› #{kOSika} ‹2)b)
+<g>α</g>
+)› ²2) ‹zu 2.› #{kOSika} ‹2)a) und b)
+<g>α</g>
+).› PW31549
+
+<H1>100{kOSikapriya}1{*kOSikapriya}¦ •m. ‹Bein. †Ra7ma's.› PW31550
+```
+------------------------------------------------------------------------
+case = 30 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kriya'>kriya</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2114'>2114-2</a> 
+linenum = 64895
+
+```
+<H1>000{krimi}1{kri/mi}¦ ‹ungenaue Schreibart für› #{kfmi}. PW31829
+
+<H1>100{kriya}1{kriya}¦ •m. |
+<g>κριός</g>
+ , {%der Widder im Thierkreise.%} PW31830
+
+<H1>100{kriyamARaka}1{kriyamARaka}¦ •n. {%Machwerk , literärischer Versu
+ch.%} PW31831
+```
+------------------------------------------------------------------------
+case = 31 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=kzapAha'>kzapAha</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2121'>2121-3</a> 
+linenum = 65987
+
+```
+<H1>100{kzapASaya}1{°kzapASaya}¦ •Adj. {%in der Nacht liegend auf.%} PW3
+2326
+
+<H1>000{kzapAha}1{kzapAha}¦ |
+<g>νυχθήμερον</g>
+ PW32327
+
+<H1>100{kzapitavya}1{kzapitavya}¦ •Adj. {%zu verbringen.%} #{paScimaM va
+yaH} ¯KA7D.II.117,15. PW32328
+```
+------------------------------------------------------------------------
+case = 32 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=gajAsura'>gajAsura</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2145'>2145-1</a> 
+linenum = 69798
+
+```
+<H1>100{gajAzwaka}1{gajAzwaka}¦ •n. ‹Titel eines Gedichts.› PW34135
+
+<H1>100{gajAsura}1{gajAsura}¦ •m. = #{gaja} ‹1)g)
+<g>β</g>
+)› ¯BA7LAR.41,13. PW34136
+
+<H1>100{gajAsuradvezin}1{*gajAsuradvezin}¦ ‹und› #{*gajAsuhfd} •m. ‹Bein
+. †C2iva's.› PW34137
+```
+------------------------------------------------------------------------
+case = 33 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=guRa'>guRa</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2169'>2169-1</a> 
+linenum = 73123
+
+```
+<H1>100{guqOdana}1{guqOdana}¦ •n. {%Reisbrei mit Zucker.%} PW35675
+
+<H1>100{guRa}1{guRa/}¦ ²1) •m. (•adj. ‹Comp.› •f. #{A}) ³a) {%der einzel
+ne Faden einer Schnur ; Schnur , Strick.%} ³b) {%Bogensehne.%} ³c) {%Sai
+te.%} ³d) ‹in Verbindung mit Zahlwörtern Theil , Mal.› •Instr. ‹und› •Ab
+l. •Pl. ‹so v.a.› {%-fach , -x- Mal mehr.%} ‹Gewöhnlich am Ende eines› •
+adj. ‹Comp. in der Bed.› {%-fach , -plex%} , |
+<g>πλοος.</g>
+ ³e) {%Multiplicator , Coefficient.%} ³f) {%Unterabtheilung , Art , Spec
+ies.%} ³g) {%die sechs Arten oder Bestandtheile der fürstlichen Politik 
+; Bündniss , Krieg , Ausmarsch , das Haltmachen , Theilung der Streitkrä
+fte%} ‹(oder› {%Entzweiung%}) ‹und› {%das Schutzsuchen bei einem Stärken
+.%} ‹Unter› {%den vier Arten%} ‹sind gemeint:› {%feindliche Mittel , Bes
+
+<H1>100{guRaka}1{guRaka}¦ ²1) •m. ³a) {%Multiplicator.%} ³b) ‹am Ende ei
+nes› •adj. ‹Comp.› {%Eigenschaft%} ¯259,1. ³c) {%*Rechner.%} ³d) ‹N.pr. 
+eines Kranzwinders.› ²2) •*f. #{guRikA} {%Geschwulst.%} PW35677
+```
+------------------------------------------------------------------------
+case = 34 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=guRavant'>guRavant</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2170'>2170-1</a> 
+linenum = 73277
+
+```
+<H1>100{guRavattva}1{guRavattva}¦ •n. {%Besitz von Eigenschaften.%} PW35
+750
+
+it einer Schnur versehen%} ¯163,26 ‹(zugleich in der Bed. c).› ³b) {%mit
+ den fünf Haupteigenschaften versehen%} ; ‹s.› #{guRa} ‹1)m).› ³c) {%mit
+ löblichen Eigenschaften ~ , mit Vorzügen versehen , tugendhaft , vorzüg
+lich , vortrefflich , ausgezeichnet , erspriesslich.%} ‹Compar.› #{gunav
+attara} , ‹Superl.› #{guRavattama}. ²2) •m. ‹N.pr. eines Sohnes von 3)b)
+<g>α</g>
+).› ²3) #{°vatI} ³a) {%eine Verbindung von drei †C2loka , durch welche e
+in und derselbe Satz durchgeht.%} ³b) ‹N.pr. einer Tochter› ¹a) ‹†Suna7b
+ha's.› ¹b) ‹†Gun2asa7gara's.› PW35751
+
+<H1>100{guRavartin}1{guRavartin}¦ •Adj. {%auf dem Wege der Tugend sich b
+efindend.%} PW35752
+```
+------------------------------------------------------------------------
+case = 35 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=ca'>ca</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2202'>2202-3</a> 
+linenum = 78366
+
+```
+<H1>500{Nu}1{*Nu}¦ , #{Navate} ‹(› #{Sabde}). ‹--› •Desid. #{YuNUzate}. 
+PW38181
+
+<H1>001{ca}1{ca}^1¦ ‹Conj.› ²1) {%und , auch , |
+<g>τε</g>
+ , , que.%} ‹Steht hinter beiden zu verbindenden Theilen (oft durch› {%s
+owohl - als auch%} ‹wiederzugeben) , nur nach dem letzten oder nur nach 
+dem ersten. Bei drei und mehr zu verbindenden Theilen überall , nur nach
+ dem letzten oder hier und da. In gebundener Rede steht› #{ca} {%bisweil
+en an unrichtiger Stelle%} ‹(› #{vEcitryaM nItividyAM dadAti ca} ‹st.› #
+<g>d</g>
+)› , #{kutra} ‹7) und› #{kva} ‹5)b).› PW38182
+
+<H1>100{ca}1{*ca}^2¦ ²1) •Adj. ³a) {%rein%} ¯VIC2VA. ³b) {%sich hinundhe
+r bewegend%} ¯ebend. ³c) {%bös , boshaft.%} ³d) {%samenlos.%} ²2) •m. ³a
+) {%Dieb%} ¯VIC2VA. ³b) {%der Mond.%} ³c) {%Schildkröte.%} PW38183
+```
+------------------------------------------------------------------------
+case = 36 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=cana'>cana</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2211'>2211-3</a> 
+linenum = 79798
+
+```
+<H1>000{can}1{can}¦ ‹nur im •Aor.› #{canizwa/m} ‹und› #{ca/nizWat} ‹(!) 
+Jenes in der Bed.› {%Gefallen finden ~ , sich erfreuen an%} (•Loc.) ; ‹d
+ieses mit caus. Bed.› {%erfreuen.%} PW38877
+
+es der Nachdruck gelegt wird , und erscheint in der älteren Sprache oft 
+ohne weitere Negation in dem Satze , während in der spätern Sprache dies
+e niemals fehlt. In der klassischen Sprache nur nach einem Interr. mit n
+egativer oder positiver Bed.› ; ‹s. 1.› #{ka} ‹2)b)› , #{katama} , #{kat
+ara} ‹3)› , #{kaTam} ‹8) , 1.› #{kad} ‹7)› , #{kadA} ‹6)› , #{kim} ‹2)d)
+<g>ι</g>
+)› , #{kutas} ‹9) und› #{kva} ‹5)c).› ²2) {%auch%} ¯R2v.1,139,2.6,26,7.8
+,67,10. PW38878
+
+<H1>100{canas}1{ca/nas}¦ •n. {%Gefallen , Befriedigung.%} ‹Nur in Verbin
+dung› ƒPage2.212-1ƒ ‹mit› #{DA} ‹•Act.› •Med. ²1) {%befriedigt sein , du
+rch , sich erfreuen an%} (•Acc. ‹oder› •Loc.). ²2) {%genehmigen.%} PW388
+79
+```
+------------------------------------------------------------------------
+case = 37 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=carakAcArya'>carakAcArya</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2217'>2217-3</a> 
+linenum = 80598
+
+```
+Arzeneipflanze.%} ³e) ‹N.pr.› ¹a) •Pl. ‹einer Schule des schwarzen †Jag4
+urveda.› ¹b) ‹eines alten Arztes› ¯NAISH.4,116. #{°sUtrARi} ¯BÜHLER,Rep.
+No.555. ¹g) ‹eines Lexiocographen.› ²2) (•*m. •n.) ‹Titel des von 1)e)› 
+¹b) ‹verfassten Lehrbuchs› ¯BHA7VAPR.1,50. ²3) •f. #{carakI} ³a) {%ein b
+est. giftiger Fisch.%} ³b) ‹N.pr. einer Unholdin› ¯AGNI-P.40,18. PW39236
+
+<H1>100{carakAcArya}1{ca/rakAcArya}¦ •m. {%ein Lehrer der †K4araka%} ‹1)
+e)
+<g>α</g>
+).› PW39237
+
+<H1>100{carakADvaryu}1{ca/rakADvaryu}¦ •m. {%ein Priester der †K4araka%}
+ ‹1)e)<g>a</g>)› ¯101,27. PW39238
+```
+------------------------------------------------------------------------
+case = 38 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=carakADvaryu'>carakADvaryu</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2217'>2217-3</a> 
+linenum = 80600
+
+```
+<H1>100{carakAcArya}1{ca/rakAcArya}¦ •m. {%ein Lehrer der †K4araka%} ‹1)
+e)<g>α</g>).› PW39237
+
+<H1>100{carakADvaryu}1{ca/rakADvaryu}¦ •m. {%ein Priester der †K4araka%}
+ ‹1)e)
+<g>α</g>
+)› ¯101,27. PW39238
+
+<H1>100{caraKaRqa}1{caraKaRqa}¦ •n. {%der Betrag der Ascensionaldifferen
+z.%} PW39239
+```
+------------------------------------------------------------------------
+case = 39 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=cArvAka'>cArvAka</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2224'>2224-3</a> 
+linenum = 81705
+
+```
+<H1>108{cArvadana}1{cArvadana}¦ ‹(für› #{cAruvada}) •Adj. {%lieblich von
+ Angesicht%} ¯AV.Paipp.20,5,5. PW39772
+
+<H1>100{cArvAka}1{cArvAka}¦ ²1) •m. ³a) ‹N.pr.› ¹a) ‹eines †Ra7kshasa.› 
+¹b) ‹eines materialistischen Philosophen.› ³b) {%ein Anhänger von%} ‹1)a
+)
+<g>β</g>
+).› ²2) •Adj. {%von%} ‹1)a)
+<g>β</g>
+).› {%herrührend.%} PW39773
+
+<H1>100{cArvAGAwa}1{*cArvAGAwa}¦ ‹und› #{*cArvAGAta} •Adj. ‹wohl› {%schö
+n auf einem Instrumente spielend.%} ƒPage2.225-1ƒ PW39774
+```
+------------------------------------------------------------------------
+case = 40 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=citrasena'>citrasena</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2230'>2230-2</a> 
+linenum = 82442
+
+```
+<H1>100{citrasarpa}1{*citrasarpa}¦ •m. {%eine Schlangenart.%} PW40116
+
+<H1>100{citrasena}1{citra/sena}¦ ²1) •Adj. {%mit glänzendem Speer verseh
+en.%} ²2) •m. ³a) ‹N.pr.› ¹a) ‹eines Schlangendämons.› ¹b) ‹eines †Gandh
+arva.› ¹g) ‹eines der Schriftführer in der Unterwelt.› ¹d) ‹verschiedene
+r Männer.› ³b) {%Secretär bei einer vornehmen Person%} ; ‹vgl. 2)a)
+<g>γ</g>
+).› ²3) •f. #{A} ‹N.pr.› ³a) ‹einer †Apsaras.› ³b) ‹einer der Mütter im 
+Gefolge †Skanda's.› ³c) ‹einer Hetäre.› ³d) ‹eines Flusses.› PW40117
+
+<H1>000{citrasEni}1{citrasEni}¦ ¯MBH.7,1091 ‹fehlerhaft für› #{cEtraseni
+}. PW40118
+```
+------------------------------------------------------------------------
+case = 41 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=citrANgada'>citrANgada</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2230'>2230-2</a> 
+linenum = 82460
+
+```
+*eine Schlangenart.%} ³b) {%®*Plumbago_rosea%} ¯RA7G4AN.6,47. ³c) ‹N.pr.
+› ¹a) ‹eines Sohnes des †Dhr2tara7sht2ra.› ¹b) ‹einer Antilope.› ¹g) ‹ei
+nes Hundes.› ²3) •f. #{I} ³a) {%*Ohrwurm , Julus.%} ³b) {%®*Rubia_Munjis
+ta%} ¯RA7G4AN.6,193. ³c) ‹N.pr. einer Hetäre.› ²4) •*n. ³a) {%Zinnober o
+der Mennig%} ¯RA7G4AN.13,59. ³b) {%Auripigment%} ¯RA7G4AN.13,68. PW40125
+
+<H1>100{citrANgada}1{citrANgada}¦ ²1) •Adj. {%mit glänzenden oder bunten
+ Armbändern geschmückt.%} ²2) •m. ³a) ‹N.pr.› ¹a) ‹eines †Gandharva.› ¹b
+) ‹eines †Vidja7dhara.› ¹g) ‹eines der Schriftführer in der Unterwelt.› 
+¹d) ‹verschiedener Männer.› ³b) {%Secretär bei einer vornehmen Person%} 
+; ‹vgl. 2)a)
+<g>γ</g>
+).› ²3) •f. #{A} ‹N.pr.› ³a) ‹einer †Apsaras.› ³b) ‹der Gattin †ARg4una'
+s.› PW40126
+
+<H1>100{citrANgadasU}1{*citrANgadasU}¦ •f. ‹Bein.› ‹der Mutter †Vja7sa's
+.› PW40127
+```
+------------------------------------------------------------------------
+case = 42 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=colaka'>colaka</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2238'>2238-3</a> 
+linenum = 83757
+
+```
+<H1>100{cola}1{cola}¦ ²1) •m. (•*f. #{I}) {%Jacke , Wamms.%} ‹Am Ende ei
+nes› •adj. ‹Comp.› •f. #{A}. ²2) •m. ³a) ‹N.pr.› ¹a) •Pl. ‹eines Volkes.
+› ¹b) ‹des Urahns dieses Volkes.› ³b) {%ein Fürst der †K4ola.%} ²3) •f. 
+#{I} {%eine Frau vom Volke%} ¯K4OLA.¯VIKRAMA7N5KAK4.5,89. ²4) •*n. {%Kle
+id , Gewand.%} PW40747
+
+<H1>100{colaka}1{colaka}¦ ²1) •m. ³a) ‹*› = #{cola} ‹1).› ³b) = #{cola} 
+‹2)a)
+<g>α</g>
+).› ²2) •*n. {%Rinde.%} PW40748
+
+<H1>100{colakin}1{*colakin}¦ •m. ²1) {%ein geharnischter Mann.%} ²2) {%R
+ohrschössling.%} ²3) {%Orangenbaum.%} ²4) {%Handgelenk.%} PW40749
+```
+------------------------------------------------------------------------
+case = 43 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=cyu'>cyu</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2239'>2239-3</a> 
+linenum = 83899
+
+```
+<H1>100{cyAvayitar}1{*cyAvayitar}¦ •Nom.ag. {%der in Bewegung setzt.%} P
+W40818
+
+dem Bogen , der Hand von Waffen)› ; ‹mit› •Abl. #{cyuta} {%entflogen%} ,
+ ‹mit› •Abl. ‹oder am Ende eine Comp.› ²4) {%herauskommen , hinausgehen 
+, herausfliessen , -träufeln , entströmen%} ‹(dem Munde von Reden)› ; ‹m
+it› •Abl. ²5) {%herabfallen , fallen , ~ von (Abl) , ~ auf%} (•Loc.). #{
+potacyuta} {%über Bord gefallen.%} #{cayuta} ‹in der Astrol› {%in den%} 
+<g>ἀποκλίματα</g>
+ {%stehend.%} ²6) {%vom Himmel herabfallen um als Mensch geboren zu werd
+en%} ¯HEM.PAR. ²7) {%sich entfernen von , so v.a. untreu werden , Etwas 
+aufgeben%} ; ‹mit› •Abl. ¯MBH.15,16,22. ²8) {%sich entfernen von , so v.
+a. kommen um , verlustig gehen.%} #{cyuta} ‹mit› •Abl. ‹oder am Ende ein
+es Comp.› {%gekommen um , ermangelnd , frei ~ , verlassen von.%} ²9) {%f
+
+<Caus.> #{cyAva/yati} ‹und› #{cyavayati} ‹(ausnahmsweise)› ²1) {%in Schw
+anken versetzen , bewegen , schütteln , aufregen.%} •Med. {%sich bewegen
+ , erschüttert werden.%} ²2) {%lockern.%} ²3) {%von der Stelle bewegen ,
+ wegschaffen , vertreiben von%} (•Abl.). ²4) {%heraus ~ , herabfallen ma
+chen von%} (•Abl.). ²5) {%Jmd um Etwas bringen%} , ‹mit doppeltem› •Acc.
+```
+------------------------------------------------------------------------
+case = 44 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=jamBan'>jamBan</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2254'>2254-2</a> 
+linenum = 85910
+
+```
+<H1>100{jamBadviz}1{*jamBadviz}¦ •m. (•Nom. #{°dviw}) ‹Bein. †Indra's.› 
+PW41751
+
+<H1>000{jamBan}1{*jamBan}¦ ‹am Ende einiger Comp.› = #{jamBa} ‹1)a)
+<g>α</g>
+).› PW41752
+
+<H1>100{jamBana}1{ja/mBana}^1¦ ²1) •Adj. (•f. #{I}) {%zermalmend , verni
+chtend , Zermalmer%} ‹u.s.w.› ²2) •*m. {%®Calotropis_gigantea%} ¯RA7G4AN
+.10,27. PW41753
+```
+------------------------------------------------------------------------
+case = 45 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=jAtya'>jAtya</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2263'>2263-2</a> 
+linenum = 87452
+
+```
+<H1>100{jAtodaka}1{jAtodaka}¦ •Adj. {%mit Wasser angefüllt%} #{udara} ¯B
+HA7VAPR.5,83. PW42510
+
+<H1>100{jAtya}1{jA/tya}¦ •Adj. ²1) ‹am Ende eines Comp.› {%zu dem und de
+m Geschlecht , Stande u.s.w. gehörig.%} ²2) {%zur Familie gehörig , verw
+andt.%} ²3) {%zu einem edlen Geschlecht gehörig , edel.%} ²4) {%ächt%} ,
+ |
+<g>γνήσιος</g>
+. ‹Ueber den› {%ächten †Svarita%} ‹s.› ¯WHITNEY.,Gr.84,b. ²5) {%rechtwin
+kelig.%} ²6) {%*lieblich , reizend.%} PW42511
+
+<H1>100{jAtyanDa}1{jAtyanDa}¦ •Adj. {%blindgeboren%} ¯SPR.2391.fg. PW425
+12
+```
+------------------------------------------------------------------------
+case = 46 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=jAmitra'>jAmitra</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2264'>2264-2</a> 
+linenum = 87618
+
+```
+<H1>100{jAmikft}1{jAmikf/t}¦ •Adj. {%Verwandtschaft schaffend.%} PW42593
+
+<H1>100{jAmitra}1{jAmitra}¦ •n. |
+<g>διάμετρον</g>
+ , ‹das 7te› {%astrol. Haus.%} PW42594
+
+<H1>100{jAmitva}1{jAmitva/}¦ •n. {%Verwandtschaft , Angehörigkeit.%} PW4
+2595
+```
+------------------------------------------------------------------------
+case = 47 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=jituma'>jituma</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2267'>2267-2</a> 
+linenum = 88055
+
+```
+<H1>100{jiti}1{ji/ti}¦ •f. {%Erwerb , Gewinn , Sieg.%} #{ajitasya jitiH}
+ ‹und› #{jitI} ‹Namen von †Sa7man› ¯A7RSH.BR. PW42798
+
+<H1>100{jituma}1{jituma}¦ •m. = |
+<g>δίδυμοι</g>
+ , {%die Zwillinge im Thierkreise.%} PW42799
+
+<H1>100{jitendriya}1{jitendriya}¦ ²1) •Adj. {%der seine Sinne bezwungen 
+hat.%} •Nom.abstr. #{°tva} •n. ¯SPR.2416. ²2) •m. ‹N.pr. eines Mannes.› 
+PW42800
+```
+------------------------------------------------------------------------
+case = 48 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=jUka'>jUka</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2273'>2273-1</a> 
+linenum = 88856
+
+```
+<H1>100{jU}1{jU/}^2¦ ²1) •Adj. ³a) {%rasch , behend.%} •Subst. {%Ross.%}
+ ³b) {%drängend , treibend.%} ²2) •*f. ³a) {%Eile.%} ³b) {%der Aether , 
+Luftraum.%} ³c) {%eine †Pic2a7ki7.%} ³d) ‹Bein.› ‹der †Sarasvati7.› ³e) 
+{%ein Fleck auf der Stirn (?) von Pferden und Stieren.%} PW43181
+
+<H1>100{jUka}1{jUka}¦ •m. |
+<g>ζυγόν</g>
+ , {%die Wage im Thierkreise%} ¯VARA7H.BR2H.1,7.8. PW43182
+
+<H1>100{jUwa}1{jUwa}¦ •m. (•adj. ‹Comp.› •f. #{A}) {%Haarflechte.%} PW43
+183
+```
+------------------------------------------------------------------------
+case = 49 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=jenya'>jenya</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2273'>2273-2</a> 
+linenum = 88940
+
+```
+<H1>100{jentAka}1{jentAka}¦ •m. {%eine Art Schwitzbadstube.%} PW43222
+
+<H1>100{jenya}1{(jenya)}¦ #{je/nia} •Adj. ²1) {%von edler Abkunft%} , |
+<g>γενναῖος.</g>
+ ²2) {%ächt , wahr.%} PW43223
+
+<H1>100{jenyAvasu}1{(jenyAvasu)}¦ #{jeniAvasu} •Adj. {%ächten , wahren R
+eichthum habend%} ¯R2V. PW43224
+```
+------------------------------------------------------------------------
+case = 50 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=jYAtar'>jYAtar</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2276'>2276-1</a> 
+linenum = 89193
+
+```
+<H1>100{jYAtatA}1{jYAtatA}¦ •f. {%das Erkanntsein , Gekanntsein.%} PW433
+24
+
+<H1>100{jYAtar}1{jYAta/r}¦ •Nom.ag. ²1) {%Erkenner , Kenner , der Etwas 
+versteht.%} •Nom.abstr. #{jYAtftva} •n. ²2) {%Bekannter%} , ‹daher wohl›
+ {%Beistand oder Bürge%} ‹(vgl.› |
+<g>γνωστήρ.</g>
+ ²3) {%Zeuge.%} PW43325
+
+<H1>100{jYAtala}1{*jYAtala}¦ •m. ‹N.pr. eines Mannes. Davon› •*Patron. #
+{°leya}. PW43326
+```
+------------------------------------------------------------------------
+case = 51 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=jyO'>jyO</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2279'>2279-2</a> 
+linenum = 89784
+
+```
+<H1>100{jyotsneSa}1{*jyotsneSa}¦ •m. {%der Mond.%} PW43616
+
+<H1>100{jyO}1{jyO}¦ (•Nom. #{jyOs}) •m. |
+<g>Ζεύς</g>
+ , {%der Planet Jupiter.%} PW43617
+
+<H1>100{jyOtiza}1{jyOtiza}¦ •n. ²1) = #{jyotiza} ‹4).› ²2) {%eine best. 
+gegen die Finsterniss geschleuderte leuchtende Waffe †Arg4una's%} ¯MBH.7
+,30,24. ‹v.l.› #{jyotizka}. ²3) ‹Name zweier †Sa7man› ¯A7RSH.BR. PW43618
+```
+------------------------------------------------------------------------
+case = 52 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=takzaSila'>takzaSila</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=3002'>3002-1</a> 
+linenum = 90774
+
+```
+<H1>100{takzavant}1{takzavant}¦ •Adj. ¯MBH.2,23,18 ‹vielleicht fehlerhaf
+t für› #{kzatavant} {%verwundet habend.%} ¯NI7LAK.: #{takzastanUkaraRa g
+AtrasaMkoca ityarTaH tadvAn}. PW44070
+
+<H1>100{takzaSila}1{takzaSila}¦ ²1) •m. •Pl. {%die Bewohner von%} ‹2).› 
+²2) •f. #{A} |
+<g>Τάξιλα</g>
+ , ‹N.pr. einer Hauptstadt der †Gandha7ra.› #{°tas} ¯45,24. PW44071
+
+<H1>100{takzaSilAvatI}1{*takzaSilAvatI}¦ •f. ‹N.pr. einer Oertlichkeit.›
+ PW44072
+```
+------------------------------------------------------------------------
+case = 53 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=tAmraparRi'>tAmraparRi</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=3022'>3022-3</a> 
+linenum = 93461
+
+```
+<H1>100{tAmraparRa}1{tAmraparRa}¦ ²1) •n. ‹N.pr. eines Theiles von †Bha7
+rata †Varsha› ¯GOLA7DHJ.BHUV.41. ²2) •f. #{I} ³a) {%®*Rubia_Munjista.%} 
+³b) {%*eine Art Teich.%} ³c) ‹N.pr.› ¹a) ‹einer Tochter †Kr2shn2a's› ¯HA
+RIV.2,103,8. #{tAmrapakzA} ‹v.l.› ¹b) ‹eines Flusses› ¯VARA7H.BR2H.S.14,
+16. ¹g) ‹*einer Stadt auf Ceylon.› PW45320
+
+<H1>100{tAmraparRi}1{tAmraparRi}¦ ‹(metrisch)› •f. = #{tAmraparRa} ‹2)c)
+<g>β</g>
+)› ¯VARA7H.BR2H.S.81,1. PW45321
+
+<H1>000{tAmraparRItawAka}1{tAmraparRItawAka}¦ ‹N.pr. einer Oertlichkeit.
+› PW45322
+```
+------------------------------------------------------------------------
+case = 54 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=tAlajaNGa'>tAlajaNGa</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=3025'>3025-2</a> 
+linenum = 93871
+
+```
+<H1>100{tAlaja}1{tAlaja}¦ ²1) •Adj. {%von der Weinpalme kommend%} ¯SUC2R
+.1,213,1.¯BHA7VAPR.1,242. ²2) •*n. {%Palmwein.%} PW45524
+
+<H1>001{tAlajaNGa}1{tAlajaNGa}¦ ²1) ³a) {%Weinpalmen gleiche ~ , d.i. se
+hr lange Beine habend%} ¯R.5,12,35. ³b) {%zum Stamme der †Ta7lagan5ga ge
+hörig.%} ²2) •m. ³a) {%ein †Rakshas%} ¯VARA7H.JOGAJ.3,21. ³b) ‹N.pr.› ¹a
+) •Pl. ‹eines Kriegerstammes› ¯105,23. ¹b) ‹des angeblichen Ahnherrn von
+ 2)b)
+<g>α</g>
+).› ¹g) ‹eines †Raksha.› ¹d) ‹eines †Daitja› ¯HARIV.3,47,11. ¹e) ‹eines 
+Fürsten der Kobolde.› ³c) {%ein Fürst der †Ta7lag4an5gha%} ‹2)b)
+<g>α</g>
+).› PW45525
+
+<H1>100{tAlajawA}1{*tAlajawA}¦ •f. {%die unter der äusseren Rinde liegen
+den Fibern der Weinpalme.%} PW45526
+```
+------------------------------------------------------------------------
+case = 55 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=tirohita'>tirohita</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=3029'>3029-3</a> 
+linenum = 94548
+
+```
+<H1>500{tirohay}1{tirohay}¦ , #{°yati} {%verstecken , verbergen.%} PW458
+60
+
+<H1>004{tirohita}1{tiro/hita}¦ •»s.u. #{tiras} ‹3)b)
+<g>β</g>
+).› PW45861
+
+<H1>100{tirohitatA}1{tirohitatA}¦ •f. {%das Verschwinden , Nichtgesehenw
+erden.%} PW45862
+```
+------------------------------------------------------------------------
+case = 56 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=tOkzika'>tOkzika</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=3045'>3045-1</a> 
+linenum = 97160
+
+```
+<H1>000{tOkzAyaRa}1{*tOkzAyaRa}¦ ‹von› #{tukza}. PW47145
+
+<H1>100{tOkzika}1{tOkzika}¦ •m. |
+<g>τοξότης</g>
+ , {%der Schütze im Thierkreise.%} PW47146
+
+<H1>100{tOgrya}1{(tOgrya)}¦ #{togria/} •m. •Patron. ‹†Bhug4ju's.› ƒPage3
+.045-2ƒ PW47147
+```
+------------------------------------------------------------------------
+case = 57 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=trika'>trika</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=3048'>3048-2</a> 
+linenum = 97576
+
+```
+<H1>100{triHplakzA}1{triHplakzA}¦ •f. ‹v.l. für› #{triplakza}. PW47336
+
+end%} ¯C2ULBAS.1,49. ³b) {%*zum dritten Mal erfolgend.%} ³c) ‹in Verbind
+ung mit oder mit Ergänzung von› #{Sata} {%drei vom hundert , drei Procen
+t.%} ²2) •m. (•*n.) {%ein dreieckiger Platz , ~ Hof%} ¯HARIV.6501. ²3) •
+*m. ³a) {%®Asteracantha_longifolia.%} ³b) {%Trapa bispinosa.%} ²4) •*f. 
+#{A} {%eine best. Vorrichtung am Brunnen.%} ²5) •n. ³a) {%Dreizahl%} , |
+<g>τριάς</g>
+ ¯227,1. ³b) {%regio sacra , Kreuzbein%} ; ‹auch› {%die Hüften.%} ‹In› ¯
+SUC2R. ‹auch› {%die Gegend zwischen den Schulterblättern.%} PW47337
+
+<H1>100{trikakud}1{trikaku/d}¦ ²1) •Adj. {%dreigipfelig , dreispitzig , 
+mit drei Hörnern versehen.%} #{trikaku/deva/ samAnA/nAm} ‹so v.a.› {%dre
+ifach Seinesgleichen überragend.%} ²2) •m. ³a) ‹Bein.› ¹a) ‹†Vishn2u's o
+der †Kr2shn2a's› ¯MBH.12,342,93. ¹b) ‹†Brahman's.› ³b) {%ein best. †Dac2
+a7ha%} ¯VAITA7N. ³c) ‹N.pr.› ¹a) ‹eines Berges im †Himavant.› ¹b) ‹eines
+```
+------------------------------------------------------------------------
+case = 58 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=tritaya'>tritaya</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=3049'>3049-3</a> 
+linenum = 97804
+
+```
+<H1>100{tritantrikA}1{tritantrikA}¦ •Adj. •f. {%dreisaitig%} ‹(Laute)› ¯
+S.S.S.177 PW47450
+
+<H1>100{tritaya}1{tritaya}¦ •n. {%Dreizahl%} , |
+<g>τριάς.</g>
+ PW47451
+
+<H1>100{tritA}1{tritA}¦ •f. {%Dreiheit.%} PW47452
+```
+------------------------------------------------------------------------
+case = 59 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=dakzakanyA'>dakzakanyA</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=3061'>3061-3</a> 
+linenum = 99724
+
+```
+C2iva's Stier.%} ³l) ‹N.pr.› ¹a) ‹eines †A7ditja , der auch mit †Prag4a7
+pati identificirt wird› , ¹b) ‹eines best. †Prag4a7pati , dessen Opfer v
+on †C2iva zu Nichte gemacht wird. Hierher wohl› #{dakzasyAyanam} ‹als Be
+s.› {%eines best. Opfers%} ¯M.6,10 ‹(Hdschr.).› ¹g) ‹eines Sohnes des †G
+arud2a.› ¹d) ‹verschiedener Männer.› ²3) •*f. #{A} {%die Erde.%} PW48397
+
+<H1>100{dakzakanyA}1{dakzakanyA}¦ •f. ²1) {%eine Tochter von †Daksha%} ‹
+2)l)
+<g>β</g>
+).› ²2) ‹*Patron. der †Du7rga7.› PW48398
+
+<H1>100{dakzakratu}1{dakzakratu/}^1¦ •m. •Du. {%Wille und Verstand%} ¯TB
+R.1,5,4,2.¯A7C2B, ¯GR2HJ.3,6,7. PW48399
+```
+------------------------------------------------------------------------
+case = 60 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=daSArhaka'>daSArhaka</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=3076'>3076-3</a> 
+linenum = 101911
+
+```
+<H1>100{daSArha}1{daSArha}¦ ²1) •m. ³a) ‹N.pr.› ¹a) •Pl. ‹eines Volkes.›
+ ¹b) ‹des Ahnen dieses Volkes.› ³b) ‹Bein.› ¹a) ‹†Kr2shna's.v.l.› #{dASA
+rha}. ¹b) ‹*jedes †Buddha.› ²2) •*f. #{I} {%eine Prinzessin der †Dac2a7r
+ha.%} PW49444
+
+<H1>100{daSArhaka}1{daSArhaka}¦ •m. •Pl. = #{daSArha} ‹1)a)
+<g>α</g>
+).› PW49445
+
+<H1>100{daSAlaMkAramaYjarI}1{daSAlaMkAramaYjarI}¦ •f. ‹Titel eines Werke
+s.› PW49446
+```
+------------------------------------------------------------------------
+@jmigliori All the cases for PW are ready for you.
+
+------------------------------------------------------------------------
+@funderburkjim would be interesting to see a video how you prepared the list. Documenting every with a text file can take the whole day. The video is better because in it you can make mistakes and still we will be able to reproduce it one day, if needed. At least we can try. Although I'm not sure - you can not do something middle class, you always want it perfect. That's a problem.
+------------------------------------------------------------------------
+It looks like there’s a mistake with Case 6. The Greek word in question appears under that headword, but on 1098-1, not 1097-3. Additionally, Greek letters are used to mark sub-definitions in the entry but aren’t marked for change. How should I go about this?
+------------------------------------------------------------------------
+`on 1098-1, not 1097-3` is possible, rarely the page numbers do not match.
+------------------------------------------------------------------------
+Regarding 1097-3 or 1098-1:  
+a) First, a detail about the displays of scan pages - you've probably already discovered this, but it won't hurt
+    to mention the detail here.   The little &lt;  and &gt; appearing at top left of the scanned image allow you to
+    click to the previous or next page, respectively.
+
+b) The page number (like 1097-3) is probably the location where the headword begins.  If this turns out to be
+   a difficulty for your work,  I can examine the program involved and try to make it more precise in terms of 
+   the location of the Greek text.  
+------------------------------------------------------------------------
+Regarding the Greek letters marking sub-definitions:  You don't need to mark these.  Here's  why, by example under case 6 , occurring at top of page 1098-1
+![image](https://cloud.githubusercontent.com/assets/6393033/7216849/462f7540-e5db-11e4-8c2e-cd19b1803bba.png)
+
+Part of the digitization is `¹a) ‹der Mutter des †Pari7kshit.› ¹b) ‹einer Schwester †Amr2todana's.›`.
+
+The `alpha)` section header of the scan is represented in the digitization by `¹a)`  and the
+`beta)` section header by `¹b)`.
+
+If you look at the display of this headword (click the amfta headword link in case 6), you'll see that the 
+display represents the Greek.   
+
+Why Thomas chose this way to represent the Greek section headers is unclear.  But, at least you don't have
+to be concerned with coding these Greek section headers.
+
+------------------------------------------------------------------------
+@gasyoun I'll put the video request in TODO list.
+------------------------------------------------------------------------
+Got it!
+
+
+
+> On Apr 18, 2015, at 3:04 PM, funderburkjim <notifications@github.com> wrote:
+> 
+> Regarding the Greek letters marking sub-definitions: You don't need to mark these. Here's why, by example under case 6 , occurring at top of page 1098-1
+> 
+> 
+> Part of the digitization is ¹a) ‹der Mutter des †Pari7kshit.› ¹b) ‹einer Schwester †Amr2todana's.›.
+> 
+> The alpha) section header of the scan is represented in the digitization by ¹a) and the
+> beta) section header by ¹b).
+> 
+> If you look at the display of this headword (click the amfta headword link in case 6), you'll see that the 
+> display represents the Greek.
+> 
+> Why Thomas chose this way to represent the Greek section headers is unclear. But, at least you don't have
+> to be concerned with coding these Greek section headers.
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+> 
+
+------------------------------------------------------------------------
+`Why Thomas chose this way to represent the Greek section headers` - maybe it's time to have them as in the book?
+------------------------------------------------------------------------
+It would be possible to programmatically change pw.txt to do this.  There are many such changes that 
+might improve pw.txt to make it more useable.  Some of these are present in the construction of pw.xml, and
+in the programs  that display pw.xml.  I don't want to tackle reorganizing pw.txt, pw.xml and the displays any time soon.
+
+
+------------------------------------------------------------------------
+As you say. It's good to at least know and document - I was not aware of it before. 
+------------------------------------------------------------------------
+Ι found some more Greek that isn’t marked here. It’s the same headword as Case 35 under section 12: http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=ca (It should be θ). There’s also something marked as Greek that isn’t.
+
+There’s also another unmarked Greek letter under the last headword on 2254-1, where it continues on to the next column, after e). (It should be γ)
+------------------------------------------------------------------------
+These are now also otherwise all set.
+------------------------------------------------------------------------
+@jmigliori `|(greek) te , , que -> θ, que` would be easier to understand than `It should be θ`, thanks.
+------------------------------------------------------------------------
+Sorry about that, @gasyoun, I’m new to GitHub and should be more clear :
+![screen shot 2015-04-20 at 12 11 46 pm](https://cloud.githubusercontent.com/assets/11936429/7234637/7a3cf642-e756-11e4-8e24-5245696e0f3f.png)
+
+•The τε part is fine.
+
+•The “d” I highlighted in code above is marked as Greek, but there is no Greek there in the dictionary scan.
+
+•As for the θ I mentioned, it’s also under that headword, but farther down in the entry. I noticed it in the scan. I don’t have access to the code to show you where it is. I can show you where it is in the online dictionary (under header 12): http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=ca
+------------------------------------------------------------------------
+Regarding Case 35.   I can see why this is confusing - the reason is that somewhere along the line (in one of
+the programs that generated these GitHub issue comments) **data vanished** !
+
+Here's the corrected data:
+```
+78366 old <H1>001{ca}1{ca}^1¦ ‹Conj.› ²1) {%und , auch , |
+<g>te</g>
+ , , que.%} ‹Steht hinter beiden zu verbindenden Theilen (oft durch› {%s
+owohl - als auch%} ‹wiederzugeben) , nur nach dem letzten oder nur nach 
+dem ersten. Bei drei und mehr zu verbindenden Theilen überall , nur nach 
+ dem letzten oder hier und da. In gebundener Rede steht› #{ca} {%bisweil
+en an unrichtiger Stelle%} ‹(› #{vEcitryaM nItividyAM dadAti ca} ‹st.› #
+
+[ALL OF THIS IS MISSING FROM ORIGINAL case 35]
+{ca da°}) ‹und auch müssig. Werden zwei Sätze durch wiederholtes› #{ca} 
+‹verbunden , so hat das erste Verbum finitum den Ton.› #{ca} ‹--› #{ca} 
+‹in einem negativen Satze› {%weder -noch%} ; #{na Kalu ca - nEva} ‹dass. 
+Grammatiker , Lexicographen und Erklärer gebrauchen› #{ca} ‹oft elliptisch›
+ {%(auch ‹so v.a.› dieses und noch Anderes)%}. ‹In Verbindung mit andern 
+Partikeln› ; #{cEva , cEva - cEva , cEva - ca , ca - cEva , cEva hi} 
+‹(am Ende eines Halbverses)› , #{cApi , ca - cApi , cApi - ca , api ca , 
+na - na - api ca} ‹(mit fehlender Negation)› , #{na - na cApi , api cEva ,
+ cEvApi , ca taTA , taTA ca , taTEva ca}. ²2) #{ca - tu} = #{ca - ca} 
+{%sowohl - als auch%} ¯110,13. ²3) {%oder%} , ‹mit› #{vA} 
+‹wechselnd oder dessen Stelle vertretend (nach› #{utAho}). ²4) 
+{%auch , selbst , sogar.%} ²5) {%und zwar.%} ²6) {%gerade , eben%}
+ ‹(ausnahmsweise).› ²7) {%aber , dagegen%} ¯43,18. ‹Insbes. nach›
+ #{yadi , aTa} ƒPage2.203-1ƒ ‹(hier v.l.› #{tu}) , #{aTa vA}.#{ na cEva}
+ ‹--› #{tu} {%nicht aber%} ¯193,28. ²8) {%dennoch.%} ²9) #{ca} 
+‹--› #{ca} {%kaum.%} ‹--› ‹so ein› #{ca} ‹an zweiter Stelle ohne ein
+ vorangehendes› #{ca} {%alsbald , sogleich.%} ²10) #{ca} ‹--› #{ca} 
+{%obgleich - dennoch%} ¯VIKROR.28. #{ca-na tu} ‹und› #{ca-na ca} 
+{%obgleich-dennoch nicht.%} #{na ca-ca} {%obgleich nicht - so doch.%}
+ ²11) {%wenn%} ‹(mit betontem Verbum fin.)› ¯VIKROR.39. ²12) 
+‹über die Bed. von› #{ca} ‹nach einem Interrogativum› •»s.u. ‹1.›
+ #{ka} ‹2)a) , 1.› #{kaTA} ‹1)› , #{kim} ‹2)d)
+[END OF MISSING DATA FROM ORIGINAL case 35
+<g>d</g>)›
+ , #{kutra} ‹7) und› #{kva} ‹5)b).› PW38182
+
+```
+As you see, that `&lt;g&gt;d&lt;/g&gt;`  occurs in a different place  and is fact that Theta that you noticed!!
+
+I've put the θ  at location of the 'd'.
+
+
+------------------------------------------------------------------------
+Regarding 'There’s also another unmarked Greek letter under the last headword on 2254-1, where it continues on to the next column, after e). (It should be γ)'
+
+I don't think this is a problem in the digitization.
+
+This is under headword <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=jamBaka'>jamBaka</a>   
+on page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/PWScan/2014/web/webtc/servepdf.php?page=2254'>2254-2</a> 
+
+That γ *does* appear in the display for jamBaka
+Here is the digitization:
+linenum = 85910
+```
+<H1>100{jamBaka}1{ja/mBaka}¦ ²1) •Adj. ‹am Ende eines Comp.› {%zermalmend , verschlingend.%} 
+²2) •m. ³a) ‹etwa› {%Zauber%} ¯MBH.5,64,16. ³b) {%Unhold oder ein best. Unhold%} ¯VS.30,16. ³c) 
+‹Bein. †Gan2ec2a's.› ³d) ‹N.pr.› ¹a) ‹eines Unholds , eines Krankheitsdämons› ¯HARIV.9557.
+ ƒPage2.254-2ƒ ¯AGNI-P.40,19. ¹b) ‹eines von †Kr2shn2a besiegten Dämons.› 
+¹g) ‹verschiedener in mythischen Waffen hausender Geister.› ¹d) ‹*eines Wesens im Gefolge †C2iva's.› ³e) {%ein an%} 
+‹2)d)› ¹g) {%gerichteter Spruch.%}   [ This is the gamma
+³f) {%*Citronenbaum.%} ²3) 
+•*f. #{jamBakA} {%das Aufsperren des Mundes.%} ²4) •f. #{jambikA} ‹N.pr. einer buddh. Gottheit.› PW41748
+
+```
+In this coding that gamma is coded as `¹g)`, that superscript '1' indicates that is the coding of a Greek subsection number, and that's the way the display shows it:
+![image](https://cloud.githubusercontent.com/assets/6393033/7287910/4974afcc-e928-11e4-9b80-a2e42bad3d13.png)
+
+So, unless that gamma is not supposed to be a subsection identifier,  the digitization looks right to me.
+
+Does this make sense?
+
+------------------------------------------------------------------------
+I didn't think that’s a subsection header because it’s out of alphabetical order (γ comes before δ) with the other headers and formatted differently in the facsimile. Most of what’s been set aside for me to code has been letters like this, appearing in parentheses right after a number and a Roman letter.
+------------------------------------------------------------------------
+@gasyoun  Can you understand the German ?   How should we understand `2)d)γ`  ?  
+------------------------------------------------------------------------
+@jmigliori   I see your point, that there are many cases with `Greek letters appearing in parentheses right after a number and a Roman letter.` This does seem similar --  At the moment I don't know which coding is right:
+``
+2)d)<g>γ</g>)
+ or 
+2)d)¹g)
+```
+
+------------------------------------------------------------------------
+My German is pretty subpar. I’m not sure what they meant by that.
+------------------------------------------------------------------------
+I've posted all these corrections.
+
+You should probably do some spot checking to convince yourself that your corrections are properly
+installed (e.g. by clicking on the headword links - The Greek text is
+temporarily shown with a yellow background color).  
+
+I'm going to post the first page of next dictionary cases (PWG) now.
+
+------------------------------------------------------------------------
+I did some random checks throughout: they all looked great!
+------------------------------------------------------------------------
+So the `2)d)γ)` or `2)d)¹g)` question remains open, right?
+------------------------------------------------------------------------
+@gasyoun - yes, that's still an open question, restated in issue#8.
+
+Since @jmigliori confirms that the installation of corrections looks ok,  this issue can be closed.

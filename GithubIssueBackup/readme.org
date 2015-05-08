@@ -1,0 +1,29 @@
+
+
+The readIssue.py program provides a copy of the issues and issue comments
+ for a particular repository.
+ Only the 'body' of the issue and comments are saved.
+This program usess the Python 'requests' module, which must be
+installed separately. (search 'Python requests', OR, if you have already
+installed pip, just 'pip install requests' to install this, OR , do this
+in a Python virtualenv.)
+
+
+ 
+Here is the command line to retrieve issues 1-11 of the GreekInSanskrit
+repository owned by the sanskrit-lexicon Github project.
+Each issue is put into a file named issue_<issue-num> in the greekcomments
+directory (which is created via mkdir greekcomments).
+
+python readIssue.py 1,11  sanskrit-lexicon GreekInSanskrit greekcomments
+
+A given issue_# file is formatted into sections separated by a string of
+72 hyphens.
+The first section has one line, and is the url of the issue.
+The second section is the body of the issue statement.
+Subsequent sections contain the bodies of the issue comments.
+
+
+Comment:  A slight improvement to the program would format the
+number in the file name to the same size, so file listing will be in
+issue order  (e.g., issue_01 instead of issue_1).

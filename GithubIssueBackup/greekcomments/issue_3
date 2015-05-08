@@ -1,0 +1,370 @@
+https://api.github.com/repos/sanskrit-lexicon/GreekInSanskrit/issues/3
+------------------------------------------------------------------------
+Since there are only 19 cases of Greek text in the Wilson dictionary,  let's tackle it first.  
+
+Jonathan, let's see if the procedure Jason has used for Arabic text works well for you.
+The issue introductions for some of Jason's cases may provide enough guidance for you to see how
+to proceed (see first comment in these [ArabicInSanskrit issues](https://github.com/sanskrit-lexicon/ArabicInSanskrit/issues/).)
+
+In Wilson, the placeholder for the Greek text in the digitization is &lt;g&gt;&lt;/g&gt;  but sometimes Thomas has added some off-the-cuff transliteration of Greek, such as &lt;g&gt;a&lt;/g&gt; for Greek alpha.
+(*Thomas* refers to Thomas Malten, professor at Cologne whose group of Sanskrit typists in south India makes the digitizations).  In such cases, just replace the transliteration with the Greek.
+
+The page links will probably be the most useful -  they will take you directly to the scanned image of the
+page containing the Greek.   When you know what to type, then you can edit the Issue comment, insert the Greek, and save the update to the comment.   This would complete the case represented by the comment.
+
+Don't hesitate to ask questions.  ------------------------------------------------------------------------
+case = 1 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=AgrahAyaRI'>AgrahAyaRI</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=105'>105</a> 
+linenum = 21020
+
+```
+.²1 The name of a constellation consisting of three stars, one of which 
+is
+
+<g>λ</g>
+ Orionis, figured by an antelope's [Page106] head, hence also
+
+{#mfgaSiras.#}
+```
+------------------------------------------------------------------------
+case = 2 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=uttaraBAdrapad'>uttaraBAdrapad</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=142'>142</a> 
+linenum = 28334
+
+```
+.{#uttaraBAdrapad#}¦ f. ({#-d#}) The twenty-seventh lunar mansion, figur
+ed by a
+
+couch, and comprehending two stars, of which one is 
+<g>α</g>
+ {%Andromedæ.%}
+
+.E. {#uttara#} subsequent, and {#BAdrapada#} properly the constellation;
+ also
+```
+------------------------------------------------------------------------
+case = 3 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=uttarAzAQA'>uttarAzAQA</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=142'>142</a> 
+linenum = 28412
+
+```
+by an elephant's tooth or a bed, and containing two stars, one of which 
+is
+
+<g>β</g>
+ in Sagittarius.
+
+.E. {#uttara#} subsequent, and {#AzAQA#} the constellation; to distingui
+sh it
+```
+------------------------------------------------------------------------
+case = 4 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=uttAnapAda'>uttAnapAda</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=142'>142</a> 
+linenum = 28451
+
+```
+.²1 A prince, son of SWAYAMBHU the {%Menu.%}
+
+.²2 One of the stars of the little bear, (
+<g>β</g>
+ Ursi minoris.)
+
+.{#uttAnapAdaja#}¦ m. ({#-jaH#}) A name of DHRUVA.
+```
+------------------------------------------------------------------------
+case = 5 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=tizya'>tizya</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=378'>378</a> 
+linenum = 74532
+
+```
+.²1 The eighth {%Nakshatra%} or lunar mansion, an asterism figured by an
+ arrow,
+
+and containing three stars, of which one is 
+<g>δ</g>
+ Cancri.
+
+.²2 The month {%Pausha,%} (December-January.)
+```
+------------------------------------------------------------------------
+case = 6 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=DanizWA'>DanizWA</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=437'>437</a> 
+linenum = 86027
+
+```
+.{#DanizWA#}¦ f. ({#-zWA#}) The twenty-fourth {%Nakshatra%} or lunar man
+sion;
+
+it comprises four stars, apparently 
+<g>α β γ</g>
+ and 
+<g>δ</g>
+ {%Delphini,%} and
+
+is figured by a drum or tabor.
+```
+------------------------------------------------------------------------
+case = 7 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=Druva'>Druva</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=448'>448</a> 
+linenum = 88250
+
+```
+.²11 One of the twenty-seven astronomical {%Yo4gas,%} or the {%Yo4ga%} s
+tar of
+
+the twelfth lunar asterism, supposed to be 
+<g>β</g>
+ Leonis.
+
+.²12 A sort of bird: see {#SarAwi.#} n. ({#-vaM#}) [Page449]
+```
+------------------------------------------------------------------------
+case = 8 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=puzya'>puzya</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=547'>547</a> 
+linenum = 107695
+
+```
+.{#puzya#}¦ mf. ({#-zyaH-zyA#})
+
+.²1 The eighth lunar asterism, comprising three stars, of which one is 
+<g>δ</g>
+
+Cancer.
+```
+------------------------------------------------------------------------
+case = 9 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=pUrvvaPalgunI'>pUrvvaPalgunI</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=550'>550</a> 
+linenum = 108236
+
+```
+{%Phalguni,%} the twelfth {%Nakshatra,%} being termed {%Uttara%} or subs
+equent;
+
+this asterism figured by a couch contains two stars, one of which is 
+<g>δ</g>
+
+Leonis.
+```
+------------------------------------------------------------------------
+case = 10 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=pUrvvAzAQA'>pUrvvAzAQA</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=550'>550</a> 
+linenum = 108332
+
+```
+{%A'sha4r'ha4,%} and the 20th of the lunar asterisms, containing two sta
+rs of
+
+which one is 
+<g>δ</g>
+ Sagitarii.
+
+.E. {#pUrvva#} first, {#AzAQA#} {%A'sha4r'ha4.%}
+```
+------------------------------------------------------------------------
+case = 11 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=maGa'>maGa</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=631'>631</a> 
+linenum = 124227
+
+```
+tenth lunar asterism, containing five stars figured by a house, apparent
+ly
+
+<g>α. γ. ζ. η.</g>
+ and 
+<g>ν.</g>
+ {%Leonis:%} it is sometimes considered to be
+
+confined to the plural number ({#maGAH#}). f. ({#-GA-GI#}) A sort of gra
+in.
+```
+------------------------------------------------------------------------
+case = 12 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=mfgaSiras'>mfgaSiras</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=670'>670</a> 
+linenum = 131641
+
+```
+.{#mfgaSiras#}¦ n. ({#-raH#}) The fifth lunar mansion, containing three 
+stars,
+
+one of which is 
+<g>λ</g>
+ ORIONIS, and figured by an antelope's head, whence its
+
+name.
+```
+------------------------------------------------------------------------
+case = 13 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=revatI'>revatI</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=710'>710</a> 
+linenum = 139280
+
+```
+.²2 The last of the {%Nakshatras%} or lunar asterisms, containing thirty
+ two
+
+stars, figured by a tabor; one of the stars is 
+<g>ζ</g>
+ piscium.
+
+.²3 One of the {%Ma4tri12s%} or energies of the gods.
+```
+------------------------------------------------------------------------
+case = 14 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=rohin'>rohin</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=712'>712</a> 
+linenum = 139757
+
+```
+.²1 The fourth lunar asterism, figured by a wheeled carriage, and contai
+ning
+
+five stars, probably, 
+<g>α β γ δ ε</g>
+ {%Tauri;%} in mythology, the asterism is
+
+personified as one of the daughters of {%Daksha,%} and wives of the moon
+.
+```
+------------------------------------------------------------------------
+case = 15 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=viSAKa'>viSAKa</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=786'>786</a> 
+linenum = 154162
+
+```
+.²4 A spindle. f. ({#-KA#}) The sixteenth lunar asterism, figured by a f
+estoon,
+
+and containing four, or according to some, two stars, one of which is 
+<g>α</g>
+or
+<g>κ</g>
+ {%Libra.%}
+```
+------------------------------------------------------------------------
+case = 16 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SataBizA'>SataBizA</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=828'>828</a> 
+linenum = 162075
+
+```
+.{#SataBizA#}¦ f. ({#-zA#}) The twenty-fifth of the {%Nakshatras%} or lu
+nar
+
+mansions, containing 100 stars, one of which is 
+<g>λ</g>
+ Aquarii.
+
+.E. {#Sata#} a hundred, {#Bizaj#} to cure, aff. {#qa;#} requiring many
+```
+------------------------------------------------------------------------
+case = 17 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SravaRa'>SravaRa</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=862'>862</a> 
+linenum = 168711
+
+```
+.²2 Dripping, oozing. mf. ({#-RaH-RA#}) The twenty-third of the lunar as
+terisms,
+
+represented by three footsteps, and containing three stars or 
+<g>α, β</g>
+ and
+
+<g>γ</g> {%Aquilæ.%}
+```
+------------------------------------------------------------------------
+case = 18 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=SravaRa'>SravaRa</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=862'>862</a> 
+linenum = 168712
+
+```
+represented by three footsteps, and containing three stars or <g>α, β</g
+> and
+
+<g>γ</g>
+ {%Aquilæ.%}
+
+.E. {#Sru#} to hear, &c., aff. {#lyuw#} or {#yuc;#} or {#SravaRA#} the a
+sterism,
+```
+------------------------------------------------------------------------
+case = 19 
+headword= <a target='_word' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/indexcaller.php?input=slp1&output=deva&key=hasta'>hasta</a> 
+page = <a target='_page' href='http://www.sanskrit-lexicon.uni-koeln.de/scans/WILScan/2014/web/webtc/servepdf.php?page=972'>972</a> 
+linenum = 190465
+
+```
+.²3 The thirteenth lunar asterism, designated by a hand, and containing 
+five
+
+stars, one of which is 
+<g>γ</g>
+ or 
+<g>δ</g>
+ {%Corvi.%}
+
+.²4 A head of hair, or abundance of hair.
+```
+------------------------------------------------------------------------
+All set. I also noticed some Latin transcription errors, namely “oe” instead of “æ” at the end of some of those star names. Additionally, Case 15 had a Greek κ encoded as a k, so I rewrote that, and Cases 17 and 18 refer to the same entry.
+------------------------------------------------------------------------
+Re 'oe' to 'ae':  Good to mention those.  I found those in cases 2,17 (and same in 18) and changed.  
+Also changed the κ.
+In future cases where there is some 'extra' correction that needs to be made, make some additional 
+visible comment   so I'll be sure to notice  the extra correction, such as
+```
+ {%Aquilæ.%}    EXTRA: oe -> æ
+```
+Also a comment like you made to doubly alert me to the presence of such extras.
+
+FYI: The way I process your corrections is to take a file made of of 'old/new' pairs from the digitization 
+for each case;  initially the
+'new' is same as old.  I copy/paste from your correction here to correct the 'new' case. For example:
+```
+; Greek text case 0017: headword=SravaRa, page=862 (168711)
+168711 old represented by three footsteps, and containing three stars or <g>a, b</g> and
+168711 new represented by three footsteps, and containing three stars or <g>α, β</g> and
+```
+Then, once I'm done transferring your changes,  a program incorporates the changes into the digitization
+of Wilson.
+
+------------------------------------------------------------------------
+These corrections are now installed.  If you click on one of the headword links above, you should see the Greek text.
+
+This task now completed for Wilson.  I'll start a similar issue for another dictionary.
+
+You seem to adapt to this format quite readily.  Does the format need any adjustments from your perspective,  or is it ok for me to continue with this format for subsequent dictionaries?
+
+------------------------------------------------------------------------
+This format seems pretty good. Bring on the next one.
+
+
+
+> On Apr 17, 2015, at 2:59 PM, funderburkjim <notifications@github.com> wrote:
+> 
+> These corrections are now installed.  If you click on one of the headword links above, you should see the Greek text.
+> 
+> This task now completed for Wilson. I'll start a similar issue for another dictionary.
+> 
+> You seem to adapt to this format quite readily. Does the format need any adjustments from your perspective, or is it ok for me to continue with this format for subsequent dictionaries?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+> 
+
+------------------------------------------------------------------------
+@jmigliori I give you my thanks. I do not know your background, but happy to see you around.

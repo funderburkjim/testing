@@ -1,0 +1,152 @@
+https://api.github.com/repos/sanskrit-lexicon/GreekInSanskrit/issues/2
+------------------------------------------------------------------------
+Of the 34 dictionaries on the Cologne Sanskrit-Lexicon [home page](http://www.sanskrit-lexicon.uni-koeln.de/), 16 have Greek text that needs to be provided.  
+In one of these (the 1899 Monier-Williams Sanskrit-English dictionary), Greek text has been provided.  I thought it might be useful to review this before preparing materials for Jonathan to work with.
+
+The real work of coding the Greek in MW was done in 2007, and is described in a [note](http://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/mwaux/mwgreek/info.html) prepared by me in 2010.  One salient point of this work was that the Greek was coded in the **beta** transliteration.  
+Coding Greek in Beta appears to be quite analogous to coding Devanagari in one of the Sanskrit transliterations (such as Sanskrit Library Phonetic (SLP1), HK (Harvard-Kyoto) and others).  Both are ways to code a language with non-English letters by using only the basic [ASCII](http://en.wikipedia.org/wiki/ASCII) character set.  
+
+When Greek is coded in BETA, it needs to be transcoded to Unicode for proper representation.  
+[This](http://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/greek/beta1/index.php) web page was prepared by me to illustrate this transcoding, and to provide a work space where the accuracy of the transcoding from BETA to Unicode code be evaluated.   
+
+A third [web document](http://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/greek/index.php) itemizes all of the 711 headwords of the MW dictionary where Greek appears.
+
+@jmigliori  Let me guide you through this web page, as it illustrates several aspects of what you'll be working with when you tackle the missing Greek text in other dictionaries.
+
+* The table has one row for each headword in MW where Greek appears.
+* The first item in each row is just a counter (1 to 711).
+* The second item (`L`) is a record number in the digitization of the MW dictionary. (more on this in a moment)
+* The third item is the headword, displayed in Devanagari.  This item is also a link to a display of the digitization for the headword.  (Note rows 13 and 14 of the table have the same headword , but different `L` numbers.)
+* The 4th item is a list of the BETA coding for Greek text that apears in the particular record `L`.
+* The 5th item is the Unicode representation of the BETA coded Greek.  It is also a link, to Perseus Greek Word Study Tool.
+
+Now click  the *MW key* link, for the first row. अ  (first letter in Devanagari alphabet - like 'a').  Also keep in mind the `L` value `4` for this row.  You see several lines, the first of which is
+```
+(H1) अ 1 [p= 1,1] [L=1]	the first letter of the alphabet
+```
+and the fifth of which is
+```
+(H1) अ 3 [p= 1,1] [L=4]	(before a vowel अन्, exc. अ-ऋणिन्) , a prefix corresponding to Gk. ἀ, ἀν, 
+   Lat. in, Goth. and Germ. un, Eng. in or un, and having a negative or privative or contrary sense 
+   (अन्-एक not one ; अन्-अन्त endless ; अ-सत् not good ; अ-पश्यत् not seeing)
+```
+Note in particular the presence of Greek **ἀ, ἀν**  and that L=4.
+
+There are two links in this L=4 line.
+* At [p=**1,**1] is a link to a scanned image of the page 1 of the Monier-Williams Dictionary that contains this entry.  Go ahead and click it, and you'll see in the first column (since [p=1,**1**] - that 2nd 1 is column on page) our L=4 record, with the Greek text:
+![image](https://cloud.githubusercontent.com/assets/6393033/7167962/d6361320-e387-11e4-946f-9e7b68c68b49.png)
+
+The digitization of the Greek was originally done (by Wendy Teo) essentially working backwards:  look at the Greek text in the scanned image, and type in its representation at the appropriate spot in the digitization of MW.  Your workflow for Greek in the other dictionaries will likely be similar.
+
+* The second link occurs under each of the Greek words, and generates a lookup of the Greek word in the
+ Perseus Greek word study page.  Incidentally, I have found the usefulness of these links to be spotty. For instance, from the 7th row in the Greek in MW report, there is link to ὄκταλλος which yields no fruit at Perseus.  Since I don't know Greek,  it is not clear to me why this link to perseus fails.  
+
+Ok - that's it for examining the MW page for L=4.
+
+Back to the first row of the Greek in MW display.  The links from the Greek in the last column are the same links to Perseus.
+
+OK - that's the end for walk through of the Greek in MW display.
+
+## TODO
+
+Jonathan, I think you should spend some time examining the Greek in MW display.  Here are some questions that are unclear to me that maybe you can help resolve before we start with the other dictionaries.
+
+* Do you know BETA - is that something that is currently used by students of Greek.  Or, is almost all work
+  with Greek currently done via the Unicode representation of Greek.  In particular, when we get to the point
+  where you'll be entering Greek in the other Sanskrit dictionaries, **should Greek be entered in BETA or in Unicode** ?  My hunch is Unicode, but I'd like your opinion.  This is probably the most important point to 
+ decide before you proceed with the other dictionaries.
+
+*  It is likely that the BETA form is correct, since it was prepared by a person who had studied Greek. However, the transcoding to Unicode was done by me (using the sources mentioned in the other documents above) and I don't know Greek.  Thus, there may be errors in the Unicode representation of the BETA text.
+This Unicode representation has never been checked extensively.  Would you look at enough cases so you
+can determine whether the Unicode representation is correct?  If not, we'll need to spend some time perfecting this.
+
+* Is there any obvious reason why many links to Perseus fail?  This is a secondary question, but I've 
+  wondered about it for a long time.
+
+* Since the Monier-Williams dictionary of 1899 was compiled after most of the other European Sanskrit dictionaries, and since it drew heavily on these other dictionaries,  it is likely that most of the Greek text that you encounter in the other dictionaries will be represented in this list of 711 cases.  That's a reason that you might spend some time with MW before diving into the other dictionaries.
+
+
+I think we can get started with another dictionary once the BETA/Unicode choice is made.  I'm also going to solicit Peter's opinion on this, since he was involved in the coding of Greek in MW.
+
+------------------------------------------------------------------------
+After MW I guess PW is a good candidate. I've seen a lot of non-Unicode Old Greek, but never in BETA, so hope it can be left in the past. The Perseus question remains the most intriguing one for me as well.
+------------------------------------------------------------------------
+•I do know BETA from using the word lookup tool on Perseus. I’m working on a Mac, so entering the Greek in Unicode is very easy to do and preferable.
+
+•I had a cursory look at the MW Greek and I didn’t see any errors in the Unicode representation. I can take a closer look later.
+
+•This Perseus issue is tricky. The word linked to, ὄκταλλος, doesn’t have its own dictionary entry because it’s a dialect form only listed under another rare word (ὄκκον). Ὄκκον appears when you manually go to its entry in the Greek dictionary, but not when you click the link for it under ὄκταλλος in the Word Study Tool. I don’t know why this is, aside from Perseus being a sprawling database that’s prone to bugginess.
+
+With that addressed, I think I’m ready to start.
+------------------------------------------------------------------------
+That means that Perseus is badly interlinked, understood. After the manual checking - should we add a link to ὄκκον instead of the non-working link to ὄκταλλος?
+------------------------------------------------------------------------
+Sure
+
+
+
+> On Apr 16, 2015, at 3:14 AM, Marcis Gasuns <notifications@github.com> wrote:
+> 
+> That means that Perseus is badly interlinked, understood. After the manual checking - should we add a link to ὄκκον instead of the non-working link to ὄκταλλος?
+> 
+> —
+> Reply to this email directly or view it on GitHub.
+> 
+
+------------------------------------------------------------------------
+Interesting idea to add link to ὄκκον.  
+
+The accomplishment of this might be broken into three steps for MW:
+* identify (using the Greek in MW links) the subset of the 711 cases where the given link (such as 
+   ὄκταλλος) is no good.  @gasyoun Could you do this?
+* Hand Jonathan this (hopefully smaller) list.  He would then have to use knowledge of Greek to 
+   provide the better link (like ὄκκον.)  According to my current understanding of Perseus API, this
+   link would need to be coded in BETA.  I wonder if the Perseus API accepts Unicode (by some other parameter)?
+* I would modify things in MW displays to make use of these improved links.
+
+This enhancement is a secondary goal at present for Jonathan - the first goal is the coding of Greek in the
+other dictionaries.
+
+@jmigliori I'm glad you found a good explanation for the Perseus link problem, and that the Unicode representation looks correct.
+
+------------------------------------------------------------------------
+@funderburkjim my Greek is worse than my Spanish, so I would prefer to say no, the more that's it's secondary indeed. 711 cases would take a week or so.
+------------------------------------------------------------------------
+Actually, knowledge of Greek is not needed for step 1..   I don't know Greek, 
+but by clicking was able to see that the link to ὄκταλλος leads nowhere.That's all that is needed for step 1.  It's up to Jonathan to find meaningful links for the nowhere links.
+
+
+------------------------------------------------------------------------
+Maybe I could make a form, like the MW in Greek display with those 711 cases, but with an extra field
+that would have three radio buttons:  * OK  * PROBLEM * TODO  next to the Perseus links.  Then any of us could classify a few links when we have a few minutes,  and the results would be saved in a database when we mark 'OK' or 'PROBLEM'.  
+That way,  the initial screening for problematic links to Perseus would not be too onerous a task for anyone (since several people could contribute) and in a month or two we would have a list of PROBLEM cases for @jmigliori to examine.
+
+Does this sound like a useful approach?  Would anyone participate in this if I make such a form?
+------------------------------------------------------------------------
+That sounds like a good plan. I can certainly chip away at that list
+between working on the other dictionaries.
+
+On Thu, Apr 16, 2015 at 10:47 PM, funderburkjim <notifications@github.com>
+wrote:
+
+> Maybe I could make a form, like the MW in Greek display with those 711
+> cases, but with an extra field
+> that would have three radio buttons: * OK * PROBLEM * TODO. Then any of us
+> could do a few when we have a few minutes, and the results would be saved
+> in a database when we mark 'OK' or 'PROBLEM'.
+>
+> That way, the initial screening for problematic links to Perseus would not
+> be too onerous a task for anyone (since several people could contribute)
+> and in a month or two we would have a list of PROBLEM cases for @jmigliori
+> <https://github.com/jmigliori> to examine.
+>
+> Does this sound like a useful approach?
+>
+> —
+> Reply to this email directly or view it on GitHub
+> <https://github.com/sanskrit-lexicon/GreekInSanskrit/issues/2#issuecomment-93882189>
+> .
+>
+
+------------------------------------------------------------------------
+@funderburkjim if that does not take longer than 20 minutes for you, than it's a good idea.
