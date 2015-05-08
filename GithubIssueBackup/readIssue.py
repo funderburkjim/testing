@@ -1,16 +1,10 @@
 import requests,json,codecs,sys
 import re
-# May 7, 2015.  With the new system, I get a warning.
-# /afs/rrz.uni-koeln.de/vol/www/projekt/sanskrit-lexicon/http/docs/scans/awork/virtualenv/virtualenv-1.10/myVE/lib/python2.6/site-packages/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
-# According to
-# https://urllib3.readthedocs.org/en/latest/security.html,
-# the next lines turn off this warning 
-# But they advise against this. 
-# But this is not available!
-#import urllib3
-#urllib3.disable_warnings()
 
-headers = {'Authorization':'token 5805b0b83d64069d9a8fcacf30aea12ae9ff22da'}
+# To get a 'TOKEN', see
+# https://help.github.com/articles/creating-an-access-token-for-command-line-use/
+
+headers = {'Authorization':'token <TOKEN>'}  
 
 #url = 'https://api.github.com/repos/sanskrit-lexicon/ArabicInSanskrit/issues/1/comments'
 #url_project = 'https://api.github.com/repos/sanskrit-lexicon'
