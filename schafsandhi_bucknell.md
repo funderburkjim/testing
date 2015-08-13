@@ -355,7 +355,7 @@ Footnote 8: C denotes any consonant. When the preceding word ends in a short vow
   <td>A</td>
   <td>ir</td>
   <td>Ir</td>
-  <td><b>A i I u U f O E e o</b></td>
+  <td><sup>7</sup> <b>A i I u U f O E e o</b></td>
  </tr>
 </table>
 
@@ -372,7 +372,7 @@ Footnotes:
 
 ### Comparison implementation
 
-* For each of the table, a program constructs a corresponding input file
+* For each of the tables, a program constructs a corresponding input file
 ``` 
 python prep_vowel.py E vowel_test.txt
 python prep_consonant.py E1 consonant_test.txt
@@ -397,6 +397,17 @@ python ScharfSandhiTest2.py bucknell/consonant_test.txt > bucknell/log_consonant
 The two log files summarize the comparison. (see below for discussion)
 
 ### Implementation of Footnotes
-Footnotes 1
+* Footnotes 1 and 2 of the consonant table are expanded into multiple test cases, using the alternate vowels.
+* Similarly, Footnote 7 has been expanded into a list of vowels (last row of consonant table)
+* The other footnotes do not play a role in the implementation.
 
-### Sum
+### Meaning of 'E1' option in consonant sandhi
+scharfsandhi uses various run-time options when computing sandhi combinations.  Currently, there are four options,
+which have been further summarized into groups of 'simple' options. Both 'E' and 'E1' represent external sandhi; 
+the only difference is that (in consonant sandhi), the space is removed with option 'E' and retained with option 'E1' 
+when (after sandhi) the first word still ends in a consonant.   Bucknell does not address this detail, so the comparison
+between Bucknell and scharfsandhi was simplified by always leaving that space; that's why E1 was chosen for consonant sandhi.
+
+
+### Summary of differences - consonant sandhi
+
