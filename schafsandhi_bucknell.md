@@ -410,4 +410,31 @@ between Bucknell and scharfsandhi was simplified by always leaving that space; t
 
 
 ### Summary of differences - consonant sandhi
+This is a review of the log_consonant_test.txt summary file.
+
+697 cases are derived from Bucknell's consonant sandhi table.  In all but 3 of these cases, scharfsandhi computed the
+same result as the table.
+Here are the three differences.
+
+1. t S -> c C (Bucknell)  c S (Scharfsandhi)
+   Note that ScharfSandhi computes t Sa -> c Ca;  in other words, the two agree when the 2nd word is followed by a vowel.
+2. n S -> Y C (Bucknell)  Y S (Scharfsandhi)
+   In contrast to case 1, using 'Sa' here has no change in Scharfsandhi.  This appears to be a real difference.
+3. n l -> M l (Bucknell)  l~ l (Scharfsandhi).   
+   In footnote 5, Bucknell mentions the nasalized l as an alternative.  
+4. Footnote 6 indicates a difference (not captured in the comparison).  
+   Bucknell's example (-in e -> -inn e) differences from the E1 option of sharf sandhi, which gives (in e -> in e).
+   However, scharfsandhi does give (iN e -> iNN e), in agreement with Bucknell. 
+
+### Possible additional options to Scharfsandhi
+The footnotes 3,4,5 indicate optional sandhi combinations that are not reachable by the current scharfsandhi program.
+
+### Summary of differences - vowel sandhi
+This is a review of the log_vowel_test.txt summary file.
+
+121 cases are derived from Bucknell's vowel sandhi table.  In all but 10 of these cases, scharfsandhi computed the
+same result as the table.
+
+Here are the differences.
+
 
