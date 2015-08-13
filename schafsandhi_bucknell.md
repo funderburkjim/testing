@@ -370,5 +370,33 @@ Footnotes:
 7. Here V denotes any vowel other than a.
 
 
+### Comparison implementation
 
+* For each of the table, a program constructs a corresponding input file
+``` 
+python prep_vowel.py E vowel_test.txt
+python prep_consonant.py E1 consonant_test.txt
 
+A sample element of vowel_test.txt is
+E:a a:A
+E:A a:A
+
+These two correspond to the first row and first column of the vowel table above, and may be read:
+"When a word ending in 'a' or 'A' is combined by External sandhi to a word beginning with 'a', then
+ the ending letter and beginning letter coalesce into a single letter, 'A' "   (according to Bucknell).
+ 
+```
+
+* Bucknell's results are then compared to the result computed by scharfsandhi.py, using the test program
+  ScharfSandhiTest2.py:
+```
+python ScharfSandhiTest2.py bucknell/vowel_test.txt > bucknell/log_vowel_test.txt
+python ScharfSandhiTest2.py bucknell/consonant_test.txt > bucknell/log_consonant_test.txt
+```
+
+The two log files summarize the comparison. (see below for discussion)
+
+### Implementation of Footnotes
+Footnotes 1
+
+### Sum
