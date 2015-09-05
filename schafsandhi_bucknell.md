@@ -138,7 +138,7 @@ of the printed tables.
   <td>-AvO-</td>
   <td>-A O-</td>
   <td>-a O-</td>
-  <td>-a o-</td>
+  <td>-a O-</td>
   <td><b>O-</b></td>
  </tr>
 </table>
@@ -435,6 +435,7 @@ This is a review of the log_vowel_test.txt summary file.
 121 cases are derived from Bucknell's vowel sandhi table.  In all but 10 of these cases, scharfsandhi computed the
 same result as the table.
 
-Here are the differences.
+All of the differences are from the '-o' column of the vowel sandhi table, and in each row except the first ('-a') row.
+These 10 differences have a single cause.  
 
 
