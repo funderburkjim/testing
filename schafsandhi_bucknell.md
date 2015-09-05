@@ -436,6 +436,48 @@ This is a review of the log_vowel_test.txt summary file.
 same result as the table.
 
 All of the differences are from the '-o' column of the vowel sandhi table, and in each row except the first ('-a') row.
-These 10 differences have a single cause.  
+For example, '-o A-' => 'avA' by scharfsandhi, but Bucknell has '-o A-' => 'a A'. All the examples are like this;
+Bucknell drops the 'v', but scharfsandhi keeps the 'v'.
+
+This should be contrasted with the '-e' column results, where '-e A' => 'a A' by both Bucknell table and scharfsandhi,
+and similarly for the others.  
+
+An application of ScharfSandhiArg shows the cause.
+First, for '-e A':
+```
+python ScharfSandhiArg.py E 'e A'
+sandhi: START: "e A"
+sandhimain: START: "e A"
+ecoyavayavah: "ay A"
+acsandhi: "ay A"
+lopahsakalyasya: "a A"   <<  the 'y' is dropped here
+sandhimain: DONE: "a A"
+sandhi: DONE: "a A"
+ScharfSandhiArg: ans="a A"
+```
+And, next for '-o A-':
+```
+python ScharfSandhiArg.py 'E' 'o A'
+sandhi: START: "o A"
+sandhimain: START: "o A"
+ecoyavayavah: "av A"
+acsandhi: "av A"      <<< lopahsakalyasya does not drop the 'v'
+sandhimain: DONE: "avA"
+sandhi: DONE: "avA"
+ScharfSandhiArg: ans="avA"
+```
+
+So the difference is that lopahsakalyasya routine drops the 'y' but not the 'v'.
+The relevant Panini sutra is 8.3.19.  lopaH SAkalyasya.
+Now, this sutra DOES say to drop both 'y' and 'v'.  In a communication with Scharf on this 
+point, he mentions:
+```
+Indeed in my XML version of the sandhi program (attached), I do delete the 'v' as well as the 'y'.
+In the Pascal version, latest dated 25 Nov. 2013 attached, I defered to contemporary textbooks which implement this only for 'y'.
+```
+
+I have modified the pythonv4 version of scharfsandhi.py so there is an option which also drops the 'v'.  This will
+be with the 'E2'  variant of external sandhi.
+
 
 
