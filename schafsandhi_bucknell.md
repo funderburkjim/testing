@@ -477,7 +477,13 @@ In the Pascal version, latest dated 25 Nov. 2013 attached, I defered to contempo
 ```
 
 I have modified the pythonv4 version of scharfsandhi.py so there is an option which also drops the 'v'.  This will
-be with the 'E2'  variant of external sandhi. 
+be with the 'E2'  variant of external sandhi. The vowel test, with option E2, shows identical results when comparing
+scharfsandhi computation to Bucknell's table:
+```
+python prep_vowel.py E2 vowel_test2.txt
+python ScharfSandhiTest2.py bucknell/vowel_test2.txt > bucknell/log_vowel_test2.txt
+```
+The adjustment for E2 sandhi option is done with no interference to any other sandhi options.
 
 
 
