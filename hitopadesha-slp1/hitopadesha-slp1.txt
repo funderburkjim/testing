@@ -55,7 +55,7 @@
 0056A: samudram iva durDarzam nfpam BAgyam ataH param .. 5..
 
 0057F: vidyA dadAti vinayaM vinayAd yAti pAtratAm .
-0057A: vidyA dadAti vinayam vinayAd yAti pAtratAm .
+0057A: vidyA dadAti vinayam vinayAt yAti pAtratAm .
 ; 
 0058F: pAtratvAt DanamApnoti DanAd DarmaM tataH suKam .. 6..
 0058A: pAtratvAt Danam Apnoti DanAt Darmam tataH suKam .. 6..
@@ -64,22 +64,22 @@
 0059A: vidyA Sastram ca SAstram ca dve vidye pratipattaye .
 
 0060F: AdyA hAsyAya vfdDatve dvitIyAdriyate sadA .. 7..
-0060A: AdyA hAsyAya vfdDatve dvitIyAdriyate sadA .. 7..
+0060A: AdyA hAsyAya vfdDatve dvitIyA Adriyate sadA .. 7..
 
 0061F: yan nave BAjane lagnaH saMskAro nAnyaTA Bavet .
-0061A: yan nave BAjane lagnaH saMskAraH nAnyaTA Bavet .
+0061A: yad nave BAjane lagnaH saMskAraH na anyaTA Bavet .
 
 ;0062 kaTA\-cCalena bAlAnAM nItistad iha kaTyate .. 8..
 0062F: kaTAcCalena bAlAnAM nItistad iha kaTyate .. 8..
-0062A: kaTAcCalena bAlAnAm nItistad iha kaTyate .. 8..
+0062A: kaTAcCalena bAlAnAm nItiH tad iha kaTyate .. 8..
 
 ;0063 mitra\-lABaH suhfd\-Bedo vigrahaH sanDireva ca .
 0063F: mitralABaH suhfdBedo vigrahaH sanDireva ca .
-0063A: mitralABaH suhfdBedaH vigrahaH sanDireva ca .
+0063A: mitralABaH suhfdBedaH vigrahaH sanDiH eva ca .
 
 ;0064 paYca\-tantrAt taTAnyasmAd granTAd Akfzya liKyate .. 9..
 0064F: paYcatantrAt taTAnyasmAd granTAd Akfzya liKyate .. 9..
-0064A: paYcatantrAt taTAnyasmAd granTAd Akfzya liKyate .. 9..
+0064A: paYcatantrAt taTA anyasmAt granTAt Akfzya liKyate .. 9..
 
 ;0065        aTa kaTA\-muKam
 0065F:        aTa kaTAmuKam
@@ -148,7 +148,7 @@
 0081A: varam jAtaH pretaH varam api ca kanyAvajanitA .
 
 0082F: varaM banDyA BAryA varamapi ca garBezu vasatir
-0082A: varam banDyA BAryA varam api ca garBezu vasatir
+0082A: varam banDyA BAryA varam api ca garBezu vasatiH
 
 ;0083 na vAvidvAn rUpa\-draviRa\-guRa\-yukto'pi tanayaH .. 14..
 0083F: na vAvidvAn rUpadraviRaguRayukto'pi tanayaH .. 14..
@@ -171,7 +171,7 @@
 
 ;0088 na patati kaWinI sa\-samBramAd yasya .
 0088F: na patati kaWinI sasamBramAd yasya .
-0088A: na patati kaWinI sasamBramAd yasya .
+0088A: na patati kaWinI sasamBramAt yasya .
 
 0089F: tenAmbA yadi sutinI
 0089A: tena ambA yadi sutinI
@@ -200,14 +200,14 @@
 
 ;0096 ekaScandrastamo hanti na ca tArA\-gaRErapi .. 18..
 0096F: ekaScandrastamo hanti na ca tArAgaRErapi .. 18..
-0096A: ekaH candras tamaH hanti na ca tArAgaREH api .. 18..
+0096A: ekaH candraH tamaH hanti na ca tArAgaREH api .. 18..
 
 ;0097 puRya\-tIrTe kftaM yena tapaH kvApyatiduzkaram .
 0097F: puRyatIrTe kftaM yena tapaH kvApyatiduzkaram .
 0097A: puRyatIrTe kftam yena tapaH kva api atiduzkaram .
 
 0098F: tasya putro Baved vaSyaH samfdDo DArmikaH suDIH .. 19..
-0098A: tasya putraH Baved vaSyaH samfdDaH DArmikaH suDIH .. 19..
+0098A: tasya putraH Bavet vaSyaH samfdDaH DArmikaH suDIH .. 19..
 
 ;0099 taTA coktaM \-\-
 0099F: taTA coktaM 
@@ -246,7 +246,7 @@
 
 ;0109 DanurvaMSa\-viSudDo'pi nirguRaH kiM karizyati .. 23..
 0109F: DanurvaMSaviSudDo'pi nirguRaH kiM karizyati .. 23..
-0109A: DanurvaMSaviSudDaH api nirguRaH kim karizyati .. 23..
+0109A: DanuH vaMSaviSudDaH api nirguRaH kim karizyati .. 23..
 
 0110F: hA hA putraka nADItaM gatAsvetAsu rAtrizu .
 0110A: hA hA putraka na aDItam gatAsu etAsu rAtrizu .
@@ -266,7 +266,7 @@
 0114A: sAmAnyam etat paSuBiH narARAm .
 
 0115F: jYAnaM narARAmaDiko viSezo
-0115A: jYAnam narARAm aDikaH viSezo
+0115A: jYAnam narARAm aDikaH viSezaH
 
 0116F: jYAnena hInAH paSuBiH samAnAH .. 25..
 0116A: jYAnena hInAH paSuBiH samAnAH .. 25..
@@ -309,7 +309,7 @@
 0126A: anyat ca 
 
 0127F: yad aBAvi na tad BAvi BAvi cen na tad anyaTA .
-0127A: yad aBAvi na tad BAvi BAvi cet na tad anyaTA .
+0127A: yad aBAvi na tad BAvi BAvi ced na tad anyaTA .
 
 ;0128 iti cintA\-viza\-Gno'yamagadaH kiM na pIyate .. 29..
 0128F: iti cintAvizaGno'yamagadaH kiM na pIyate .. 29..
@@ -353,7 +353,7 @@
 
 ;0138 anyacca \-\-
 0138F: anyacca 
-0138A: anyacca 
+0138A: anyat ca 
 
 ;0139 udyoginaM puruza\-siMhamupEti lakzmIr
 0139F: udyoginaM puruzasiMhamupEti lakzmIr
