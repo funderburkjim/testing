@@ -1,4 +1,4 @@
-; A convention of this file is that lines starting with semicolon are comments
+01; A convention of this file is that lines starting with semicolon are comments
 ; Begun approx. Apr 2016
 ; Each line is represented in two forms:
 ;  F  is the final sandhi form; this is the version one sees printed
@@ -317,7 +317,7 @@
 
 ;0129 etat kAryAkzamARAM kezAMcid Alasya\-vacanam .
 0129F: etat kAryAkzamARAM kezAMcid Alasyavacanam .
-0129A: etat kAryAkzamARAm kezAm cid Alasyavanam .
+0129A: etat kAryAkzamARAm kezAm cid Alasyavacanam .
 
 ; Kale divergence:
 ; 0130 not in Kale
