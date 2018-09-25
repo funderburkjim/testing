@@ -50,7 +50,9 @@ What is not to be can never be, and if it is to be, it can never be otherwise --
 
 ;hitoeng004.txt
 
-These are the idle words of some, incapable of doing anything.
+These are the idle words of some, incapable of doing anything
+
+; The next two lines are out of order with the lines of hitopadesha_slp1.txt.
 Even thinking fate to be favourable one should not give up one's industry ; (for) one can never get oil from sesamum without exertion. Moreover,
 Fortune approaches him, the lion among men, who is industrious. It is the weak-minded who say "Fate gives". Dismissing all idea about (lit., killing) fate, put forth manly efforts depending upon your own strength; and if, after an exertion is made, success attend not, where is the blame (i.e., you are not to blame; or, find out where the fault lay)? 
 ; 31. 
