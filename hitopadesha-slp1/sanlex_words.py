@@ -75,6 +75,13 @@ def init_skip_words():
   words = words + wordsline
  return set(words)
 
+def adjust_word(word):
+ word1 = re.sub(r'EH$','a',word)
+ word1 = re.sub(r'[mMH]$','',word1)
+ word1 = re.sub(r'e$','a',word1)
+ word1 = re.sub(r'asya$','a',word1)
+ return word1
+
 def adjust(recs):
  skip_words = init_skip_words() 
  for rec in recs:
@@ -82,7 +89,7 @@ def adjust(recs):
   for word in rec.words:
    if word in skip_words:
     continue
-   word1 = re.sub(r'[mMH]$','',word)
+   word1 = adjust_word(word)
    wordsadj.append(word1)
   rec.wordsadj = wordsadj
 
