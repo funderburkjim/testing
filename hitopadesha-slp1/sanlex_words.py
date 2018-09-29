@@ -76,7 +76,18 @@ def init_skip_words():
   words = words + wordsline
  return set(words)
 
+predetermined_words = {
+ "Bavanti":"BU","uvAca":"vac","abravIt":"brU",
+ "anyat":"anya",
+ "yataH":"yatas",
+ "ataH":"atas",
+ "etat":"etad",
+ 
+}
 def adjust_word(word):
+ if word in predetermined_words:
+  return predetermined_words[word]
+ # remove common inflections for nouns ending in 'a'
  word1 = re.sub(r'EH$','a',word)
  word1 = re.sub(r'AH$','a',word)
  word1 = re.sub(r'A[td]$','a',word)
@@ -84,6 +95,10 @@ def adjust_word(word):
  word1 = re.sub(r'[mMH]$','',word1)
  word1 = re.sub(r'e$','a',word1)
  word1 = re.sub(r'asya$','a',word1)
+ word1 = re.sub(r'Aya','a',word1)
+ word1 = re.sub(r'A[nR]Am','a',word1)
+ word1 = re.sub(r'ezu','a',word1)
+
  return word1
 
 def adjust(recs):
