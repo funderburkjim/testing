@@ -412,9 +412,10 @@
 0154F: aparaYca 
 0154A: aparam ca 
 
+; verse 39 not in Kale English
 ;0155     pustakezu ca nADItaM nADItaM guru\-sanniDO .
 0155F:     pustakezu ca nADItaM nADItaM gurusanniDO .
-0155A:     pustakezu ca nADItam nADItam gurusanniDO .
+0155A:     pustakezu ca na aDItam na aDItam gurusanniDO .
 
 ;0156     na SoBate saBAmaDye jAra\-garBa iva striyAH .. 39..
 0156F:     na SoBate saBAmaDye jAragarBa iva striyAH .. 39..
@@ -507,7 +508,7 @@
 
 ;0180 anyacca \-\-
 0180F: anyacca 
-0180A: anyad ca 
+0180A: anyat ca 
 
 ;0181 yaTodaya\-girerdravyaM sannikarzeRa dIpyate .
 0181F: yaTodayagirerdravyaM sannikarzeRa dIpyate .
@@ -541,9 +542,10 @@
 0189F: samarpitavAn ..
 0189A: samarpitavAn ..
 
+; markup from Sanskrit Documents. not part of text. Thus commented out.
 ;0190 \medskip\hrule\medskip %i \-\-
-0190F: \medskip\hrule\medskip %i 
-0190A: \medskip\hrule\medskip %i 
+;0190F: \medskip\hrule\medskip %i 
+;0190A: \medskip\hrule\medskip %i 
 
 ;0191 1 mitra\-lABaH
 0191F: 1 mitralABaH
@@ -634,7 +636,7 @@
 
 ;0213 anyacca \-\-vizayiRAmidamavaSyaM kartavyam .
 0213F: anyacca vizayiRAmidamavaSyaM kartavyam .
-0213A: anyad ca vizayiRAm idam avaSyam kartavyam .
+0213A: anyat ca vizayiRAm idam avaSyam kartavyam .
 
 0214F: utTAyotTAya bodDavyaM kimadya sukftaM kftam .
 ;0214Kale:  utTAyotTAya bodDavyaM mahadBayamupasTitam .

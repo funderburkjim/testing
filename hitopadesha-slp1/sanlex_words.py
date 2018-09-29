@@ -65,6 +65,7 @@ saH kaH yaH sA kA yA kim
 tasya kasya yasya
 na ca tu iti api atra yatra eva vA
 tena yena kena taTA yaTA
+iva
 """
 def init_skip_words():
  lines = skip_words_txt.splitlines()
@@ -77,6 +78,9 @@ def init_skip_words():
 
 def adjust_word(word):
  word1 = re.sub(r'EH$','a',word)
+ word1 = re.sub(r'AH$','a',word)
+ word1 = re.sub(r'A[td]$','a',word)
+ word1 = re.sub(r'e[nR]a$','a',word)
  word1 = re.sub(r'[mMH]$','',word1)
  word1 = re.sub(r'e$','a',word1)
  word1 = re.sub(r'asya$','a',word1)
