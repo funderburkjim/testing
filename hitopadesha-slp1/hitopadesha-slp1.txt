@@ -588,6 +588,7 @@
 
 ;0201 sADayantyASu kAryARi kAka\-kUrma\-mfgAKuvat .. 2..
 0201F: sADayantyASu kAryARi kAkakUrmamfgAKuvat .. 2..
+; what is 'vat' in 'AKuvat' ?
 0201A: sADayanti ASu kAryARi kAkakUrmamfgAKuvat .. 2..
 
 ;0202 rAjaputrA UcuH \-\-kaTametat \?
@@ -614,6 +615,7 @@
 ; KALE dvitIyamAyAntaM  =? dvitIyam AyAntam,  participle AyA:  coming
 ; KALE vyADam   =  piercer, hunter
 0207F: dvitIyamAyAntaM pASahastaM vyADamapaSyat . tamAlokyAcintayat
+; AyAntam:  prap of A-yA  (m. sing. acc.)   ??
 0207A: dvitIyam AyAntam pASahastam vyADam apaSyat . tam Alokya acintayat
 
 ;0208 \-\-adya prAtarevAnizwa\-darSanaM jAtam .
@@ -698,7 +700,7 @@
 
 ;0229 brUte \-\-Bo Bo panTAH \! idaM suvarRa\-kaNkaRaM gfhyatAm .
 0229F: brUte Bo Bo panTAH \! idaM suvarRakaNkaRaM gfhyatAm .
-; pAnTAH ?   (traveler)  panTAH (path)
+; pAnTAH   (traveler) cf. mw 'paTin'
 0229A: brUte Bo Bo panTAH \! idam suvarRakaNkaRam gfhyatAm .
 
 ;0230 tato loBAkfzwena kenacit pAnTena Alocitam \-\-BAgyena etat
@@ -754,6 +756,7 @@
 
 ;0244 tataH kenacid DArmikeRAhamupadizwaH . dAna\-DarmAdikaM caratu
 0244F: tataH kenacid DArmikeRAhamupadizwaH . dAnaDarmAdikaM caratu
+; Adika ?
 0244A: tataH kenacid DArmikeRa aham upadizwaH . dAnaDarmAdikam caratu
 
 ;0245 BavAn iti . tad\-upadeSAdi\-dAnImahaM snAna\-SIlo dAtA vfdDo

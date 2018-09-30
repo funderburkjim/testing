@@ -95,9 +95,9 @@ def adjust_word(word):
  word1 = re.sub(r'[mMH]$','',word1)
  word1 = re.sub(r'e$','a',word1)
  word1 = re.sub(r'asya$','a',word1)
- word1 = re.sub(r'Aya','a',word1)
- word1 = re.sub(r'A[nR]Am','a',word1)
- word1 = re.sub(r'ezu','a',word1)
+ word1 = re.sub(r'Aya$','a',word1)
+ word1 = re.sub(r'A[nR]Am$','a',word1)
+ word1 = re.sub(r'ezu$','a',word1)
 
  return word1
 
