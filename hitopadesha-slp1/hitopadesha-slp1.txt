@@ -828,7 +828,7 @@
 0262A: pratyAKyAne ca dAne ca suKaduHKe priyApriye .
 
 0263F: AtmOpamyena puruzaH pramARamaDigacCati .. 13..
-0263A: AtmOpamyena puruzaH pramARam +aDigacCati .. 13..
+0263A: AtmOpamyena puruzaH pramARam aDigacCati .. 13..
 
 ;0264 anyacca \-\-
 0264F: anyacca 
@@ -932,7 +932,7 @@
 0290A: aparam ca 
 
 0291F: sarvasya hi parIkzyante svaBAvA netare guRAH .
-0291A: sarvasya hi parIkzyante svaBAvAH na i+tare guRAH .
+0291A: sarvasya hi parIkzyante svaBAvAH na itare guRAH .
 
 0292F: atItya hi guRAn sarvAn svaBAvo mUrDni vartate .. 20..
 0292A: atItya hi guRAn sarvAn svaBAvaH mUrDni vartate .. 20..

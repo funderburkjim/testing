@@ -61,7 +61,7 @@ def init_recs(filein,first,last):
  return recs
 
 skip_words_txt="""
-saH kaH yaH sA kA yA kim
+saH sa kaH yaH sA kA yA kim
 tasya kasya yasya
 na ca tu iti api atra yatra eva vA
 tena yena kena taTA yaTA
@@ -92,12 +92,13 @@ def adjust_word(word):
  word1 = re.sub(r'AH$','a',word)
  word1 = re.sub(r'A[td]$','a',word)
  word1 = re.sub(r'e[nR]a$','a',word)
- word1 = re.sub(r'[mMH]$','',word1)
  word1 = re.sub(r'e$','a',word1)
  word1 = re.sub(r'asya$','a',word1)
  word1 = re.sub(r'Aya$','a',word1)
  word1 = re.sub(r'A[nR]Am$','a',word1)
  word1 = re.sub(r'ezu$','a',word1)
+ word1 = re.sub(r'An$','a',word)
+ word1 = re.sub(r'[mMH]$','',word1)
 
  return word1
 
