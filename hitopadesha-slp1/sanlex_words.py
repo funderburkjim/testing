@@ -88,18 +88,19 @@ def adjust_word(word):
  if word in predetermined_words:
   return predetermined_words[word]
  # remove common inflections for nouns ending in 'a'
- word1 = re.sub(r'EH$','a',word)
- word1 = re.sub(r'AH$','a',word)
- word1 = re.sub(r'A[td]$','a',word)
- word1 = re.sub(r'e[nR]a$','a',word)
- word1 = re.sub(r'e$','a',word1)
+ word1 = word
+ word1 = re.sub(r'EH$','a',word1)
+ word1 = re.sub(r'AH$','a',word1)
+ word1 = re.sub(r'A[td]$','a',word1)
+ word1 = re.sub(r'e[nR]a$','a',word1)
  word1 = re.sub(r'asya$','a',word1)
  word1 = re.sub(r'Aya$','a',word1)
  word1 = re.sub(r'A[nR]Am$','a',word1)
  word1 = re.sub(r'ezu$','a',word1)
- word1 = re.sub(r'An$','a',word)
+ word1 = re.sub(r'An$','a',word1)
  word1 = re.sub(r'[mMH]$','',word1)
-
+ word1 = re.sub(r'e$','a',word1)
+ 
  return word1
 
 def adjust(recs):

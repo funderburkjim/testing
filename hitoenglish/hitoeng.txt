@@ -135,6 +135,7 @@ Let me therefore carefully see it. He said aloud -- "Where is thy bracelet?" The
 ; - 8.
 ; line 0249
 Out of these the first four may be practised even for display, while the last four are found in the magnanimous-hearted only.
+; line 0251
 And so great is my freedom from desire, that I wish to give away, to any body whatsoever, the gold bracelet although secure in my hand. Yet the (indescriminate) talk of the people
 
 ;hitoeng008.txt
@@ -142,33 +143,51 @@ And so great is my freedom from desire, that I wish to give away, to any body wh
 that a tiger eats men is difficult to be avoided (lit., warded off). For,
 People, who are the blind followers of one another, regard not a preaching bawd as an authority in religious matters, as they do a Brahmana although (he happens to be) a cow-killer.
 ; -10
-I, on my part, bave studied the codes of religious law. Hear me.
+; line 0256
+I, on my part, have studied the codes of religious law. Hear me.
+; line 0257
 O son of Pandu, as is a shower of rain to the Maru (desert) land, or food to one afflicted with hunger, so is a gift to the poor, full of fruit.
+; line 0259
 As life is dear to oneself so it is to (other) creatures. The good show pity to creatures by comparing (them) to themselves. Moreover,
+; line 0262
 In refusing and giving, in pleasure and pain, and in things (or acts) agreeable and disagreeable, a man knows the standard (of action) by self-comparison. Also,
+; line 0265
 He, who looks upon another's wife as a mother, another's wealth as a clod of earth, and upon all creatures as his own self, is a (truly) wise man.
+; line 0267
 You are in hard distress (lit., extremely ill-situated) and hence I am endeavouring to give it to you.
+; line 0269
 Enrich the poor, O son of Kunti ; bestow not wealth upon the rich; medicine is wholesome to him who is diseased; what need of medicine has he that is whole ? And again,
+; line 0272
 A gift, which is given for the sake of charity, to one who is not a benefactor (or who cannot make a return for it), and in the proper place, at the proper time and to a proper recipient is, (the sages) consider, a gift of the best sort.
+; line 0274
 Therefore, bathe in this lake and accept this gold bracelet. Thereupon, placing confidence in his words, no sooner did the traveller enter the lake for bathing than he stuck in deep mud and was unable to run away. The tiger seeing him plunged into the mire said -- Ha, thou art fallen into deep mud. I will lift thee out of it. Saying so he approached him gently : and the traveller being seized by the tiger reflected --
+; line 0279
 That he reads the texts of religious law or studies the Vedas, is no reason why confidence should be reposed in a villain : it is the nature that predominate in such a case : just as by nature the milk of cows is sweet.
 
 ;hitoeng009.txt
-
+; line 0283
 Also, the actions of those, whose senses and mind are not under control, are like the bath of an elephant:* knowledge without action is a burden, like feeding an ill-natured (lit. unlucky) woman or like ornaments on an ugly woman.
 [Page 8]
+; line 0286
 I, therefore, did not do well in that I placed confidence in
 this ferocious beast. For, says the precept --
 Trust should never be placed in rivers, in persons having weapons in their hands, in animals armed with claws, and horns, as well as in women and royal families.** Again,
+; line 0291
 It is the natural disposition of every one that is tested, and not his other qualities; for having surpassed all (other) qualities, disposition stands at the head. And further,
 ; 20
  That well-known sporter in the sky, the destroyer of sin (darkness), possessor of a thousand rays (bands), and marching in the midst of the stars, even he, the Moon, is devoured (eclipsed) by Rahu, by the decree of fate: who is able to efface what is written on the forehead ? 
+; line 0298
 While thus musing he was killed by the tiger, and eaten.
 Therefore I say "Through the last of a bracelet &c." For this reason nothing rash should at all be done. For,
+; line 0301
 Food well digested, a son very wise (well educated), a wife well disciplined, a king served faithfully, what is spoken after being well thought over and what is done after due consideration -- these do not lead to a bad result even after a very long time.
+; line 0305
 On hearing these words a certain pigeon said arrogantly -- Ah, why is it so said ?
+; line 0307
 The words (counsel) of the aged should be acted upon (followed) only when the time of calamity is at hand : if we consider thus in all matters, we can hardly proceed to take our food. For,
+; line 0310
 Everything on the surface of the earth, food and drink, is involved in doubt: to what should an attempt be directed and how should life be supported ?
+; line line 0313
 One who is envious, one given to reviling, one (ever) discontented, one who is irascible and one who is always suspicious -- these six have misery for their lot.
 * Which is useless as the animal is sure to cover his body the next moment with mud.
 ** (As far as third favour is concerned).
@@ -176,27 +195,41 @@ One who is envious, one given to reviling, one (ever) discontented, one who is i
 ;hitoeng010.txt
 
 ; 10
+; line 0315
 On hearing this the pigeons alighted on (the grains ). For,
+; line 0317
 Even those, who are masters of the great Shastras, well-informed, and able to remove doubts, experience trouble when (their judgment is) blinded by avarice. Again --
+; line 0320
 From greed proceeds disquietude, from greed springs up the desire (for pleasures), and from greed result infatuation and (finally) ruin; greed is the root of sin.
+; line 0322
 And again,
+; line 0323
 The existence of a gold deer was impossible and yet Rama coveted (such) a deer; as a general rule when (some) calamity is impending the talents of men become clouded. 
 ; 28
 [Page 9]
+; line 0327
 After that they were all caught in the net. Then all of them began to revile him, by whose advice they had descended there. For,
+; line 0329
 One should not go at the head of (lead) a multitude; if the undertaking succeeds, the fruit is the same to (equally shared by) all; but if it fails, the leader is killed. 
+; line 0331
 Hearing how he was reproached, Chitragriva said -- It is not his fault. For,
+; line 0332
 Of misfortunes about to befall, even a friend becomes the cause: when a calf is to be tied down the leg of the mother serves as a post.
 He is a friend of the afflicted who is able to deliver them from misery, and not he, who is clever (only) in condemning a thing ill done or omitted to be done. (With the reading न तु भीत -- clever in finding fault with the manner of protecting the distressed.)
+; line 0337
 In the time of adversity, perplexity itself is the sign of a weak-minded man. Therefore, taking courage in this case, think out a remedy. For,
+; line 0339
 Fortitude in adversity and again forbearance in prosperity, eloquence in an assembly and valour on the battle-field, a liking for fame (good name) and a strong attachment to study -- these are the natural possessions of the magnanimous.
+; line 0343
 A mother rarely gives birth to a son, an ornament of the three worlds, who does not rejoice in prosperity or feel sorrow in adversity and is firm in battle. Moreover,
+; line 0346
 A man, wishing for welfare in this world, should avoid theee six faults ; viz., sleepiness, slothfulness, timidity, anger, idleness and dilatoriness.
 
 ;hitoeng011.txt
 
-
+; line 0348
 Even now let this be done. Let us all, being of one mind, fly away with the net. For,
+; line 0350
 The union of even small things leads to the accomplishment of an object ; infuriated (rutting) elephants are tied down by means of grass twisted (made) into a rope.
 Union with the members of their family, although insignificant, is for the good of men ; rice stripped of even its husk will not grow.
 The birds, having thus taken counsel, flew up all with the net. Thereupon the fowler, seeing them, from afar, carrying off the net, and running after them, thought to himself,
