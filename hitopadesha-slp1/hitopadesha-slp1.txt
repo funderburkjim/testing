@@ -1524,7 +1524,7 @@
 0449A: vAyasaH aham . hiraRyakaH vihasya Aha kA tvayA saha mEtrI \? yataH 
 
 0450F: yad yena yujyate loke buDastat tena yojayet .
-0450A: yad yena yujyate loke buDaH tat tena yojayet .
+0450A: yad yena yujyate loke buDaH tad tena yojayet .
 
 0451F: ahamannaM BavAn BoktA kaTaM prItirBavizyati .. 54..
 0451A: aham annam BavAn BoktA kaTam prItiH Bavizyati .. 54..
@@ -1569,11 +1569,11 @@
 
 ;0462 kaTametan\-mAMsaM sulalitaM BakzayAmi \? Bavatu\, viSvAsaM tAvad
 0462F: kaTametanmAMsaM sulalitaM BakzayAmi \? Bavatu\, viSvAsaM tAvad
-0462A: kaTam etad mAMsam sulalitam BakzayAmi \? Bavatu\, viSvAsam tAvad
+0462A: kaTam etad mAMsam sulalitam BakzayAmi \? Bavatu\, viSvAsam tAvat
 
 ;0463 utpAdayAmi ityAlocya upasftyAbravIt \-\-mitra \! kuSalaM te \?
 0463F: utpAdayAmi ityAlocya upasftyAbravIt mitra \! kuSalaM te \?
-0463A: utpAdayAmi iti AlocyaH upasftya abravIt mitra \! kuSalam te \?
+0463A: utpAdayAmi iti Alocya upasftya abravIt mitra \! kuSalam te \?
 
 ;0464 mfgeRoktam \-\-kastvam \?
 0464F: mfgeRoktam kastvam \?
@@ -1646,7 +1646,7 @@
 
 ;0482 gfDraH prativasati . aTa kfpayA taj\-jIvanAya tad\-vfkza\-vAsinaH
 0482F: gfDraH prativasati . aTa kfpayA tajjIvanAya tadvfkzavAsinaH
-0482A: gfDraH prativasati . aTa kfpayA tad jIvanAya tad vfkzavAsinaH
+0482A: gfDraH prativasati . aTa kfpayA tajjIvanAya tad vfkzavAsinaH
 
 0483F: pakziRaH svAhArAt kiMcit kiMcid udDftya tasmE dadati\, tenAsO
 0483A: pakziRaH svAhArAt kiM cid kiMcid udDftya tasmE dadati \, tena asO
@@ -1665,7 +1665,7 @@
 
 ;0487 tacCrutvA jaradgavena uktam \-\-ko'yamAyAti \? dIrGakarRo
 0487F: tacCrutvA jaradgavena uktam ko'yamAyAti \? dIrGakarRo
-0487A: tad SrutvA jaradgavenaH uktam kaH ayam AyAti \? dIrGakarRaH
+0487A: tad SrutvA jaradgavena uktam kaH ayam AyAti \? dIrGakarRaH
 
 ;0488 gfDramavalokya sa\-BayamAha \-\-hA hato'smi yato'yaM mAM
 0488F: gfDramavalokya saBayamAha hA hato'smi yato'yaM mAM
@@ -1681,7 +1681,7 @@
 0491A: aDunA atisanniDAne palAyitum akzamaH . tad yaTA Bavitavyam taTA
 
 0492F: Bavatu\, tAvat viSvAsamutpAdyAsya samIpamupagacCAmItyAlocya
-0492A: Bavatu , tAvat viSvAsam utpAdyAsya samIpam upagacCAmi iti Alocya
+0492A: Bavatu , tAvat viSvAsam utpAdya asya samIpam upagacCAmi iti Alocya
 
 ;0493 tamupasftyAbravIt \-\-Arya \! tvAmaBivande .
 0493F: tamupasftyAbravIt Arya \! tvAmaBivande .

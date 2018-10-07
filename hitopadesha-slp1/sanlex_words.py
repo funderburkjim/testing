@@ -90,7 +90,7 @@ predetermined_words = {
 
  # words ending in 'am' that need no change
  "aham":"aham", "kaTam":"kaTam", "evam":"evam",
- "idam":"idam",
+ "idam":"idam","AH":"AH","ayam","ayam",
 }
 def adjust_word(word):
  if word in predetermined_words:
