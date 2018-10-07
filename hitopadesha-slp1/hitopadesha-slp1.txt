@@ -1167,14 +1167,15 @@
 0353A: tuzeRa api parityaktA na prarohanti taRqulAH .. 36..
 
 0354F: iti vicitya pakziRaH sarve jAlamAdAya utpatitAH .  anantaraM ca vyADaH
-0354A: iti vicitya pakziRaH sarve jAlam AdAyaH utpatitAH .  anantaram ca vyADaH
+; should 'vicitya' be 'vicintya' (= 'having considered')
+0354A: iti vicintya pakziRaH sarve jAlam AdAya utpatitAH .  anantaram ca vyADaH
 
 ;0355 sudUrAj jAlApahArakAMstAn avalokya paScAd DAvito'cintayat \-\-
 0355F: sudUrAj jAlApahArakAMstAn avalokya paScAd DAvito'cintayat 
-0355A: sudUrAt jAlApahArakAMstAn avalokya paScAt DAvitaH acintayat 
+0355A: sudUrAt jAlApahArakAn tAn avalokya paScAt DAvitaH acintayat 
 
 0356F: saMhatAstu harantyete mama jAlaM vihaNgamAH .
-0356A: saMhatAstu haranti ete mama jAlam vihaNgamAH .
+0356A: saMhatAH tu haranti ete mama jAlam vihaNgamAH .
 
 0357F: yadA tu nipatizyanti vaSamezyanti me tadA .. 37..
 0357A: yadA tu nipatizyanti vaSam ezyanti me tadA .. 37..
@@ -1234,13 +1235,13 @@
 
 ;0372 \-\-AH \! puRyavAn asmi priya\-suhfn me citragrIvaH samAyAtaH .
 0372F: AH \! puRyavAn asmi priyasuhfn me citragrIvaH samAyAtaH .
-0372A: AH \! puRyavAn asmi priyasuhfn me citragrIvaH samAyAtaH .
+0372A: AH \! puRyavAn asmi priyasuhft me citragrIvaH samAyAtaH .
 
 0373F: yasya mitreRa samBAzo yasya mitreRa saMsTitiH .
 0373A: yasya mitreRa samBAzaH yasya mitreRa saMsTitiH .
 
 0374F: yasya mitreRa saMlApastato nAstIha puRyavAn .. 39..
-0374A: yasya mitreRa saMlApastataH na asti iha puRyavAn .. 39..
+0374A: yasya mitreRa saMlApaH tataH na asti iha puRyavAn .. 39..
 
 ;0375 aTa pASa\-badDAMScEtAn
 0375F: aTa pASabadDAMScEtAn
@@ -1259,7 +1260,7 @@
 0378A: saKe \! asmAkam prAktanajanmakarmaRaH Palam etat .
 
 0379F: yasmAcca yena ca yaTA ca yadA ca yacca
-0379A: yasmAt ca yena ca yaTA ca yadA ca yacca
+0379A: yasmAt ca yena ca yaTA ca yadA ca yad ca
 
 ;0380 yAvacca yatra ca SuBASuBamAtma\-karma .
 0380F: yAvacca yatra ca SuBASuBamAtmakarma .
@@ -1289,17 +1290,18 @@
 
 ;0387 kuru . praTamamasmad\-ASritAnAmetezAM tAvat pASAMSCinDi . mama
 0387F: kuru . praTamamasmadASritAnAmetezAM tAvat pASAMSCinDi . mama
-0387A: kuru . praTamam asmadASritAnAm etezAm tAvat pASAn CinDi . mama
+; 10-6-2018. changed 'CinDi' to 'CindDi'
+0387A: kuru . praTamam asmadASritAnAm etezAm tAvat pASAn CindDi . mama
 
 0388F: pASaM paScAcCetsyasi .
-0388A: pASam paH ca acCetsyasi .
+0388A: pASam paScAt Cetsyasi .
 
 ;0389 hiraRyako'pyAha \-\-ahamalpa\-SaktiH . dantASca me komalAH . tad
 0389F: hiraRyako'pyAha ahamalpaSaktiH . dantASca me komalAH . tad
 0389A: hiraRyakaH api Aha aham alpaSaktiH . dantAH ca me komalAH . tad
 
 0390F: etezAM pASAMSCettuM kaTaM samarTo BavAmi \? tat yAvan me dantA
-0390A: etezAm pASAn Cettum kaTam samarTaH BavAmi \? tat yAvaT me dantAJ
+0390A: etezAm pASAn Cettum kaTam samarTaH BavAmi \? tat yAvat me dantAH
 
 ;0391 na truwyanti\, tAvat tava pASaM Cinadmi . tad\-anantaramapyetezAM
 0391F: na truwyanti\, tAvat tava pASaM Cinadmi . tadanantaramapyetezAM
