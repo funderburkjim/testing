@@ -1342,11 +1342,11 @@
 
 ;0401 citragrIva uvAca \-\-saKe \! nItistAvad IdfSyeva\,
 0401F: citragrIva uvAca saKe \! nItistAvad IdfSyeva\,
-0401A: citragrIvaH uvAca saKe \! nItistAvad IdfSyeva\,
+0401A: citragrIvaH uvAca saKe \! nItiH tAvat IdfSi eva
 
 ;0402 kintvahamasmad\-ASritAnAM duHKaM soQuM sarvaTAsamarTastenedaM
 0402F: kintvahamasmadASritAnAM duHKaM soQuM sarvaTAsamarTastenedaM
-0402A: kintvahamasmadASritAnAm duHKam soQum sarvaTAsamarTastenedaM
+0402A: kintu aham asmadASritAnAm duHKam soQum sarvaTA samarTaH tena idam
 
 ;0403 bravImi . yataH \-\-
 0403F: bravImi . yataH 
@@ -1359,11 +1359,11 @@
 0405A: sannimitte varam tyAgaH vinASe niyate sati .. 44..
 
 0406F: ayamaparaScAsADAraRo hetuH .
-0406A: ayamaparaH cAsADAraRaH hetuH .
+0406A: ayam aparaH ca sADAraRaH hetuH .
 
 ;0407 jAti\-dravya\-balAnAM ca sAmyamezAM mayA saha .
 0407F: jAtidravyabalAnAM ca sAmyamezAM mayA saha .
-0407A: jAtidravyabalAnAm ca sAmyamezAm mayA saha .
+0407A: jAtidravyabalAnAm ca sAmyam ezAm mayA saha .
 
 ;0408 mat\-praButva\-PalaM brUhi kadA kiM tad Bavizyati .. 45..
 0408F: matpraButvaPalaM brUhi kadA kiM tad Bavizyati .. 45..
@@ -1374,11 +1374,11 @@
 0409A: anyat ca 
 
 0410F: vinA vartanamevEte na tyajanti mamAntikam .
-0410A: vinA vartanamevEte na tyajanti mamAntikam .
+0410A: vinA vartanam eva ete na tyajanti mama antikam .
 
 ;0411 tan me prARa\-vyayenApi jIvayEtAn mamASritAn .. 46..
 0411F: tan me prARavyayenApi jIvayEtAn mamASritAn .. 46..
-0411A: tan me prARavyayenApi jIvayEtAn mamASritAn .. 46..
+0411A: tad me prARavyayena api jIvaya etAn mama ASritAn .. 46..
 
 ;0412 kiM ca \-\-
 0412F: kiM ca 
@@ -1386,9 +1386,10 @@
 
 ;0413 mAMsa\-mUtra\-purIzAsTi\-pUrite \-\-tra kalevare .
 0413F: mAMsamUtrapurIzAsTipUrite tra kalevare .
-0413A: mAMsamUtrapurIzAsTipUrite tra kalevare .
+0413A: mAMsamUtrapurIzAsTipUrite atra kalevare .
 
 0414F: vinaSvare vihAyAsTAM yaSaH pAlaya mitra me .. 47..
+; vihAyAsTAm : how to parse?
 0414A: vinaSvare vihAyAsTAm yaSaH pAlaya mitra me .. 47..
 
 ;0415 aparaM ca paSya \-\-
@@ -1397,17 +1398,17 @@
 
 ;0416 yadi nityamanityena nirmalaM mala\-vAhinA .
 0416F: yadi nityamanityena nirmalaM malavAhinA .
-0416A: yadi nityamanityena nirmalam malavAhinA .
+0416A: yadi nityam anityena nirmalam malavAhinA .
 
 0417F: yaSaH kAyena laByeta tan na labDaM Baven nu kim .. 48..
-0417A: yaSaH kAyena laByeta tan na labDam Baven nu kim .. 48..
+0417A: yaSaH kAyena laByeta tad na labDam Bavet nu kim .. 48..
 
 ;0418 yataH \-\-
 0418F: yataH 
 0418A: yataH 
 
 0419F: SarIrasya guRAnAM ca dUramatyantamantaram .
-0419A: SarIrasya guRAnAm ca dUramatyantamantaram .
+0419A: SarIrasya guRAnAm ca dUram atyantam antaram .
 
 ;0420 SarIraM kzaRa\-viDvaMsi kalpAnta\-sTAyino guRAH .. 49..
 0420F: SarIraM kzaRaviDvaMsi kalpAntasTAyino guRAH .. 49..
@@ -1415,14 +1416,15 @@
 
 ;0421 ityAkarRya hiraRyakaH prahfzwa\-manAH pulakitaH san abravIt \-\-sADu
 0421F: ityAkarRya hiraRyakaH prahfzwamanAH pulakitaH san abravIt sADu
-0421A: ityAkarRya hiraRyakaH prahfzwamanAH pulakitaH san abravIt sADu
+; san: how to parse?
+0421A: iti AkarRya hiraRyakaH prahfzwamanAH pulakitaH san abravIt sADu
 
 ;0422 mitra \! sADu . anenASrita\-vAtsalyena trElokyasyApi praButvaM
 0422F: mitra \! sADu . anenASritavAtsalyena trElokyasyApi praButvaM
-0422A: mitra \! sADu . anenASritavAtsalyena trElokyasyApi praButvaM
+0422A: mitra \! sADu . anena ASritavAtsalyena trElokyasya api praButvam
 
 0423F: tvayi yujyate . evamuktvA tena sarvezAM kapotAnAM banDanAni CinnAni .
-0423A: tvayi yujyate . evamuktvA tena sarvezAm kapotAnAm banDanAni CinnAni .
+0423A: tvayi yujyate . evam uktvA tena sarvezAm kapotAnAm banDanAni CinnAni .
 
 ;0424 tato hiraRyakaH sarvAn sAdaraM sampUjya Aha \-\-saKe citragrIva \!
 0424F: tato hiraRyakaH sarvAn sAdaraM sampUjya Aha saKe citragrIva \!
@@ -1430,15 +1432,15 @@
 
 ;0425 sarvaTAtra jAla\-banDana\-viDO sati dozamASaNkya Atmani avajYA
 0425F: sarvaTAtra jAlabanDanaviDO sati dozamASaNkya Atmani avajYA
-0425A: sarvaTAtra jAlabanDanaviDO sati dozamASaNkya Atmani avajYA
+0425A: sarvaTA atra jAlabanDanaviDO sati dozam ASaNkya Atmani avajYA
 
 ;0426 na kartavyA . yataH \-\- yo'DikAd yojana\-SatAn paSyatIhAmizaM KagaH .
 0426F: na kartavyA . yataH  yo'DikAd yojanaSatAn paSyatIhAmizaM KagaH .
-0426A: na kartavyA . yataH  yaH aDikAd yojanaSatAn paSyatIhAmizam KagaH .
+0426A: na kartavyA . yataH  yaH aDikAt yojanaSatAn paSyati iha Amizam KagaH .
 
 ;0427 sa eva prApta\-kAlastu pASa\-banDaM na paSyati .. 50..
 0427F: sa eva prAptakAlastu pASabanDaM na paSyati .. 50..
-0427A: sa eva prAptakAlastu pASabanDam na paSyati .. 50..
+0427A: sa eva prAptakAlaH tu pASabanDam na paSyati .. 50..
 
 ;0428 aparaM ca \-\-
 0428F: aparaM ca 
@@ -1446,17 +1448,17 @@
 
 ;0429 SaSi\-divAkarayorgraha\-pIqanaM
 0429F: SaSidivAkarayorgrahapIqanaM
-0429A: SaSidivAkarayorgrahapIqanaM
+0429A: SaSidivAkarayoH grahapIqanam
 
 ;0430 gaja\-BujaNgamayorapi banDanam .
 0430F: gajaBujaNgamayorapi banDanam .
-0430A: gajaBujaNgamayorapi banDanam .
+0430A: gajaBujaNgamayoH api banDanam .
 
 0431F: matimatAM ca vilokya daridratAM
-0431A: matimatAm ca vilokya daridratAM
+0431A: matimatAm ca vilokya daridratAm
 
 0432F: viDiraho balavAn iti me matiH .. 51..
-0432A: viDiraho balavAn iti me matiH .. 51..
+0432A: viDiH aho balavAn iti me matiH .. 51..
 
 ;0433 anyacca \-\-
 0433F: anyacca 
@@ -1464,54 +1466,54 @@
 
 ;0434 vyomEkAnta\-vihAriRo'pi vihagAH samprApnuvantyApadaM
 0434F: vyomEkAntavihAriRo'pi vihagAH samprApnuvantyApadaM
-0434A: vyomEkAntavihAriRaH api vihagAH samprApnuvantyApadaM
+0434A: vyomEkAntavihAriRaH api vihagAH samprApnuvanti Apadam
 
 ;0435 baDyante nipuREragADa\-salilAn matsyAH samudrAd api .
 0435F: baDyante nipuREragADasalilAn matsyAH samudrAd api .
-0435A: baDyante nipuREragADasalilAn matsyAH samudrAd api .
+0435A: baDyante nipuREH agADasalilAt matsyAH samudrAt api .
 
 ;0436 durnItaM kimihAsti kiM sucaritaM kaH sTAna\-lABe guRaH
 0436F: durnItaM kimihAsti kiM sucaritaM kaH sTAnalABe guRaH
-0436A: durnItam kimihAsti kim sucaritam kaH sTAnalABe guRaH
+0436A: durnItam kim iha asti kim sucaritam kaH sTAnalABe guRaH
 
 ;0437 kAlo hi vyasana\-prasArita\-karo gfhRAti dUrAd api .. 52..
 0437F: kAlo hi vyasanaprasAritakaro gfhRAti dUrAd api .. 52..
-0437A: kAlaH hi vyasanaprasAritakaraH gfhRAti dUrAd api .. 52..
+0437A: kAlaH hi vyasanaprasAritakaraH gfhRAti dUrAt api .. 52..
 
 0438F: iti praboDya AtiTyaM
-0438A: iti praboDya AtiTyaM
+0438A: iti praboDya AtiTyam
 
 0439F: kftvA AliNgya ca tena samprezitaScitragrIvo'pi saparivAro
-0439A: kftvA AliNgya ca tena samprezitaH citragrIvaH api saparivAro
+0439A: kftvA AliNgya ca tena samprezitaH citragrIvaH api saparivAraH
 
 ;0440 yaTezwa\-deSAn yayO\, hiraRyako'pi sva\-vivaraM pravizwaH .
 0440F: yaTezwadeSAn yayO\, hiraRyako'pi svavivaraM pravizwaH .
-0440A: yaTezwadeSAn yayO\, hiraRyakaH api svavivaram pravizwaH .
+0440A: yaTA izwadeSAn yayO , hiraRyakaH api svavivaram pravizwaH .
 
 0441F: yAni kAni ca mitrARi kartavyAni SatAni ca .
 0441A: yAni kAni ca mitrARi kartavyAni SatAni ca .
 
 ;0442 paSya mUzika\-mitreRa kapotA mukta\-banDanAH .. 53..
 0442F: paSya mUzikamitreRa kapotA muktabanDanAH .. 53..
-0442A: paSya mUzikamitreRa kapotA muktabanDanAH .. 53..
+0442A: paSya mUzikamitreRa kapotAH muktabanDanAH .. 53..
 
 ;0443 aTa laGu\-patanaka\-nAmA kAkaH sarva\-vfttAnta\-darSI
 0443F: aTa laGupatanakanAmA kAkaH sarvavfttAntadarSI
-0443A: aTa laGupatanakanAmA kAkaH sarvavfttAntadarSI
+0443A: aTa laGupatanaka nAmA kAkaH sarvavfttAntadarSI
 
 ;0444 sAScaryamidamAha \-\-aho hiraRyaka \! SlAGyo'si\, ato'hamapi
 0444F: sAScaryamidamAha aho hiraRyaka \! SlAGyo'si\, ato'hamapi
-0444A: sAH caryamidamAha aho hiraRyaka \! SlAGyaH asi\, ataH ahamapi
+0444A: sAScaryam idam Aha aho hiraRyaka \! SlAGyaH asi\, ataH aham api
 
 0445F: tvayA saha
 0445A: tvayA saha
 
 0446F: mEtrIM kartumicCAmi . atastvaM mAM mEtryeRAnugrahItumarhasi .
-0446A: mEtrIm kartumicCAmi . atastvam mAm mEtryeRAnugrahItumarhasi .
+0446A: mEtrIm kartum icCAmi . ataH tvam mAm mEtryeRa anugrahItum arhasi .
 
 ;0447 etacCrutvA hiraRyako'pi vivarAByantarAd Aha \-\-kastvam \?
 0447F: etacCrutvA hiraRyako'pi vivarAByantarAd Aha kastvam \?
-0447A: etacCrutvA hiraRyakaH api vivarAByantarAd Aha kastvam \?
+0447A: etad SrutvA hiraRyakaH api vivarAByantarAt Aha kaH tvam \?
 
 ;0448 sa brUte \-\-laGupatanaka\-nAmA
 0448F: sa brUte laGupatanakanAmA
@@ -1519,13 +1521,13 @@
 
 ;0449 vAyaso'ham . hiraRyako vihasyAha \-\-kA tvayA saha mEtrI \? yataH \-\-
 0449F: vAyaso'ham . hiraRyako vihasyAha kA tvayA saha mEtrI \? yataH 
-0449A: vAyasaH aham . hiraRyakaH vihasyAha kA tvayA saha mEtrI \? yataH 
+0449A: vAyasaH aham . hiraRyakaH vihasya Aha kA tvayA saha mEtrI \? yataH 
 
 0450F: yad yena yujyate loke buDastat tena yojayet .
-0450A: yad yena yujyate loke buDastat tena yojayet .
+0450A: yad yena yujyate loke buDaH tat tena yojayet .
 
 0451F: ahamannaM BavAn BoktA kaTaM prItirBavizyati .. 54..
-0451A: ahamannam BavAn BoktA kaTam prItirBavizyati .. 54..
+0451A: aham annam BavAn BoktA kaTam prItiH Bavizyati .. 54..
 
 ;0452 aparaM ca \-\-
 0452F: aparaM ca 
@@ -1533,14 +1535,14 @@
 
 ;0453 Bakzya\-BakzayoH prItirvipatteH kAraRaM matam .
 0453F: BakzyaBakzayoH prItirvipatteH kAraRaM matam .
-0453A: BakzyaBakzayoH prItirvipatteH kAraRam matam .
+0453A: BakzyaBakzayoH prItiH vipatteH kAraRam matam .
 
 0454F: SfgAlAt pASabadDo'sO mfgaH kAkena rakzitaH .. 55..
 0454A: SfgAlAt pASabadDaH asO mfgaH kAkena rakzitaH .. 55..
 
 ;0455 vAyaso'bravIt\-\-kaTametat \?
 0455F: vAyaso'bravItkaTametat \?
-0455A: vAyasaH abravItkaTametat \?
+0455A: vAyasaH abravIt kaTam etat \?
 
 ;0456 hiraRyakaH kaTayati \-\-
 0456F: hiraRyakaH kaTayati 
@@ -1559,7 +1561,7 @@
 
 ;0460 hfzwa\-puzwANgaH kenacit SfgAlenAvalokitaH .
 0460F: hfzwapuzwANgaH kenacit SfgAlenAvalokitaH .
-0460A: hfzwapuzwANgaH kenacit SfgAlenAvalokitaH .
+0460A: hfzwapuzwANgaH kena cid SfgAlena avalokitaH .
 
 ;0461 taM dfzwvA SfgAlo'cintayat \-\-AH \!
 0461F: taM dfzwvA SfgAlo'cintayat AH \!
@@ -1567,31 +1569,31 @@
 
 ;0462 kaTametan\-mAMsaM sulalitaM BakzayAmi \? Bavatu\, viSvAsaM tAvad
 0462F: kaTametanmAMsaM sulalitaM BakzayAmi \? Bavatu\, viSvAsaM tAvad
-0462A: kaTametanmAMsam sulalitam BakzayAmi \? Bavatu\, viSvAsam tAvad
+0462A: kaTam etad mAMsam sulalitam BakzayAmi \? Bavatu\, viSvAsam tAvad
 
 ;0463 utpAdayAmi ityAlocya upasftyAbravIt \-\-mitra \! kuSalaM te \?
 0463F: utpAdayAmi ityAlocya upasftyAbravIt mitra \! kuSalaM te \?
-0463A: utpAdayAmi ityAlocyaH upasftyAbravIt mitra \! kuSalam te \?
+0463A: utpAdayAmi iti AlocyaH upasftya abravIt mitra \! kuSalam te \?
 
 ;0464 mfgeRoktam \-\-kastvam \?
 0464F: mfgeRoktam kastvam \?
-0464A: mfgeRoktam kastvam \?
+0464A: mfgeRa uktam kaH tvam \?
 
 ;0465 sa brUte \-\-kzudra\-budDi\-nAmA jambuko'ham . atrAraRye
 0465F: sa brUte kzudrabudDinAmA jambuko'ham . atrAraRye
-0465A: sa brUte kzudrabudDinAmA jambukaH aham . atrAraRye
+0465A: sa brUte kzudrabudDinAmA jambukaH aham . atra araRye
 
 ;0466 banDu\-hIno mftavat ekAkI nivasAmi . idAnIM tvAM mitramAsAdya punaH
 0466F: banDuhIno mftavat ekAkI nivasAmi . idAnIM tvAM mitramAsAdya punaH
-0466A: banDuhInaH mftavat ekAkI nivasAmi . idAnIm tvAm mitramAsAdya punaH
+0466A: banDuhInaH mftavat ekAkI nivasAmi . idAnIm tvAm mitram AsAdya punaH
 
 ;0467 sa\-banDurjIva\-lokaM pravizwo'smi . aDunA tavAnucareRa mayA sarvaTA
 0467F: sabanDurjIvalokaM pravizwo'smi . aDunA tavAnucareRa mayA sarvaTA
-0467A: sabanDurjIvalokam pravizwaH asmi . aDunA tavAnucareRa mayA sarvaTA
+0467A: sabanDuH jIvalokam pravizwaH asmi . aDunA tava anucareRa mayA sarvaTA
 
 ;0468 Bavitavyamiti . mfgeRoktam \-\-evamastu . tataH paScAd astaM gate
 0468F: Bavitavyamiti . mfgeRoktam evamastu . tataH paScAd astaM gate
-0468A: Bavitavyamiti . mfgeRoktam evamastu . tataH paH cAd astam gate
+0468A: Bavitavyam iti . mfgeRa uktam evam astu . tataH paScAt astam gate
 
 ;0469 savitari Bagavati marIci\-mAlini tO mfgasya vAsa\-BUmiM gatO .
 0469F: savitari Bagavati marIcimAlini tO mfgasya vAsaBUmiM gatO .
@@ -1613,11 +1615,11 @@
 0473A: mfgaH brUte mitra \!
 
 0474F: akasmAd AgantunA saha mEtrI na yuktA . tan na BadramAcaritam .
-0474A: akasmAd AgantunA saha mEtrI na yuktA . tan na BadramAcaritam .
+0474A: akasmAt AgantunA saha mEtrI na yuktA . tad na Badram Acaritam .
 
 ;0475 taTA coktam \-\- ajYAta\-kula\-SIlasya vAso deyo na kasyacit .
 0475F: taTA coktam  ajYAtakulaSIlasya vAso deyo na kasyacit .
-0475A: taTA coktam  ajYAtakulaSIlasya vAsaH deyaH na kasyacit .
+0475A: taTA ca uktam  ajYAtakulaSIlasya vAsaH deyaH na kasya cid .
 
 ;0476 mArjArasya hi dozeRa hato gfDro jarad\-gavaH .. 56..
 0476F: mArjArasya hi dozeRa hato gfDro jaradgavaH .. 56..
@@ -1625,7 +1627,7 @@
 
 ;0477 tO AhatuH\-\-kaTametat \?
 0477F: tO AhatuHkaTametat \?
-0477A: tO AhatuHkaTametat \?
+0477A: tO AhatuH kaTam etat \?
 
 ;0478 kAkaH kaTayati \-\-
 0478F: kAkaH kaTayati 
@@ -1644,50 +1646,50 @@
 
 ;0482 gfDraH prativasati . aTa kfpayA taj\-jIvanAya tad\-vfkza\-vAsinaH
 0482F: gfDraH prativasati . aTa kfpayA tajjIvanAya tadvfkzavAsinaH
-0482A: gfDraH prativasati . aTa kfpayA tajjIvanAya tadvfkzavAsinaH
+0482A: gfDraH prativasati . aTa kfpayA tad jIvanAya tad vfkzavAsinaH
 
 0483F: pakziRaH svAhArAt kiMcit kiMcid udDftya tasmE dadati\, tenAsO
-0483A: pakziRaH svAhArAt kiMcit kiMcid udDftya tasmE dadati\, tenAsO
+0483A: pakziRaH svAhArAt kiM cid kiMcid udDftya tasmE dadati \, tena asO
 
 ;0484 jIvati\, tezAM SAvaka\-rakzAM ca karoti . aTa kadAcit
 0484F: jIvati\, tezAM SAvakarakzAM ca karoti . aTa kadAcit
-0484A: jIvati\, tezAm SAvakarakzAm ca karoti . aTa kadAcit
+0484A: jIvati\, tezAm SAvakarakzAm ca karoti . aTa kadA cid
 
 ;0485 dIrGakarRa\-nAmA mArjAraH pakzi\-SAvakAn BakzayituM tatrAgataH .
 0485F: dIrGakarRanAmA mArjAraH pakziSAvakAn BakzayituM tatrAgataH .
-0485A: dIrGakarRanAmA mArjAraH pakziSAvakAn Bakzayitum tatrAgataH .
+0485A: dIrGakarRanAmA mArjAraH pakziSAvakAn Bakzayitum tatra AgataH .
 
 ;0486 tatastamAyAntaM dfzwvA pakzi\-SAvakErBayArtEH kolAhalaH kftaH .
 0486F: tatastamAyAntaM dfzwvA pakziSAvakErBayArtEH kolAhalaH kftaH .
-0486A: tatastamAyAntam dfzwvA pakziSAvakErBayArtEH kolAhalaH kftaH .
+0486A: tataH tam AyAntam dfzwvA pakziSAvakEH BayArtEH kolAhalaH kftaH .
 
 ;0487 tacCrutvA jaradgavena uktam \-\-ko'yamAyAti \? dIrGakarRo
 0487F: tacCrutvA jaradgavena uktam ko'yamAyAti \? dIrGakarRo
-0487A: tacCrutvA jaradgavenaH uktam kaH ayamAyAti \? dIrGakarRo
+0487A: tad SrutvA jaradgavenaH uktam kaH ayam AyAti \? dIrGakarRaH
 
 ;0488 gfDramavalokya sa\-BayamAha \-\-hA hato'smi yato'yaM mAM
 0488F: gfDramavalokya saBayamAha hA hato'smi yato'yaM mAM
-0488A: gfDramavalokya saBayamAha hA hataH asmi yataH ayam mAM
+0488A: gfDram avalokya saBayam Aha hA hataH asmi yataH ayam mAm
 
 0489F: vyApAdayizyati . aTavA' tAvad Bayasya BetavyaM yAvad BayamanAgatam .
-0489A: vyApAdayizyati . aTavA' tAvad Bayasya Betavyam yAvad BayamanAgatam .
+0489A: vyApAdayizyati . aTavA' tAvad Bayasya Betavyam yAvat Bayam anAgatam .
 
 0490F: AgataM tu BayaM vIkzya naraH kuryAd yaTocitam .. 57..
-0490A: Agatam tu Bayam vIkzya naraH kuryAd yaTocitam .. 57..
+0490A: Agatam tu Bayam vIkzya naraH kuryAt yaTA ucitam .. 57..
 
 0491F: aDunAtisanniDAne palAyitumakzamaH . tad yaTA BavitavyaM taTA
-0491A: aDunAtisanniDAne palAyitumakzamaH . tad yaTA Bavitavyam taTA
+0491A: aDunA atisanniDAne palAyitum akzamaH . tad yaTA Bavitavyam taTA
 
 0492F: Bavatu\, tAvat viSvAsamutpAdyAsya samIpamupagacCAmItyAlocya
-0492A: Bavatu\, tAvat viSvAsamutpAdyAsya samIpamupagacCAmItyAlocya
+0492A: Bavatu , tAvat viSvAsam utpAdyAsya samIpam upagacCAmi iti Alocya
 
 ;0493 tamupasftyAbravIt \-\-Arya \! tvAmaBivande .
 0493F: tamupasftyAbravIt Arya \! tvAmaBivande .
-0493A: tamupasftyAbravIt Arya \! tvAmaBivande .
+0493A: tam upasftya abravIt Arya \! tvAm aBivande .
 
 ;0494 gfDro'vadat \-\-kastvam \?
 0494F: gfDro'vadat kastvam \?
-0494A: gfDraH avadat kastvam \?
+0494A: gfDraH avadat kaH tvam \?
 
 ;0495 so'vadat \-\-mArjAro'ham .
 0495F: so'vadat mArjAro'ham .
@@ -1695,7 +1697,7 @@
 
 ;0496 gfDro brUte \-\-dUramapasara no cet hantavyo'si mayA .
 0496F: gfDro brUte dUramapasara no cet hantavyo'si mayA .
-0496A: gfDraH brUte dUramapasara naH cet hantavyaH asi mayA .
+0496A: gfDraH brUte dUram apasara naH cet hantavyaH asi mayA .
 
 ;0497 mArjAro'vadat \-\-SrUyatAM
 0497F: mArjAro'vadat SrUyatAM
@@ -1703,22 +1705,23 @@
 
 ;0498 tAvat mad\-vacanam . tato yadyahaM vaDyastadA hantavyaH . yataH  \-\-
 0498F: tAvat madvacanam . tato yadyahaM vaDyastadA hantavyaH . yataH  
-0498A: tAvat madvacanam . tataH yadyaham vaDyastadA hantavyaH . yataH  
+0498A: tAvat madvacanam . tataH yadi aham vaDyaH tadA hantavyaH . yataH  
 
 ;0499 jAti\-mAtreRa kiM kaScid vaDyate pUjyate kvacit .
 0499F: jAtimAtreRa kiM kaScid vaDyate pUjyate kvacit .
-0499A: jAtimAtreRa kim kaH cid vaDyate pUjyate kvacit .
+0499A: jAtimAtreRa kim kaH cid vaDyate pUjyate kva cit .
 
 0500F: vyavahAraM parijYAya vaDyaH pUjyo'TavA Bavet .. 58..
 0500A: vyavahAram parijYAya vaDyaH pUjyaH aTavA Bavet .. 58..
 
 ;0501 gfDro brUte \-\-brUhi kimarTamAgato'si \?
 0501F: gfDro brUte brUhi kimarTamAgato'si \?
-0501A: gfDraH brUte brUhi kimarTamAgataH asi \?
+0501A: gfDraH brUte brUhi kim arTam AgataH asi \?
 
 ;0502 so'vadat \-\-ahamatra gaNgA\-tIre nitya\-snAyI
 0502F: so'vadat ahamatra gaNgAtIre nityasnAyI
-0502A: saH avadat ahamatra gaNgAtIre nityasnAyI
+0502A: saH avadat aham atra gaNgAtIre nityasnAyI
+; --- end of mamual sandhi 10-6-2018
 
 ;0503 nirAmizASI brahmacArI cAndrAyaRa\-vratamAcaraMstizWAmi . yuzmAn
 0503F: nirAmizASI brahmacArI cAndrAyaRavratamAcaraMstizWAmi . yuzmAn
@@ -5512,7 +5515,7 @@
 
 ;1544 mantrI yaH praTamaM BUmi\-tyAgaM paScAd yudDaM copaviSati
 1544F: mantrI yaH praTamaM BUmityAgaM paScAd yudDaM copaviSati
-1544A: mantrI yaH praTamam BUmityAgam paH cAd yudDam copaviSati
+1544A: mantrI yaH praTamam BUmityAgam paScAt yudDam copaviSati
 
 ;1545 asmin kArya\-sandehe BftyAnAmupayoga eva jYAtavyaH . yataH \-\-
 1545F: asmin kAryasandehe BftyAnAmupayoga eva jYAtavyaH . yataH 
@@ -8628,7 +8631,7 @@
 2384A: ataH aham tena rAjYA yaTAvyavahAram sampUjya prasTApitaH .
 
 2385F: Suko'pi mama paScAd AgacCann Aste . etat sarvaM parijYAya
-2385A: SukaH api mama paH cAd AgacCann Aste . etat sarvam parijYAya
+2385A: SukaH api mama paScAt AgacCann Aste . etat sarvam parijYAya
 
 ;2386 yaTA\-kartavyamanusanDIyatAm . cakravAko
 2386F: yaTAkartavyamanusanDIyatAm . cakravAko
@@ -8778,7 +8781,7 @@
 
 ;2425 \-\-kftAvAse tAvad gatvA tizWatu\, paScAd AnIya drazwavyaH .
 2425F: kftAvAse tAvad gatvA tizWatu\, paScAd AnIya drazwavyaH .
-2425A: kftAvAse tAvad gatvA tizWatu\, paH cAd AnIya drazwavyaH .
+2425A: kftAvAse tAvad gatvA tizWatu\, paScAt AnIya drazwavyaH .
 
 2426F: yaTAjYApayati devaH ityaBiDAya pratIhAraH SukaM gfhItvA
 2426A: yaTAjYApayati devaH ityaBiDAya pratIhAraH Sukam gfhItvA
@@ -11249,7 +11252,7 @@
 
 ;3099 taTA\-viDaM kUrmamAlokya sarve go\-rakzakAH paScAd DAvanti\,
 3099F: taTAviDaM kUrmamAlokya sarve gorakzakAH paScAd DAvanti\,
-3099A: taTAviDam kUrmamAlokya sarve gorakzakAH paH cAd DAvanti\,
+3099A: taTAviDam kUrmamAlokya sarve gorakzakAH paScAt DAvanti\,
 
 ;3100 vadanti ca \-\-aho \! mahad AScaryam \! pakziByAM kUrmo nIyate .
 3100F: vadanti ca aho \! mahad AScaryam \! pakziByAM kUrmo nIyate .
