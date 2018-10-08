@@ -1721,11 +1721,10 @@
 ;0502 so'vadat \-\-ahamatra gaNgA\-tIre nitya\-snAyI
 0502F: so'vadat ahamatra gaNgAtIre nityasnAyI
 0502A: saH avadat aham atra gaNgAtIre nityasnAyI
-; --- end of mamual sandhi 10-6-2018
 
 ;0503 nirAmizASI brahmacArI cAndrAyaRa\-vratamAcaraMstizWAmi . yuzmAn
 0503F: nirAmizASI brahmacArI cAndrAyaRavratamAcaraMstizWAmi . yuzmAn
-0503A: nirAmizASI brahmacArI cAndrAyaRavratamAcaraMstizWAmi . yuzmAn
+0503A: nirAmizASI brahmacArI cAndrAyaRavratam Acaran tizWAmi . yuzmAn
 
 ;0504 Darma\-jYAna\-ratAH prema\-viSvAsa\-BUmayaH iti pakziRaH sarve
 0504F: DarmajYAnaratAH premaviSvAsaBUmayaH iti pakziRaH sarve
@@ -1733,50 +1732,50 @@
 
 ;0505 sarvadA mamAgre prastuvanti\, ato BavadByo vidyAvayo\-vfdDeByo
 0505F: sarvadA mamAgre prastuvanti\, ato BavadByo vidyAvayovfdDeByo
-0505A: sarvadA mamAgre prastuvanti\, ataH BavadByaH vidyAvayovfdDeByo
+0505A: sarvadA mama agre prastuvanti\, ataH BavadByaH vidyAvayovfdDeByaH
 
 0506F: DarmaM SrotumihAgataH . BavantaScEtAdfSA DarmajYAH\,
-0506A: Darmam SrotumihAgataH . BavantaH ca etAdfSA DarmajYAH\,
+0506A: Darmam Srotum iha AgataH . BavantaH ca etAdfSA DarmajYAH\,
 
 ;0507 yan mAmatiTiM hantumudyatAH \? gfhasTa\-DarmaSca ezaH  \-\-
 0507F: yan mAmatiTiM hantumudyatAH \? gfhasTaDarmaSca ezaH  
-0507A: yan mAmatiTim hantumudyatAH \? gfhasTaDarmaH ca ezaH  
+0507A: yad mAm atiTim hantum udyatAH \? gfhasTaDarmaH ca ezaH  
 
 0508F: arAvapyucitaM kAryamAtiTyaM gfhamAgate .
-0508A: arAvapyucitam kAryamAtiTyam gfhamAgate .
+0508A: arO api ucitam kAryam AtiTyam gfham Agate .
 
 0509F: CettumapyAgate CAyAM nopasaMharate drumaH .. 59..
-0509A: CettumapyAgate CAyAm nopasaMharate drumaH .. 59..
+0509A: Cettum api Agate CAyAm na upasaMharate drumaH .. 59..
 
 0510F: kiM ca
 0510A: kim ca
 
 ;0511 \-\-yadi annaM nAsti\, tadA suprItenApi vacasA tAvad atiTiH pUjya eva .
 0511F: yadi annaM nAsti\, tadA suprItenApi vacasA tAvad atiTiH pUjya eva .
-0511A: yadi annam nAsti\, tadA suprItenApi vacasA tAvad atiTiH pUjya eva .
+0511A: yadi annam na asti\, tadA suprItena api vacasA tAvat atiTiH pUjyaH eva .
 
 0512F: tfRAni BUmirudakaM vAk caturTI ca sUnftA .
-0512A: tfRAni BUmirudakam vAk caturTI ca sUnftA .
+0512A: tfRAni BUmiH udakam vAk caturTI ca sUnftA .
 
 0513F: etAnyapi satAM gehe nocCidyante kadAcana .. 60..
-0513A: etAnyapi satAm gehe nocCidyante kadAcana .. 60..
-
+0513A: etAni api satAm gehe na ucCidyante kadA cana .. 60..
+; 0514 - 0516 divergence from Kale
 ;0514 anyacca \-\-
 0514F: anyacca 
 0514A: anyat ca 
 
 0515F: bAlo vA yadi vA vfdDo yuvA vA gfhamAgataH .
-0515A: bAlaH vA yadi vA vfdDaH yuvA vA gfhamAgataH .
+0515A: bAlaH vA yadi vA vfdDaH yuvA vA gfham AgataH .
 
 0516F: tasya pUjA viDAtavyA sarvasyAByAgato guruH .. 61..
-0516A: tasya pUjA viDAtavyA sarvasyAByAgataH guruH .. 61..
+0516A: tasya pUjA viDAtavyA sarvasya aByAgataH guruH .. 61..
 
 ;0517 aparaM ca \-\-
 0517F: aparaM ca 
 0517A: aparam ca 
 
 0518F: nirguRezvapi sattvezu dayAM kurvanti sADavaH .
-0518A: nirguRezvapi sattvezu dayAm kurvanti sADavaH .
+0518A: nirguRezu api sattvezu dayAm kurvanti sADavaH .
 
 ;0519 na hi saMharate jyotsnAM candraScARqAla\-veSmanaH .. 62..
 0519F: na hi saMharate jyotsnAM candraScARqAlaveSmanaH .. 62..
@@ -1787,17 +1786,17 @@
 0520A: anyat ca 
 
 0521F: atiTiryasya BagnASo gfhAt pratinivartate .
-0521A: atiTiryasya BagnASaH gfhAt pratinivartate .
+0521A: atiTiH yasya BagnASaH gfhAt pratinivartate .
 
 0522F: sa dattvA duzkftaM tasmE puRyamAdAya gacCati .. 63..
-0522A: sa dattvA duzkftam tasmE puRyamAdAya gacCati .. 63..
+0522A: sa dattvA duzkftam tasmE puRyam AdAya gacCati .. 63..
 
 ;0523 anyacca \-\-
 0523F: anyacca 
 0523A: anyat ca 
 
 0524F: uttamasyApi varRasya nIco'pi gfhamAgataH .
-0524A: uttamasyApi varRasya nIcaH api gfhamAgataH .
+0524A: uttamasya api varRasya nIcaH api gfham AgataH .
 
 ;0525 pUjanIyo yaTA\-yogyaM sarva\-deva\-mayo'tiTiH .. 64..
 0525F: pUjanIyo yaTAyogyaM sarvadevamayo'tiTiH .. 64..
@@ -1805,33 +1804,34 @@
 
 ;0526 gfDro'vadat \-\-mArjAro
 0526F: gfDro'vadat mArjAro
-0526A: gfDraH avadat mArjAro
+0526A: gfDraH avadat mArjAraH
 
 ;0527 hi mAMsa\-ruciH . pakzi\-SAvakAScAtra nivasanti . tenAhameva bravImi .
 0527F: hi mAMsaruciH . pakziSAvakAScAtra nivasanti . tenAhameva bravImi .
-0527A: hi mAMsaruciH . pakziSAvakAH cAtra nivasanti . tenAhameva bravImi .
+0527A: hi mAMsaruciH . pakziSAvakAH ca atra nivasanti . tena aham eva bravImi .
 
 0528F: tacCrutvA mArjAro BUmiM spfzwvA karRO spfSati\, brUte
-0528A: tacCrutvA mArjAraH BUmim spfzwvA karRO spfSati\, brUte
+0528A: tad SrutvA mArjAraH BUmim spfzwvA karRO spfSati\, brUte
 
 ;0529 ca \-\-mayA Darma\-SAstraM SrutvA vIta\-rAgenedaM duzkaraM
 0529F: ca mayA DarmaSAstraM SrutvA vItarAgenedaM duzkaraM
-0529A: ca mayA DarmaSAstram SrutvA vItarAgenedam duzkaraM
+0529A: ca mayA DarmaSAstram SrutvA vItarAgena idam duzkaraM
 
 0530F: vrataM cAndrAyaRamaDyavasitam . yataH parasparaM vivadamAnAnAmapi
-0530A: vratam cAndrAyaRamaDyavasitam . yataH parasparam vivadamAnAnAmapi
+0530A: vratam cAndrAyaRam aDyavasitam . yataH parasparam vivadamAnAnAm api
 
 ;0531 Darma\-SAstrARAmahiMsA paramo DarmaH ityatrEkamatyam . yataH \-\-
 0531F: DarmaSAstrARAmahiMsA paramo DarmaH ityatrEkamatyam . yataH 
-0531A: DarmaSAstrARAmahiMsA paramaH DarmaH ityatrEkamatyam . yataH 
+; ekamatyam : cannot parse.  Kale English: quite at one
+0531A: DarmaSAstrARAm ahiMsA paramaH DarmaH iti atra ekam atyam . yataH 
 
 ;0532 sarva\-hiMsA\-nivfttA ye narAH sarva\-sahASca ye .
 0532F: sarvahiMsAnivfttA ye narAH sarvasahASca ye .
-0532A: sarvahiMsAnivfttA ye narAH sarvasahAH ca ye .
+0532A: sarvahiMsAnivfttAH ye narAH sarvasahAH ca ye .
 
 ;0533 sarvasyASraya\-BUtASca te narAH svarga\-gAminaH .. 65..
 0533F: sarvasyASrayaBUtASca te narAH svargagAminaH .. 65..
-0533A: sarvasyASrayaBUtAH ca te narAH svargagAminaH .. 65..
+0533A: sarvasya ASrayaBUtAH ca te narAH svargagAminaH .. 65..
 
 ;0534 anyacca \-\-
 0534F: anyacca 
@@ -1839,30 +1839,30 @@
 
 ;0535 eka eva suhfd Darmo niDane \-\-pyanuyAti yaH .
 0535F: eka eva suhfd Darmo niDane pyanuyAti yaH .
-0535A: eka eva suhfd DarmaH niDane pyanuyAti yaH .
+0535A: ekaH eva suhfd DarmaH niDane pi anuyAti yaH .
 
 0536F: SarIreRa samaM nASaM sarvamanyad hi gacCati .. 66..
-0536A: SarIreRa samam nASam sarvamanyad hi gacCati .. 66..
+0536A: SarIreRa samam nASam sarvam anyat hi gacCati .. 66..
 
 ;0537 kiM ca \-\-
 0537F: kiM ca 
 0537A: kim ca 
 
 0538F: yo'tti yasya yadA mAMsamuBayoH paSyatAntaram .
-0538A: yaH atti yasya yadA mAMsamuBayoH paSyatAntaram .
+0538A: yaH atti yasya yadA mAMsam uBayoH paSyata antaram .
 
 0539F: ekasya kzaRikA prItiranyaH prARErvimucyate .. 67..
-0539A: ekasya kzaRikA prItiranyaH prARErvimucyate .. 67..
+0539A: ekasya kzaRikA prItiH anyaH prAREH vimucyate .. 67..
 
 ;0540 api ca \-\-
 0540F: api ca 
 0540A: api ca 
 
 0541F: martavyamiti yad duHKaM puruzasyopajAyate .
-0541A: martavyamiti yad duHKam puruzasyopajAyate .
+0541A: martavyam iti yad duHKam puruzasya upajAyate .
 
 0542F: SakyastenAnumAnena paro'pi parirakzitum .. 68..
-0542A: SakyastenAnumAnena paraH api parirakzitum .. 68..
+0542A: SakyaH tena anumAnena paraH api parirakzitum .. 68..
 
 ;0543 SfRu punaH \-\-
 0543F: SfRu punaH 
@@ -1870,28 +1870,28 @@
 
 ;0544 svacCanda\-vana\-jAtena SAkenApi prapUryate .
 0544F: svacCandavanajAtena SAkenApi prapUryate .
-0544A: svacCandavanajAtena SAkenApi prapUryate .
+0544A: svacCandavanajAtena SAkena api prapUryate .
 
 0545F: asya dagDodarasyArTe kaH kuryAt pAtakaM mahat .. 69..
-0545A: asya dagDodarasyArTe kaH kuryAt pAtakam mahat .. 69..
+0545A: asya dagDodarasya arTe kaH kuryAt pAtakam mahat .. 69..
 
 ;0546 evaM viSvAsya sa mArjArastaru\-koware sTitaH . tato dinezu gacCatsu
 0546F: evaM viSvAsya sa mArjArastarukoware sTitaH . tato dinezu gacCatsu
-0546A: evam viSvAsya saH mArjArastarukoware sTitaH . tataH dinezu gacCatsu
+0546A: evam viSvAsya saH mArjAraH tarukoware sTitaH . tataH dinezu gacCatsu
 
 ;0547 asO pakzi\-SAvakAn Akramya sva\-kowaramAnIya pratyahaM KAdati .
 0547F: asO pakziSAvakAn Akramya svakowaramAnIya pratyahaM KAdati .
-0547A: asO pakziSAvakAn Akramya svakowaramAnIya pratyaham KAdati .
+0547A: asO pakziSAvakAn Akramya svakowaram AnIya pratyaham KAdati .
 
 0548F: aTa yezAmapatyAni KAditAni . tEH SokArtErvilapadBiritastato
-0548A: aTa yezAmapatyAni KAditAni . tEH SokArtErvilapadBiritastato
+0548A: aTa yezAm apatyAni KAditAni . tEH SokArtEH vilapadBiH itas tataH
 
 0549F: jijYAsA samArabDA . tat parijYAya mArjAraH kowarAn niHsftya bahiH
-0549A: jijYAsA samArabDA . tat parijYAya mArjAraH kowarAn niHsftya bahiH
+0549A: jijYAsA samArabDA . tat parijYAya mArjAraH kowarAt niHsftya bahiH
 
 ;0550 palAyitaH . paScAt pakziBiritastato nirUpayadBistatra taru\-koware
 0550F: palAyitaH . paScAt pakziBiritastato nirUpayadBistatra tarukoware
-0550A: palAyitaH . paH cAt pakziBiritastataH nirUpayadBistatra tarukoware
+0550A: palAyitaH . paScAt pakziBiritastataH nirUpayadBistatra tarukoware
 
 0551F: SAvakAH KAditA iti sarvEH pakziBirniScitya ca gfDro
 0551A: SAvakAH KAditA iti sarvEH pakziBirniH citya ca gfDro
@@ -3145,7 +3145,7 @@
 
 ;0894 paScAt\-tApa\-hato jarA\-pariRataH SokAgninA dahyate .. 148..
 0894F: paScAttApahato jarApariRataH SokAgninA dahyate .. 148..
-0894A: paH cAttApahataH jarApariRataH SokAgninA dahyate .. 148..
+0894A: paScAttApahataH jarApariRataH SokAgninA dahyate .. 148..
 
 ;0895 yuzmABiratisaYcayaH kftaH . tasyAyaM dozaH . SfRu \-\-
 0895F: yuzmABiratisaYcayaH kftaH . tasyAyaM dozaH . SfRu 
@@ -3647,7 +3647,7 @@
 
 ;1035 paScAt tad\-vacanAd Agatya punaH sarve militvA tatrEvopavizwAH .
 1035F: paScAt tadvacanAd Agatya punaH sarve militvA tatrEvopavizwAH .
-1035A: paH cAt tadvacanAd Agatya punaH sarve militvA tatrEvopavizwAH .
+1035A: paScAt tadvacanAd Agatya punaH sarve militvA tatrEvopavizwAH .
 
 ;1036 manTareRoktaM \-\-Badra mfga \! kuSalaM te \? svecCayA
 1036F: manTareRoktaM Badra mfga \! kuSalaM te \? svecCayA
@@ -5857,7 +5857,7 @@
 
 ;1636 darSanaM kAritavantO . paScAt tatrEva parama\-prItyA nivasati .
 1636F: darSanaM kAritavantO . paScAt tatrEva paramaprItyA nivasati .
-1636A: darSanam kAritavantO . paH cAt tatrEva paramaprItyA nivasati .
+1636A: darSanam kAritavantO . paScAt tatrEva paramaprItyA nivasati .
 
 ;1637 aTa kadAcit tasya siMhasya BrAtA stabDa\-karRa\-nAmA siMhaH samAgataH .
 1637F: aTa kadAcit tasya siMhasya BrAtA stabDakarRanAmA siMhaH samAgataH .
@@ -7937,7 +7937,7 @@
 
 ;2198 dIrGamuKo brUte \-\-tataH paScAt tEH pakziBiruktam \-\-are pApA
 2198F: dIrGamuKo brUte tataH paScAt tEH pakziBiruktam are pApA
-2198A: dIrGamuKaH brUte tataH paH cAt tEH pakziBiruktam are pApA
+2198A: dIrGamuKaH brUte tataH paScAt tEH pakziBiruktam are pApA
 
 ;2199 duzwa\-baka \! asmAkaM BUmO carann asmAkaM svAminamaDikzipasi . tan
 2199F: duzwabaka \! asmAkaM BUmO carann asmAkaM svAminamaDikzipasi . tan
@@ -9066,7 +9066,7 @@
 2502A: astyaraRye kaH cicCfgAlaH svecCayA nagaropAnte BrAmyan nIlIBARqe
 
 2503F: nipatitaH . paScAt tata utTAtumasamarTaH\, prAtarAtmAnaM mftavat
-2503A: nipatitaH . paH cAt tataH utTAtumasamarTaH\, prAtarAtmAnam mftavat
+2503A: nipatitaH . paScAt tataH utTAtumasamarTaH\, prAtarAtmAnam mftavat
 
 ;2504 sandarSya sTitaH . aTa nIlI\-BARqa\-svAminA mfti iti jYAtvA\,
 2504F: sandarSya sTitaH . aTa nIlIBARqasvAminA mfti iti jYAtvA\,
@@ -9416,7 +9416,7 @@
 2599A: raTAnAm pArSvataH nAgA nAgAnAm ca padAtayaH .. 73..
 
 2600F: paScAt senApatiryAyAt KinnAnASvAsayan CanEH .
-2600A: paH cAt senApatiryAyAt KinnAnASvAsayan CanEH .
+2600A: paScAt senApatiryAyAt KinnAnASvAsayan CanEH .
 
 2601F: mantriBiH suBawEryuktaH pratigfhya balaM nfpaH .. 74..
 2601A: mantriBiH suBawEryuktaH pratigfhya balam nfpaH .. 74..
@@ -10787,7 +10787,7 @@
 
 ;2971 kukkuwa\-senA bahuSo hatA . paScAt sAraso'pi bahuBiH
 2971F: kukkuwasenA bahuSo hatA . paScAt sAraso'pi bahuBiH
-2971A: kukkuwasenA bahuSaH hatA . paH cAt sArasaH api bahuBiH
+2971A: kukkuwasenA bahuSaH hatA . paScAt sArasaH api bahuBiH
 
 ;2972 pakziBiH sametya caYcu\-prahAreRa viBidya vyApAditaH . aTa
 2972F: pakziBiH sametya caYcuprahAreRa viBidya vyApAditaH . aTa
@@ -11230,7 +11230,7 @@
 
 ;3093 baka\-SAvakAnAM rAvaH SrutaH . paScAt tad\-vfkzamAruhya
 3093F: bakaSAvakAnAM rAvaH SrutaH . paScAt tadvfkzamAruhya
-3093A: bakaSAvakAnAm rAvaH SrutaH . paH cAt tadvfkzamAruhya
+3093A: bakaSAvakAnAm rAvaH SrutaH . paScAt tadvfkzamAruhya
 
 ;3094 baka\-SAvakAH KAditAH . ata AvAM brUvaH \-\-upAyaM cintayan ityAdi .
 3094F: bakaSAvakAH KAditAH . ata AvAM brUvaH upAyaM cintayan ityAdi .
@@ -12579,7 +12579,7 @@
 3458A: kroqIkaroti praTamam yadA jAtamanityatA .
 
 3459F: DAtrIva jananI paScAt tadA Sokasya kaH kramaH .. 68..
-3459A: DAtrIva jananI paH cAt tadA Sokasya kaH kramaH .. 68..
+3459A: DAtrIva jananI paScAt tadA Sokasya kaH kramaH .. 68..
 
 ;3460 taTA ca \-\-
 3460F: taTA ca 
@@ -13013,7 +13013,7 @@
 
 ;3578 yatastadAsmAkaM paScAt prakopo'nena kartavyaH . aparaM ca \-\-
 3578F: yatastadAsmAkaM paScAt prakopo'nena kartavyaH . aparaM ca 
-3578A: yatastadAsmAkam paH cAt prakopaH anena kartavyaH . aparam ca 
+3578A: yatastadAsmAkam paScAt prakopaH anena kartavyaH . aparam ca 
 
 ;3579 yo'rTa\-tattvamavijYAya kroDasyEva vaSaM gataH .
 3579F: yo'rTatattvamavijYAya kroDasyEva vaSaM gataH .

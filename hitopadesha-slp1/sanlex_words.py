@@ -78,7 +78,7 @@ def init_skip_words():
 
 predetermined_words = {
  "Bavanti":"BU","uvAca":"vac","UcuH":"vac",
- "abravIt":"brU",
+ "abravIt":"brU", "avadat":"vad",
  "anyat":"anya",
  "yataH":"yatas",
  "tataH":"tatas",
@@ -87,10 +87,10 @@ predetermined_words = {
  "etat":"etad",
  "SrutvA":"Sru",
  "paScAd":"paScAt",
-
+ "asya":"idam",
  # words ending in 'am' that need no change
  "aham":"aham", "kaTam":"kaTam", "evam":"evam",
- "idam":"idam","AH":"AH","ayam","ayam",
+ "idam":"idam","AH":"AH","ayam":"ayam",
 }
 def adjust_word(word):
  if word in predetermined_words:
