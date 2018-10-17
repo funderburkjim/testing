@@ -307,16 +307,18 @@ Now the crow Laghupatanaka, the witness of the whole affair, said this in astoni
 praiseworthy. I, therefore, desire friendship with you. Kindly then favour me with your friendship. On hearing this, Hiranyaka asked from within his hole -- who are you? He said I am a crow, Laghupatanaka by name. Hiranyaka smilingly observed -- What friendship can there be with you ? For,
 ; line 0450
 Whatever is fit to be united with another, in this world, the same a wise man should unite with that: I am the food and you the feeder: how can love (friendship) exist between us? And again,
+; line 0453
 Friendship between the food and its eater is simply the cause of misfortune: the deer that was caught in a snare, through (the stratagem of) a jackal was delivered by a crow. The crow asked -- How was that ? Hiranyaka related -- :
 
 FABLE II. 
-
+; line 0458
 There is, in the country of Magadha, a vast wilderness, called Champakavati. In it there long lived in great friendship a deer and a crow. The deer, plump and sleek in body, was spied by a certain jackal, while roaming at will. On seeing him, the jackal said to himself -- Ah, how shall I come by his delicious flesh ! Well, let me first create confidence (in him). Having thus reflected, he went up to him and said -- Friend, is it all well with you? The dear asked -- Who are you? He replied -- I am a jackal, Kshudrabuddhi (Little-wit) by name. I live here, like one dead, having lost all my relatives. Now that I have found a friend in you and have (thus) a relative, I have once more entered the world of the living. Now I will, in every way, be your attendant. The deer said -- Be it so. Thereafter, when the divine Sun, the wearer of a wreath of rays, had set, the two went to the residence of the deer. There on the branch of a Champaka tree, lived a crow, named Subuddbi (Good-wit), an old friend of the deer. Seeing the two the crow asked -- Friend, who is this second ? The deer said -- This is a jackal who comes here desiring our friendship. The crow said, friend, friendship, all of a sudden, with a stranger, is not advisable. For it is said -- 
-Shelter should not be given to any one whose family and disposition are not known; for the fault ofa& cat, the vulture, Jaradgava, suffered death.
+; line 0475
+Shelter should not be given to any one whose family and disposition are not known; for the fault of a cat, the vulture, Jaradgava, suffered death.
 The two asked how it was, whereupon the crow related --
 
 FABLE III. 
-
+; line 0480
 There is a large Parkati tree on the hill, named Gridhrakut (the peak of Vultures), on the bank of the Bhagirathi,
 
 ;hitoeng015.txt
@@ -325,30 +327,47 @@ There is a large Parkati tree on the hill, named Gridhrakut (the peak of Vulture
 In its hollow dwelt, with his talons and eyes gone through an adverse turn of fate, a vultura, Jaradgava by name. Now, out of pity, the birds, roosting in the tree, spared small portions from their food and gave them to him. He lived on that and 
 [Page 13]
  looked after the young birds. Now, once a cat, named
+; line 0485
 Dirghakarna (the long-eared) came there to eat the youngs of the birds. Seeing him coming, the nestlings being terror-stricken, raised a cry. Hearing it Jaradgava asked -- Who is this that is coming? Dirghakarna, seeing the vulture, said in alarm -- Alas, it is all up with me. However,
 One should dread a danger only as long as it has not arrived; but seeing that the danger has come, a man should do what the occasion demands,
+; line 0491
 Now that I am in his presence, I cannot run away. So let things take what course they may. I will first create confidence in him and then approach him. Thus resolved, he went forth and said -- Sir, I salute you. The Vulture asked -- Who are you? He replied -- A cat. The Vulture said -- Get away, else I shall have to kill yon. The cat said -- In the first place, hear me, and then, if you deem me to be worthy of death, let me not live. For,
+; line 0499
 Is any one killed or honoured merely because he belongs to a particular caste? It is only on one's actions (conduct) being fully known that one is found fit to merit death or respect.
-The Vultore said –- Explain why you have come here. The cat replied -- I dwell here on the bank of the Ganges, bathing every day, living a life of celibacy and practising the vow of Chandrayana. All birds, worthy of confidence, always declare before me that you are devoted to the study of religious law. Hence did I come here to hear from you, who are advanced both in knowledge and years (lit. old both as regards krowledge and age), the holy law. But your honour is so well versed in that law that you are ready to kill me, a guest. While the duty of a house-holder is this --
+; line 0501
+The Vulture said –- Explain why you have come here. The cat replied -- I dwell here on the bank of the Ganges, bathing every day, living a life of celibacy and practising the vow of Chandrayana. All birds, worthy of confidence, always declare before me that you are devoted to the study of religious law. Hence did I come here to hear from you, who are advanced both in knowledge and years (lit. old both as regards krowledge and age), the holy law. But your honour is so well versed in that law that you are ready to kill me, a guest. While the duty of a house-holder is this --
+; line 0508
 Fitting hospitality should be shown even to a foe coming to the house: the tree withdraws not its shade from its cutter.
+; line 0510
 And if there be no wealth, a guest should be honoured with kind words at least. For,
+; line 0512
 Grass (a seat made of grass), place, water and the fourth (thing), agreeable speech, these, at any rate, are never refused in the house of the good. Moreover, 
 ; 60.
 
 ;hitoeng016.txt
 
-
+; line 0518
 The good show pity even to creatures devoid of merits: the moon does not, indeed, withhold her light from the pariah's residence. Also,
+; This sentence from Kale not in hitopadesha-slp1 
 Fire is the object of worship to the twice-born (Brahmanas), and the Brahmana to the (four) castes; the husband is the only object of adoration to his wife, while a guest is the object of reverence everywhere. 
 [Page 14]
+; line 0521
  When a guest turns back from a man's house, disappointed in his hopes, he does so, having transferred his sin to him and taken his merit with him. And again,
-Evet a low-born person, coming to the house of one of a high caste, should be honoured as he deserves ; (for) a guest represents in himself all the gods.
+; line 0524
+Even a low-born person, coming to the house of one of a high caste, should be honoured as he deserves ; (for) a guest represents in himself all the gods.
+; line 0526
 The vulture said –- The cat is fond of flesh; and the youngs of birds live here: therefore, I say so. The cat, on hearing this, touched the ground and then his ears and said I having learnt the code of religious ordinances and being free from passion have undertaken this arduous vow of the Moon. Although the religious texts disagree with one another (in other respects) they are quite at one in this that abstinence from killing is the highest religious duty. For,
+; line 0532
 Those men, who are averse to all sort of killing, who bear all things and who are the refuge of all, go to heaven.
+; line 0535
 Religious merit is the only friend who follows one even in death: everything else goes to destruction along with the body. Moreover,
+; line 0538
 When one eats the flesh of another, mark the difference between the two -- the one enjoys momentary pleasure; while the other loses his life. Besides,
+; line 0541
 The agony that a man suffers, at the thought that he has to die, cannot be described by another hy guessing. Hear me again,
+; line 0544
 Who will commit great sin for this accursed belly when it can be filled with herbs growing spontaneously in the forest?
+; line 0546
 Having thus inspired confidence (in the vulture) the cat abode in the hollow of the tree.
 Thereafter, as days passed on, he attacked the young birds, brought them into the hollow and devoured them every day. (Now) an inquiry was set on foot by those birds whose young nestlings were eaten and who being sorrow-stricken were
 
