@@ -87,10 +87,13 @@ predetermined_words = {
  "etat":"etad",
  "SrutvA":"Sru",
  "paScAd":"paScAt",
- "asya":"idam",
- # words ending in 'am' that need no change
+ "paScAt":"paScAt",
+ "asya":"idam","anena":"idam",
+ "Aha":"ah", "AhuH":"ah","brUte":"brU", "tizWati":"sTA",
+ # words, such as those ending in 'am', that need no change
  "aham":"aham", "kaTam":"kaTam", "evam":"evam",
  "idam":"idam","AH":"AH","ayam":"ayam",
+ "anantaram":"anantaram"
 }
 def adjust_word(word):
  if word in predetermined_words:
