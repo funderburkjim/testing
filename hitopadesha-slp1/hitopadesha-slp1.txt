@@ -2622,26 +2622,26 @@
 0745A: tasya pUjA viDAtavyA sarvatra aByAgataH guruH .. 112..
 
 ; 0746-0751 not in Kale
-^;0746F: taTA'
-^;0746A: taTA '
+;0746F: taTA'
+;0746A: taTA '
 
-^;0747F: gururagnirdvijAtInAM varRAnAM brAhmaRo guruH .
-^;0747A: guruH agniH dvijAtInAm varRAnAm brAhmaRaH guruH .
+;0747F: gururagnirdvijAtInAM varRAnAM brAhmaRo guruH .
+;0747A: guruH agniH dvijAtInAm varRAnAm brAhmaRaH guruH .
 
-^;0748F: patireko guruH strIRAM sarvatrAByAgato guruH .. 113..
-^;0748A: patiH ekaH guruH strIRAm sarvatra aByAgataH guruH .. 113..
+;0748F: patireko guruH strIRAM sarvatrAByAgato guruH .. 113..
+;0748A: patiH ekaH guruH strIRAm sarvatra aByAgataH guruH .. 113..
 
 ;
 ;0749 aparaM ca \-\-
-^;0749F: aparaM ca 
-^;0749A: aparam ca 
+;0749F: aparaM ca 
+;0749A: aparam ca 
 
-^;0750F: uttamasyApi varRasya nIco'pi gfhamAgataH .
-^;0750A: uttamasya api varRasya nIcaH api gfham AgataH .
+;0750F: uttamasyApi varRasya nIco'pi gfhamAgataH .
+;0750A: uttamasya api varRasya nIcaH api gfham AgataH .
 
 ;0751 pUjanIyo yaTA\-yogyaM sarva\-deva\-mayo'tiTiH .. 114..
-^;0751F: pUjanIyo yaTAyogyaM sarvadevamayo'tiTiH .. 114..
-^;0751A: pUjanIyaH yaTAyogyam sarvadevam ayaH atiTiH .. 114..
+;0751F: pUjanIyo yaTAyogyaM sarvadevamayo'tiTiH .. 114..
+;0751A: pUjanIyaH yaTAyogyam sarvadevam ayaH atiTiH .. 114..
 
 ;0752 vAyaso'vadat \-\-saKe \! manTara \! sa\-viSeza\-pUjAmasami viDehi\,
 ; saviSezapUjAmasami -> saviSezapUjAmasmE, per Kale
@@ -2689,7 +2689,7 @@
 0763A: avasTApya svapiti .
 
 0764F: ahaM ca tad annamutplutya utplutya pratyahaM  BakzayAmi . anantaraM
-0764A: aham ca tad annam utplutya utplutya pratyaham  BakzayAmi . anantaraM
+0764A: aham ca tad annam utplutya utplutya pratyaham  BakzayAmi . anantaram
 
 ;0765 tasya priya\-suhfd vIRAkarRo nAma parivrAjakaH samAyAtaH\, tena saha
 0765F: tasya priyasuhfd vIRAkarRo nAma parivrAjakaH samAyAtaH\, tena saha
@@ -2700,40 +2700,42 @@
 0766A: nAnAkaTAprasaNgAvasTitaH mama trAsArTam jarjaravaMSaKaRqena
 
 0767F: cUqAkarRo BUmimatAqayat . taM taTAviDaM dfzwvA vIRAkarRa uvAca
-0767A: cUqAkarRaH BUmimatAqayat . tam taTA viDam dfzwvA vIRAkarRaH uvAca
+0767A: cUqAkarRaH BUmim atAqayat . tam taTAviDam dfzwvA vIRAkarRaH uvAca
 
 ;0768 \-\-saKe \! kimiti mama kaTA\-virakto'nyAsakto BavAn \? yataH \-\-
 0768F: saKe \! kimiti mama kaTAvirakto'nyAsakto BavAn \? yataH 
 0768A: saKe \! kim iti mama kaTAviraktaH anyAsaktaH BavAn \? yataH 
+; -----
+; 0769-0776 not in Kale
+;0769F: muKaM prasannaM vimalA ca dfzwiH
+;0769A: muKam prasannam vimalA ca dfzwiH
 
-0769F: muKaM prasannaM vimalA ca dfzwiH
-0769A: muKam prasannam vimalA ca dfzwiH
-
-0770F: kaTAnurAgo maDurA ca vARI .
-0770A: kaTA anurAgaH maDurA ca vARI .
+;0770F: kaTAnurAgo maDurA ca vARI .
+;0770A: kaTA anurAgaH maDurA ca vARI .
 
 ;0771 sneho'DikaH samBrama\-darSanaM ca
-0771F: sneho'DikaH samBramadarSanaM ca
-0771A: snehaH aDikaH samBramadarSanam ca
+;0771F: sneho'DikaH samBramadarSanaM ca
+;0771A: snehaH aDikaH samBramadarSanam ca
 
-0772F: sadAnuraktasya janasya lakzma .. 115..
-0772A: sadA anuraktasya janasya lakzma .. 115..
+;0772F: sadAnuraktasya janasya lakzma .. 115..
+;0772A: sadA anuraktasya janasya lakzma .. 115..
 
 ;0773 adfzwi\-dAnaM kfta\-pUrva\-nASanam
-0773F: adfzwidAnaM kftapUrvanASanam
-0773A: adfzwidAnam kftapUrvanASanam
+;0773F: adfzwidAnaM kftapUrvanASanam
+;0773A: adfzwidAnam kftapUrvanASanam
 
-0774F: AnanaM duScaritAnukIrtanam .
-0774A: Ananam duH caritAnukIrtanam .
+;0774F: AnanaM duScaritAnukIrtanam .
+;0774A: Ananam duH caritAnukIrtanam .
 
 ;0775 kaTA\-prasaNgena ca nAma\-vismftir
-0775F: kaTAprasaNgena ca nAmavismftir
-0775A: kaTAprasaNgena ca nAmavismftiH
+;0775F: kaTAprasaNgena ca nAmavismftir
+;0775A: kaTAprasaNgena ca nAmavismftiH
 
 ;0776 virakta\-BAvasya janasya lakzaRam .. 116..
-0776F: viraktaBAvasya janasya lakzaRam .. 116..
-0776A: viraktaBAvasya janasya lakzaRam .. 116..
+;0776F: viraktaBAvasya janasya lakzaRam .. 116..
+;0776A: viraktaBAvasya janasya lakzaRam .. 116..
 
+; -- return to Kale text
 ;0777 cUqAkarRenoktam \-\-Badra \! nAhaM viraktaH\, kintu paSya ayaM mUziko
 0777F: cUqAkarRenoktam Badra \! nAhaM viraktaH\, kintu paSya ayaM mUziko
 0777A: cUqAkarRena uktam Badra \! na aham viraktaH\, kiM tu paSya ayam mUzikaH
@@ -2743,11 +2745,12 @@
 
 ;0779 nAgadantamavalokyAha \-\-kaTamayaM mUzikaH svalpa\-balo'pyetAvad
 0779F: nAgadantamavalokyAha kaTamayaM mUzikaH svalpabalo'pyetAvad
-0779A: na agadantam avalokya Aha kaTam ayam mUzikaH svalpabalaH api etAvat
+0779A: nAgadantam avalokya Aha kaTam ayam mUzikaH svalpabalaH api etAvat
 
 0780F: dUramutpatati \? tad atra kenApi kAraRena Bavitavyam .
 0780A: dUram utpatati \? tad atra kena api kAraRena Bavitavyam .
 
+; 0781 - 0927 is not present in Kale (so absent in hitoeng)
 ;0781 kzaRaM vicintya parivrAjakenoktam \-\-kAraRaM cAtra
 0781F: kzaRaM vicintya parivrAjakenoktam kAraRaM cAtra
 0781A: kzaRam vicintya parivrAjakena uktam kAraRam ca atra
@@ -2773,7 +2776,7 @@
 
 ;0787 sattvotsAha\-rahitaH svAhAramapyutpAdayitumakzamaH sann AsaM
 0787F: sattvotsAharahitaH svAhAramapyutpAdayitumakzamaH sann AsaM
-0787A: sattvotsAharahitaH sva AhAram api utpAdayitum akzamaH san Asam
+0787A: sattvotsAharahitaH svAhAram api utpAdayitum akzamaH sat Asam
 
 ;0788 mandaM mandamupasarpan cUqAkarRenAvalokitaH . tatastenoktam \-\-
 0788F: mandaM mandamupasarpan cUqAkarRenAvalokitaH . tatastenoktam 
@@ -2802,7 +2805,8 @@
 0794A: aparam ca 
 
 0795F: yasyArTAstasya mitrARi yasyArTAstasya bAnDavAH .
-0795A: yasya arTAH tasya mitrARi yasya arTAH tasya bAnDavAH .
+; bAnDavAH  bAnDu not in mw; presume = banDu
+0795A: yasya arTAH tasya mitrARi yasya arTAH tasya banDavAH .
 
 0796F: yasyArTAH sa pumAn loke yasyArTAH sa hi paRqitaH .. 120..
 0796A: yasya arTAH saH pumAn loke yasya arTAH saH hi paRqitaH .. 120..
@@ -2822,53 +2826,55 @@
 ;0800 aparaM ca \-\-
 0800F: aparaM ca 
 0800A: aparam ca 
-; >> End of sandhi analysis 10-21-2018
+
 0801F: dAridryAn maraRAd vApi dAridryamavaraM smftam .
-0801A: dAridryAn maraRAd vApi dAridryamavaram smftam .
+0801A: dAridryAt maraRAt vA api dAridryam avaram smftam .
 
 ;0802 alpa\-kleSena maraRaM dAridryamatiduHsaham .. 122..
 0802F: alpakleSena maraRaM dAridryamatiduHsaham .. 122..
-0802A: alpakleSena maraRam dAridryamatiduHsaham .. 122..
+0802A: alpakleSena maraRam dAridryam atiduHsaham .. 122..
 
 ;0803 anyacca \-\-
 0803F: anyacca 
 0803A: anyat ca 
 
 0804F: tAnIndriyARyavikalAni tad eva nAma
-0804A: tAnIndriyARyavikalAni tad eva nAma
+0804A: tAni IndriyARi avikalAni tad eva nAma
 
 0805F: sA budDirapratihatA vacanaM tad eva .
-0805A: sA budDirapratihatA vacanam tad eva .
+0805A: sA budDiH apratihatA vacanam tad eva .
 
 0806F: arTozmaRA virahitaH puruzaH sa eva
 0806A: arTozmaRA virahitaH puruzaH saH eva
 
 0807F: anyaH kzaRena BavatIti vicitrametat .. 123..
-0807A: anyaH kzaRena BavatIti vicitrametat .. 123..
+0807A: anyaH kzaRena Bavati iti vicitram etad .. 123..
 
 0808F: etat sarvamAkarRya
-0808A: etat sarvamAkarRya
+; AkarRya -- not in mw. ?  Having heard?
+0808A: etad sarvam AkarRya
 
 ;0809 mayAlocitaM \-\-mamAnnAvasTAnamayuktamidAnIm . taTA coktam \-\-
 0809F: mayAlocitaM mamAnnAvasTAnamayuktamidAnIm . taTA coktam 
-0809A: mayAlocitam mamAnnAvasTAnamayuktamidAnIm . taTA ca uktam 
+0809A: mayA Alocitam mama annAvasTAnam ayuktam idAnIm . taTA ca uktam 
 
 ;0810 atyanta\-vimuKe dEve vyarTe yatne ca pOruze .
 0810F: atyantavimuKe dEve vyarTe yatne ca pOruze .
 0810A: atyantavimuKe dEve vyarTe yatne ca pOruze .
 
 0811F: manasvino daridrasya vanAd anyat kutaH suKam .. 124..
-0811A: manasvinaH daridrasya vanAd anyat kutaH suKam .. 124..
+0811A: manasvinaH daridrasya vanAt anyat kutaH suKam .. 124..
 
 ;0812 anyacca \-\-
 0812F: anyacca 
 0812A: anyat ca 
 
 0813F: manasvI miryate kAmaM kArpaRyaM na tu gacCati .
-0813A: manasvI miryate kAmam kArpaRyam na tu gacCati .
+; miryate --  typo? change to mriyate
+0813A: manasvI mriyate kAmam kArpaRyam na tu gacCati .
 
 0814F: api nirvARamAyAti nAnalo yAti SItatAm .. 125..
-0814A: api nirvARamAyAti nAnalaH yAti SItatAm .. 125..
+0814A: api nirvARam AyAti na analaH yAti SItatAm .. 125..
 
 ;0815 kiM ca \-\-
 0815F: kiM ca 
@@ -2876,26 +2882,27 @@
 
 ;0816 kusuma\-stavakasyeva dve vfttI tu manasvinaH .
 0816F: kusumastavakasyeva dve vfttI tu manasvinaH .
-0816A: kusumastavakasyeva dve vfttI tu manasvinaH .
+0816A: kusumastavakasya iva dve vfttI tu manasvinaH .
 
 ;0817 sarvezAM mUrDni vA tizWed viSIryeta vane \-\-TavA .. 126..
 0817F: sarvezAM mUrDni vA tizWed viSIryeta vane TavA .. 126..
-0817A: sarvezAm mUrDni vA tizWed viSIryeta vane TavA .. 126..
+0817A: sarvezAm mUrDni vA tizWet viSIryeta vane aTavA .. 126..
 
 ;0818 yaccAnyasmE etad vfttAnta\-kaTanaM tad apyanucitam . yataH \-\-
 0818F: yaccAnyasmE etad vfttAntakaTanaM tad apyanucitam . yataH 
-0818A: yaccAnyasmE etad vfttAntakaTanam tad apyanucitam . yataH 
+0818A: yaccAni asmE etad vfttAntakaTanam tad api anucitam . yataH 
 
 ;0819 arTa\-nASaM manas\-tApaM gfhe duScaritAni ca .
 0819F: arTanASaM manastApaM gfhe duScaritAni ca .
-0819A: arTanASam manastApam gfhe duH caritAni ca .
+0819A: arTanASam manastApam gfhe duScaritAni ca .
 
 0820F: vaYcanaM cApamAnaM ca matimAn na prakASayet .. 127..
-0820A: vaYcanam cApamAnam ca matimAn na prakASayet .. 127..
+0820A: vaYcanam ca apamAnam ca matimAn na prakASayet .. 127..
 
 ;0821 yaccAtrEva yAcYayA jIvanaM tad apyatIva\-garhitam . yataH \-\-
 0821F: yaccAtrEva yAcYayA jIvanaM tad apyatIvagarhitam . yataH 
-0821A: yaccAtrEva yAcYayA jIvanam tad apyatIvagarhitam . yataH 
+; yaccAtra ? tad ca atra ?
+0821A: yaccAtra eva yAcYayA jIvanam tad api atIvagarhitam . yataH 
 
 ;0822 varaM viBava\-hInena prAREH santarpito'nalaH .
 0822F: varaM viBavahInena prAREH santarpito'nalaH .
@@ -2903,7 +2910,7 @@
 
 ;0823 nopacAra\-pariBrazwaH kfpaRaH prArTyate janaH .. 128..
 0823F: nopacArapariBrazwaH kfpaRaH prArTyate janaH .. 128..
-0823A: nopacArapariBrazwaH kfpaRaH prArTyate janaH .. 128..
+0823A: na upacArapariBrazwaH kfpaRaH prArTyate janaH .. 128..
 
 ;0824 anyacca \-\-
 0824F: anyacca 
@@ -2911,24 +2918,27 @@
 
 ;0825 dAridryAd Driyameti hrI\-parigataH sattvAt pariBraSyate
 0825F: dAridryAd Driyameti hrIparigataH sattvAt pariBraSyate
-0825A: dAridryAd Driyameti hrIparigataH sattvAt pariBraSyate
+; Driyam not in MW.  prob. from root Df
+0825A: dAridryAt Driyam eti hrIparigataH sattvAt pariBraSyate
 
 0826F: niHsattvaM pariBUyate pariBavAn nirvedamApadyate .
-0826A: niHsattvam pariBUyate pariBavAn nirvedamApadyate .
+0826A: niHsattvam pariBUyate pariBavAt nirvedam Apadyate .
 
 ;0827 nirviRRaH Sucameti Soka\-Pihito budDyA parityajyate
+;? PihitaH 
 0827F: nirviRRaH Sucameti SokaPihito budDyA parityajyate
-0827A: nirviRRaH Sucameti SokaPihitaH budDyA parityajyate
+; 
+0827A: nirviRRaH Sucam eti SokaPihitaH budDyA parityajyate
 
 0828F: nirbudDiH kzayametyaho niDanatA sarvApadAmAspadam .. 129..
-0828A: nirbudDiH kzayametyaho niDanatA sarvApadAmAspadam .. 129..
+0828A: nirbudDiH kzayam eti aho niDanatA sarvApadAm Aspadam .. 129..
 
 ;0829 kiM ca \-\-
 0829F: kiM ca 
 0829A: kim ca 
 
 0830F: varaM mOnaM kAryaM na ca vacanamuktaM yad anftaM
-0830A: varam mOnam kAryam na ca vacanamuktam yad anftaM
+0830A: varam mOnam kAryam na ca vacanam uktam yad anftam
 
 ;0831 varaM klEbyaM puMsAM na ca para\-kalatrABigamanam .
 0831F: varaM klEbyaM puMsAM na ca parakalatrABigamanam .
@@ -2936,7 +2946,7 @@
 
 ;0832 varaM prARa\-tyAgo na ca piSuna\-vAkyezvaBirucir
 0832F: varaM prARatyAgo na ca piSunavAkyezvaBirucir
-0832A: varam prARatyAgaH na ca piSunavAkyezvaBirucir
+0832A: varam prARatyAgaH na ca piSunavAkyezu aBiruciH
 
 ;0833 varaM BikzASitvaM na ca para\-DanAsvAdana\-suKam .. 130..
 0833F: varaM BikzASitvaM na ca paraDanAsvAdanasuKam .. 130..
@@ -2944,79 +2954,80 @@
 
 ;0834 varaM SUnyA SAlA na ca Kalu varo duzwa\-vfzaBo
 0834F: varaM SUnyA SAlA na ca Kalu varo duzwavfzaBo
-0834A: varam SUnyA SAlA na ca Kalu varaH duzwavfzaBo
+0834A: varam SUnyA SAlA na ca Kalu varaH duzwavfzaBaH
 
 ;0835 varaM veSyA patnI na punaravinItA kula\-vaDUH .
 0835F: varaM veSyA patnI na punaravinItA kulavaDUH .
-0835A: varam veSyA patnI na punaravinItA kulavaDUH .
+0835A: varam veSyA patnI na punar avinItA kulavaDUH .
 
 ;0836 varaM vAso'raRye na punaravivekADipa\-pure
 0836F: varaM vAso'raRye na punaravivekADipapure
-0836A: varam vAsaH araRye na punaravivekADipapure
+0836A: varam vAsaH araRye na punar avivekADipapure
 
 ;0837 varaM prARa\-tyAgo na punaraDamAnAmupagamaH .. 131..
 0837F: varaM prARatyAgo na punaraDamAnAmupagamaH .. 131..
-0837A: varam prARatyAgaH na punaraDamAnAmupagamaH .. 131..
+0837A: varam prARatyAgaH na punar aDamAnAm upagamaH .. 131..
 
 ;0838 api ca \-\-
 0838F: api ca 
 0838A: api ca 
 
 0839F: seveva mAnamaKilaM jyotsneva tamo jareva lAvaRyam .
-0839A: seveva mAnamaKilam jyotsneva tamaH jareva lAvaRyam .
+0839A: seveva mAnam aKilam jyotsnA iva tamaH jarA iva lAvaRyam .
 
 ;0840 hari\-hara\-kaTeva duritaM guRa\-SatamapyarTitA harati .. 132..
 0840F: hariharakaTeva duritaM guRaSatamapyarTitA harati .. 132..
-0840A: hariharakaTeva duritam guRaSatamapyarTitA harati .. 132..
+0840A: hariharakaTA iva duritam guRaSatam api arTitA harati .. 132..
 
 ;0841 tat kimahaM para\-piRqena AtmAnaM pozayAmi \?
 0841F: tat kimahaM parapiRqena AtmAnaM pozayAmi \?
-0841A: tat kimaham parapiRqena AtmAnam pozayAmi \?
+0841A: tat kim aham parapiRqena AtmAnam pozayAmi \?
 
 ;0842 kazwaM BoH \! tad api dvitIyaM mftyu\-dvAram . anyacca \-\-
 0842F: kazwaM BoH \! tad api dvitIyaM mftyudvAram . anyacca 
-0842A: kazwam BoH \! tad api dvitIyam mftyudvAram . anyacca 
+0842A: kazwam BoH \! tad api dvitIyam mftyudvAram . anyat ca 
 
 ;0843 rogI cira\-pravAsI parAnna\-BojI parAvasaTa\-SAyI .
 0843F: rogI cirapravAsI parAnnaBojI parAvasaTaSAyI .
 0843A: rogI cirapravAsI parAnnaBojI parAvasaTaSAyI .
 
 0844F: yaj jIvati tan maraRaM yan maraRaM so'sya viSrAmaH .. 133..
-0844A: yaj jIvati tan maraRam yan maraRam saH asya viSrAmaH .. 133..
+0844A: yad jIvati tad maraRam yad maraRam saH asya viSrAmaH .. 133..
 
 0845F: ityAlocyApi loBAt
-0845A: ityAlocyApi loBAt
+0845A: iti Alocya api loBAt
 
 ;0846 punarapi tadIyamannaM grahItuM grahamakaravam . taTA coktam \-\-
 0846F: punarapi tadIyamannaM grahItuM grahamakaravam . taTA coktam 
-0846A: punarapi tadIyamannam grahItum grahamakaravam . taTA ca uktam 
+0846A: punar api tadIyam annam grahItum graham akaravam . taTA ca uktam 
 
 0847F: loBena budDiScalati loBo janayate tfzAm .
 0847A: loBena budDiH calati loBaH janayate tfzAm .
 
 0848F: tfzArto duHKamApnoti paratreha ca mAnavaH .. 134..
-0848A: tfzArtaH duHKamApnoti paratreha ca mAnavaH .. 134..
+0848A: tfzArtaH duHKam Apnoti paratra iha ca mAnavaH .. 134..
 
 0849F: tato'haM mandaM mandamupasarpaMstena vIRAkarRena
-0849A: tataH aham mandam mandamupasarpaMstena vIRAkarRena
+0849A: tataH aham mandam mandam upasarpan tena vIRAkarRena
 
 ;0850 jarjara\-vaMSa\-KaRqena tAqitaScAcintayam
 0850F: jarjaravaMSaKaRqena tAqitaScAcintayam
-0850A: jarjaravaMSaKaRqena tAqitaH cAcintayam
+0850A: jarjaravaMSaKaRqena tAqitaH ca acintayam
 
 ;0851 \-\-lubDo hyasantuzwo niyatamAtma\-drohI Bavati .  taTA ca \-\-
 0851F: lubDo hyasantuzwo niyatamAtmadrohI Bavati .  taTA ca 
-0851A: lubDaH hyasantuzwaH niyatamAtmadrohI Bavati .  taTA ca 
+0851A: lubDaH hi asantuzwaH niyatam AtmadrohI Bavati .  taTA ca 
 
 ;0852 Dana\-lubDo hyasantuzwo'niyatAtmAjitendriyaH .
 0852F: DanalubDo hyasantuzwo'niyatAtmAjitendriyaH .
-0852A: DanalubDaH hyasantuzwaH aniyatAtmAjitendriyaH .
+0852A: DanalubDaH hi asantuzwaH aniyatAtmAjitendriyaH .
 
 0853F: sarvA evApadastasya yasya tuzwaM na mAnasam .. 135..
-0853A: sarvA evApadastasya yasya tuzwam na mAnasam .. 135..
+0853A: sarvAH eva ApadaH tasya yasya tuzwam na mAnasam .. 135..
 
 0854F: sarvAH sampattasyastasya santuzwaM yasya mAnasam .
-0854A: sarvAH sampattasyastasya santuzwam yasya mAnasam .
+; sampattasyaH error? shld. be sampattayaH
+0854A: sarvAH sampattasyaH tasya santuzwam yasya mAnasam .
 
 ;0855 upAnad\-gUQa\-pAdasya nanu carmAvfteva BUH .. 136..
 0855F: upAnadgUQapAdasya nanu carmAvfteva BUH .. 136..
@@ -3028,21 +3039,21 @@
 
 ;0857 santozAmfta\-tfptAnAM yat suKaM SAnta\-cetasAm .
 0857F: santozAmftatfptAnAM yat suKaM SAntacetasAm .
-0857A: santozAmftatfptAnAm yat suKam SAntacetasAm .
+0857A: santozAmftatfptAnAm yad suKam SAntacetasAm .
 
 ;0858 kutastad\-Dana\-lubDAnAmitaScetaSca DAvatAm .. 137..
 0858F: kutastadDanalubDAnAmitaScetaSca DAvatAm .. 137..
-0858A: kutastadDanalubDAnAmitaH cetaH ca DAvatAm .. 137..
+0858A: kutas tad DanalubDAnAm itas cetaH ca DAvatAm .. 137..
 
 ;0859 kiM ca \-\-
 0859F: kiM ca 
 0859A: kim ca 
 
 0860F: tenADItaM SrutaM tena tena sarvamanuzWitam .
-0860A: tenADItam Srutam tena tena sarvamanuzWitam .
+0860A: tena aDItam Srutam tena tena sarvam anuzWitam .
 
 0861F: yenASAH pfzWataH kftvA nErASyamavalambitam .. 138..
-0861A: yenASAH pfzWataH kftvA nErASyamavalambitam .. 138..
+0861A: yena ASAH pfzWatas kftvA nErASyam avalambitam .. 138..
 
 ;0862 api ca \-\-
 0862F: api ca 
@@ -3050,19 +3061,21 @@
 
 ;0863 aseviteSvara\-dvAramadfzwa\-viraha\-vyaTam .
 0863F: aseviteSvaradvAramadfzwavirahavyaTam .
-0863A: aseviteSvaradvAramadfzwavirahavyaTam .
+; vyaTa not in MW.  adj. from vyaT
+0863A: aseviteSvaradvAram adfzwavirahavyaTam .
 
 ;0864 anukta\-klIba\-vacanaM DanyaM kasyApi jIvanam .. 139..
 0864F: anuktaklIbavacanaM DanyaM kasyApi jIvanam .. 139..
-0864A: anuktaklIbavacanam Danyam kasyApi jIvanam .. 139..
+0864A: anuktaklIbavacanam Danyam kasya api jIvanam .. 139..
 
 ;0865 na yojana\-SataM dUraM vAhyamAnasya tfzRayA .
 0865F: na yojanaSataM dUraM vAhyamAnasya tfzRayA .
+; vAhyamAnasya =? vAhyamAna = present middle participle causal of vah?
 0865A: na yojanaSatam dUram vAhyamAnasya tfzRayA .
 
 ;0866 santuzwasya kara\-prApte \-\-pyarTe Bavati nAdaraH .. 140..
 0866F: santuzwasya karaprApte pyarTe Bavati nAdaraH .. 140..
-0866A: santuzwasya karaprApte pyarTe Bavati nAdaraH .. 140..
+0866A: santuzwasya karaprApte api arTe Bavati nAdaraH .. 140..
 
 ;0867 tad atra avasTocita\-kArya\-paricCedaH SreyAn .
 0867F: tad atra avasTocitakAryaparicCedaH SreyAn .
@@ -3070,7 +3083,7 @@
 
 ;0868 ko Darmo BUta\-dayA kiM sOKyaM nityamaroginA jagati .
 0868F: ko Darmo BUtadayA kiM sOKyaM nityamaroginA jagati .
-0868A: kaH DarmaH BUtadayA kim sOKyam nityamaroginA jagati .
+0868A: kaH DarmaH BUtadayA kim sOKyam nityam aroginA jagati .
 
 ;0869 kaH snehaH sad\-BAvaH kiM pARqityaM paricCedaH .. 141..
 0869F: kaH snehaH sadBAvaH kiM pARqityaM paricCedaH .. 141..
@@ -3081,10 +3094,11 @@
 0870A: taTA ca 
 
 0871F: paricCedo hi pARqityaM yadApannA vipattayaH .
-0871A: paricCedaH hi pARqityam yadApannA vipattayaH .
+0871A: paricCedaH hi pARqityam yadA ApannAH vipattayaH .
 
 ;0872 aparicCeda\-kartfRAM vipadaH syuH pade pade .. 142..
 0872F: aparicCedakartfRAM vipadaH syuH pade pade .. 142..
+; kartfRAM error shld be kartFRAM  (6p of kartf)
 0872A: aparicCedakartfRAm vipadaH syuH pade pade .. 142..
 
 ;0873 taTA hi \-\-
@@ -3092,10 +3106,10 @@
 0873A: taTA hi 
 
 0874F: tyajed ekaM kulasyArTe grAmasyArTe kulaM tyajet .
-0874A: tyajed ekam kulasyArTe grAmasyArTe kulam tyajet .
+0874A: tyajet ekam kulasya arTe grAmasya arTe kulam tyajet .
 
 0875F: grAmaM janapadasyArTe AtmArTe pfTivIM tyajet .. 143..
-0875A: grAmam janapadasyArTe AtmArTe pfTivIm tyajet .. 143..
+0875A: grAmam janapadasya arTe AtmArTe pfTivIm tyajet .. 143..
 
 ;0876 aparaM ca \-\-
 0876F: aparaM ca 
@@ -3105,11 +3119,11 @@
 0877A: pAnIyam vA nirAyAsam svAdvannam vA Bayottaram .
 
 0878F: vicAryaM Kalu paSyAmi tat suKaM yatra nirvftiH .. 144..
-0878A: vicAryam Kalu paSyAmi tat suKam yatra nirvftiH .. 144..
+0878A: vicAryam Kalu paSyAmi tad suKam yatra nirvftiH .. 144..
 
 ;0879 ityAlocyAhaM nirjana\-vanamAgataH . yataH \-\-
 0879F: ityAlocyAhaM nirjanavanamAgataH . yataH 
-0879A: ityAlocyAham nirjanavanamAgataH . yataH 
+0879A: iti Alocya aham nirjanavanam AgataH . yataH 
 
 ;0880 varaM vanaM vyAGra\-gajendra\-sevitaM
 0880F: varaM vanaM vyAGragajendrasevitaM
@@ -3117,7 +3131,8 @@
 
 ;0881 drumAlayaH patra\-PalAmbu\-Bakzitam .
 0881F: drumAlayaH patraPalAmbuBakzitam .
-0881A: drumAlayaH patraPalAmbuBakzitam .
+; patra - MW spells pattra (leaf)
+0881A: drumAlayaH pattraPalAmbuBakzitam .
 
 0882F: tfRAni SayyA vasanaM ca valkalaM
 0882A: tfRAni SayyA vasanam ca valkalaM
@@ -3132,6 +3147,7 @@
 
 ;0885 saMsAra\-vizaya\-vfkzasya dve eva rasavat Pale .
 0885F: saMsAravizayavfkzasya dve eva rasavat Pale .
+; rasavat Pale ->? rasavatPale  (a compound - juicy fruit)
 0885A: saMsAravizayavfkzasya dve eva rasavat Pale .
 
 ;0886 kAvyAmfta\-rasAsvAdaH saNgamaH sajjanEH saha .. 146..
@@ -3144,7 +3160,7 @@
 
 ;0888 sat\-saNgaH keSave BaktirgaNgAmBasi nimajjanam .
 0888F: satsaNgaH keSave BaktirgaNgAmBasi nimajjanam .
-0888A: satsaNgaH keSave BaktirgaNgAmBasi nimajjanam .
+0888A: satsaNgaH keSave BaktiH gaNgAmBasi nimajjanam .
 
 0889F: asAre Kalu saMsAre trIRi sArARi BAvayet .. 147..
 0889A: asAre Kalu saMsAre trIRi sArARi BAvayet .. 147..
@@ -3155,7 +3171,8 @@
 
 ;0891 arTAH pAda\-rajopamA giri\-nadI\-vegopamaM yOvanam
 0891F: arTAH pAdarajopamA girinadIvegopamaM yOvanam
-0891A: arTAH pAdarajopamA girinadIvegopamam yOvanam
+; pAdarajopamAH ? = pAdaraja + upamA
+0891A: arTAH pAdarajopamAH girinadIvegopamam yOvanam
 
 ;0892 AyuzyaM jala\-bindu\-lola\-capalaM PenopamaM jIvanam .
 0892F: AyuzyaM jalabindulolacapalaM PenopamaM jIvanam .
@@ -3163,22 +3180,23 @@
 
 ;0893 DarmaM yo na karoti niScala\-matiH svargArgalodGAwanaM
 0893F: DarmaM yo na karoti niScalamatiH svargArgalodGAwanaM
-0893A: Darmam yaH na karoti niH calamatiH svargArgalodGAwanaM
+0893A: Darmam yaH na karoti niScalamatiH svargArgalodGAwanam
 
 ;0894 paScAt\-tApa\-hato jarA\-pariRataH SokAgninA dahyate .. 148..
 0894F: paScAttApahato jarApariRataH SokAgninA dahyate .. 148..
-0894A: paScAttApahataH jarApariRataH SokAgninA dahyate .. 148..
+0894A: paScAt tApahataH jarApariRataH SokAgninA dahyate .. 148..
 
 ;0895 yuzmABiratisaYcayaH kftaH . tasyAyaM dozaH . SfRu \-\-
 0895F: yuzmABiratisaYcayaH kftaH . tasyAyaM dozaH . SfRu 
-0895A: yuzmABiratisaYcayaH kftaH . tasyAyam dozaH . SfRu 
+0895A: yuzmABiH atisaYcayaH kftaH . tasya ayam dozaH . SfRu 
 
 0896F: upArjitAnAM vittAnAM tyAga eva hi rakzaRam .
-0896A: upArjitAnAm vittAnAm tyAga eva hi rakzaRam .
+0896A: upArjitAnAm vittAnAm tyAgaH eva hi rakzaRam .
 
 ;0897 taqAgodara\-saMsTAnAM parIvAhEvAmBasAm .. 149..
 0897F: taqAgodarasaMsTAnAM parIvAhEvAmBasAm .. 149..
-0897A: taqAgodarasaMsTAnAm parIvAhEvAmBasAm .. 149..
+; parIvAhEva =? parIvAha eva :  Then parIvAha would be voc. sg., looks wrong.
+0897A: taqAgodarasaMsTAnAm parIvAha eva amBasAm .. 149..
 
 ;0898 anyacca \-\-
 0898F: anyacca 
@@ -3189,7 +3207,7 @@
 
 ;0900 tad\-aDo nilayaM gantuM cakre panTAnamagrataH .. 150..
 0900F: tadaDo nilayaM gantuM cakre panTAnamagrataH .. 150..
-0900A: tadaDaH nilayam gantum cakre panTAnamagrataH .. 150..
+0900A: tad aDaH nilayam gantum cakre panTAnam agrataH .. 150..
 
 ;0901 yataH \-\-
 0901F: yataH 
@@ -3197,11 +3215,11 @@
 
 ;0902 nija\-sOKyaM nirunDAno yo DanArjanamicCati .
 0902F: nijasOKyaM nirunDAno yo DanArjanamicCati .
-0902A: nijasOKyam nirunDAnaH yaH DanArjanamicCati .
+0902A: nijasOKyam nirunDAnaH yaH DanArjanam icCati .
 
 ;0903 parArTa\-BAra\-vAhIva sa kleSasyEva BAjanam .. 151..
 0903F: parArTaBAravAhIva sa kleSasyEva BAjanam .. 151..
-0903A: parArTaBAravAhIva saH kleSasyEva BAjanam .. 151..
+0903A: parArTaBAravAhI iva saH kleSasya eva BAjanam .. 151..
 
 ;0904 taTA coktaM \-\-
 0904F: taTA coktaM 
@@ -3212,23 +3230,24 @@
 0905A: dAnopaBogahInena Danena DaninaH yadi .
 
 0906F: BavAmaH kiM na tenEva Danena Danino vayam .. 152..
-0906A: BavAmaH kim na tenEva Danena DaninaH vayam .. 152..
+0906A: BavAmaH kim na tena eva Danena DaninaH vayam .. 152..
 
 ;0907 yataH \-\-
 0907F: yataH 
 0907A: yataH 
 
 0908F: Danena kiM yo na dadAti nASnute
-0908A: Danena kim yaH na dadAti nASnute
+0908A: Danena kim yaH na dadAti na aSnute
 
 0909F: balena kiM yaSca ripUn na yADatte .
+; yADatte ?  Datte = 3s of DA
 0909A: balena kim yaH ca ripUn na yADatte .
 
 0910F: Srutena kiM yo na ca DarmamAcaret
-0910A: Srutena kim yaH na ca DarmamAcaret
+0910A: Srutena kim yaH na ca Darmam Acaret
 
 0911F: kimAtmanA yo na jitendriyo Bavet .. 153..
-0911A: kimAtmanA yaH na jitendriyaH Bavet .. 153..
+0911A: kim AtmanA yaH na jitendriyaH Bavet .. 153..
 
 ;0912 anyacca \-\-
 0912F: anyacca 
@@ -3238,14 +3257,14 @@
 0913A: asamBogena sAmAnyam kfpaRasya Danam parEH .
 
 0914F: asyedamiti sambanDo hAnO duHKena gamyate .. 154..
-0914A: asyedamiti sambanDaH hAnO duHKena gamyate .. 154..
+0914A: asya idam iti sambanDaH hAnO duHKena gamyate .. 154..
 
 ;0915 api ca \-\-
 0915F: api ca 
 0915A: api ca 
 
 0916F: na devAya na viprAya na banDuByo na cAtmane .
-0916A: na devAya na viprAya na banDuByaH na cAtmane .
+0916A: na devAya na viprAya na banDuByaH na ca Atmane .
 
 ;0917 kfpaRasya DanaM yAti vahni\-taskara\-pArTivEH .. 155..
 0917F: kfpaRasya DanaM yAti vahnitaskarapArTivEH .. 155..
@@ -3257,16 +3276,16 @@
 
 ;0919 dAnaM priya\-vAk\-sahitaM
 0919F: dAnaM priyavAksahitaM
-0919A: dAnam priyavAksahitaM
+0919A: dAnam priyavAk sahitam
 
 0920F: jYAnamagarvaM kzamAnvitaM sOryam .
-0920A: jYAnamagarvam kzamAnvitam sOryam .
+0920A: jYAnam agarvam kzamAnvitam sOryam .
 
 0921F: tyAgaM sahitaM ca vittaM
-0921A: tyAgam sahitam ca vittaM
+0921A: tyAgam sahitam ca vittam
 
 0922F: durlaBametaccaturBadram .. 156..
-0922A: durlaBametaccaturBadram .. 156..
+0922A: durlaBam etad caturBadram .. 156..
 
 ;0923 uktaM ca \-\-
 0923F: uktaM ca 
@@ -3281,12 +3300,13 @@
 
 ;0926 tAvAhatuH \-\-kaTametat \?
 0926F: tAvAhatuH kaTametat \?
-0926A: tAvAhatuH kaTametat \?
+0926A: tO AhatuH kaTam etat \?
 
 ;0927 manTaraH kaTayati \-\-
 0927F: manTaraH kaTayati 
 0927A: manTaraH kaTayati 
 
+; this is kaTA 6 in Kale, p. 24
 0928F: kaTA 5
 0928A: kaTA 5
 
@@ -3296,81 +3316,83 @@
 
 ;0930 sa cEkadA mAMsa\-lubDo DanurAdAya
 0930F: sa cEkadA mAMsalubDo DanurAdAya
-0930A: sa ca ekadA mAMsalubDaH DanurAdAya
+0930A: sa ca ekadA mAMsalubDaH Danus AdAya
 
 ;0931 mfgamanvizyan vinDyAwavI\-maDyaM gataH . tatra tena mfga
 0931F: mfgamanvizyan vinDyAwavImaDyaM gataH . tatra tena mfga
-0931A: mfgamanvizyan vinDyAwavImaDyam gataH . tatra tena mfga
+0931A: mfgam anvizyan vinDyAwavImaDyam gataH . tatra tena mfgaH
 
 0932F: eko vyApAditaH . tato mfgamAdAya gacCatA tena GorAkftiH
-0932A: ekaH vyApAditaH . tataH mfgamAdAya gacCatA tena GorAkftiH
+0932A: ekaH vyApAditaH . tataH mfgam AdAya gacCatA tena GorAkftiH
 
 0933F: SUkaro dfzwaH . tatastena mfgaM BUmO niDAya SUkaraH SareRa
-0933A: SUkaraH dfzwaH . tatastena mfgam BUmO niDAya SUkaraH SareRa
+0933A: SUkaraH dfzwaH . tatas tena mfgam BUmO niDAya SUkaraH SareRa
 
 ;0934 hataH . SUkareRApyAgatya pralaya\-Gana\-Gora\-garjanaM kurvARena sa
 0934F: hataH . SUkareRApyAgatya pralayaGanaGoragarjanaM kurvARena sa
-0934A: hataH . SUkareRApyAgatya pralayaGanaGoragarjanam kurvARena sa
+0934A: hataH . SUkareRa api Agatya pralayaGanaGoragarjanam kurvARena saH
 
 ;0935 vyADo muzka\-deSe hataH Cinna\-druma iva papAta . taTA coktam \-\-
 0935F: vyADo muzkadeSe hataH Cinnadruma iva papAta . taTA coktam 
-0935A: vyADaH muzkadeSe hataH Cinnadruma iva papAta . taTA ca uktam 
+0935A: vyADaH muzkadeSe hataH CinnadrumaH iva papAta . taTA ca uktam 
 
 0936F: jalamagnirvizaM SastaM kzud vyADiH patanaM gireH .
-0936A: jalamagnirvizam Sastam kzud vyADiH patanam gireH .
+; Sastam (praise) changed to Sastram (weapon)
+0936A: jalam agniH vizam Sastam kzud vyADiH patanam gireH .
 
 0937F: nimittaM kiYcid AsAdya dehI prARErvimucyate .. 158..
-0937A: nimittam kiYcid AsAdya dehI prARErvimucyate .. 158..
+0937A: nimittam kim cid AsAdya dehI prAREH vimucyate .. 158..
 
 0938F: aTa tayoH pAdAsPAlanena ekaH sarpo'pi mftaH . atrAntare
-0938A: aTa tayoH pAdAsPAlanena ekaH sarpaH api mftaH . atrAntare
+0938A: aTa tayoH pAdAsPAlanena ekaH sarpaH api mftaH . atra antare
 
 0939F: dIrGarAvo nAma jambukaH pariBramanAhArArTA tAn mftAn
-0939A: dIrGarAvaH nAma jambukaH pariBramanAhArArTA tAn mftAn
+; AhArArTA -> AhArArTI  (agree with Kale)
+0939A: dIrGarAvaH nAma jambukaH pariBraman AhArArTI tAn mftAn
 
 ;0940 mfga\-vyADa\-sarpa\-SUkarAn apaSyat . AlokyAcintayacca \-\-aho
 0940F: mfgavyADasarpaSUkarAn apaSyat . AlokyAcintayacca aho
-0940A: mfgavyADasarpaSUkarAn apaSyat . AlokyAcintayacca aho
+0940A: mfgavyADasarpaSUkarAn apaSyat . Alokya acintayat ca aho
 
 0941F: BAgyam \! adya mahad BojyaM me samupasTitam .
-0941A: BAgyam \! adya mahad Bojyam me samupasTitam .
+0941A: BAgyam \! adya mahat Bojyam me samupasTitam .
 
 0942F: aTavA
 0942A: aTavA
 
 0943F: acintitAni duHKAni yaTEvAyAnti dehinAm .
-0943A: acintitAni duHKAni yaTEvAyAnti dehinAm .
+0943A: acintitAni duHKAni yaTA eva AyAnti dehinAm .
 
 0944F: suKAnyapi taTA manye dEvamatrAtiricyate .. 159..
-0944A: suKAnyapi taTA manye dEvamatrAtiricyate .. 159..
+0944A: suKAni api taTA manye dEvam atra atiricyate .. 159..
 
 ;0945 mAsamekaM naro yAti dvO mAsO mfga\-SUkarO .
 0945F: mAsamekaM naro yAti dvO mAsO mfgaSUkarO .
-0945A: mAsamekam naraH yAti dvO mAsO mfgaSUkarO .
+0945A: mAsam ekam naraH yAti dvO mAsO mfgaSUkarO .
 
 0946F: ahirekaM dinaM yAti adya Bakzyo DanurguRaH .. 160..
-0946A: ahirekam dinam yAti adya BakzyaH DanurguRaH .. 160..
+0946A: ahiH ekam dinam yAti adya BakzyaH DanurguRaH .. 160..
 
 ;0947 tataH praTama\-buBukzAyAmidaM niHsvAdu kodaRqa\-lagnaM snAyu\-banDanaM
 0947F: tataH praTamabuBukzAyAmidaM niHsvAdu kodaRqalagnaM snAyubanDanaM
-0947A: tataH praTamabuBukzAyAmidam niHsvAdu kodaRqalagnam snAyubanDanaM
+0947A: tataH praTamabuBukzAyAm idam niHsvAdu kodaRqalagnam snAyubanDanam
 
 ;0948 KAdAmi\, ityuktvA taTAkarot . tataSCinne snAyu\-banDane
 0948F: KAdAmi\, ityuktvA taTAkarot . tataSCinne snAyubanDane
-0948A: KAdAmi\, ityuktvA taTAkarot . tataSCinne snAyubanDane
+0948A: KAdAmi\, iti uktvA taTA akarot . tatas Cinne snAyubanDane
 
 0949F: drutamutpatitena DanuzA hfdi nirBinnaH sa dIrGarAvaH paYcatvaM
-0949A: drutamutpatitena DanuzA hfdi nirBinnaH saH dIrGarAvaH paYcatvaM
+0949A: drutam utpatitena DanuzA hfdi nirBinnaH saH dIrGarAvaH paYcatvam
 
 ;0950 gataH . ato'haM bravImi kartavyaH saYcayo nityamityAdi . taTA ca \-\-
 0950F: gataH . ato'haM bravImi kartavyaH saYcayo nityamityAdi . taTA ca 
-0950A: gataH . ataH aham bravImi kartavyaH saYcayaH nityamityAdi . taTA ca 
+0950A: gataH . ataH aham bravImi kartavyaH saYcayaH nityam iti Adi . taTA ca 
 
 0951F: yad dadAti yad aSnAti tad eva Danino Danam .
 0951A: yad dadAti yad aSnAti tad eva DaninaH Danam .
 
 0952F: anye mftasya krIqanti dArErapi DanErapi .. 161..
-0952A: anye mftasya krIqanti dArErapi DanErapi .. 161..
+0952A: anye mftasya krIqanti dArEH api DanEH api .. 161..
 
 ;0953 kiM ca \-\-
 0953F: kiM ca 
@@ -3380,11 +3402,11 @@
 0954A: yad dadAsi viSizweByaH yaccASnAsi dine dine .
 
 0955F: tat te vittamahaM manye SezaM kasyApi rakzasi .. 162..
-0955A: tat te vittamaham manye Sezam kasyApi rakzasi .. 162..
-
+0955A: tat te vittam aham manye Sezam kasya api rakzasi .. 162..
+;   END OF EJF SANDHI 10-25-2018
 ;0956 yAtu\, kimidAnImatikrAntopavarRanena . yataH \-\-
 0956F: yAtu\, kimidAnImatikrAntopavarRanena . yataH 
-0956A: yAtu\, kimidAnImatikrAntopavarRanena . yataH 
+0956A: yAtu\, kim idAnIm atikrAntopavarRanena . yataH 
 
 0957F: nAprAyamaBivAYCanti nazwaM necCanti Socitum .
 0957A: nAprAyamaBivAYCanti nazwam necCanti Socitum .
