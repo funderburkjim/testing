@@ -374,80 +374,353 @@ Thereafter, as days passed on, he attacked the young birds, brought them into th
 ;hitoeng017.txt
 
 
-lamenting. On perceiving this, the cat slipped out of the hollow and escaped. After that, the birds, who were making a close search here and there, discovered the bones of there nestling. in the hollow of the tree. Then all the birds having come to the conclusion - our young ones have been eaten by this very Jaradgava -- put him to death. Therefore, I say -- "To one of unknown family and disposition &c." On hearing this the jackal said angrily - On the day the deer saw you first, your honour too was one whose family and disposition were not known. How comes it then that this friendly behaviour towards you is gaining strength day by day?
+lamenting. On perceiving this, the cat slipped out of the hollow and escaped. After that, the birds, who were making a close search here and there, discovered the bones of their nestling in the hollow of the tree. Then all the birds having come to the conclusion - our young ones have been eaten by this very Jaradgava -- put him to death. Therefore, I say -- "To one of unknown family and disposition &c." On hearing this the jackal said angrily -- On the day the deer saw you first, your honour too was one whose family and disposition were not known. How comes it then that this friendly behaviour towards you is gaining strength day by day?
+; line 0556
 Where there is absence of learned men, even a man of little intellect is lauded ; in a country destitute of trees even the castor-oil plant stands out as a tree. Also, 
 ;-70. 
 [Page 15]
-This is mine : this is a stranger -- such is the counting of the
-little-minded : while to the large-minded the whole world is their family.
+; line 0559
+This is mine : this is a stranger -- such is the counting of the little-minded : while to the large-minded the whole world is their family.
+; line 0561
 Just as the deer is my friend, so are you too. The deer said -- What is the use of this altercation? Let us all live happily together in friendly discourse. For,
+; line 0564
 No one is anybody's friend or anybody's foe: it is the behaviour (or, intercourse) that makes friends or foes.
+; line 0566
 The crow said -- Be it so. Then in the morning, they all went to places where their will led them.
-Once the jackal said to the deer in solitude -- Friend, in a corner of this wood there is a field full of corn. I shall take you there and show it to you. That being done, the deer went there every day and ate the corn. Now, the master of the field observed this and set a snare. Then the door going there again was caught into the snare; whereapon he reflected -- Who but a friend can deliver me from the hunter's snare as from the snare of Death? Presently the jackal came up and standing near reflected -- As to the success of my wish, it has borne fruit by my well-arranged scheme. When he will be cut up, I am sure to get his bones covered with flesh and blood which will serve me as food plentifully. The deer, delighted at his sight, said,
-Friend, cut my bonds at once ; quickly save ea. For,
+; line 0567
+Once the jackal said to the deer in solitude -- Friend, in a corner of this wood there is a field full of corn. I shall take you there and show it to you. That being done, the deer went there every day and ate the corn. Now, the master of the field observed this and set a snare. Then the deer going there again was caught into the snare; whereapon he reflected -- Who but a friend can deliver me from the hunter's snare as from the snare of Death? Presently the jackal came up and standing near reflected -- As to the success of my wish, it has borne fruit by my well-arranged scheme. When he will be cut up, I am sure to get his bones covered with flesh and blood which will serve me as food plentifully. The deer, delighted at his sight, said,
+; line 0579
+Friend, cut my bonds at once ; quickly save me. For,
+; line 0580
 One should know (the sincerity of) a friend in calamities, a warrior in battle, an honest man when in debt, a wife when fortune declines and relatives in difficulties. Also,
 
 ;hitoeng018.txt
 
-
+; line 0583
 He is a kinsman who stands (by one) in joy as well as in misery, when there is a famine or when a kingdom is overthrown, at the royal gate or in a cemetery.
-The Jackal having again and again looked at the net, thought to himself -- As for this net it is very strong; and said -- Friend, these snares are made of sinews. How then, can I touch these with my teeth to-day, it being Sunday ? Friend, if you will not think otherwise (i.e. will not have any misconception about me) tomorrow morning I will do whatever you will bid me do. With these words, he concealed himself near him and remained (waiting). Afterwards the crow, seeing that the deer did not return in the evening, looked for him here and there, and having discovered him in that condition, said -- Friend, what is this? The deer replied –- This is the result of my disregard of a friend's advice. For, it is said
+; line 0585
+The Jackal having again and again looked at the net, thought to himself -- As for this net it is very strong; and said -- Friend, these snares are made of sinews. How then, can I touch these with my teeth to-day, it being Sunday ? Friend, if you will not think otherwise (i.e. will not have any misconception about me) tomorrow morning I will do whatever you will bid me do. 
+; next line not in Kale
+{With these words, he concealed himself near him and remained (waiting).}
+; 0589
+ Afterwards the crow, seeing that the deer did not return in the evening, looked for him here and there, and having discovered him in that condition, said -- Friend, what is this? The deer replied –- This is the result of my disregard of a friend's advice. For, it is said
+; 0592
 Adversity stands close to him who listens not to the words of well-meaning friends: such a man is the delight of his enemies.
+; 0594
 The crow asked -- Where is that traitor? The deer said -- Desirous of my flesh he waits just here. The crow said I had already said (as much).
-"I have committed no fault" -- this is no reason for putting confidence in a wicked man) : for, even the meritorious have fear from the wicked.
+; 0597
+"I have committed no fault" -- this is no reason for putting confidence (in a wicked man) : for, even the meritorious have fear from the wicked.
+; 0599
 Those, whose life has ended, perceive not the smell of an extinguished lamp, listen not to the words of a friend, and see not the star Arundhati. 
 ; 77. 
 [Page 16] 
+; 0601
 He who defeats one's object in one's absence and speaks sweetly in one's presence -- such a friend one should avoid, like a vessel fall of poison with milk at the surface.
+; 0603
 Then the crow, having heaved a deep sigh, said -- Ah villain, what hast thou done in acting so wickedly ? For,
+; 0605
 What (glory or credit) is there in deceiving supplicants, in this world, who are made to converse (with you) by using sweet words, who are won over by false attentions, and who (thereby) entertain hopes and have placed confidence in you)?
+; 0610
 O divine Earth, how dost thou bear (on thy surface) that man, treacherous to his promise, who practises evil upon a benevolent, unsuspecting (lit., full of confidence) and simple-hearted person ?
 
 ;hitoeng019.txt
-
-One should not form friendship or feel affection for a wioked man: a charcoal, when alive, burns; when cold, it soils the hand.
+; 0613
+One should not form friendship or feel affection for a wicked man: a charcoal, when alive, burns; when cold, it soils the hand.
+; 0614
 Or rather, such is the settled course of conduct of the wicked.
+; 0615
 First he falls at the feet and then bites the back; gradually he sings wonderfully some sweet indistinct hum into the ear; and having noticed some hole (a weak point) he at once enters it (takes advantage of it) fearlessly : -(thus) does a gnat imitate all the actions of wicked man.
+; 0620
 That a wicked man speaks sweetly is no reason why confidence should be reposed in him : (for) on the tip of his tongue there is honey, but in his heart the deadliest poison.
+; 0622
 Then at dawn, the crow observed the owner of the field coming towards the place, stick in hand. On seeing him the crow said -- Friend deer, feign yourself dead, fill your belly with wind and so remain, with your legs stiffened. When I make a noise, you shall get up and bound off quickly.
+; 0627
 Following the advice of the crow, the deer stood in that posture. Now the master of the field saw the deer in that condition, his eyes beaming with joy. Saying "Ah, thou art dead of thyself", he released him from confinement and was busied in collecting his nets. Then hearing the sound of the crow, the deer quickly got up and ran away, while the jackal was killed by the stick flung at him (the deer) by the owner of the field. For it is said
+; 0634
 In three years, or three months, or three fortnights, or (even) in three days, a man reaps the fruit of his good or bad actions when reaching their extreme.
+; 0636
 Hence I say "Friendship between the victim and the eater &c." The crow observed again,
+; 0639
 Even though I eat you I shall not get ample food; but if you live, I live, O sinless one, like Chitragriva. Again,
+; 0642
 Confidence (in one another) is observed even amongst those lower animals whose actions are invariably (wholly) good : for the disposition of the good ever remains true to (lit. does not vary from) their inborn goodness. Moreover,
+; 0645
 The mind of a good man, although made to fly into a great passion, is not affected (by anger); it is not possible to heat the water of the sea with a torch of straw. 
 ; 87
 
 ;hitoeng020.txt
 
 [Page 17]
+; 0647
 Hiranyaka said -- You are fickle-minded (or, mischievous); and, with the fickle-minded, friendship should not at all be formed. For it is said
+; 0649
 A cat, a buffalo, a ram, a crow, and a bad man -- these get the upper hand (get the better of as) through confidence : confidence in them is out of place (lit. it is not proper to put trust in them).
 Another consideration is this -- you belong to the side of our enemies. And thus says the precept --
+; 0653
 One should not make peace with an enemy even by a compactly-formed treaty: water, although greatly heated, does extinguish fire. Nevertheless,
+; 0655
 A wicked man should be shunned although he be adorned with learning; the cobra is decked with a gem : but is he not dreadful?
+; 0657
 What is impossible can never be possible; and what is possible is certainly possible: a cart cannot move on water nor can a boat on land. Moreover,
-He, who, depending upon the strength of wealth (given to or by his enemies), although great, trasts to his enemies or to wives that have ceased to love him, finds his life end there.
+; 0660
+He, who, depending upon the strength of wealth (given to or by his enemies), although great, trusts to his enemies or to wives that have ceased to love him, finds his life end there.
+; 0662
 Laghupatanaka said I have heard everything. Yet I am thus far resolved that I must necessarily form friendship with you: or else I will destroy myself by starvation. For,
+; 0665
 (Friendship with) a bad man, like a vessel of earth, is easily broken and cemented with difficulty; while (that with) a good man is like a pot of gold, difficult to be broken and easily re-united. Moreover,
+; 0668
 The union of metals is due to their fluxibility, of beasts and birds to some cause, of fools to fear or (the prospect of) gain, while of good men to (mere) sight. Also,
+; 0671
 Friends appear to be of the form of coconuts (rough and rugged to outward appearance but sweet at heart): others are like jujubes -- attractive from outside only.
+; 0674
 Although friendship be at an end, the qualities (behaviour) of good men suffer no change: even when lotus-stalks are broken, the fibres remain sticking (to them) yet. And again
+; 0677
 Purity (of purpose), generosity, courage, sameness of behaviour in pleasure or pain, politeness, affection and truthfulness -- those are the characteristics of a (true) friend.
 
 ;hitoeng021.txt
-
+; 0679
 And what other friend than yourself, endowed with these qualities, can I find ? Hearing these his words and such others, Hiranyaka stepped out and said --
+; 0681
 I am exhilarated by this nectar of your speech (lit. I am fattened by you by &c.); as it is observed :
+; 0682
 Not a bath with very cool water, not a necklace of pearls, not (even) sandal-wood-pigment applied to each and every limb, delights a man, oppressed with heat, so much, as the words of the good, uttered with affection, advanced with wise arguments (or full of wise thoughts) and comparable to (fascinating like) the charm of attraction, have power over (are able to gratify) the mind of the virtuous. Again, 
 ;-98. 
 [Page 18]
+; 0687
  Divulging a secret, begging, hard-heartedness, fickleness of mind, anger, faithlessness and gambling --these are the faults in a friend.
+; 0689
 Following the order of (the faults mentioned in) this speech, not a single fault is found in you. For,
+; 0690
 Cleverness and truthfulness are known in the course of conversation; while activity and absence of rashness are known from actual experience. Moreover,
+; 0693
 Of quite a different sort (from that of a deceitful person) is the friendship of one whose mind is pure: while quite in a different direction (from real action) proceed the words of one whose mind is affected with deceit.
+; 0695
 There is one thing in mind, another in speech and a third in deed of the vile-minded, while there is one thing in mind, the same in speech and the same in action of the magnanimous.
+; 0697
 Therefore let your wish be done. Having said so, Hiranyaka formed friendship with the crow, pleased him with choice eatables and entered his hole. The crow, too, repaired to his residence. Thenceforward the two passed their time in making presents of food to each other, in inquiries after good health and in confidential discourses.
-Once Laghupatanaka said to Hiranyaka -- Friend, it is very hard to get food in this place. I wish, therefore, to go to some other place. Hiranyaka said -- Where can we go to? For it is said
-A talented man walks with one foot, and stops with the other: one should not leave one's old abode without examining carefully the new one.
+; 0701
+Once Laghupatanaka said to Hiranyaka -- Friend, it is very hard to get food in this place. I wish, therefore, to go to some other place. 
+; 0715
+Hiranyaka said  -- Where can we go to? For it is said
+A talented man walks with one foot, and stops with the other: 
+one should not leave one's old abode without examining carefully the new one.
 
+;hitoeng022.txt
+; 0717
+The crow said–There is a place well examined. Hiranyaka asked—'Which is that?' The crow replied: There is a lake called Karparagaura in the Dandaka forest. There dwells a pious tortoise, who is my dear friend, acquired a long while ago. For,
+; 0723
+To be wise in giving advice to others is a thing very easy for all to do; but to be true to the discharge of one's proper duties (or, to discharge ono's duties as required by religion) belongs to some magnanimous soul (only). He will entertain me with choice dainties. Hiranyaka too said--And what am I to do by staying here? For,
+; 0727
+One should abandon that country in which one cannot command respect, has no means of livelihood, no relatives, and no (possibility) of acquiring knowledge of any kind. Also,
+; 0732
+One should not reside in a country where there is a lack of these five, viz., subsistence, dread (of authority ), sense of shame, politeness, and charitableness.
+; 0736
+One should not dwell there, O friend, where these four things do not exist, viz., a creditor, a physician, a Brahmana versed in the Vedas and a river with water (ever flowing).
+; 0738
+Therefore, take me there too. 
+; 0740
+Then the crow arrived at the lake with ease conversing on diverse subjects with that friend of his. Then Manthara, having seen them from a distance, addressed a fitting welcome to Laghupatanaka and received the mouse with hospitality due to a guest. For,
+; 0744
+Let a boy or an old man or a young man come to the house, respect should be shown to him; a guest is the object of worship everywhere. 
+;-108. 
+[Page 19]
+
+The crow said -- Friend Manthara, do him special honour. For he is the king of mice, Hiranyaka by name, foremost of those whose actions are meritorious and an ocean of mercy. The king of serpents, aided by his twice thousand tongues even, will not be able to sing the praise of his merits. Having said so he described the episode about Chitragriva. Manthara having respectfully entertained Hiranyaka said -- Good friend, kindly relate the cause of your coming to a dreary wood. Hiranyaka said--I will; may you listen. 
+FABLE IV. 
+; 0760
+There is a convent of recluses in the city of Champaka. In it dwelt a hermit, Chudakara by name. He was in the habit of sleeping after having hung on a peg his alms-pot, containing
+
+;hitoeng023.txt
+
+the remnant of the food collected by begging after he had eaten of it. 
+; 0763
+I used every day to leap up and eat that food. After some time a dear friend of his, Vinakarna by name, a hermit, came there. While engaged in conversation with him Chudakarna kept beating the ground with an old bamboo stick. Vinakarna said-Friend, why do you take no interest in my story and are busy with something else? Chudakarna replied -- Friend, not that I am indifferent (to your conversation ), but look at this mouse, doing wrong to me, who by jumping up always eats the food collected by me by begging and placed in that pot. Vinakarna, having looked at the peg, observed -- How can a mouse, possessed of little strength, jump to such a height? There must be some reason for this. 
+;** This is not present in hitopadesha-slp1.txt 
+For it is said--
+The young wife, having suddenly drawn her old husband by the hair, kissed him with a close embrace; there must be some reason for this.
+
+Chudakarna demanded how it was, whereupon Vinakarna related--
+FABLE V.
+There is, in the country of Gauda, a city, Kausambi by name. In it dwelt a merchant of great wealth, Chandanadasa by name. Although in the decline of age, he through the pride of wealth, and his mind being full of passion, married merchant's daughter, Lilavati by name. She attained youth, looking like the victorious banner of the god of love; while that aged husband did not please her. For,
+The heart of women delights not in a husband whose limbs are worn out by old age, as does not that of men pinched with cold in the (rays of the) moon, or that of men oppressed with heat in the sun. Moreover, 110.
+What passion can men have, when the hair even is turned grey, since women, whose heart is set on others, regard it as medicine? However, that old husband had a very great affection for her.
+The lust of wealth and the desire for life of men is ever great; but to an old man a youthful wife is dearer than his life.
+An old man is not able to enjoy pleasures or to abandon them either: as a dog without teeth simply licks a bone with his tongue (but does not throw it off).
+;hitoeng024.txt
+
+
+Now that Lilavati, transgressing the bounds of family honour througb flush of youth, became attached to a certain merchant's son. For, 
+[Page 20]
+Unrestrained ) liberty, residence in the father's house
+(after the consummation of marriage), meeting with persons on occasions of festive gatherings, a loose living in the vicinity of men, meeting in a company, dwelling in a foreign country, association with women of bad character, constant violation of one's proper conduct, the old age of the husband or his jealousy or his absence in a foreign land--these are the causes of the ruin of a woman's character. Moreover,
+Drinking, the company of bad men, separation from the husband, rambling about wantonly, and sleeping and residing in another's house—these six spoil a woman.
+* * * * Moreover,
+There is no (suitable) place, or leisure or a suitor; it is on account of this that women remain chaste.
+Women are ever inconstant, as it is well known even to the gods: happy are those by whom even such are guarded.
+There is none who is disagreeable to women; nor is there one who is loved by them; they ever seek a fresh man, as cows do grass in a forest. Again,
+A woman resembles a pot of ghee, while a man is like live charcoal: a wise man should not, therefore, keep together the two. - 120.
+Not modesty, not good breeding, not rectitude, not timidity, but absence of a suit is the cause of a woman's chastity.
+The father guards a woman in childhood, the husband in youth and the son in old age: a woman is not allowed liberty (in any case ).
+Once, as that Lilavati was sitting at ease on a couch fringed with the rays of a series of gems, engaged in a confidential talk with the merchant's son, she be held her husband come there unexpectedly, when, rising quickly, she pulled him by the hair, closely embraced him and kissed him. In the meanwhile, the gallant made his escape.
+It is said,
+The Sastra which Usanas ever knew, as also that which Brihaspati knew,—all that is well planted in the talent of a woman.
+;hitoeng025.txt
+
+Seeing that embrace a procuress that stood by said to herself "She has embraced him all of a sudden!' Then that procuress, having ascertained the cause, punished that Lilavati with a secret fine. Hence I say The youthful wife having suddenly seized her old husband &c.' There must be some cause in this case which keeps up the strength of this mouse. After a moment's thought the recluse said-And the cause must be abundance of money. For,
+In this world every man of wealth is, everywhere and at all times, powerful; even the supreme power of kings has
+wealth for its cause.
+[Page 21]
+Then he took a spade and having dug out my burrow, took away my long-hoarded wealth. Thenceforward, deprived of my strength, without spirit and energy, and unable to earn even my own food, I was observed by Chudakarna, moving along slowly and with trepidation. Then he observed--
+In this world a man becomes powerful by wealth, and by wealth also he becomes (is considered) learned. Look at this wicked mouse reduced to the level of his kind. Moreover,
+All the actions of a man of little intellect, if void of wealth, die away (prove fruitless) like small streams in summer.
+Again,
+He who has wealth has friends; he who has wealth has kinsmen; he who has wealth is a man in this world, and he who has wealth is a learned man. Also,
+The house of the sonless is void, and so is of one who has no good friend; all the quarters are void to a fool, but all is void to poverty. And again,
+His limbs uninjured are the same; his name is the same ; his intellect unimpaired is the same; his words the same; and the man also the same; and yet, when deprived of the warmth of money, he becomes quite a different man in a moment; this is strange!
+Having heard all this I thought to myself:--Now my residence here is improper; and as to my communicating this matter to another, that too is not proper. For,
+A wise man should not give out the loss of wealth, mental anxiety, the misdeeds in the house, his being deceived and his humiliation. Moreover, - 130.
+;hitoeng026.txt
+
+(The period of) life, (the amount of) wealth, a family secret, charms, conjugal enjoyment, medicine, penance, charity and one's disgrace--these nine things should be carefully concealed.
+And so it is said
+When fate is extremely adverse, and exertions and valour have been of no avail, where, except in a wilderness, can a highminded man, reduced to poverty, find relief? Moreover,
+A man of self-respect will rather die than stoop to meanness (act meanly): fire will even suffer extinction, but never become cool. Moreover,
+The course of action of a wise man, like that of a bunch of flowers, is twofold, viz., either to stand at (on) the head of all, or to die (wither) away in a forest.
+And as to living here on alms, that would be exceedingly despicable. For,
+It were better for a poor man to satisfy fire with his life than to solicit a mean person, lost to all civility.
+From poverty a man comes to have shame : overwhelmed with shame he loses moral fortitude: with his moral fortitude lost he suffers contempt; being contemned he feels dejected: full of dejection he comes to sorrow; when overcome with sorrow he is forsaken by reason; with his reason gone, he passes on to destruction: Want of wealth, alas, is the abode of all misfortunes !! Again,
+Better is silence observed than an untrue word spoken : better is impotency for men than intercourse with another's wife: better to abandon life than to have a liking for the words of the wicked; better to live on alms than to have the happiness of enjoying another's wealth.
+[Page 22]
+Better to have an empty cow-pen than a naughty ox; better to have a courtesan for wife than an immodest (ill-trained) woman of family; better a residence in a foreat than in the city of a thoughtless king; better is the abandonment of life than approaching the base (with a request). Moreover,
+As service destroys all self-respect, moonlight darkness, old age beauty, the stories about Hari and Hara sin, so does beggars destroy even a hundred good qualities.
+
+;hitoeng027.txt
+
+Having reflected thus (said I to myself)-What then? Shall I support myself with another's cake? O hard lot! That too, would be a second door of death.
+Superficial learning, sexual enjoyment obtained by payment, and dependence on others for one's bread-these three are humiliations to men. - 140.
+A sick man, one in long exile, one eating another's food, and one sleeping (living) in the house of another the life which such a man lives is as good as ) death, while death is rest to him.
+Although I considered thus, yet, from avarice, I made up my mind to hoard wealth. For it is said,
+Judgment is led astray (warped) by avarice; avarice begets desire; and a man troubled by desire meets with misery both here and hereafter.
+Then as I moved about gently I was struck with an old bamboo-stick by that Vinakarna, whereupon I reflected--A covetous man who is (ever) discontented is certainly a traitor to himself. For,
+All riches are his whose mind is contented: is not the earth overspread with leather (at it were) to him whose feet are covered with shoes? Again,
+How can that happiness, which is enjoyed by the tranquil-minded, who are satisfied with the nectar of contentment, be theirs, who, attracted by the (lust of) wealth, run here and there? Moreover,
+All has been studied, heard and put into practice by him, by whom, having cast behind all desires, contentment (lit. freedom from desire) has been resorted to. Again,
+Blessed is the life of some one (rarely to be found) in which the door of the rich has not been attended, in which the pain of separation has not been experienced and in which piteous words have not been uttered. For,
+Even a hundred Yojanas (800 miles) are no distances to him who is troubled (spurred on) by thirst; while he, who is content, has no regard even for a thing that is actually in his hand.
+It will be advisable, therefore, to decide what to do under the present circumstances.
+
+;hitoeng028.txt
+
+What is a man's (true) duty in this world? Compassion to creatures. What is (real) happiness? Health (lit. freedom from disease). What is affection? Good feeling. And
+what is wisdom? Decision. Similarly,
+[Page 23]
+When misfortunes assail (a man), wisdom lies in (quickly) coming to a decision; misfortunes at every step overtake those who cannot arrive at a decision. Moreover,
+One should abandon one person to save a family, a family to save a village, and a village to save a country; but for the sake of one's own self, one should abandon the whole world, Again, - 150.
+Of the two--water obtained with ease (lit. without trouble) and delicious food attended with fear, on consideration, I find, indeed, that to be conducive to happiness, wherein lies ease.
+Having thus reflected I came to a dreary forest. For,
+Better is a forest, haunted by tigers and lordly elephants, wherein the trees serve as a home, ripe fruits and water as food, grass as a bed and barks as garments, than a life without wealth among relatives.
+Then by the manifestation of the fruit of my religious merit, I was favoured with friendly intercourse by this friend. And now, by a further continuation of merit, I have got your company, which is heaven itself. For,
+Of the poisonous tree of worldly existence, two fruits only have a flavoury juice (are sweet); viz. the testing of the nectar of poetry and the society of the good.
+Manthara said--
+Riches are comparable to (as unsteady as) the dust of the feet; youth flies away with the rapidity of a mountain river; life is as fleeting as a rolling drop of water, and existence as evanascent as foam; (such being the case) he, who, with his judgment deprived, does not perform his religious duties, which unfasten the bolt of the gate of heaven, being overtaken by old age and full of contrition, is burnt by the fire of sorrow.
+[Page 24] 
+You laid up too large a hoard; and this ill consequence was the result of that. Hear,
+To spend in charity is just to save the money that is acquired, as an outlet is, in the case of water stored up in the bowels of a tank, (the only way to preserve it in a good condition). Moreover,
+
+;hitoeng029.txt
+
+29
+Since a miser buries his wealth, deeper and deeper in the earth, he makes a passage for it, beforehand, to go to its nether abode (to disappear in the bowels of the earth). Again,
+He who wishes to acquire wealth denying comfort to himself (at the sacrifice of personal comfort) is simply an abode of trouble like one bearing burdens for others. And again,
+If people are to be considered rich for possessing wealth which is not used in charity or enjoyment, why should we not consider ourselves rich by the same? Also,
+A miser's wealth, inasmuch as it is not used, is the common property of others; the fact that it belonged to him is known by the sorrow caused when it is lost.
+A gift accompanied with sweet words, knowledge without vanity, courage attended by forbearance, and wealth spent in charity: these four are rare in this world. It is also said, - 160
+A hoard should always be made, but not too great a one; Lo ! The jackal that was in the habit of hoarding was killed by a bow.
+The two asked how that was. Manthara related--
+
+;; This is fable 5 in hitopadesha-slp1
+; 0928
+FABLE VI.
+There was a hunter, Bhairava by name, residing in the province of Kalyana. He, one day, went to the Vindhya forast in search of a deer. As he passed carrying the deer that he had killed, he saw a boar of a formidable form. Then the hunter placed the deer on the ground and wounded the boar with an arrow. The boar too, having set up a deep and dreadful cry (or, a cry as terrible as the thunder of clouds ) struck the hunter in the groin, upon which he fell down like a tree struck down. For,
+; 0936
+Having met with some cause, such as water, fire, poison, a weapon, hunger (starvation), a disease, or a fall from a mountain, a creature loses his life.
+; 0938
+Now by the tramplings of their feet a serpent too was killed. After this a jackal, Dirgharava, by name, who was wandering in quest of prey, found the deer, the hunter, the serpent and the boar, dead there; upon which he said to himself--Oh, here have I come across a good feast. Or rather,
+; 0943
+Just as unthought-of misfortunes befall men, so do blessings also: I think, therefore, that fate has an upper hand in these things.
+
+;hitoeng030.txt
+
+[Page 25] 
+; next not in hitopadesha-slp1
+Well then. I shall live happily for three months on the flesh of these.
+; 0945
+The man will last for a month, and the deer and the boar for two more: the serpent will serve me (as food for) a day while the bow-string should be eaten to-day.
+Let me, therefore, at the first impulse of hunger, eat the unsavoury string made of sinews attached to the bow. When Dirgharava had done so after having thus reflected, he being pierced in the breast by the bow which flew up as soon as the string was cut into two, perished. Hence I say--A hoard should be made every day &c. So also,
+; 0951
+That which a wealthy man gives away or enjoys is his wealth; when he dies, others play with his wife and riches. Moreover,
+; 0954
+I consider that to be thy wealth which thou givest to the worthy and which thou enjoyest (day by day), the rest thou keepest for some one else.
+; 0956
+Let this pass. What is the use, now, of describing the past? For,
+; 0957
+Men of wise minds do not wish for what is unattainable, do not lament over what is lost, and do not lose courage even in adversities.
+; 0959
+Therefore, friend, you should always be hopeful. Because,
+; 0960
+Even after having studied the sastras people may remain fools; that man is learned who puts his knowledge into practice: a medicine, although well selected, does not restore the diseased to health by the mere mention of its name. Moreover,
+; 0965
+The knowledge of theory does not do the least good to one who shrinks from a determined exertion (or perseveranoe): does a lamp, in this world, reveal a thing to a blind man although it be placed on the palm of his hand ?
+; 0969
+Therefore, friend, you ought to be reconciled to this particular (changed) condition. And you should not consider this as very hard to do. For,
+; -- begin: not in hitopadesha-slp1
+“A king, a woman of family, Brahmanas, ministers, breasts, teeth, hair, nails and men do not shine (appear well) when fallen from their proper position. Knowing this a wise man should not leave his own place."
+These are the words of cowardly persons. For,
+
+;hitoeng031.txt
+
+Lions, good men and elephants leave their places and go to others; while crows, cowardly men and deer perish in their own places.
+To a high-minded hero, what is his own and what is a foreign country? Whatever country he resorts to, the same he acquires by the might of his arms : whichever forest the lion, armed with his jaws, claws and tail, enters, in the same he quenches his thirst with the blood of the lordly elephants he kills. Again, - 172.
+; end : not in hitopadesha-slp1
+[Page 26] 
+; 0974
+As frogs repair to a puddle or birds to a lake full (of water), so do all fortunes to an industrious man helplessly (being entirely at his disposal). Moreover,
+; This translates lines 971-3 of hitopadesha-slp
+Happiness should be welcomed, and also misery, as they fall to 'one's share: Happiness and misery revolve (follow each other) like a wheel. Again,
+; 0977
+The goddess of wealth goes, of her own Accord, for residence, to him who is endowed with energy, who is prompt in action, who knows the theory and practice of a thing, who is not addicted to vices, and who is brave, grateful and firm in friendship. And particularly,
+; 0982
+A heroic person, although without wealth, attains a high position attended with great honour; while a miser, though endowed with riches, becomes an object of contempt. Can a dog, although wearing necklaces of gold, possess the majesty of the lion, which is a natural possession and which is the province for the attainment of a number of good qualities?
+; 0987
+Why should you be proud when you have wealth, and why should you be sorry when you have lost it? The ups and downs (in the life) of man are like (risings and fallings of) a ball struck with the hand. Again,
+; Begin not in hitopadesha-slp1
+The shadow of clouds, the friendship of a wicked man, new corn, women, youth and wealth are to be enjoyed but for a short while.
+; End not in hitopadesha-slp1
+; 0990
+One should not work too hard for livelihood : for that is provided by the creator: so soon as a creature is born, the breasts of the mother overflow with milk, Moreover, friend,
+; 0993
+He who made the swans white, the parrots green, and the peacocks of a varied colour, will provide for your sustenance. -180
+Hear, also, friend, the secret of the good.
+
+;
+;hitoeng032.txt
+; 0996
+How can riches be conducive to happiness, since they cause trouble in their acquisition, give pain in adversity (by their want) and stupefy the mind in prosperity? Again,
+; 0999
+Better is the absence of desire for him who wishes to acquire money for religious purposes : for rather than wash off mud it would be well to keep at a distance from it and so not to touch it.
+; 1002
+As meat (food) is eaten by birds in the sky, by beasts on earth, and by crocodiles in water, so is a rich man (his wealth) fed upon everywhere.
+; 1005
+There is ever fear to the wealthy from the king, from water, from fire, from a thief, and even from a relative, as there is from death to the living. Similarly,
+[Page 27]
+; 1008
+In life which abounds in troubles what misery can be greater than this, that wealth is not obtained according to desire and yet desire does not turn back? Hear me again, brother:--
+; 1011
+In the first place wealth is not easily obtained, and when obtained it can be preserved with difficulty; its loss is as if death: one should not therefore think of it.
+When desire is abandoned, who is poor and who is rich? But if scope is allowed to it, servitude is the immediate result (inevitable lot). Moreover,
+Whatever one may wish for, desire proceeds onward from that (ever increases); but that thing may be said to be really obtained from which desire turns back.
+But why waste more words on the subject? Being in friendship with me, pass your time just here in my company. For,
+The friendship of the noble-minded lasts till death; their anger vanishes the very moment (it appears) and their favours (lit. gifts ) are disinterested.
+Having listened to all this, Laghupatanaka said-Blessed are you, Manthara; your virtues are laudable in every way. Because,
+The good alone are able to rescue the good from misery; elephants alone are able to deliver elephants sunk into mire. -190.
+He alone on earth, of all men, is worthy of praise, he is the best, he is a good man and he is blessed, from whom supplicants

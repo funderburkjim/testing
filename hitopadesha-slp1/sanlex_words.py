@@ -39,6 +39,7 @@ class Rec(object):
 
 def init_recs(filein,first,last):
  recs = []
+ #print(first,last)
  with codecs.open(filein,"r","utf-8") as f:
   for i,x in enumerate(f):
    x = x.rstrip('\r\n')
@@ -52,6 +53,7 @@ def init_recs(filein,first,last):
     continue
    recid = words[0]
    recid = recid[0:-2]  # remove A:
+   #print(recid)
    if recid < first:
     continue
    if recid > last:
