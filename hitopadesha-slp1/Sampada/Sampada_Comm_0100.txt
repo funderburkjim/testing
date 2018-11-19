@@ -1,0 +1,211 @@
+Sampada Sandhi Comments
+
+
+0044F: .. hitopadeSaH ..
+0044A: .. hitopadeSaH ..
+
+0045F:        maNgalAcaraRam
+0045A:        maNgalAcaraRam
+
+0046F: sidDiH sADye satAmastu prasAdAt tasya DUrjaweH .
+0046A: sidDiH sADye satAm astu prasAdAt tasya DUrjaweH .
+
+;0047 jAhnavI\-Pena\-leKeva yan\-mUrDni SaSinaH kalA .. 1..
+0047F: jAhnavIPenaleKeva yanmUrDni SaSinaH kalA .. 1..
+0047A: jAhnavIPenaleKA iva yanmUrDni SaSinaH kalA .. 1..
+0047S: jAhnavIPenaleKA iva yat mUrDni SaSinaH kalA .. 1..
+
+0048F: Sruto hitopadeSo'yaM pAwavaM saMskftoktizu .
+0048A: SrutaH hitopadeSaH ayam pAwavam saMskftoktizu .
+
+;0049 vAcAM sarvatra vEcitryaM nIti\-vidyAM dadAti ca .. 2..
+0049F: vAcAM sarvatra vEcitryaM nItividyAM dadAti ca .. 2..
+0049A: vAcAm sarvatra vEcitryam nItividyAm dadAti ca .. 2..
+
+;0050        vidyA\-praSaMsA
+0050F:        vidyApraSaMsA
+0050A:        vidyApraSaMsA
+
+0051F: ajarAmaravat prAjYo vidyAmarTaM ca cintayet .
+0051A: ajarAmaravat prAjYaH vidyAm arTam ca cintayet .
+
+0052F: gfhIta iva keSezu mftyunA DarmamAcaret .. 3..
+0052A: gfhItaH iva keSezu mftyunA Darmam Acaret .. 3..
+; Apr 26, 2016
+;0053 sarva\-dravyezu vidyEva dravyamAhuranuttamam .
+0053F: sarvadravyezu vidyEva dravyamAhuranuttamam .
+0053A: sarvadravyezu vidyA eva dravyam AhuH anuttamam .
+
+0054F: ahAryatvAd anarGatvAd akzayatvAcca sarvadA .. 4..
+0054A: ahAryatvAt anarGatvAt akzayatvAt ca sarvadA .. 4..
+; Apr 29, 2016
+; Muller has saMgamayati.  Either word plausible
+0055F: saMyojayati vidyEva nIcagApi naraM sarit .
+0055A: saMyojayati vidyA eva nIcagA api naram sarit .
+; Muller uses 'durDarzaM', which makes more sense; this text so changed.
+;0056F: samudramiva durGarzaM nfpaM BAgyamataH param .. 5..
+0056F: samudramiva durDarzaM nfpaM BAgyamataH param .. 5..
+0056A: samudram iva durDarzam nfpam BAgyam ataH param .. 5..
+
+0057F: vidyA dadAti vinayaM vinayAd yAti pAtratAm .
+0057A: vidyA dadAti vinayam vinayAt yAti pAtratAm .
+; 
+0058F: pAtratvAt DanamApnoti DanAd DarmaM tataH suKam .. 6..
+0058A: pAtratvAt Danam Apnoti DanAt Darmam tataH suKam .. 6..
+
+0059F: vidyA SastraM ca SAstraM ca dve vidye pratipattaye .
+0059A: vidyA Sastram ca SAstram ca dve vidye pratipattaye .
+
+0060F: AdyA hAsyAya vfdDatve dvitIyAdriyate sadA .. 7..
+0060A: AdyA hAsyAya vfdDatve dvitIyA Adriyate sadA .. 7..
+
+0061F: yan nave BAjane lagnaH saMskAro nAnyaTA Bavet .
+0061A: yad nave BAjane lagnaH saMskAraH na anyaTA Bavet .
+
+;0062 kaTA\-cCalena bAlAnAM nItistad iha kaTyate .. 8..
+0062F: kaTAcCalena bAlAnAM nItistad iha kaTyate .. 8..
+0062A: kaTAcCalena bAlAnAm nItiH tad iha kaTyate .. 8..
+
+;0063 mitra\-lABaH suhfd\-Bedo vigrahaH sanDireva ca .
+0063F: mitralABaH suhfdBedo vigrahaH sanDireva ca .
+0063A: mitralABaH suhfdBedaH vigrahaH sanDiH eva ca .
+
+;0064 paYca\-tantrAt taTAnyasmAd granTAd Akfzya liKyate .. 9..
+0064F: paYcatantrAt taTAnyasmAd granTAd Akfzya liKyate .. 9..
+0064A: paYcatantrAt taTA anyasmAt granTAt Akfzya liKyate .. 9..
+
+;0065        aTa kaTA\-muKam
+0065F:        aTa kaTAmuKam
+0065A:        aTa kaTAmuKam
+
+;0066 asti BAgIraTI\-tIre pAwaliputra\-nAmaDeyaM nagaram . tatra
+0066F: asti BAgIraTItIre pAwaliputranAmaDeyaM nagaram . tatra
+0066A: asti BAgIraTItIre pAwaliputranAmaDeyam nagaram . tatra
+
+;0067 sarva\-svAmi\-guRopetaH sudarSano nAma narapatirAsIt . sa BUpatirekadA
+0067F: sarvasvAmiguRopetaH sudarSano nAma narapatirAsIt . sa BUpatirekadA
+0067A: sarvasvAmiguRopetaH sudarSanaH nAma narapatiH AsIt . saH BUpatiH ekadA
+
+;0068 kenApi pAWyamAnaM Sloka\-dvayaM SuSrAva \-\-
+0068F: kenApi pAWyamAnaM SlokadvayaM SuSrAva 
+0068A: kena api pAWyamAnam Slokadvayam SuSrAva 
+
+;0069 aneka\-saMSayocCedi parokzArTasya darSakam .
+0069F: anekasaMSayocCedi parokzArTasya darSakam .
+0069A: anekasaMSayocCedi parokzArTasya darSakam .
+
+0070F: sarvasya locanaM SAstraM yasya nAstyanDa eva saH .. 10..
+0070A: sarvasya locanam SAstram yasya na asti anDaH eva saH .. 10..
+
+;0071 yOvanaM Dana\-sampattiH praButvamavivekitA .
+0071F: yOvanaM DanasampattiH praButvamavivekitA .
+0071A: yOvanam DanasampattiH praButvam avivekitA .
+
+;0072F: ekEkamapyanarTAya kimu yatra catuzwayam .. 11..
+0072F: ekEkamapyanarTAya kim yatra catuzwayam .. 11..
+0072A: ekEkam api anarTAya kim yatra catuzwayam .. 11..
+
+;0073 ityAkarRyAtmanaH putrARAmanaDigata\-SAstrARAM nityamunmArga\-gAminAM
+0073F: ityAkarRyAtmanaH putrARAmanaDigataSAstrARAM nityamunmArgagAminAM
+0073A: iti AkarRya AtmanaH putrARAm anaDigataSAstrARAm nityam unmArgagAminAM
+
+;0074 SAstrAnanuzWAnenodvigna\-manAH sa rAjA cintayAmAsa .
+0074F: SAstrAnanuzWAnenodvignamanAH sa rAjA cintayAmAsa .
+0074A: SAstrAnanuzWAnena udvignamanAH saH rAjA cintayAmAsa .
+
+0075F: ko'rTaH putreRa jAtena yo na vidvAn na DArmikaH .
+0075A: kaH arTaH putreRa jAtena yaH na vidvAn na DArmikaH .
+
+0076F: kARena cakzuzA kiM vA cakzuH pIqEva kevalam .. 12..
+0076A: kARena cakzuzA kim vA cakzuH pIqA eva kevalam .. 12..
+
+;0077 ajAta\-mfta\-mUrKARAM varamAdyO na cAntimaH .
+0077F: ajAtamftamUrKARAM varamAdyO na cAntimaH .
+0077A: ajAtamftamUrKARAm varam AdyO na ca antimaH .
+
+;0078 sakfd duHKa\-karAvAdyAvantimastu pade pade .. 13..
+0078F: sakfd duHKakarAvAdyAvantimastu pade pade .. 13..
+0078A: sakft duHKakarO AdyO antimaH tu pade pade .. 13..
+
+; 0079 - 0083 are not present in Kale edition
+;0079 kiM ca \-\-
+0079F: kiM ca 
+0079A: kim ca 
+
+;0080 varaM garBa\-srAvo varamapi ca nEvABigamanaM
+0080F: varaM garBasrAvo varamapi ca nEvABigamanaM
+0080A: varam garBasrAvaH varam api ca na eva aBigamanaM
+
+; kanyAvajanitA  ?
+0081F: varaM jAtaH preto varamapi ca kanyAvajanitA .
+0081A: varam jAtaH pretaH varam api ca kanyO ajanitA .
+
+0082F: varaM banDyA BAryA varamapi ca garBezu vasatir
+0082A: varam banDyA BAryA varam api ca garBezu vasatiH
+
+;0083 na vAvidvAn rUpa\-draviRa\-guRa\-yukto'pi tanayaH .. 14..
+0083F: na vAvidvAn rUpadraviRaguRayukto'pi tanayaH .. 14..
+0083A: na vA vidvAn rUpadraviRaguRayuktaH api tanayaH .. 14..
+
+0084F: sa jAto yena jAtena yAti vaMSaH samunnatim .
+0084A: saH jAtaH yena jAtena yAti vaMSaH samunnatim .
+
+0085F: parivartini saMsAre mftaH ko vA na jAyate .. 15..
+0085A: parivartini saMsAre mftaH kaH vA na jAyate .. 15..
+
+;0086 anyacca \-\-
+0086F: anyacca 
+0086A: anyat ca 
+
+;0087 guRi\-gaRa\-gaRanA'ramBe
+;0087 guRi-gaRa-gaRana-AramBe
+0087F: guRigaRagaRanA'ramBe
+0087A: guRigaRagaRanAramBe
+
+;0088 na patati kaWinI sa\-samBramAd yasya .
+0088F: na patati kaWinI sasamBramAd yasya .
+0088A: na patati kaWinI sasamBramAt yasya .
+
+0089F: tenAmbA yadi sutinI
+0089A: tena ambA yadi sutinI
+
+0090F: vada banDyA kIdfSI Bavati \? .. 16..
+0090A: vada banDyA kIdfSI Bavati \? .. 16..
+
+;0091 api ca \-\-
+0091F: api ca 
+0091A: api ca 
+
+0092F: dAne tapasi SOrye ca yasya na praTitaM manaH .
+0092A: dAne tapasi SOrye ca yasya na praTitam manaH .
+
+;0093 vidyAyAmarTa\-lABe ca mAturuccAra eva saH .. 17..
+0093F: vidyAyAmarTalABe ca mAturuccAra eva saH .. 17..
+0093A: vidyAyAm arTalABe ca mAtuH uccAraH eva saH .. 17..
+
+;0094 aparaM ca \-\-
+0094F: aparaM ca 
+0094A: aparam ca 
+
+;0095 varameko guRI putro na ca mUrKa\-SatErapi .
+0095F: varameko guRI putro na ca mUrKaSatErapi .
+0095A: varam ekaH guRI putraH na ca mUrKaSatEH api .
+
+;0096 ekaScandrastamo hanti na ca tArA\-gaRErapi .. 18..
+0096F: ekaScandrastamo hanti na ca tArAgaRErapi .. 18..
+0096A: ekaH candraH tamaH hanti na ca tArAgaREH api .. 18..
+
+;0097 puRya\-tIrTe kftaM yena tapaH kvApyatiduzkaram .
+0097F: puRyatIrTe kftaM yena tapaH kvApyatiduzkaram .
+0097A: puRyatIrTe kftam yena tapaH kva api atiduzkaram .
+
+0098F: tasya putro Baved vaSyaH samfdDo DArmikaH suDIH .. 19..
+0098A: tasya putraH Bavet vaSyaH samfdDaH DArmikaH suDIH .. 19..
+
+;0099 taTA coktaM \-\-
+0099F: taTA coktaM 
+0099A: taTA ca uktam 
+
+0100F: arTAgamo nityamarogitA ca
+0100A: arTAgamaH nityam arogitA ca
+

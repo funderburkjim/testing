@@ -1,0 +1,183 @@
+;0101      priyA ca BAryA priya\-vAdinI ca .
+0101F:      priyA ca BAryA priyavAdinI ca .
+0101A:      priyA ca BAryA priyavAdinI ca .
+
+;0102 vaSyaSca putro'rTa\-karI ca vidyA
+0102F: vaSyaSca putro'rTakarI ca vidyA
+0102A: vaSyaH ca putraH arTakarI ca vidyA
+
+;0103      zaq jIva\-lokasya suKAni rAjan .. 20..
+0103F:      zaq jIvalokasya suKAni rAjan .. 20..
+0103A:      zaq jIvalokasya suKAni rAjan .. 20..
+
+0104F: ko Danyo bahuBiH putrEH kuSUlApUraRAQakEH .
+0104A: kaH DanyaH bahuBiH putrEH kuSUlApUraRAQakEH .
+;not able to comprehend 'kuSUlApUraRAQakEH'
+
+0105F: varamekaH kulAlambI yatra viSrUyate pitA .. 21..
+0105A: varam ekaH kulAlambI yatra viSrUyate pitA .. 21..
+
+;0106 fRa\-kartA pitA SatrurmAtA ca vyaBicAriRI .
+0106F: fRakartA pitA SatrurmAtA ca vyaBicAriRI .
+0106A: fRakartA pitA SatruH mAtA ca vyaBicAriRI .
+
+0107F: BAryA rUpavatI SatruH putraH SatrurapaRqitaH .. 22..
+0107A: BAryA rUpavatI SatruH putraH SatruH apaRqitaH .. 22..
+
+0108F: yasya kasya prasUto'pi guRavAn pUjyate naraH .
+0108A: yasya kasya prasUtaH api guRavAn pUjyate naraH .
+
+;0109 DanurvaMSa\-viSudDo'pi nirguRaH kiM karizyati .. 23..
+0109F: DanurvaMSaviSudDo'pi nirguRaH kiM karizyati .. 23..
+0109A: DanuH vaMSaviSudDaH api nirguRaH kim karizyati .. 23..
+
+0110F: hA hA putraka nADItaM gatAsvetAsu rAtrizu .
+0110A: hA hA putraka na aDItam gatAsu etAsu rAtrizu .
+
+0111F: tena tvaM viduzAM maDye paNke gOriva sIdasi .. 24..
+0111A: tena tvam viduzAm maDye paNke gOH iva sIdasi .. 24..
+
+;0112 tat kaTamidAnImete mama putrA guRavantaH kriyantAm \? yataH \-\-
+0112F: tat kaTamidAnImete mama putrA guRavantaH kriyantAm \? yataH 
+0112A: tat kaTam idAnIm ete mama putrAH guRavantaH kriyantAm ? yataH 
+
+;0113 AhAra\-nidrA\-Baya\-mETunAni
+0113F: AhAranidrABayamETunAni
+0113A: AhAranidrABayamETunAni
+
+0114F: sAmAnyametat paSuBirnarARAm .
+0114A: sAmAnyam etat paSuBiH narARAm .
+
+0115F: jYAnaM narARAmaDiko viSezo
+0115A: jYAnam narARAm aDikaH viSezaH
+
+0116F: jYAnena hInAH paSuBiH samAnAH .. 25..
+0116A: jYAnena hInAH paSuBiH samAnAH .. 25..
+
+;0117 yataH \-\-
+0117F: yataH 
+0117A: yataH 
+
+;0118 DarmArTa\-kAma\-mokzARAM yasyEko'pi na vidyate .
+0118F: DarmArTakAmamokzARAM yasyEko'pi na vidyate .
+0118A: DarmArTakAmamokzARAm yasya ekaH api na vidyate .
+
+;0119 ajAgala\-stanasyeva tasya janma nirarTakam .. 26..
+0119F: ajAgalastanasyeva tasya janma nirarTakam .. 26..
+0119A: ajAgalastanasya iva tasya janma nirarTakam .. 26..
+
+;0120 yaccocyate \-\-
+0120F: yaccocyate 
+0120A: yad ca ucyate
+
+0121F: AyuH karma ca vittaM ca vidyA niDanameva ca .
+0121A: AyuH karma ca vittam ca vidyA niDanam eva ca .
+
+0122F: paYcEtAni hi sfjyante garBasTasyEva dehinaH .. 27..
+0122A: paYca etAni hi sfjyante garBasTasya eva dehinaH .. 27..
+
+;0123 kiM ca \-\-
+0123F: kiM ca 
+0123A: kim ca 
+
+0124F: avaSyaM BAvino BAvA Bavanti mahatAmapi .
+0124A: avaSyam BAvinaH BAvAH Bavanti mahatAm api .
+
+;0125 nagnatvaM nIlakaRWasya mahAhi\-SayanaM hareH .. 28..
+0125F: nagnatvaM nIlakaRWasya mahAhiSayanaM hareH .. 28..
+0125A: nagnatvam nIlakaRWasya mahAhiSayanam hareH .. 28..
+;'mahAhiSayanam' is a compound of mahat ahi Sayanam. I don't think this needs to be further analysed though. Otherwise it would be a samAsavicCeda.
+
+;0126 anyacca \-\-
+0126F: anyacca 
+0126A: anyat ca 
+
+0127F: yad aBAvi na tad BAvi BAvi cen na tad anyaTA .
+0127A: yad aBAvi na tad BAvi BAvi ced na tad anyaTA .
+
+;0128 iti cintA\-viza\-Gno'yamagadaH kiM na pIyate .. 29..
+0128F: iti cintAvizaGno'yamagadaH kiM na pIyate .. 29..
+0128A: iti cintAvizaGnaH ayam agadaH kim na pIyate .. 29..
+
+;0129 etat kAryAkzamARAM kezAMcid Alasya\-vacanam .
+0129F: etat kAryAkzamARAM kezAMcid Alasyavacanam .
+0129A: etat kAryAkzamARAm kezAm cid Alasyavacanam .
+;seems to be like it should be 'kezAYcid' in the first place.
+
+; Kale divergence:
+; 0130 not in Kale
+; Kale's verse 30, 31 (p.3, bottom) are absent here.
+;0130 puruzakArOtkarzyamAha \-\-
+0130F: puruzakArOtkarzyamAha 
+0130A: puruzakArOtkarzyam Aha 
+
+; Resume Kale text, p.4 top
+0131F: yaTA hyekena cakreRa na raTasya gatirBavet .
+0131A: yaTA hi ekena cakreRa na raTasya gatiH Bavet .
+
+0132F: taTA puruzakAreRa vinA dEvaM na sidDyati .. 30..
+0132A: taTA puruzakAreRa vinA dEvam na sidDyati .. 30..
+
+;0133 taTA ca \-\-
+0133F: taTA ca 
+0133A: taTA ca 
+
+;0134 pUrva\-janma\-kftaM karma tad dEvamiti kaTyate .
+0134F: pUrvajanmakftaM karma tad dEvamiti kaTyate .
+0134A: pUrvajanmakftam karma tad dEvam iti kaTyate .
+
+0135F: tasmAt puruzakAreRa yatnaM kuryAd atandritaH .. 31..
+0135A: tasmAt puruzakAreRa yatnam kuryAt atandritaH .. 31..
+
+; This is the verse 30 of Kale mentioned above
+0136F: na dEvamapi saMcintya tyajed udyogamAtmanaH .
+0136A: na dEvam api saMcintya tyajet udyogam AtmanaH .
+
+0137F: anudyogena tElAni tileByo nAptumarhati .. 32..
+0137A: anudyogena tElAni tileByaH na Aptum arhati .. 32..
+
+;0138 anyacca \-\-
+0138F: anyacca 
+0138A: anyat ca 
+
+;0139 udyoginaM puruza\-siMhamupEti lakzmIr
+0139F: udyoginaM puruzasiMhamupEti lakzmIr
+0139A: udyoginam puruzasiMham upEti lakzmIH
+
+0140F: dEvena deyamiti kApuruzA vadanti .
+0140A: dEvena deyam iti kApuruzAH vadanti .
+
+;0141 dEvaM nihatya kuru pOruzamAtma\-SaktyA
+0141F: dEvaM nihatya kuru pOruzamAtmaSaktyA
+0141A: dEvam nihatya kuru pOruzam AtmaSaktyA
+
+0142F: yatne kfte yadi na siDyati ko'tra dozaH .. 33..
+0142A: yatne kfte yadi na siDyati kaH atra dozaH .. 33..
+
+;0143 yaTA mft\-piRqataH kartA kurute yad yad icCati .
+0143F: yaTA mftpiRqataH kartA kurute yad yad icCati .
+0143A: yaTA mftpiRqataH kartA kurute yad yad icCati .
+
+;0144 evamAtma\-kftaM karma mAnavaH pratipadyate .. 34..
+0144F: evamAtmakftaM karma mAnavaH pratipadyate .. 34..
+0144A: evam Atmakftam karma mAnavaH pratipadyate .. 34..
+
+0145F: kAkatAlIyavat prAptaM dfzwvApi niDimagrataH .
+0145A: kAkatAlIyavat prAptam dfzwvA api niDim agrataH .
+
+0146F: na svayaM dEvamAdatte puruzArTamapekzate ..
+0146A: na svayam dEvam Adatte puruzArTam apekzate ..
+
+0147F: udyamena hi siDyanti kAryARi na manoraTEH .
+0147A: udyamena hi siDyanti kAryARi na manoraTEH .
+
+0148F: nahi suptasya siMhasya praviSanti muKe mfgAH .. 36..
+0148A: nahi suptasya siMhasya praviSanti muKe mfgAH .. 36..
+
+;0149 taTA coktaM \-\-
+0149F: taTA coktaM 
+0149A: taTA ca uktam 
+
+0150F: mAtA SatruH pitA vErI yena bAlo na pAWitaH .
+0150A: mAtA SatruH pitA vErI yena bAlaH na pAWitaH .
+
