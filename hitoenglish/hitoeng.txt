@@ -1,14 +1,23 @@
 ;hitoeng001.txt
 HITOPADESA
+; 0046
 May success attend the good in their undertakings (in the object they wish to accomplish ) by the favour of that Dhurjati, on whose head there is a digit of the moon looking like a streak of the foam of the Ganges.
+; 0048
 This Hitopadesa (the work inculcating salutary instruction) when studied (lit., carefully attended to) gives (the student) proficiency in elegant speeches, a variety of expression in every department and a knowledge of the conduct of human affairs.
+; 0051
 A wise man should think of (acquiring) knowledge and money as though he were not subject to old age or death: but he should perform his religious duties as if Death had seized him by the hair.
+; 0053
 Learning, of all things, (the wise) declare to be without a superior (the best of them all ), because of its incapability of being taken away, or valued or exhausted.
+; 0055
 Learning, although possessed by a low man, introduces him to the king who is (ordinarily) inapproachable, just as a river, although flowing through a low region, takes one to the inaccessible sea : (sources) from which floweth great fortune (or, the future rests with fortune).
+; 0057
 Learning endows one with modesty ; from (having) modesty one passes on to (gets) worthiness ; being worthy one obtains riches ; from riches religious merit and from that happiness.
+; 0059
 The knowledge of arms and that of the Sastras - these two lores conduce to glory: but the former exposes one to ridicule in old age, while the latter is ever respected.
+; 0061
 As an impression made upon a raw (earthen or so) pot can undergo no change afterwards -- so (following the same principle) in this work the science of conduct (or policy) is taught to youths under the guise of stories. 
 [Page 2]
+; 0063
  [The subjects of] "The acquisition of friends", “The separation of friends", "Making war" and “Concluding peace” are written upon, extracts being made from Panchatantra and other works.
 ; 0066
 On the bank of the Bhagirathi there is a city named Pataliputra. In it there was a king, Sudarshana by name,
@@ -16,67 +25,101 @@ On the bank of the Bhagirathi there is a city named Pataliputra. In it there was
 ;hitoeng002.txt
 endowed with all princely qualities. That king once heard a couple of Slokas (stanzas) chanted by some one ; (viz.)
 ; 0069
-He who does not possess (a knowledge of) Sastra, the universal eye, which totally removes various doubts and discusses things hidden from view, is surely blind. -10
+He who does not possess (a knowledge of) Sastra, the universal eye, which totally removes various doubts and discusses things hidden from view, is surely blind.
+; -10
+; 0071
 Youth, abundance of wealth, sovereignty and inconsiderateness are the source of calamity even singly; what then, where all these four are combined !
+; 0073
 On hearing this, the king, who was distracted at heart, on account of the non-attendance to (the commands of the) Sastras of his sons who had no knowledge of the Sastras and who always followed the wrong path, thought to himself:
 ; 0075
 What is the good of (what benefit can accrue from) having a son who is neither learned nor pious (dutiful); (for) what is the use of an eye that is blind? It simply causes occular pain.
+; 0077
 Of sons, not born, (born and) dead and foolish, the first two are to be preferred and not the last: (for) the first two cause pain (but) once ; the last at every step. Moreover,
-
+; 0080-0083 not in Kale
+; 0084
 He is (really) born by whose birth the family is exalted. In this revolving world who does not die and is not born again?
+; 0087
 If the mother of the boy, for whom the little finger does not bend down hastily at the commencement of the enumeration of the number of meritorious men, be said to have given birth to a son, then say, what a barren woman would be like to (i.e., she is as good as a barren woman).
+; 0092
 He, who is not well known for his charity, penance, bravery, learning and the acquisition of wealth, is but the excrement of his mother. Also,
+; 0095
 It is better to have one meritorious son than a hundred of foolish ones; the single moon dispels darkness; and not the whole firmament of stars.
+; 0097
 The son of him, who has practised religious austerities, extremely difficult to perform, at some holy place, will be obedient, prosperous, righteous and talented.
+; 0100
 An influx of money, constant health (lit., freedom from disease), a beloved wife, and one sweet-speaking (of gentle manners), an obedient son, and learning productive of wealth -- these six, o king, are the pleasures of the mortal world. 
 [Page 3]
+; 0104
 Who will be (considered) blessed by having sons who are like (no better than, the adhakas* (a kind of measure) filling up
 ** i.e., Simply making up a particular number.
 
 
 ;hitoeng003.txt
 
-a granary? It is better to have one son, who is the prop of the family and who brings fame to his father. -20
+a granary? It is better to have one son, who is the prop of the family and who brings fame to his father. 
+; -20
+; 0106
 A father who contracts debts (i.e., leaves nothing to his son but a legacy of debt) is an enemy, and so is a mother, false to her bed; a beautiful wife is an enemy; and such is an illiterate son.
 ; next is Kale only -- not in hitopadesha-slp1 (09-24-2018)
 Learning if not kept up by constant study is poison ; taking food after indigestion is poison; to a poor man a public assembly is poison; and to an old man a youthful wife is poison.
-
+; 108
 A man of merits, born of whatevor parents, is honoured ; (for) what is the use of a bow that is without string though made of a faultless bamboo staff (or, what can a man of pure Kshatriya extraction do if wanting in martial vigour)?
+; 0110
 Alas! poor child, thou, who leadest an easy life, didst not acquire knowledge in these (bygone) nights, on this account dost thou come to grief (fare ill) in the society of the learned like a cow stuck in mud.
+; 0112
 Then how shall I now make my sons accomplished ! For: --
+; 0113
 Food, sleep, fear and the enjoyment of carnal pleasures -- these men share in common with beasts ; surely the sense (or performance) of duty is their special attribute (distinguishing mark): devoid of this they are degraded to the level of (stand on a level with) beasts.
+; 0118
 The life of him, who has not achieved any one of Dharma (the discharge of religious duties), Artha (the acquisition of money by fair means), Kama (the gratification of desires so as not to trespass on Dharma) and final emancipation, is as without its purpose (useless) as that of the nipple on the neck of a she-goat.
+; 0120
 Now, (as to) the declaration (doctrine) that --
+; 0121
 (The period of) life, (the kinds of) action (one has to perform), (the amount of) wealth (to be acquired), (the degree of) knowledge (to be attained), and (the time of) death -- even these five are created (determined) while a man is yet in the womb. And that,
+; 0123
 Things, which are fated, do happen even in the case of the great: (as) Siva's nakedness aad Hari's having to sleep on a huge serpent. And further,
+; 0127
 What is not to be can never be, and if it is to be, it can never be otherwise -- why is this antidote against the poison of anxiety not swallowed ? --
 
 ;hitoeng004.txt
-
-These are the idle words of some, incapable of doing anything
+; 0129
+These are the idle words of some, incapable of doing anything.
 
 ; The next two lines are out of order with the lines of hitopadesha_slp1.txt.
+; 0136
 Even thinking fate to be favourable one should not give up one's industry ; (for) one can never get oil from sesamum without exertion. Moreover,
+; 0140
 Fortune approaches him, the lion among men, who is industrious. It is the weak-minded who say "Fate gives". Dismissing all idea about (lit., killing) fate, put forth manly efforts depending upon your own strength; and if, after an exertion is made, success attend not, where is the blame (i.e., you are not to blame; or, find out where the fault lay)? 
 ; 31. 
 [Page 4]
+; 0131 - 0133  (Note out of Kale order)
  Just as a chariot can not move with one wheel, so without manly exertion, fate does not succeed. And further,
+; 0134 - 0135
 What is called fate is (but) the (sum of one's) actions in a previous life; one should, therefore, make an effort manfully without being slothful.
+; 0143
 Just as a potter makes whatever he likes out of a lump of clay, so does a man reap the fruit of the action done by himself.
+; 0145
 Even seeing a treasure found quite by accident in front of a man, fate does not take it up itself, but expects a manly effort of his part.
+; 0147
 Works are accomplished by industry and not by (idle) wishes; for the deer enter not the mouth of a sleeping lion.
+; not in hitopadesha
 A boy who is educated by his parents becomes accomplished. A son does not become a learned man by merely being dropped out of the womb.
 ; line 0150
 That mother is an enemy and that father a foe of the son by whom he is not taught; for he (such a son) shines not in an assembly just as a crane does not in the midst of swans.
+; 0152 
 Men, endowed with beauty and youth and born of a very noble race but deficient in learning, do not shine as (do not) the scentless Kimshuka flowers.
+; Not in hitopadesha-slp1
 Even a fool, dressed in fine garments, shines in an assembly; but he shines only so long as he does not open his lips. 
 ;- 40.
+; 0154
 Having thus meditated the king convened a council of the learned. The King said -- Ye Pandits, listen. Is there such a learned man among you, as is able to make my sons who are always going astray and who are ignorant of the Sastras, undergo a second birth (as it were) by giving them instruction in the science of conduct? For,
 
 ;hitoeng005.txt
-
+; 0162
 A piece of glass, by being in contact with gold, possesses the lustre of emerald ; similarly a fool attains proficiency by being in the company of the good. It is also said --
+; 0165
 The intellect is impaired, O friend, by the society of inferiors; it remains what it is with one's equals and is improved by association with one's superiors.
+; 0167
 Then a great Pandit, Visnusharman by name, who knew all the principles of the Science of conduct (or, who knew the very essence of the entire science of conduct) spoke like a second Brihaspati -- My lord, these princes are born of an exalted race. They are, therefore, capable of being instructed by me in the Nitishastra. For,
 ; line 0171
 No action exercised upon an unfit object can bear fruit: a crane cannot be taught (to speak) like a parrot even with hundreds of efforts. And this other thing,
@@ -94,6 +137,7 @@ Merits pass as merits with those who know how to appreciate them: coming in cont
 I, therefore, give you Carte blanche as regards giving instruction to my sons in the science of conduct. Having said so the king entrusted his sons to Vishnusharman with great respect.
 ; line 192
 Now as the princes were sitting at ease on the terrace of their palace the Pandit said before them by way of introduction --
+; 0194
 The wise pass their time in amusement derived from (the study of) poetry and Shastra, while fools pass theirs in vicious pursuits, in sleep or in quarrelling.
 
 ;hitoeng006.txt
@@ -104,15 +148,17 @@ Chapter 1.
 THE ACQUISITION OF FRIENDS. 
 ; line 0200
 Though destitute of means and without wealth, the crow, the tortoise, the deer and the mouse, who were the best of friends and gifted with intellect quickly accomplished their purposes.
+; 0202
 The princes asked "How was this ?" Vishnusharma related --
 ; line 0203
-There is, on the bank of the Godavari, a large silk-cotton tree. There, coming from regions in different quarters, birds were wont to roost at night. Once, when the night was almost spent, and the divine Moon, lord of the night-lotus, was pending on the crest of the setting mountain, a crow, Laghupatanaka (Swift-flier) by name, who was awake, saw a fowler advancing like a second god of death. Seeing him he reflected "To-day I have had an unwelcome sight iu the early morning. I know not what evil it forebodes." Saying so he set out, much disturbed at heart, following up his (the fowler's) course. For,
+There is, on the bank of the Godavari, a large silk-cotton tree. There, coming from regions in different quarters, birds were wont to roost at night. Once, when the night was almost spent, and the divine Moon, lord of the night-lotus, was pending on the crest of the setting mountain, a crow, Laghupatanaka (Swift-flier) by name, who was awake, saw a fowler advancing like a second god of death. Seeing him he reflected "To-day I have had an unwelcome sight in the early morning. I know not what evil it forebodes." Saying so he set out, much disturbed at heart, following up his (the fowler's) course. For,
 ; line 0211
 Thousands of occasions for sorrow, and hundreds for fear, day by day, overtake the fool and not the wise man. 
 ; 3
 [Page 6]
 ; line 0213
  Moreover, worldly people must do this --
+; 0214
 Every day on rising, they should think that a great calamity is at hand -- which of death, disease or sorrow would befall (them)! (So that in case of an emergency one should be fore-warned and prepared to meet it).
 ; line 0216
 Now the hunter, having scattered the grains of rice, spread out his net, and himself remained concealed. Just at that time a king of pigeons, Chitragriva (the Speckle-necked) by name, who was sailing in the sky with his retinue, noticed the grains of rice. Then the pigeon-king said to the pigeons that were attracted by the grains of rice -- Whence can there be the possibility of rice-grains being found in this lonely (tenantless) forest? So let the matter be first carefully examined. I do not see any good will come out of this.
@@ -121,6 +167,7 @@ Probably, by this our desire for the rice-grains, we too shall fare similarly (m
 ;hitoeng007.txt
 ; line 0223
 The traveller, who through the lust of a bracelet, sank in deep mire and being caught by an old tiger, lost his life.
+; 0225
 The pigeons asked how it was ; whereupon he related --
 FABLE 1. 
 ; line 0227
@@ -131,7 +178,7 @@ But an attempt to get wealth is in every case, attended with peril. And it is sa
 ; line  0236
 Without embarking upon an adventure a man does not see good fortune ; but if he does embark upon it and lives (survives it), he sees it.
 ; line 0238
-Let me therefore carefully see it. He said aloud -- "Where is thy bracelet?" The tiger stretched forth bis paw and showed it. The traveller said - How am I to trust thee who art ferocious ? The tiger replied -- Liston, O traveller. Formerly, indeed, in the days of youth, I was extremely wicked. On account of my slaughter of many a cow and man, my sons and wife perishod ; and I am without issue. I was then advised by a holy man to practice charity and do such other holy deeds. Following his counsel, I am now in the habit of bathing and giving gifts ; I am old and have lost my nails and teeth ; how can I not be an object of confidence then! For, 
+Let me therefore carefully see it. He said aloud -- "Where is thy bracelet?" The tiger stretched forth bis paw and showed it. The traveller said - How am I to trust thee who art ferocious ? The tiger replied -- Listen, O traveller. Formerly, indeed, in the days of youth, I was extremely wicked. On account of my slaughter of many a cow and man, my sons and wife perishod ; and I am without issue. I was then advised by a holy man to practice charity and do such other holy deeds. Following his counsel, I am now in the habit of bathing and giving gifts ; I am old and have lost my nails and teeth ; how can I not be an object of confidence then! For, 
 [Page 7]
 ; line 0247
  Sacrificing, studying one's prescribed portion (of the Vedas), charity, penance, truthfulness, patience, forgiveness and freedom from avarice -- this is the eightfold way of doing religious duties as laid down in the Smritis. 
@@ -144,6 +191,7 @@ And so great is my freedom from desire, that I wish to give away, to any body wh
 ;hitoeng008.txt
 
 that a tiger eats men is difficult to be avoided (lit., warded off). For,
+; 0254
 People, who are the blind followers of one another, regard not a preaching bawd as an authority in religious matters, as they do a Brahmana although (he happens to be) a cow-killer.
 ; -10
 ; line 0256
@@ -218,6 +266,7 @@ One should not go at the head of (lead) a multitude; if the undertaking succeeds
 Hearing how he was reproached, Chitragriva said -- It is not his fault. For,
 ; line 0332
 Of misfortunes about to befall, even a friend becomes the cause: when a calf is to be tied down the leg of the mother serves as a post.
+; 0335
 He is a friend of the afflicted who is able to deliver them from misery, and not he, who is clever (only) in condemning a thing ill done or omitted to be done. (With the reading न तु भीत -- clever in finding fault with the manner of protecting the distressed.)
 ; line 0337
 In the time of adversity, perplexity itself is the sign of a weak-minded man. Therefore, taking courage in this case, think out a remedy. For,
@@ -269,7 +318,7 @@ Another consideration is --
 ; line 0399
 Life is the cause of the proper maintenance of Dharma, Artha, Kama and Moksha. *{* See. p. 3, 11, 23-26.} What does he not deprive himself of who deprives himself of it, or what does he not save who saves it?
 ; line 0401
-Chitragriva said -- Friend, as for the principle of) Policy it is such, indeed! But I am not, at all, able to bear the affliction of these my followers (lit., protegees). Hence I say this. For,
+Chitragriva said -- Friend, as for (the principle of) Policy it is such, indeed! But I am not, at all, able to bear the affliction of these my followers (lit., protegees). Hence I say this. For,
 ; line 0404
 A wise man should give up his wealth and also his life for another's sake; their abandonment in a good cause is desirable as destruction is certain.
 ; line 0406
@@ -327,14 +376,14 @@ There is a large Parkati tree on the hill, named Gridhrakut (the peak of Vulture
 ;hitoeng015.txt
 
 
-In its hollow dwelt, with his talons and eyes gone through an adverse turn of fate, a vultura, Jaradgava by name. Now, out of pity, the birds, roosting in the tree, spared small portions from their food and gave them to him. He lived on that and 
+In its hollow dwelt, with his talons and eyes gone through an adverse turn of fate, a vulture, Jaradgava by name. Now, out of pity, the birds, roosting in the tree, spared small portions from their food and gave them to him. He lived on that and 
 [Page 13]
  looked after the young birds. Now, once a cat, named
 ; line 0485
 Dirghakarna (the long-eared) came there to eat the youngs of the birds. Seeing him coming, the nestlings being terror-stricken, raised a cry. Hearing it Jaradgava asked -- Who is this that is coming? Dirghakarna, seeing the vulture, said in alarm -- Alas, it is all up with me. However,
 One should dread a danger only as long as it has not arrived; but seeing that the danger has come, a man should do what the occasion demands,
 ; line 0491
-Now that I am in his presence, I cannot run away. So let things take what course they may. I will first create confidence in him and then approach him. Thus resolved, he went forth and said -- Sir, I salute you. The Vulture asked -- Who are you? He replied -- A cat. The Vulture said -- Get away, else I shall have to kill yon. The cat said -- In the first place, hear me, and then, if you deem me to be worthy of death, let me not live. For,
+Now that I am in his presence, I cannot run away. So let things take what course they may. I will first create confidence in him and then approach him. Thus resolved, he went forth and said -- Sir, I salute you. The Vulture asked -- Who are you? He replied -- A cat. The Vulture said -- Get away, else I shall have to kill you. The cat said -- In the first place, hear me, and then, if you deem me to be worthy of death, let me not live. For,
 ; line 0499
 Is any one killed or honoured merely because he belongs to a particular caste? It is only on one's actions (conduct) being fully known that one is found fit to merit death or respect.
 ; line 0501
@@ -348,10 +397,10 @@ Grass (a seat made of grass), place, water and the fourth (thing), agreeable spe
 ; 60.
 
 ;hitoeng016.txt
-
-; line 0518
+; 0514-0516 not in Kale
+; 0518
 The good show pity even to creatures devoid of merits: the moon does not, indeed, withhold her light from the pariah's residence. Also,
-; This sentence from Kale not in hitopadesha-slp1 
+; not in hitopadesha-slp1 
 Fire is the object of worship to the twice-born (Brahmanas), and the Brahmana to the (four) castes; the husband is the only object of adoration to his wife, while a guest is the object of reverence everywhere. 
 [Page 14]
 ; line 0521
@@ -367,7 +416,7 @@ Religious merit is the only friend who follows one even in death: everything els
 ; line 0538
 When one eats the flesh of another, mark the difference between the two -- the one enjoys momentary pleasure; while the other loses his life. Besides,
 ; line 0541
-The agony that a man suffers, at the thought that he has to die, cannot be described by another hy guessing. Hear me again,
+The agony that a man suffers, at the thought that he has to die, cannot be described by another by guessing. Hear me again,
 ; line 0544
 Who will commit great sin for this accursed belly when it can be filled with herbs growing spontaneously in the forest?
 ; line 0546
@@ -375,7 +424,6 @@ Having thus inspired confidence (in the vulture) the cat abode in the hollow of 
 Thereafter, as days passed on, he attacked the young birds, brought them into the hollow and devoured them every day. (Now) an inquiry was set on foot by those birds whose young nestlings were eaten and who being sorrow-stricken were
 
 ;hitoeng017.txt
-
 
 lamenting. On perceiving this, the cat slipped out of the hollow and escaped. After that, the birds, who were making a close search here and there, discovered the bones of their nestling in the hollow of the tree. Then all the birds having come to the conclusion - our young ones have been eaten by this very Jaradgava -- put him to death. Therefore, I say -- "To one of unknown family and disposition &c." On hearing this the jackal said angrily -- On the day the deer saw you first, your honour too was one whose family and disposition were not known. How comes it then that this friendly behaviour towards you is gaining strength day by day?
 ; line 0556
@@ -403,8 +451,8 @@ One should know (the sincerity of) a friend in calamities, a warrior in battle, 
 He is a kinsman who stands (by one) in joy as well as in misery, when there is a famine or when a kingdom is overthrown, at the royal gate or in a cemetery.
 ; line 0585
 The Jackal having again and again looked at the net, thought to himself -- As for this net it is very strong; and said -- Friend, these snares are made of sinews. How then, can I touch these with my teeth to-day, it being Sunday ? Friend, if you will not think otherwise (i.e. will not have any misconception about me) tomorrow morning I will do whatever you will bid me do. 
-; next line not in Kale
-{With these words, he concealed himself near him and remained (waiting).}
+; next line not in hitopadesha-slp1
+With these words, he concealed himself near him and remained (waiting).
 ; 0589
  Afterwards the crow, seeing that the deer did not return in the evening, looked for him here and there, and having discovered him in that condition, said -- Friend, what is this? The deer replied –- This is the result of my disregard of a friend's advice. For, it is said
 ; 0592

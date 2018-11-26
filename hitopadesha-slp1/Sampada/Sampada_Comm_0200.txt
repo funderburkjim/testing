@@ -1,0 +1,192 @@
+;0151 na SoBate saBA\-maDye haMsa\-maDye bako yaTA .. 37..
+0151F: na SoBate saBAmaDye haMsamaDye bako yaTA .. 37..
+0151A: na SoBate saBAmaDye haMsamaDye bakaH yaTA .. 37..
+
+;0152 rUpa\-yOvana\-sampannA viSAla\-kula\-samBavAH .
+0152F: rUpayOvanasampannA viSAlakulasamBavAH .
+0152A: rUpayOvanasampannAH viSAlakulasamBavAH .
+
+;0153 vidyA\-hInA na SoBante nirganDA iva kiMSukAH .. 38..
+0153F: vidyAhInA na SoBante nirganDA iva kiMSukAH .. 38..
+0153A: vidyAhInAH na SoBante nirganDAH iva kiMSukAH .. 38..
+
+;0154 aparaYca \-\-
+0154F: aparaYca 
+0154A: aparam ca 
+
+; verse 39 not in Kale English
+;0155     pustakezu ca nADItaM nADItaM guru\-sanniDO .
+0155F:     pustakezu ca nADItaM nADItaM gurusanniDO .
+0155A:     pustakezu ca na aDItam na aDItam gurusanniDO .
+
+;0156     na SoBate saBAmaDye jAra\-garBa iva striyAH .. 39..
+0156F:     na SoBate saBAmaDye jAragarBa iva striyAH .. 39..
+0156A:     na SoBate saBAmaDye jAragarBaH iva striyAH .. 39..
+
+0157F: etaccintayitvA
+0157A: etad cintayitvA
+
+;0158 rAjA paRqita\-saBAM kAritavAn . rAjovAca \-\-Bo BoH paRqitAH \!
+0158F: rAjA paRqitasaBAM kAritavAn . rAjovAca Bo BoH paRqitAH \!
+0158A: rAjA paRqitasaBAm kAritavAn . rAjA uvAca BoH BoH paRqitAH \!
+
+0159F: SrUyatAM mama vacanam . asti kaScid evamBUto vidvAn yo
+0159A: SrUyatAm mama vacanam . asti kaH cid evam BUtaH vidvAn yaH
+
+;0160 mama putrARAM nityamunmArga\-gAminAmanaDigata\-SAstrARAmidAnIM
+0160F: mama putrARAM nityamunmArgagAminAmanaDigataSAstrARAmidAnIM
+0160A: mama putrARAm nityam unmArgagAminAm anaDigataSAstrARAm idAnIM
+
+;0161 nIti\-SAstropadeSena punarjanma kArayituM samarTaH \? yataH \-\-
+0161F: nItiSAstropadeSena punarjanma kArayituM samarTaH \? yataH 
+0161A: nItiSAstropadeSena punar janma kArayitum samarTaH ? yataH 
+
+;0162     kAcaH kAYcana\-saMsargAd Datte mArakatIrdyutIH .
+0162F:     kAcaH kAYcanasaMsargAd Datte mArakatIrdyutIH .
+0162A:     kAcaH kAYcanasaMsargAt Datte mArakatIH dyutIH .
+
+;0163 taTA sat\-sanniDAnena mUrKo yAti pravIRatAm .. 40..
+0163F: taTA satsanniDAnena mUrKo yAti pravIRatAm .. 40..
+0163A: taTA satsanniDAnena mUrKaH yAti pravIRatAm .. 40..
+
+;0164 uktaM ca \-\-
+0164F: uktaM ca 
+0164A: uktam ca 
+
+0165F: hIyate hi matistAta hInEH saha samAgamAt .
+0165A: hIyate hi matiH tAta hInEH saha samAgamAt .
+
+0166F: samESca samatAmeti viSizwESca viSizwatAm .. 41..
+0166A: samEH ca samatAm eti viSizwEH ca viSizwatAm .. 41..
+
+;0167 atrAntare vizRu\-Sarma\-nAmA mahA\-paRqitaH
+0167F: atrAntare vizRuSarmanAmA mahApaRqitaH
+0167A: atra antare vizRuSarmanAmA mahApaRqitaH
+
+;0168 sakala\-nIti\-SAstra\-tattva\-jYo bfhaspatirivAbravIt \-\-deva
+0168F: sakalanItiSAstratattvajYo bfhaspatirivAbravIt deva
+0168A: sakalanItiSAstratattvajYaH bfhaspatiH iva abravIt deva
+
+;0169 mahAkula\-samBUtA
+0169F: mahAkulasamBUtA
+0169A: mahAkulasamBUtAH
+
+;0170 ete rAjaputrAH . tat mayA nItiM grAhayituM Sakyante . yataH \-\-
+0170F: ete rAjaputrAH . tat mayA nItiM grAhayituM Sakyante . yataH 
+0170A: ete rAjaputrAH . tat mayA nItim grAhayitum Sakyante . yataH 
+
+0171F: nAdravye nihitA kAcit kriyA PalavatI Bavet .
+0171A: na adravye nihitA kAcit kriyA PalavatI Bavet .
+
+;0172 na vyApAra\-SatenApi Sukavat pAWyate bakaH .. 42..
+0172F: na vyApAraSatenApi Sukavat pAWyate bakaH .. 42..
+0172A: na vyApAraSatena api Sukavat pAWyate bakaH .. 42..
+
+;0173 anyacca \-\-
+0173F: anyacca 
+0173A: anyat ca 
+
+0174F: asmiMstu nirguRaM gotre nApatyamupajAyate .
+0174A: asmin tu nirguRam gotre na apatyam upajAyate .
+
+;0175 Akare padya\-rAgAnAM janma kAca\-maReH kutaH .. 43..
+0175F: Akare padyarAgAnAM janma kAcamaReH kutaH .. 43..
+0175A: Akare padyarAgAnAm janma kAcamaReH kutaH .. 43..
+
+;0176 ato'haM zaR\-mAsAByantare Bavat\-putrAn
+0176F: ato'haM zaRmAsAByantare BavatputrAn
+0176A: ataH aham zaRmAsAByantare BavatputrAn
+
+;0177 nIti\-SAstrABijYAn karizyAmi . rAjA sa\-vinayaM punaruvAca .
+0177F: nItiSAstrABijYAn karizyAmi . rAjA savinayaM punaruvAca .
+0177A: nItiSAstrABijYAn karizyAmi . rAjA savinayam punar uvAca .
+
+;0178 kIwo'pi sumanaH\-saNgAd Arohati satAM SiraH .
+0178F: kIwo'pi sumanaHsaNgAd Arohati satAM SiraH .
+0178A: kIwaH api sumanaH saNgAt Arohati satAm SiraH .
+
+0179F: aSmApi yAti devatvaM mahadBiH supratizWitaH .. 44..
+0179A: aSmA api yAti devatvam mahadBiH supratizWitaH .. 44..
+
+;0180 anyacca \-\-
+0180F: anyacca 
+0180A: anyat ca 
+
+;0181 yaTodaya\-girerdravyaM sannikarzeRa dIpyate .
+0181F: yaTodayagirerdravyaM sannikarzeRa dIpyate .
+0181A: yaTA udayagireH dravyam sannikarzeRa dIpyate .
+
+;0182 taTA sat\-sanniDAnena hIna\-varRo'pi dIpyate .. 45..
+0182F: taTA satsanniDAnena hInavarRo'pi dIpyate .. 45..
+0182A: taTA satsanniDAnena hInavarRaH api dIpyate .. 45..
+
+0183F: guRA guRajYezu guRA Bavanti
+0183A: guRAH guRajYezu guRAH Bavanti
+
+0184F: te nirguRaM prApya Bavanti dozAH .
+0184A: te nirguRam prApya Bavanti dozAH .
+
+;0185 AsvAdya\-toyAH pravahanti nadyaH
+0185F: AsvAdyatoyAH pravahanti nadyaH
+0185A: AsvAdyatoyAH pravahanti nadyaH
+;Sampada, AsvAdya toyAH
+
+0186F: samudramAsAdya BavantyupeyAH .. 46..
+0186A: samudram AsAdya Bavanti upeyAH .. 46..
+
+;0187 tad etezAmasmat\-putrARAM nIti\-SAstropadeSAya BavantaH
+0187F: tad etezAmasmatputrARAM nItiSAstropadeSAya BavantaH
+0187A: tad etezAm asmatputrARAm nItiSAstropadeSAya BavantaH
+
+;0188 pramARamityuktvA tasya vizRu\-SarmaRo kare bahumAna\-puraHsaraM putrAn
+0188F: pramARamityuktvA tasya vizRuSarmaRo kare bahumAnapuraHsaraM putrAn
+0188A: pramARam iti uktvA tasya vizRuSarmaRaH kare bahumAnapuraHsaram putrAn
+
+0189F: samarpitavAn ..
+0189A: samarpitavAn ..
+
+; markup from Sanskrit Documents. not part of text. Thus commented out.
+;0190 \medskip\hrule\medskip %i \-\-
+;0190F: \medskip\hrule\medskip %i 
+;0190A: \medskip\hrule\medskip %i 
+
+;0191 1 mitra\-lABaH
+0191F: 1 mitralABaH
+0191A: 1 mitralABaH
+
+;0192 aTa prAsAda\-pfzWe suKopavizwAnAM rAjaputrARAM purastAt
+0192F: aTa prAsAdapfzWe suKopavizwAnAM rAjaputrARAM purastAt
+0192A: aTa prAsAdapfzWe suKopavizwAnAm rAjaputrARAm purastAt
+
+;0193 prastAva\-krameRa paRqito'bravIt \-\-Bo rAja\-putrAH SfRuta \-\-
+0193F: prastAvakrameRa paRqito'bravIt Bo rAjaputrAH SfRuta 
+0193A: prastAvakrameRa paRqitaH abravIt Bo rAjaputrAH SfRuta 
+
+;0194 kAvya\-SAstra\-vinodena kAlo gacCati DImatAm .
+0194F: kAvyaSAstravinodena kAlo gacCati DImatAm .
+0194A: kAvyaSAstravinodena kAlaH gacCati DImatAm .
+
+0195F: vyasanena tu mUrKARAM nidrayA kalahena vA .. 1..
+0195A: vyasanena tu mUrKARAm nidrayA kalahena vA .. 1..
+
+;0196 tad BavatAM vinodAya kAka\-kUrmAdInAM vicitrAM kaTAM kaTayizyAmi .
+0196F: tad BavatAM vinodAya kAkakUrmAdInAM vicitrAM kaTAM kaTayizyAmi .
+0196A: tad BavatAm vinodAya kAkakUrmAdInAm vicitrAm kaTAm kaTayizyAmi .
+
+;0197 rAja\-putrEruktam \-\-Arya \! kaTyatAM . vizRu\-SarmovAca
+0197F: rAjaputrEruktam Arya \! kaTyatAM . vizRuSarmovAca
+0197A: rAjaputrEh uktam Arya kaTyatAm . vizRuSarmaH uvAca
+
+;0198 \-\-SfRuta yUyam .
+0198F: SfRuta yUyam .
+0198A: SfRuta yUyam .
+
+;0199 samprati mitra\-lABaH prastUyate . yasyAyamAdyaH SlokaH \-\-
+0199F: samprati mitralABaH prastUyate . yasyAyamAdyaH SlokaH 
+0199A: samprati mitralABaH prastUyate . yasya ayam AdyaH SlokaH 
+
+;0200 asADanA vitta\-hInA budDimantaH suhfn\-matAH .
+0200F: asADanA vittahInA budDimantaH suhfnmatAH .
+0200A: asADanAH vittahInAH budDimantaH suhfnmatAH .
+
+

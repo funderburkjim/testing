@@ -1,0 +1,201 @@
+;0200 asADanA vitta\-hInA budDimantaH suhfn\-matAH .
+0200F: asADanA vittahInA budDimantaH suhfnmatAH .
+0200A: asADanAH vittahInAH budDimantaH suhfnmatAH .
+
+;0201 sADayantyASu kAryARi kAka\-kUrma\-mfgAKuvat .. 2..
+0201F: sADayantyASu kAryARi kAkakUrmamfgAKuvat .. 2..
+; what is 'vat' in 'AKuvat' ?
+0201A: sADayanti ASu kAryARi kAkakUrmamfgAKuvat .. 2..
+
+;0202 rAjaputrA UcuH \-\-kaTametat \?
+0202F: rAjaputrA UcuH kaTametat \?
+0202A: rAjaputrAH UcuH kaTam etat \?
+
+;0203 so'bravIt \-\-asti godAvarI\-tIre viSAlaH SAlmalI\-taruH . tatra
+0203F: so'bravIt asti godAvarItIre viSAlaH SAlmalItaruH . tatra
+0203A: saH abravIt asti godAvarItIre viSAlaH SAlmalItaruH . tatra
+
+;0204 nAnA\-dig\-deSAd Agatya rAtrO pakziRo nivasanti . aTa kadAcid
+0204F: nAnAdigdeSAd Agatya rAtrO pakziRo nivasanti . aTa kadAcid
+0204A: nAnAdigdeSAt Agatya rAtrO pakziRaH nivasanti . aTa kadAcid
+
+;0205 avasannAyAM rAtrO astAcala\-cUqAvalambini Bagavati kumudinI\-nAyake
+0205F: avasannAyAM rAtrO astAcalacUqAvalambini Bagavati kumudinInAyake
+0205A: avasannAyAm rAtrO astAcalacUqAvalambini Bagavati kumudinInAyake
+
+;0206 candramasi . laGupatana\-nAmA vAyasaH prabudDaH kftAntamiva
+0206F: candramasi . laGupatananAmA vAyasaH prabudDaH kftAntamiva
+0206A: candramasi . laGupatananAmA vAyasaH prabudDaH kftAntam iva
+
+;0207 dvitIyamawantaM pASa\-hastaM vyAGamapaSyat . tamAlokyAcintayat
+; KALE dvitIyamAyAntaM  =? dvitIyam AyAntam,  participle AyA:  coming
+; KALE vyADam   =  piercer, hunter
+0207F: dvitIyamAyAntaM pASahastaM vyADamapaSyat . tamAlokyAcintayat
+; AyAntam:  prap of A-yA  (m. sing. acc.)   ??
+0207A: dvitIyam AyAntam pASahastam vyADam apaSyat . tam Alokya acintayat
+
+;0208 \-\-adya prAtarevAnizwa\-darSanaM jAtam .
+0208F: adya prAtarevAnizwadarSanaM jAtam .
+0208A: adya prAtar eva anizwadarSanam jAtam .
+
+0209F: na jAne kimanaBimataM darSayizyati .
+0209A: na jAne kim anaBimatam darSayizyati .
+
+;0210 ityuktvA tad anusaraRa\-krameRa vyAkulaScalati . yataH \-\-
+0210F: ityuktvA tad anusaraRakrameRa vyAkulaScalati . yataH 
+0210A: iti uktvA tad anusaraRakrameRa vyAkulaH calati . yataH 
+
+;0211 Soka\-sTAna\-sahasrARi Baya\-sTAna\-SatAni ca .
+0211F: SokasTAnasahasrARi BayasTAnaSatAni ca .
+0211A: SokasTAnasahasrARi BayasTAnaSatAni ca .
+
+0212F: divase divase mUQamAviSanti na paRqitam .. 3..
+0212A: divase divase mUQam AviSanti na paRqitam .. 3..
+
+;0213 anyacca \-\-vizayiRAmidamavaSyaM kartavyam .
+0213F: anyacca vizayiRAmidamavaSyaM kartavyam .
+0213A: anyat ca vizayiRAm idam avaSyam kartavyam .
+
+0214F: utTAyotTAya bodDavyaM kimadya sukftaM kftam .
+;0214Kale:  utTAyotTAya bodDavyaM mahadBayamupasTitam .
+0214A: utTAyotTAya bodDavyam kim adya sukftam kftam .
+;Sampada, utTAya utTAya...
+
+0215F: AyuzaH KaRqamAdAya ravirastaM gamizyati .. 4..
+;0215Kale: maraRavyADiSokAnAM kim adya nipatizyati .. 4..
+0215A: AyuzaH KaRqam AdAya raviH astam gamizyati .. 4..
+
+0216F: aTa tena vyADena
+0216A: aTa tena vyADena
+
+;0217 taRqula\-kaRAn vikIrya jAlaM vistIrRam . sa ca tatra pracCanno
+0217F: taRqulakaRAn vikIrya jAlaM vistIrRam . sa ca tatra pracCanno
+0217A: taRqulakaRAn vikIrya jAlam vistIrRam . saH ca tatra pracCannaH
+
+; 06-04-2018
+;0218 BUtvA sTitaH . asminn eva kAle citragrIva\-nAmA kapota\-rAjaH
+0218F: BUtvA sTitaH . asminn eva kAle citragrIvanAmA kapotarAjaH
+0218A: BUtvA sTitaH . asmin eva kAle citragrIvanAmA kapotarAjaH
+
+;0219 sa\-parivAro viyati visarpaMstaRqula\-kaRAn avalokayAmAsa . tataH
+0219F: saparivAro viyati visarpaMstaRqulakaRAn avalokayAmAsa . tataH
+0219A: saparivAraH viyati visarpan taRqulakaRAn avalokayAmAsa . tataH
+
+;0220 kapota\-rAjastaRqula\-kaRa\-lubDAn kapotAn prAha \-\-kuto'tra nirjane
+0220F: kapotarAjastaRqulakaRalubDAn kapotAn prAha kuto'tra nirjane
+0220A: kapotarAjaH taRqulakaRalubDAn kapotAn prAha kutaH atra nirjane
+
+;0221 vane taRqula\-kaRAnAM samBavaH . tan nirUpyatAM tAvat . BadramidaM na
+0221F: vane taRqulakaRAnAM samBavaH . tan nirUpyatAM tAvat . BadramidaM na
+0221A: vane taRqulakaRAnAm samBavaH . tan nirUpyatAm tAvat . Badram idam na
+
+;0222 paSyAmi prAyeRAnena taRqula\-kaRa\-loBenAsmABirapi taTA Bavitavyam .
+0222F: paSyAmi prAyeRAnena taRqulakaRaloBenAsmABirapi taTA Bavitavyam .
+0222A: paSyAmi prAyeRa anena taRqulakaRaloBena asmABiH api taTA Bavitavyam .
+
+0223F: kaNkaRasya tu loBena magnaH paNke sudustare .
+0223A: kaNkaRasya tu loBena magnaH paNke sudustare .
+
+;0224 vfdDa\-vyAGreRa samprAptaH paTikaH sammftaH .. 5..
+0224F: vfdDavyAGreRa samprAptaH paTikaH sammftaH .. 5..
+0224A: vfdDavyAGreRa samprAptaH paTikaH sammftaH .. 5..
+
+;0225 kapotA UcuH \-\-kaTametat \?
+0225F: kapotA UcuH kaTametat \?
+0225A: kapotAH UcuH kaTam etat \?
+
+0226F: kaTA 1
+0226A: kaTA 1
+
+;0227 so'bravIt \-\-ahamekadA dakziRAraRye carann
+0227F: so'bravIt ahamekadA dakziRAraRye carann
+0227A: saH abravIt aham ekadA dakziRAraRye caran
+
+;0228 apaSyameko vfdDo vyAGraH snAtaH kuSa\-hastaH saras\-tIre
+0228F: apaSyameko vfdDo vyAGraH snAtaH kuSahastaH sarastIre
+0228A: apaSyam ekaH vfdDaH vyAGraH snAtaH kuSahastaH sarastIre
+
+;0229 brUte \-\-Bo Bo panTAH \! idaM suvarRa\-kaNkaRaM gfhyatAm .
+0229F: brUte Bo Bo panTAH \! idaM suvarRakaNkaRaM gfhyatAm .
+; pAnTAH   (traveler) cf. mw 'paTin'
+0229A: brUte Bo Bo panTAH \! idam suvarRakaNkaRam gfhyatAm .
+
+;0230 tato loBAkfzwena kenacit pAnTena Alocitam \-\-BAgyena etat
+0230F: tato loBAkfzwena kenacit pAnTena Alocitam BAgyena etat
+0230A: tataH loBAkfzwena kenacit pAnTena Alocitam BAgyena etat
+
+0231F: samBavati .
+0231A: samBavati .
+
+;0232 kintu asmin Atma\-sandehe pravfttirna viDeyA . yataH \-\-
+0232F: kintu asmin Atmasandehe pravfttirna viDeyA . yataH 
+0232A: kiM tu asmin Atmasandehe pravfttiH na viDeyA . yataH 
+
+;0233 anizwAd izwa\-lABe \-\-pi na gatirjAyate SuBA .
+0233F: anizwAd izwalABe pi na gatirjAyate SuBA .
+0233A: anizwAt izwalABe pi na gatiH jAyate SuBA .
+
+;0234 yatrAste viza\-saMsargo'mftaM tad api mftyave .. 6..
+0234F: yatrAste vizasaMsargo'mftaM tad api mftyave .. 6..
+0234A: yatra Aste vizasaMsargaH amftam tad api mftyave .. 6..
+
+;0235 kintu sarvatrArTArjana\-pravfttO sandeha eva . taTA coktam \-\-
+0235F: kintu sarvatrArTArjanapravfttO sandeha eva . taTA coktam 
+0235A: kiM tu sarvatra arTArjanapravfttO sandeha eva . taTA ca uktam 
+
+0236F: na saMSayamanAruhya naro BadrARi paSyati .
+0236A: na saMSayam anAruhya naraH BadrARi paSyati .
+
+0237F: saMSayaM punarAruhya yadi jIvati paSyati .. 7..
+0237A: saMSayam punar Aruhya yadi jIvati paSyati .. 7..
+
+0238F: tan nirUpayAmi tAvat .
+0238A: tad nirUpayAmi tAvat .
+
+0239F: prakASaM brUte . kutra tava kaNkaRam \? vyAGro hastaM prasArya
+0239A: prakASam brUte . kutra tava kaNkaRam \? vyAGraH hastam prasArya
+
+;0240 darSayati . pAnTo'vadat \-\-kaTaM mArAtmake tvayi viSvAsaH \?
+0240F: darSayati . pAnTo'vadat kaTaM mArAtmake tvayi viSvAsaH \?
+0240A: darSayati . pAnTaH avadat kaTam mArAtmake tvayi viSvAsaH \?
+
+;0241 vyAGra uvAca \-\-SfRu re pAnTa \! prAg eva
+0241F: vyAGra uvAca SfRu re pAnTa \! prAg eva
+0241A: vyAGraH uvAca SfRu re pAnTa \! prAg eva
+
+;0242 yOvana\-daSAyAmahamatIva durvftta Asam . aneka\-go\-mAnuzARAM vaDAd
+0242F: yOvanadaSAyAmahamatIva durvftta Asam . anekagomAnuzARAM vaDAd
+0242A: yOvanadaSAyAm aham atIva durvfttaH Asam . anekagomAnuzARAm vaDAt
+
+;0243 me putrA mftA dArASca . vaMSa\-hInaScAham .
+0243F: me putrA mftA dArASca . vaMSahInaScAham .
+0243A: me putrAH mftAH dArAH ca . vaMSahInaH ca aham .
+
+;0244 tataH kenacid DArmikeRAhamupadizwaH . dAna\-DarmAdikaM caratu
+0244F: tataH kenacid DArmikeRAhamupadizwaH . dAnaDarmAdikaM caratu
+; Adika ?
+0244A: tataH kenacid DArmikeRa aham upadizwaH . dAnaDarmAdikam caratu
+
+;0245 BavAn iti . tad\-upadeSAdi\-dAnImahaM snAna\-SIlo dAtA vfdDo
+0245F: BavAn iti . tadupadeSAdidAnImahaM snAnaSIlo dAtA vfdDo
+; dAtA  ?
+0245A: BavAn iti . tadupadeSAt idAnIm aham snAnaSIlaH dAtA vfdDaH
+
+;0246 galita\-naKa\-dantaH na kaTaM viSvAsa\-BUmiH \? uktaM ca \-\-
+0246F: galitanaKadantaH na kaTaM viSvAsaBUmiH \? uktaM ca 
+0246A: galitanaKadantaH na kaTam viSvAsaBUmiH ? uktam ca 
+
+;0247 ijyA'Dyayana\-dAnAni tapaH satyaM DftiH kzamA .
+0247F: ijyA'DyayanadAnAni tapaH satyaM DftiH kzamA .
+0247A: ijyA aDyayanadAnAni tapaH satyam DftiH kzamA .
+
+;0248 aloBa iti mArgo'yaM DarmasyAzwa\-viDaH smftaH .. 8..
+0248F: aloBa iti mArgo'yaM DarmasyAzwaviDaH smftaH .. 8..
+0248A: aloBaH iti mArgaH ayam Darmasya azwaviDaH smftaH .. 8..
+
+0249F: tatra pUrvaScaturvargo damBArTamapi sevyate .
+0249A: tatra pUrvaH caturvargaH damBArTam api sevyate .
+
+0250F: uttarastu caturvargo mahAtmanyeva tizWati .. 9..
+0250A: uttaraH tu caturvargaH mahAtmani eva tizWati .. 9..
+
