@@ -579,17 +579,19 @@ Let a boy or an old man or a young man come to the house, respect should be show
 The crow said -- Friend Manthara, do him special honour. For he is the king of mice, Hiranyaka by name, foremost of those whose actions are meritorious and an ocean of mercy. The king of serpents, aided by his twice thousand tongues even, will not be able to sing the praise of his merits. Having said so he described the episode about Chitragriva. Manthara having respectfully entertained Hiranyaka said -- Good friend, kindly relate the cause of your coming to a dreary wood. Hiranyaka said--I will; may you listen. 
 FABLE IV. 
 ; 0760
-There is a convent of recluses in the city of Champaka. In it dwelt a hermit, Chudakara by name. He was in the habit of sleeping after having hung on a peg his alms-pot, containing
+There is a convent of recluses in the city of Champaka. In it dwelt a hermit, Chudakarna by name. He was in the habit of sleeping after having hung on a peg his alms-pot, containing
 
 ;hitoeng023.txt
 
 the remnant of the food collected by begging after he had eaten of it. 
 ; 0763
 I used every day to leap up and eat that food. After some time a dear friend of his, Vinakarna by name, a hermit, came there. While engaged in conversation with him Chudakarna kept beating the ground with an old bamboo stick. Vinakarna said-Friend, why do you take no interest in my story and are busy with something else? Chudakarna replied -- Friend, not that I am indifferent (to your conversation ), but look at this mouse, doing wrong to me, who by jumping up always eats the food collected by me by begging and placed in that pot. Vinakarna, having looked at the peg, observed -- How can a mouse, possessed of little strength, jump to such a height? There must be some reason for this. 
-;** This is not present in hitopadesha-slp1.txt 
+
+; --------------------------------------------------------------------
+; BEGIN: not present in hitopadesha-slp1.txt 
 For it is said--
 The young wife, having suddenly drawn her old husband by the hair, kissed him with a close embrace; there must be some reason for this.
-
+;** end not in hitopadesha-slp1
 Chudakarna demanded how it was, whereupon Vinakarna related--
 FABLE V.
 There is, in the country of Gauda, a city, Kausambi by name. In it dwelt a merchant of great wealth, Chandanadasa by name. Although in the decline of age, he through the pride of wealth, and his mind being full of passion, married merchant's daughter, Lilavati by name. She attained youth, looking like the victorious banner of the god of love; while that aged husband did not please her. For,
@@ -688,11 +690,12 @@ A miser's wealth, inasmuch as it is not used, is the common property of others; 
 A gift accompanied with sweet words, knowledge without vanity, courage attended by forbearance, and wealth spent in charity: these four are rare in this world. It is also said, - 160
 A hoard should always be made, but not too great a one; Lo ! The jackal that was in the habit of hoarding was killed by a bow.
 The two asked how that was. Manthara related--
+; --------------------------------------------------------------------
 
 ;; This is fable 5 in hitopadesha-slp1
 ; 0928
 FABLE VI.
-There was a hunter, Bhairava by name, residing in the province of Kalyana. He, one day, went to the Vindhya forast in search of a deer. As he passed carrying the deer that he had killed, he saw a boar of a formidable form. Then the hunter placed the deer on the ground and wounded the boar with an arrow. The boar too, having set up a deep and dreadful cry (or, a cry as terrible as the thunder of clouds ) struck the hunter in the groin, upon which he fell down like a tree struck down. For,
+There was a hunter, Bhairava by name, residing in the province of Kalyana. He, one day, went to the Vindhya forest in search of a deer. As he passed carrying the deer that he had killed, he saw a boar of a formidable form. Then the hunter placed the deer on the ground and wounded the boar with an arrow. The boar too, having set up a deep and dreadful cry (or, a cry as terrible as the thunder of clouds ) struck the hunter in the groin, upon which he fell down like a tree struck down. For,
 ; 0936
 Having met with some cause, such as water, fire, poison, a weapon, hunger (starvation), a disease, or a fall from a mountain, a creature loses his life.
 ; 0938
@@ -724,6 +727,7 @@ Even after having studied the sastras people may remain fools; that man is learn
 The knowledge of theory does not do the least good to one who shrinks from a determined exertion (or perseveranoe): does a lamp, in this world, reveal a thing to a blind man although it be placed on the palm of his hand ?
 ; 0969
 Therefore, friend, you ought to be reconciled to this particular (changed) condition. And you should not consider this as very hard to do. For,
+; --------------------------------------------
 ; -- begin: not in hitopadesha-slp1
 “A king, a woman of family, Brahmanas, ministers, breasts, teeth, hair, nails and men do not shine (appear well) when fallen from their proper position. Knowing this a wise man should not leave his own place."
 These are the words of cowardly persons. For,
@@ -733,6 +737,7 @@ These are the words of cowardly persons. For,
 Lions, good men and elephants leave their places and go to others; while crows, cowardly men and deer perish in their own places.
 To a high-minded hero, what is his own and what is a foreign country? Whatever country he resorts to, the same he acquires by the might of his arms : whichever forest the lion, armed with his jaws, claws and tail, enters, in the same he quenches his thirst with the blood of the lordly elephants he kills. Again, - 172.
 ; end : not in hitopadesha-slp1
+; --------------------------------------------
 [Page 26] 
 ; 0974
 As frogs repair to a puddle or birds to a lake full (of water), so do all fortunes to an industrious man helplessly (being entirely at his disposal). Moreover,
@@ -760,6 +765,7 @@ How can riches be conducive to happiness, since they cause trouble in their acqu
 ; 0999
 Better is the absence of desire for him who wishes to acquire money for religious purposes : for rather than wash off mud it would be well to keep at a distance from it and so not to touch it.
 ; 1002
+; ? crocodiles == matsya?
 As meat (food) is eaten by birds in the sky, by beasts on earth, and by crocodiles in water, so is a rich man (his wealth) fed upon everywhere.
 ; 1005
 There is ever fear to the wealthy from the king, from water, from fire, from a thief, and even from a relative, as there is from death to the living. Similarly,
@@ -790,7 +796,7 @@ or persons seeking protection go not away with faces turned back through disappo
 ; 1030
 Thus did they (the three friends) live in happy contentment, feasting and sporting at will.
 ; 1031
-Now on one occasion, a deer, Chitranga by name, frightened by some one, came and joined them. Thereupon, apprehending that the person who had caused the fright might be coming after the deer, Manthara entered the water, the mouse a hole and the crow flew up and perched on the top of a tree. Then Laghupatanaka, looking to a great distance, found that no one that would cause fright was coming. Then in pursuance of his words all of them again joined company and sat just there. Manthara said--Good, O deer, you are welcome. You are at liberty to enjoy provisions such as water and the like. Do you favour the forest with your residence here (lit, let the forest have a master by your residence here). Chitranga said, I who was alarmed by the hunters have come to you for protection and desire your friendship. 
+Now on one occasion, a deer, Chitranga by name, frightened by some one, came and joined them. Thereupon, apprehending that the person who had caused the fright might be coming after the deer, Manthara entered the water, the mouse a hole and the crow flew up and perched on the top of a tree. Then Laghupatanaka, looking to a great distance, found that no one that would cause fright was coming. Then in pursuance of his words all of them again joined company and sat just there. Manthara said--Good, O deer, you are welcome. You are at liberty to enjoy provisions such as water and the like. Do you favour the forest with your residence here (lit,, let the forest have a master by your residence here). Chitranga said, I who was alarmed by the hunters have come to you for protection and desire your friendship. 
 ; 1043
 Hiranyaka replied-As for friendship, you have secured that without an effort. For,
 ; 1045
