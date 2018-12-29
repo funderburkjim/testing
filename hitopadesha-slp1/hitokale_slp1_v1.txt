@@ -10278,37 +10278,37 @@
 103.32A: susaMhitapraMARastu saH ca saMyogaH ucyate .. 122..
 
 104.01F: AvayoryoDamuKyEstu madarTaH sADyatAmiti .
-104.01A: AvayoryoDamuKyEH tu madarTaH sADyatAmiti .
+104.01A: AvayoH yoDamuKyEH tu madarTaH sADyatAm iti .
 
 104.02F: yasminpaRastu kriyate sa saMDiH puruzAntaraH .. 123..
 104.02A: yasmin paRaH tu kriyate saH saMDiH puruzAntaraH .. 123..
 
 104.03F: tvayEkena madIyo'rTaH saMprasADyastvasAviti .
-104.03A: tvayEkena madIyaH arTaH saMprasADyastvasAviti .
+104.03A: tvayA ekena madIyaH arTaH saMprasADyaH tu asO iti .
 
 104.04F: yatra SatruH paRaM kuryAtso'dfzwapuruzaH smftaH .. 124..
 104.04A: yatra SatruH paRam kuryAt saH adfzwapuruzaH smftaH .. 124..
 
 104.05F: yatra BUmyekadeSena paRena ripurUrjitaH .
-104.05A: yatra BUmyekadeSena paRena ripurUrjitaH .
+104.05A: yatra BUmyekadeSena paRena ripuH UrjitaH .
 
 104.06F: saMDIyate saMDividBiH sa cAdizwa udAhftaH .. 125..
 104.06A: saMDIyate saMDividBiH saH cAdizwaH udAhftaH .. 125..
 
 104.07F: svasEnyena tu saMDAnamAtmAdizwa udAhftaH .
-104.07A: svasEnyena tu saMDAnamAtmAdizwaH udAhftaH .
+104.07A: svasEnyena tu saMDAnam AtmAdizwaH udAhftaH .
 
 104.08F: kriyate prARarakzArTaM sarvadAnamupagrahaH .. 126..
 104.08A: kriyate prARarakzArTam sarvadAnamupagrahaH .. 126..
 
 104.09F: kozAMSenArDakozena sarvakozena vA punaH .
-104.09A: kozAMSenArDakozena sarvakozena vA punaH .
+104.09A: kozAMSena arDakozena sarvakozena vA punaH .
 
 104.10F: Sizwasya pratirakzArTaM parikraya udAhftaH .. 127..
 104.10A: Sizwasya pratirakzArTam parikrayaH udAhftaH .. 127..
 
 104.11F: BuvAM sAravatInAM tu dAnAducCanna ucyate .
-104.11A: BuvAm sAravatInAm tu dAnAd ucCinnaH ucyate .
+104.11A: BuvAm sAravatInAm tu dAnAt ucCinnaH ucyate . 
 
 104.12F: BUmyutTaPaladAnena sarveRa paraBUzaRaH .. 128..
 104.12A: BUmyutTaPaladAnena sarveRa paraBUzaRaH .. 128..
@@ -10320,50 +10320,50 @@
 104.14A: skanDopaneyam tam prAhuH saMDim saMDivicakzaRAH .. 129..
 
 104.15F: parasparopakArastu mEtraH saMbanDakastaTA .
-104.15A: parasparopakArastu mEtraH saMbanDakastaTA .
+104.15A: parasparopakAraH tu mEtraH saMbanDakastaTA .
 
 104.16F: upahAraSca vijYeyAScatvAraScEva saMDayaH .. 130..
 104.16A: upahAraH ca vijYeyAH catvAraH ca eva saMDayaH .. 130..
 
 104.17F: eka evopahArastu saMDireva mato mama .
-104.17A: eka evopahArastu saMDireva mataH mama .
+104.17A: eka eva upahAraH tu saMDiH eva mataH mama .
 
 104.18F: upahAraviBedAstu sarve mEtravivarjitAH .. 131..
-104.18A: upahAraviBedAstu sarve mEtravivarjitAH .. 131..
+104.18A: upahAraviBedAH tu sarve mEtravivarjitAH .. 131..
 
 104.19F: aBiyoktA balIyastvAdalabDvA na nivartate .
-104.19A: aBiyoktA balIyastvAd alabDvA na nivartate .
+104.19A: aBiyoktA balIyastvAt alabDvA na nivartate .
 
 104.20F: upahArAdfte tasmAtsaMDiranyo na vidyate .. 132..
-104.20A: upahArAt fte tasmAt saMDiranyaH na vidyate .. 132..
+104.20A: upahArAt fte tasmAt saMDiH anyaH na vidyate .. 132..
 
 104.21F: cakravAko brUte -- SrRu tAvat .
-104.21A: cakravAko brUte -- SrRu tAvat .
+104.21A: cakravAkaH brUte -- SrRu tAvat .
 
 104.22F: ayaM nijaH paro veti gaRanA laGucetasAm .
-104.22A: ayaM nijaH paro veti gaRanA laGucetasAm .
+104.22A: ayaM nijaH paraH vA iti gaRanA laGucetasAm .
 
 104.23F: udAracaritAnAM tu vasuDEva kuwumbakam .. 133 ..
 104.23A: udAracaritAnAM tu vasuDEva kuwumbakam .. 133 ..
 
 ; 't' in 'mAta' unclear in print
 104.24F: aparaM ca . mAtavatparadArezu paradravyezu lozwavat .
-104.24A: aparam ca . mAtavatparadArezu paradravyezu lozwavat .
+104.24A: aparam ca . mAtava tparadArezu paradravyezu lozwavat .
 
 104.25F: AtmavatsarvaBUtezu yaH paSyati sa paRqitaH .. 134 ..
-104.25A: AtmavatsarvaBUtezu yaH paSyati sa paRqitaH .. 134 ..
+104.25A: Atmavat sarvaBUtezu yaH paSyati sa paRqitaH .. 134 ..
 
 104.26F: rAjAha -- Bavanto
-104.26A: rAjAha -- Bavanto
+104.26A: rAjA Aha -- Bavanto
 
 104.27F: mahAntaH paRqitASca . tad atrAsmAkaM yaTAkAryamupadiSyatAm .
-104.27A: mahAntaH paRqitAH ca . tad atrAsmAkam yaTAkAryamupadiSyatAm .
+104.27A: mahAntaH paRqitAH ca . tad atra asmAkam yaTAkAryam upadiSyatAm .
 
 104.28F: mantrI brUte -- AH kimevamucyate .
-104.28A: mantrI brUte -- AH kimevamucyate .
+104.28A: mantrI brUte -- AH kim evam ucyate .
 
 104.29F: ADivyADiparItApAdadya Svo vA vinASine .
-104.29A: ADivyADiparItApAd adya SvaH vA vinASine .
+104.29A: ADivyADiparItApAt adya SvaH vA vinASine .  
 
 104.30F: ko hi nAma SarIrAya DarmApetaM samAcaret .. 135..
 104.30A: kaH hi nAma SarIrAya DarmApetam samAcaret .. 135..
@@ -10372,28 +10372,28 @@
 104.31A: jalAntaH candracapalam jIvitam Kalu dehinAm .
 
 104.32F: taTAviDamiti jYAtvA SaSvatkalyARamAcaret .. 136..
-104.32A: taTAviDamiti jYAtvA SaSvatkalyARamAcaret .. 136..
+104.32A: taTAviDam iti jYAtvA SaSvat kalyARam Acaret .. 136..
 
 105.01F: mfgatfzRAsamaM vIkzya saMsAraM kzaRaBaNguram .
 105.01A: mfgatfzRAsamam vIkzya saMsAram kzaRaBaNguram .
 
 105.02F: sajjanEH saMgataM kuryAdDarmAya ca suKAya ca .. 137..
-105.02A: sajjanEH saMgatam kuryAd DarmAya ca suKAya ca .. 137..
+105.02A: sajjanEH saMgatam kuryAt DarmAya ca suKAya ca .. 137..
 
 105.03F: tanmama saMmatena tadeva kriyatAm . yataH .
-105.03A: tan mama saMmatena tad eva kriyatAm . yataH .
+105.03A: tat mama saMmatena tat eva kriyatAm . yataH .
 
 105.04F: aSvameDasahasrARi satyaM ca tulayA Dftam .
 105.04A: aSvameDasahasrARi satyam ca tulayA Dftam .
 
 105.05F: aSvameDasahasrAdDi satyamevAtirizyate .. 138..
-105.05A: aSvameDasahasrAd Di satyameva viSizyate .. 138..
+105.05A: aSvameDasahasrAt hi satyam eva atirizyate .. 138..
 
 105.06F: ataH satyABiDAnadivyapuraHsaro dvayorapyanayorBUpAlayoH 
-105.06A: ataH satyABiDAnadivyapuraHsaro dvayorapyanayorBUpAlayoH 
+105.06A: ataH satyABiDAnadivyapuraHsaraH dvayoH api anayoH BUpAlayoH 
 
 105.07F: kAYcanABiDAnasaMDirviDIyatAm . sarvajYo brUte -- evamastu . tato rAjahaMsena
-105.07A: kAYcanABiDAnasaMDirviDIyatAm . sarvajYaH brUte -- evamastu . tataH rAjahaMsena
+105.07A: kAYcanABiDAnasaMDiH viDIyatAm . sarvajYaH brUte -- evam astu . tataH rAjahaMsena
 
 105.08F: rAjYA vastrAlaMkAropahArEH sa mantrI dUradarSI pUjitaH 
 105.08A: rAjYA vastrAlaMkAropahArEH saH mantrI dUradarSI pUjitaH 
@@ -10402,10 +10402,10 @@
 105.09A: prahfzwamanAH cakravAkam gfhItvA rAjYaH mayUrasya saMniDAnaM
 
 105.10F: gataH . tatra citravarRena rAjYA sarvajYo gfDravacanAd
-105.10A: gataH . tatra citravarRena rAjYA sarvajYaH gfDravacanAd
+105.10A: gataH . tatra citravarRena rAjYA sarvajYaH gfDravacanAt
 
 105.11F: bahumAnadAnapuraHsaraM saMBAzitastaTAviDaM saMDiM
-105.11A: bahumAnadAnapuraHsaram saMBAzitastaTAviDam saMDiM
+105.11A: bahumAnadAnapuraHsaram saMBAzitaH taTAviDam saMDiM
 
 105.12F: svIkftya rAjahaMsasamIpaM prasTApitaH .
 105.12A: svIkftya rAjahaMsasamIpam prasTApitaH .
@@ -10414,55 +10414,55 @@
 105.13A: dUradarSI brUte -- deva sidDam naH samIhitam .
 
 105.14F: idAnIM svasTAnameva vinDyAcalaM vyAvftya pratigamyatAm .
-105.14A: idAnIm svasTAnameva vinDyAcalam vyAvftya pratigamyatAm .
+105.14A: idAnIm svasTAnam eva vinDyAcalam vyAvftya pratigamyatAm .
 
 105.15F: aTa sarve svasTAnaM prApya manoBilazitaM PalaM prApnuvanniti .
 105.15A: aTa sarve svasTAnam prApya manoBilazitam Palam prApnuvan iti .
 
 105.16F: vizRuSarmaRoktaM -- aparaM kiM kaTayAmi . kaTyatAm .
-105.16A: vizRuSarmaRoktam -- aparam kim kaTayAmi . kaTyatAm .
+105.16A: vizRuSarmaRA uktam -- aparam kim kaTayAmi . kaTyatAm .
 
 105.17F: rAjaputrA UcuH -- tava 
-105.17A: rAjaputrA UcuH -- tava 
+105.17A: rAjaputrAH UcuH -- tava 
 
 105.18F: prasAdAdrAjyavyavahArANgaM jAtam . tataH suKino BUtA vayam .
-105.18A: prasAdAt rAjyavyavahArANgam jAtam . tataH suKinaH BUtA vayam .
+105.18A: prasAdAt rAjyavyavahArANgam jAtam . tataH suKinaH BUtAH vayam .
 
 105.19F: vizRuSarmovAca -- yadyapyevaM taTApyaparamapIdamastu --
-105.19A: vizRuSarmovAca -- yadyapyevam taTApyaparamapIdamastu --
+105.19A: vizRuSarmA uvAca -- yadi api evam taTA api aparam api idam astu --
 
 105.20F: saMDiH sarvamahIBujAM vijayinAmastu pramodaH sadA
-105.20A: saMDiH sarvamahIBujAm vijayinAmastu pramodaH sadA
+105.20A: saMDiH sarvamahIBujAm vijayinAm astu pramodaH sadA
 
 105.21F: santaH santu nirApadaH sukftinAM kIrtiSciraM varDatAm .
-105.21A: santaH santu nirApadaH sukftinAm kIrtiH ciram varDatAm .
+105.21A: santaH santu nirApadaH sukftinAm kIrtiH ciraM varDatAm .
 
 105.22F: nItirvAravilAsinIva satataM vakzaHsTale saMsTitA
-105.22A: nItirvAravilAsinIva satatam vakzaHsTale saMsTitA
+105.22A: nItiH vAravilAsinI iva satatam vakzaHsTale saMsTitA
 
 105.23F: vaktraM cumbatu mantriRAmaharaharBUyAnmahAnutsavaH .. 139..
-105.23A: vaktram cumbatu mantriRAmaharaharBUyAn mahAn utsavaH .. 139..
+105.23A: vaktram cumbatu mantriRAm ahaH ahaH BUyAn mahAn utsavaH .. 139..
 
 105.24F: anyaccAstu -- 
-105.24A: anyaccAstu -- 
+105.24A: anyat ca astu -- 
 
 105.25F: prAleyAdreH sutAyAH praRayanivasatiScandramOliH sa yAvad
-105.25A: prAleyAdreH sutAyAH praRayanivasatiH candramOliH saH yAvad
+105.25A: prAleyAdreH sutAyAH praRayanivasatiH candramOliH saH yAvat
 
 105.26F: yAvallakzmIrmurArerjalada iva taqinmAnase visPurantI .
-105.26A: yAval lakzmIrmurArerjalada iva taqin mAnase visPurantI .
+105.26A: yAvat lakzmIH murAreH jaladaH iva taqit mAnase visPurantI .
 
 105.27F: yAvatsvarRAcalo'yaM davadahanasamo yasya sUryaH sPuliNgaH
 105.27A: yAvat svarRAcalaH ayam davadahanasamaH yasya sUryaH sPuliNgaH
 
 105.28F: tAvannArAyaRena pracaratu racitaH saMgraho'yaM kaTAnAm .. 140..
-105.28A: tAvan nArAyaRena pracaratu racitaH saMgrahaH ayam kaTAnAm .. 140..
+105.28A: tAvat nArAyaRena pracaratu racitaH saMgrahaH ayam kaTAnAm .. 140..
 
 105.29F: aparaM ca . SrImAnDavalacandro'sO jIyAnmARqaliko ripUn .
-105.29A: aparam ca . SrImAnDavalacandraH asO jIyAn mARqalikaH ripUn .
+105.29A: aparaM ca . SrImAn DavalacandraH asO jIyAn mARqalikaH ripUn .
 
 105.30F: yenAyaM saMgraho yatnAlleKayitvA pracAritaH .. 141..
-105.30A: yenAyam saMgraho yatnAlleKayitvA pracAritaH .. 141..
+105.30A: yena ayam saMgrahaH yatnAt leKayitvA pracAritaH .. 141..
 
 ; final lines in Kale
 105.31F: kALevaMSasamutpannena rAmacaMdrasUnunA moreSvareRa kftA
@@ -10472,6 +10472,6 @@
 105.32A: marmaprakASikA nAma hitopadeSavyAKyA samAptA .
 
 105.33F: SuBaM BUyAdaDyApakAnAmaDyetFRAM ca .
-105.33A: SuBaM BUyAdaDyApakAnAmaDyetFRAM ca .
+105.33A: SuBaM BUyAt aDyApakAnAm aDyetFRAM ca .
 
 ; this is the End of the hitopadesha in Kale.
