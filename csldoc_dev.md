@@ -111,4 +111,5 @@ Via ssh connection to Cologne,
 ```
 # make current directory scans/csldev/csldoc
 git pull origin master
+```
 
