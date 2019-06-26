@@ -65,12 +65,15 @@ deactivate
 ```
 
 
-* initalizing test sphinx document
-# besure myenv is activated
+### Steps used to initialize a new sphinx project
+This section for information only.
+*These were done initially. However they should NOT be redone.*  
+The file 'source/conf.py' has some of these settings.  One which you might want to change is 'version'.
+```
+# be sure myenv is activated
+# initalize sphinx document
 sphinx-quickstart
-
-a) Separate source/build directories
- named 'source' and 'build'
+# Choose to have  Separate source/build directories named 'source' and 'build'
 * make copyright blank
 in source/conf.py, change 
 copyright = '2018, Jim Funderburk'
@@ -80,55 +83,18 @@ This copyright seems to show on all pages.
 When blank, there is still a copyright to Sphinx and alabaster.
 Guess we'll have to leave these.
 
-* making html
+### To regenerate the documentation as html:
+The 'build' directory is constructed or updated.
+```
+# be sure *myenv* is activated
 sphinx-build -b html source build
 
-The 'build' directory is constructed or updated.
-We'll want to do some modification of this when uploading to 
-Cologne.  Details later under 'Cologne upload'
-* images folder 
-For conceptual simplicity, it seems better to relocate the scanned 
-images of the front matter of the dictionary.
-For ease of reference in the restructured text files, the images directory
-should be within the *source* directory
-cd source
-mkdir images
-* current location of front matter scans
-For dictionary X, the images are in folder
-source/dictionaries/prefaces/Xpref/images
+# Note on changes in sphinx version.  Note above that we installed sphinx in the virtual environment.
+sphinx-build --version
+# >>> 2.1.2  (as of June 26, 2019)
+# When the files were generated previously (in Nov 11, 2018), sphinx-build was at version 1.8.1.
+# The changes in sphinx-build from 1.8.1 to 2.1.2  generated many changes to the html generated output,
+# even though we have not made any changes to the input files  (in directory *source*).
 
-For each image, the page referencing image number NN is XprefNN.rst.
-In this file, the sphinx image directive is
-.. image:: images/IMGFILENAME_X_NN
-We need to:
-a) move source/dictionaries/prefaces/Xpref/images/IMGFILENAME_X_NN to
-        source/images/IMGFILENAME_X_NN
-  -- I assume that as X ranges over all dictionaries and NN over all
-     the possibilities, then there all the IMGFILENAME_X_NN are distinct.
-     This assumption needs to be checked before moving all these
-     files into one directory.
-* imgchk
-  python move_images.py imgchk
-  There are 34 dictionary codes
-  acc, ae, ap90, ben  have no images folder
-  There are 468 total file names found in images folders for the other 30
-  dictionaries.
-  There are no dupicates among these file names (i.e., each filename 
-   occurs in the images folder of precisely one dictionary).
-* copyimg 
-python move_images.py copyimg
-Copy images for all dictionaries. 
-The source images are in directories for each dictionary code X
-  ../sphinx/cslv1/dictionaries/prefaces/Xpref/images'
-The target images are in 'images' directory.
-* copy and alter XprefNN files
-python move_images.py prefnn
-* Cologne upload
-* THE END
-* image sizes
-size of git repository with just bhs: 17 mb
-images 20mb  (just bhs - 30 files -- only 15 are used)
+```
 
-After build,
-  size of build directory: 3.8 mb
-  size of .git directory : 17.8mb
