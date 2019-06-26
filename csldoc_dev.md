@@ -74,17 +74,17 @@ The file 'source/conf.py' has some of these settings.  One which you might want 
 # initalize sphinx document
 sphinx-quickstart
 # Choose to have  Separate source/build directories named 'source' and 'build'
-* make copyright blank
-in source/conf.py, change 
-copyright = '2018, Jim Funderburk'
-to 
-copyright = ''
+#make copyright blank
+#in source/conf.py, change 
+#copyright = '2018, Jim Funderburk' to copyright = ''
 This copyright seems to show on all pages.
 When blank, there is still a copyright to Sphinx and alabaster.
 Guess we'll have to leave these.
+```
 
-### To regenerate the documentation as html:
+### Regenerate the documentation as html:
 The 'build' directory is constructed or updated.
+Note that the top-level html files is *build/index.html*.
 ```
 # be sure *myenv* is activated
 sphinx-build -b html source build
