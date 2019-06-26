@@ -98,3 +98,17 @@ sphinx-build --version
 
 ```
 
+### Push to Github
+``` 
+# on local development machine, in csldoc directory
+git add .
+git commit -m "Rebuild with latest version of sphinx (2.1.2)"
+git push origin master
+```
+
+### Install at Cologne
+Via ssh connection to Cologne,
+```
+# make current directory scans/csldev/csldoc
+git pull origin master
+
