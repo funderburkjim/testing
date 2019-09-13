@@ -1,0 +1,946 @@
+These pages were copied from the dokuwiki at sanskrit-lexicon web site on
+Sep 13, 2019.  Reason:  The dokuwiki was infested with spam and had to be
+removed.  
+The major divisions (emacs org mode) are lines starting with '* '.
+The syntax is that of dokuwiki.
+It should be possible to restore this using another markup language,
+maybe somewhere in Github, either as a wiki or as a repository.
+
+* scans:apidev
+====== apidev ======
+
+The path to this directory is //scans/awork/apidev//.  
+
+There is also a Unix softlink from //scans/csl-apidev// to //scans/awork/apidev// (As of Aug. 2019), although no 
+use is made of this link yet.
+
+This directory is managed by git, and the origin of the repository is currently set at
+https://github.com/sanskrit-lexicon/csl-apidev.
+
+The basic purpose of apidev  (development version of sanskrit-lexicon Application Programming Interface) is to provide components that may be used to develop web pages making use of the Cologne sanskrit-lexicon dictionaries.
+
+In the mid-2000s, Malcolm Hyman and Peter Scharf envisioned providing accessibility to the data of the dictionary 
+digitizations via an API.   The present 2019 form of //apidev// was implemented by Funderburk (starting around 2015, I think) as materialization of this dictionary api idea.
+
+The api uses the PHP programming language, as well as some (currently small) amount of Javascript, and some special purpose CSS.  The current reliability status of the api should be considered well-tested beta.  
+
+The API style of apidev entry points is a RESTful api.  The base url of an api call currently starts with:
+
+ **https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/X.php**.  Restful parameters can be passed either as part of the base url  (by a so-called "GET" request) or via a "POST" request.  Here **X** specifies the action,
+and is currently one of:
+
+^X^description^
+|[[scans:apidev:listview]] | generate display like simple-search|
+|[[scans:apidev:listhier]] | generate the list pane of the listview display|
+|[[scans:apidev:getword]] | generate the entry display pane of the listview display|
+|[[scans:apidev:getsuggest]]| return short list of words with a certain prefix|
+|[[scans:apidev:servepdf]] | generates link to scanned images for a particular page of a particular dictionary|
+|[[scans:apidev:getword_xml]] | for a given headword, return matching records from <dict>.xml.  Currently not used.|
+
+The current convention of restful interface APIs is to return data in JSON format.
+This is the case with //getsuggest//, but the other formats are returned as strings of HTML.  
+
+The links above will provide more details, in particular the expected input parameters.
+
+[[scans:apidev:restfulparm | Restful parameters ]] shows all the restful parameters used by any of the endpoints.
+
+
+* scans:apidev:listview
+====== listview ======
+listview.php can function as a restful endpoint, either as a web page or as a component in a web page.
+
+===== listview as a web page =====
+
+listview.php can be used directly to generate a web display. As an experiment, click on the following link, opening in a new browser window.
+
+[[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/listview.php?dict=mw&key=harika&input=slp1&output=deva&accent=no]]
+
+We'll provide more details on the parameters below.  But explore a bit first.
+
+  * click on a word in the list to the left, say //hari//.   The definition of the clicked word is now in right pane
+  * click on the up and down triangles in the list pane.  The list now shows words before or after.
+  * reload the page to show definition of //harika//.  In right pane, click on the second (yellow) arrow.  Note that the list recenters to this second homonym, and the arrows change colors (in right pane).
+  * edit the url to show 'dict=ap90' (Apte dictonary of 1890).  Notice that the right pane shows 'not found', but the left pane shows words with 'harikaH' in the middle.  This is because Apte's headword shows the (masculine) nominative singular form, ending in visarga.  Click on 'harikaH' in left pane and you'll see Apte's definition in right pane.
+  * right click in the display, and 'view page source'.  You'll see that the page loads in css and javascript. These provide visual details and functionality. 
+
+===== listview as a component =====
+
+Note: The term //component// is used in a loose sense here.  As our understanding of the //web component// technology improves,  we may at sometime be able to make this listview into a genuine [[https://en.wikipedia.org/wiki/Web_Components | Web Component ]].
+
+listview can be embedded in an **iframe** as part of a larger web application.  
+
+For example, the [[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/simple-search/v1.0/list-0.2s.html | simple search]] display at Cologne.
+
+
+This display has various user-friendly controls to set parameters for an ajax call to listview.php like above.  But the result is put into an iframe.   If you 'view source', you'll see 
+  * toward the bottom, an iframe specification:
+  <code>
+ <iframe id="dataframe">  
+   <p>Your browser does not support iframes.</p>
+  </iframe>
+  </code>
+  * In the *listDisplay* javascript function, you'll see a jQuery ajax call to listview.php which puts the results into the iframe with id="dataframe".   **TODO** Must the listview code be put into an //iframe// ? Can it be put into a 'div'? 
+  * If you then (a) look up a word (say harika in mw), (b) right click in the iframe and 'View frame source',  then you will see the same code as in the 'view source' example of the 'listview as a web page' example above.
+
+
+===== input parameters =====
+The most important restful parameters for listview are: //dict, key, input, output, and accent// (see first example above).   
+
+Since listview 'includes' listhier, parameters used by listhier calls are also used indirectly. These  parameters are // lnum and direction//.
+
+See [[scans:apidev:restfulparm|Restful Parameters]] for details.
+
+* scans:apidev:restfulparm
+====== Restful Parameters for apidev ======
+
+There are currently only a handful of restful parameters used by the various apidev endpoints.
+ 
+The Parm class (defined in parm.php) translates these restful parameters into values of Parm public variables.
+In a few cases, for historical reasons, distinct restful parameters  (e.g. 'output' and 'filter') are synonyms (i.e. refer to the same Parm variable).
+Some Parm variables are determined indirectly from one or more restful parameters. For example, the value of the Parm variable //key// depends on both the 'key' and 'input' restful parameters.
+
+
+===== output, filter parameters =====
+Synonyms for Parm class attribute 'filter0'.  How should words coded as Devanagari be displayed. For recognized
+values see [[scans:apidev:transcoder]].
+
+The Parm class attribute 'filter' provides a standardized value of 'filter0', using  transcoder_standardize_filter function of transcoder.
+
+
+===== input, transLit parameters =====
+Synonyms for Parm class attribute 'filterin0'.  How is citation value encoded. For recognized
+values see [[scans:apidev:transcoder]].
+
+The Parm class attribute 'filterin' provides a standardized value of 'filterin0', using  transcoder_standardize_filter function of transcoder.
+
+===== key parameter =====
+Parm class attribute 'keyin'.  The spelling of a citation, normally assumed consistent with the 'input' parameter.
+
+Parm attributes 'keyin1' and 'key' are derived from 'keyin'.
+  * If word is English (see 'dict' below), 'keyin1' and 'key' are same as 'keyin'.
+  * If word is Sanskrit, then
+    * 'keyin1' is the UTF-8 representation of 'keyin' 
+    * 'key' is the transcoding of 'keyin1' from the 'input' spelling to 'slp1' spelling.
+
+===== dict parameter =====
+The lower case of this parameter is value of Parm class attribute 'dict'. These are the Cologne dictionary codes.
+In upper case form, these are specified in [[https://github.com/sanskrit-lexicon/csl-apidev/blob/master/dictinfo.php]]
+
+The Parm class attribute 'dictinfo' provides an instance of the Dictinfo class based on Parm.dict [value of Parm class attribute 'dict'].  
+
+The Parm class attribute 'english' is a copy of the dictinfo attribute 'english'  (is dictionary headword English?)
+
+===== accent parameter =====
+Parm class attribute 'accent'.  Value should be 'yes' or 'no' (default).  Displays use this to show or hide accents in words coded as Devanagari.
+
+===== dispcss parameter =====
+Parm class attribute 'dispcss'.  Value should be 'yes'(default) or 'no'. Used in 'disp.php'.  When 'yes', 
+the CSS file [[https://github.com/sanskrit-lexicon/csl-apidev/blob/master/css/basic.css|basic.css]] is loaded as part of the html generated by a getword instance via a call 'basicDisplay' function (of disp.php).
+
+There are no current applications which set 'dispcss' to 'no'. See [[scans:apidev:getword]] for an example when 'dispcss' has value 'no'.
+
+===== term parameter =====
+The getsuggestParms() method returns the  $_REQUEST['term'] parameter in three forms, as used by GetsuggestClass constructor.  The name 'term' is used for consistency with the JQuery autocomplete function; see the //$("#key").autocomplete// code in [[https://github.com/sanskrit-lexicon/csl-apidev/blob/master/simple-search/v1.0/list-0.2s.html | simple search]].  
+
+===== page parameter =====
+The servepdfParms() method returns the $_REQUEST['page'] parameter.  This is used by servepdf.php, as well as some other public attributes of a Parm object, to generate a url for the scanned image of a dictionary entry.
+
+===== lnum and direction parameters =====
+The listhierParms() method sets the 'lnumin' Parm class attribute from the 'lnum' parameter; this is a Cologne record id for a particular dictionary.  The listhierParms() method also sets the 'direction' Parm class attribute from the 'direction' parameter;  this has a value of UP, DOWN or CENTER(default).  These attributes are used by
+the ListhierClass constructor in the generation of the list of words displayed by listhier endpoint.
+
+
+* scans:apidev:getword
+====== getword ======
+
+The getword endpoint was written to work as a subcomponent of the listview endpoint.
+
+But it does generate html, and can be used in other contexts.  It knows about the same six restful parameters as does listview.  The basic four parameters are //dict, key, input, output//.  The //accent// parameter has default value 'no' (Sanskrit accents not shown).  The //dispcss// parameter has default value 'yes' (stylesheet css/basic.css is loaded).
+
+===== with listview parameters =====
+Let's start with an example of the listview display:
+[[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/listview.php?dict=mw&key=harika&input=slp1&output=iast]]
+
+We can replace 'listview.php' by 'getword.php' and will get only the entry display of the right hand pane of listview display.
+[[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/getword.php?dict=mw&key=harika&input=slp1&output=iast]]
+
+Note that this is almost identical to the listview display.  The only difference I notice is that the homonym arrows are not colored in the getword display.  This is because the css styling classes are defined in css/listview.css, which is not included as part of getword.   Notice that css/basic.css //is// included by default.
+
+===== with parameter dispcss=no =====
+To illustrate the impact of NOT loading css/basic.css,  consider this example, where also the output is changed to Devanagari.
+[[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/getword.php?dict=mw&key=harika&input=slp1&output=deva&dispcss=no]]
+
+Inspecting the devanagari text हरिक , we see that it is rendered with the Devanagari Unicode block using the browser default font (which is Nirmala for a windows 10 pc).
+By contrast, with basic.css loaded (as previous example), the css and getword markup cause the Devanagari text to be rendered with the Siddhanta font.
+
+==== A 'Basic' display with getword ====
+getword.php has utility in addition to its use as a listview component.  Several examples of using getword.php as part of a VueJS application are [[https://funderburkjim.github.io/sanlex-vue/index.html]].  For example there are several examples which are functionally quite similar to the Basic Displays (such as [[https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/webtc/indexcaller.php]]).
+
+* scans:apidev:listhier
+====== listhier ======
+
+The listhier endpoint was written to work as a subcomponent of the [[scans:apidev:listview]] endpoint.
+
+But it does generate html, and viewing urls constructed with it gives insight into its different uses.
+
+  
+===== with listview parameters =====
+
+Let's start with an example of the listview display:
+[[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/listview.php?dict=mw&key=harika&input=slp1&output=iast]]
+
+To display //just the list// part of this display, we replace 'listview.php' with 'listhier.php', and the same parameters: 
+[[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/listhier.php?dict=mw&key=harika&input=slp1&output=iast]]
+If we look at the source of this listhier display, we see that each word in the list is associated with a clickable link to a Javascript function. These functions are defined in js/listview.js; since listview.php includes this javascript library, clicking on the links changes the display.  However, listhier.php does not, by itself, include these JS functions, so clicking on the words in the linkhier display has no effect.
+
+===== with the 'direction' parameter =====
+In the previous example, the keyword 'harika' is in the middle of the list; this is because the default value of the //direction// parameter is CENTER.  
+But we can explictly include the direction parameter. For example, with the value 'UP',  the keyword 'harika' will be at the bottom of the list:
+[[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/listhier.php?dict=mw&key=harika&input=slp1&output=iast&direction=UP]]
+
+Similarly, with direction parameter value of DOWN, the key 'harika' appears at the top of the list:
+[[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/listhier.php?dict=mw&key=harika&input=slp1&output=iast&direction=DOWN]]
+
+===== with the 'lnum' parameter =====
+From the above //listview// example of 'harika', we note that 'harika' has two homonyms.  When we construct the listhier display with //key=harika//, the list is constructed with respect to the //first// homonym.
+However, the 'lnum' parameter allows the list to be constructed with respect to another homonym.  Note that the Cologne ID=261324 for the second homonym of harika. If the 'lnum=261324' restful parameter is passed to listhier,
+then the list is constructed with respect to the record with this Cologne ID, i.e., with respect to the second homonym of 'harika':
+[[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/listhier.php?dict=mw&lnum=261324&input=slp1&output=iast]]
+
+Incidentally, if both the //key// and //lnum// parameters appear in the url, then the //lnum// parameter takes precedence.
+Also note that the //direction// parameter could be used with the //lnum// parameter.
+
+* scans/apidev/getsuggest
+====== getsuggest ======
+
+This returns a list of words from a given dictionary with a given prefix.
+
+10 or fewer words are returned.
+
+The words are returned as a JSON array of strings.
+
+For a dictionary with Sanskrit headwords, the spelling can be in one of the Sanskrit encodings known by [[scans:apidev:transcoder]], such as slp1, hk, iast, deva, itrans.   
+
+getsuggest also works for a dictionary with English headwords.
+
+To see getsuggest in action, use the [[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/simple-search/v1.0/list-0.2s.html|simple search display]], and choose as 'input' method any of the methods except //simple//.  In the citation box, type the first 2 or more letters of a word.  You will see the list of matches returned by getsuggest as a list below the citation field. The mouse ('hand pointer') may moved in the list to a desired word, then a mouse click shows the entry for the selected word.  This user interface is accomplished by
+JQuery UI autocomplete widget, with getsuggest providing the list of words.
+
+
+===== Parameters =====
+The list of parameters is similar to those for listview:  dict, term, input.  One difference is that 'term' is used (for conformity with JQuery UI autocomplete) instead of 'key';  also 'output' is NOT used -- the returned list is in the encoding specified by 'input'.
+
+As usual with restful APIs,  getsuggest can be used directly as part of a browser url:
+
+https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/getsuggest.php?dict=mw&input=slp1&term=sev
+
+
+* scans/apidev/transcoder
+====== transcoder ======
+
+The utilities folder of apidev contains transcoder.php and the transcoder subdirectory.
+There are different ways to code Sanskrit for computer usage.  The most 'natural' way is probably with 
+[[https://en.wikipedia.org/wiki/Devanagari_(Unicode_block)| Devanagari Unicode]].  But before Unicode became well-supported, other schemes were common; and there is still some convenience in using one or another of these other schemes.   The transcoder system was developed (in Java) by Ralph Bunker as a way of converting from one to another scheme.  transcoder.php is a functional PHP implementation of an early version of Bunker's Java code. 
+
+To transcode a PHP string A from transcoding scheme X to transcoding scheme Y, one must have in hand an XML file 
+of simple structure named X_Y.xml.  The transcoder subdirectory has a collection of these XML transcoder files.
+The first time a particular program does a particular X to Y transcoding, the X_Y.xml file is parsed into a finite state machine. This finite state machine then is applied to the string A, changing it into PHP string B. 
+
+There are also some additional convenience functions in transcoder.php.
+
+transcoder.php has also been translated into a Python 2 module transcoder.py.  See https://github.com/funderburkjim/sanskrit-transcoding.
+
+As mentioned, transcoder.php is written as a collection of PHP functions and global variables.  
+
+Among the functions, some are intended for external use by other applications (such as the dictionary displays); other internal functions are helpers to the external functions.  The global variables are also intended as internally useful.
+
+----
+
+===== transcoder subdirectory =====
+**slp1** is  //lingua franca// of the sanskrit-lexicon website.  This means that SLP1 is used to represent Devanagari Sanskrit within digitizations.  Displays allow users to view or enter Devanagari Sanskrit in slp1 or several other codings.  For each coding X,  there is 
+  * a transcoder xml file named 'slp1_X.xml' for  transcoding from slp1 to X and 
+  * a transcoding file named X_slp1.xml for transcoding from X to slp1.
+
+Currently, the standardized spellings for the codings X are:  hk, itrans, roman, deva, and wx.
+<code>
+**TODO**   The 'input' and 'output' menus of displays currently do not allow the user to choose the //wx// coding.
+     This coding is used at Hyderabad University.
+</code>
+
+Other files, not of general interest (in particular, not used in the current displays):
+  * as_roman.xml   'as' (Anglicized Sanskrit) is Thomas Malten's transcoding which uses letter-number combinations to represent text printed with the Latin alphabet, possibly with diacritics.
+  * as_romanorig.xml  An earlier version of as_roman.xml
+  * slp1_romanpms.xml A version of slp1_roman.xml prepared by Peter Scharf
+  * pms directory : contains a zip file of some transcoders as of 2013, from Peter Scharf.
+
+
+----
+
+===== External functions =====
+
+
+==== transcoder_processString($line,$from,$to) ====
+A primary user function to transocode the string $line from the coding $from to the coding $to.  E.g.,
+transcoder_processString('rAma','slp1','deva') returns राम .
+
+====  transcoder_processElements($line,$from,$to,$tagname)  ====
+This function transcodes //parts// of $line.  The assumption
+is that $line contains parts which should be transcoded, and that these parts are delimited in the XML style by the tag $tagname.   For instance  transcoder_processElements('The hero named <SA>rAma</SA>','slp1','deva','<SA>') returns the string 'The hero named राम'. 
+
+==== transcoder_standardize_filter ====
+Function transcoder_standardize_filter($filter) returns a 'standardized' name for the value of $filter.
+Historically, code used by Cologne has used alternate names for Sanskrit coding schemes; e.g., "SKTROMANUNICODE", "roman" and "iast".  It is assumed that applications will provide a standardized spellings for the $from and $to parameters of the transcoder_processString and  transcoder_processElements functions.  
+
+====  transcoder_set_dir($dir) ====
+
+Allows user to change the $transcoder_dir global variable; thus, applications can provide their own from_to.xml files, rather than using those in the transcoder subdirectory.
+
+====  transcoder_get_dir() ====
+Returns current value of the $transcoder_dir global variable
+
+----
+
+===== Internal global variables =====
+==== $transcoder_dir ====
+The directory containing the from_to.xml files. Default is the //utilities/transcoder// directory.  Can be
+changed by function //transcoder_set_dir($dir)//.
+
+==== $transcoder_fsmarr ====
+Associative array containing the finite state machines.  When a from_to.xml file is parsed, the result is a data structure contained in a PHP (local) variable, $fsm. We save this for later use:  $transcoder_fsmarr[<from_to>]=$fsm.
+E.g., $transcoder_fsmarr['slp1_deva'] = $fsm.
+
+==== $transcoder_htmlentities ====
+Contains a boolean value, initially 'false'.  Appears to have no substantive use, so could be removed.
+
+----
+
+===== Internal functions =====
+
+==== transcoder_processString_main($line,$fsm) ====
+Function transforms the string in variable $line, according to
+the finite state machine in variable $fsm, and returns the resulting string.
+
+==== transcoder_processString_match ====
+Used by function transcoder_processString_main.  Details not clear.
+
+==== transcoder_processElements_callback ====
+Function used by transcoder_processElements with PHP regular expression matching.
+
+
+==== transcoder_fsm($from,$to) ====
+Function parses a transcoder file (from_to.xml) and stores the resulting finite state machine in $transcoder_fsmarr['from_to'] (see above).
+
+==== unichr($dec) ====
+Converts the integer value in $dec to a unicode string in utf-8 format.
+
+==== unichr_alt($u) ====
+Unused function, so could be removed.
+
+==== transcoder_unicode_parse_alt($val) ====
+Function only used when $transcoder_htmlentities is 'true'. So probably could be removed.
+
+==== transcoder_unicode_parse($val) ====
+Function converts $val to a unicode string.  $val is assumed to be a string like '\uXXXX'  where each X is a
+hex digit.  
+
+==== transcoder_unicode_parse_old ($val) ====
+Another implementation of transcoder_unicode_parse function.  Function could be removed.
+
+==== transcoder_dbg ====
+Function transcoder_dbg($line,$from,$to,$ans) writes a debug message to the 'tempout' file in the directory containing this transcoder.php file.
+
+* scans/apidev/servepdf
+====== servepdf ======
+servepdf.php can function as a restful endpoint, either as a web page or as a component in a web page.
+
+===== servepdf as a web page =====
+
+servepdf.php can be used directly to generate a web display. As an experiment, click on the following link, opening in a new browser window.
+Here is an example which returns a web page which displays the scanned image of page number 1234 of the MW dictionary:
+
+https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=mw&page=1234
+
+It is also possible to display the scanned image via a headword; here we spell the headword in hk transliteration:
+
+https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=mw&input=hk&key=gaN
+
+
+And here's another example where the key is in Devanagari.
+
+[[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=mw&input=deva&key=राम]]
+
+
+===== As web page component =====
+Most of the web page displays contain a link to the scan page of the entry.   The displays construct a URL like
+those shown above, using the 'page' parameter;  that URL is then the href value in a clickable link .
+
+For example, search for word rAma (slp1) in [[https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/simple-search/v1.0/list-0.2s.html |simple-search]].   Then (with Chrome browser) place cursor over link //p=877//, right click and inspect.  You'll see 
+<code>
+<a href="//www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/servepdf.php?dict=MW&page=877" target="_MW">877</a>
+</code>
+
+===== input parameters =====
+The most important restful parameters for servepdf are: //dict, page// (see first example above) or //dict, key, input//  (see other examples above).
+
+See also [[scans:apidev:restfulparm|Restful Parameters]].
+
+
+===== How it works when apidev run from Cologne server =====
+
+As shown above,  the 'page' parameter is normally used to construct a link to a particular image of a scanned page of a particular dictionary.  
+  * The 'dict' parameter is used to get an instance of the Dictinfo class
+  * The get_cologne_weburl method of the Dictinfo instance provides a URL $weburl to the //web// directory for the dictionary.  Similarly, the get_webPath method provides a filesystem relative path $webpath to the //web// directory.
+    * For instance, for 'mw' dictionary, 
+      * $weburl == https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web
+      * $webpath == ../../MWScan/2014/web
+  * There is a file  ($webpath/webtc/pdffiles.txt) which contains a line for each scan image, of the form
+    * <page>:image-file-name
+  * pdffiles.txt is scanned to find the 'image-file-name' corresponding to the //page// parameter
+  * This image-file-name is assumed to be in the //web/pdfpages// directory, namely at url "$weburl/pdfpages/image-file-name".  For instance with page=1234 and dict=mw, the scanned image is at url
+    * https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/pdfpages/mw1234-suvihvala.pdf
+  * Finally, servepdf.php constructs a web page showing the image at this url, along with next-previous controls.
+  * And then servepdf.php sends this html code back to the caller.
+
+
+===== servepdf from non-Cologne servers =====
+There is some provision for using scanned images from applications run on other servers, such as XAMPP on Windows PCS, or Ubuntu.   If these are set up in a certain simple way, then
+  * If the web/pdfpages directory contains images named consistently with web/webtc/pdffiles.txt, then those (local) images will be shown instead of the Cologne images
+  * If the non-Cologne installation does not have such images, then the Cologne images will be shown.
+
+===== Enhancement suggestions =====
+  * **TODO** the logic uses a test (in dictinfowhich.php) to determine whether the server being run is the Cologne Sanskrit Lexicon or some other server.  This test may need improvement.
+  * **TODO** There are copies of the images saved in an Amazon Web Services bucket.  These images could also be used (as still a third source of images), but currently the code does not make this easy to do.
+  * **TODO** servepdf.php is currently is written in a functional style; it should be converted to Class style
+  * **TODO** I have written a version of servepdf that allows the pdf images to be viewed on android devices.   This should be incorporated into servepdf.php. Here are references:
+    * https://github.com/sanskrit-lexicon/Cologne/issues/168#issuecomment-382589313
+    * Note particularly the link to 'Development version for MW', which I think has the example in web/webtc/servepdf.php.
+
+* scans/apidev/getword_xml
+====== getword_xml ======
+
+This is very much in an 'alpha' state, and is used by no displays or sample displays.
+
+The idea was to have an api call that would return the xml form of the data from a given dictionary;  it would be
+assumed that Javascript code provided by the calling application would provide the display of this data.
+
+The parameters are the 5 primary ones used by the [[scans:apidev:getword]] display: //dict, key, input, output, accent//.
+
+Data is returned in a JSON object with (a) the given 5 inputs and (b) an 'xml' attribute' whose value is an array of strings.  The array has as many elements as there are records the the dictionary xml file with 'key1 == key'.
+In the following example, there are 2 elements in the returned xml array.
+
+Here is an example from the browser:
+
+https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/getword_xml.php?dict=mw&key=harika&input=slp1&output=slp1&accent=no.  
+
+It is actually better to view this result using 'show source' of browser, since the xml markup of the array elements does not display nicely in a main browser windown.
+
+Compare this to the getword display:
+https://www.sanskrit-lexicon.uni-koeln.de/scans/awork/apidev/getword.php?dict=mw&key=harika&input=slp1&output=slp1&accent=no.  
+
+As mentioned, this is in a very preliminary form.   One could imagine having a more robust form which would return all resources needed to construct a dictionary display; the display itself would be constructed by Javascript code.
+
+* scans/csl-sanweblexicon
+======= csl-websanlexicon ======
+
+This directory is managed by git, and the origin of the repository is currently set at
+https://github.com/sanskrit-lexicon/csl-websanlexicon.
+
+**TODO:** v00/makotemplates/webtc1/help/accents.html  needs to be revised.  See [[https://github.com/sanskrit-lexicon/csl-websanlexicon/issues/2#issuecomment-516615837|this github comment]]
+* slfiles/docs/scans/mwscan/2014/pywork/readme_update.txt
+====== readme_update.txt for MW ======
+
+[[https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/pywork/readme_update.txt | readme_update.txt]]
+
+This file describes how to make manual corrections to the MW dictionary.
+  - Ordered List Item
+  - Modify a 'manualByLine' text file to specify the corrections.
+  - Use updateByLine program to apply the 'manualByLine' corrections to the prior version of the digitization, resulting in the current version of the digitization.
+  - Use the current version of the digitization to regenerate the dictionary headwords and the xml form of the dictionary. Also, transform the xml form to the sqlite database used in displays of the dictionary.
+  - Remake files needed as user downloads
+  - Backup changes to AWS S3 bucket.
+
+
+The general form of the procedure is the same for any dictionary.  Specific details depend on the dictionary.
+
+The work begins in the [[slfiles:docs:scans:mwscan:2014:pywork]] directory.
+
+===== manualByLine03.txt =====
+For MW dictionary, the changes are currently put into this particular //manualByLine// file.
+
+A change requires two records (lines) of the manualByLine file, which together specify a change to one particular
+line of the //previous (old)// version of the digitization.
+Note: the current version of the digitization file is always named //mw.txt//.  The //previous// version of the
+digitization is (at the time of this writing) named //mw2.txt//.  These files are in the 'orig' directory,
+which is a sibling of the 'pywork' directory.
+
+Here is the format of the two lines:
+
+^ ^field1 ^field2 ^field3^
+|first change line  |  line number within mw2.txt | //old// [constant] |text of line number xxxx in  mw2.txt|
+|second change line |  same as above| //new// [constant] | new changed text for line number xxxx in mw.txt|
+
+===== updateByLine =====
+Apply the changes, thereby getting new version of mw.txt:
+<code>
+python3 updateByLine.py ../orig/mw2.txt manualByLine03.txt ../orig/mw.txt
+</code>
+
+===== hw.txt =====
+
+Generate headwords for the dictionary.
+For MW, we also generate an MW-specific form of headwords call mwkeys.sqlite.
+**TODO:** Why is mwkeys is required for MW?
+<code>
+sh redo_hw.sh
+</code>
+
+===== mw.xml =====
+Regenerate the xml form of the digitization from the mw.txt form. 
+This also generates web/sqlite/mw.sqlite used in displays.
+<code>
+sh redo_xml.sh
+</code>
+
+**TODO:** remake 'sync' file --  is this needed?
+<code>
+sh make_sync.sh
+</code>
+
+===== redo user downloads =====
+<code>
+cd ../downloads/
+sh redo_all.sh
+</code>
+
+===== AWS S3 backup =====
+<code>
+cd ../pywork  # back to pywork
+cd ../../../awork/virtualenv/aws/
+python make_copy_environ.py mw
+source s3bk_mw.sh
+rm s3bk_mw.sh
+</code>
+
+**TODO:**  What about the additional steps mentioned in readme_update.txt?
+* slfiles:docs:scans:mwscan:2014:pywork
+[This topic does not exist yet]
+* slfiles:docs:php:correction_response
+====== Correction Form as source for dictionary corrections. ======
+
+===== Overview of Correction Form =====
+
+A user of the MW Basic display can submit corrections via the ''Corrections'' link (e.g.,
+ [[https://www.sanskrit-lexicon.uni-koeln.de/php/correction_form.php?dict=MW | Corrections (for MW)]] ).  Other dictionaries and displays have a similar link.
+
+A submitted correction generates a line in the ''php/correction_response/cfr.tsv'' file. (//tsv// = //tab-separated values//, a file suffix used in Google Sheets.)
+
+**TODO:** The ''Ctrl-Enter'' method is alternate to ''Corrections'' link.
+
+From time to time (generally about once a month), the accumulated new lines of ''cfr.tsv'' are acted on. Each cfr.tsv proposed correction is evaluated and a correction (if appropriate) is generated for the dictionary.
+This action also involves
+  * marking the lines of the cfr.tsv file as Corrected (or otherwise) 
+  * saving the cfr.tsv file on the Cologne server
+  * notifying the user who submitted the correction (if user leaves email contact info in Correction Form)
+  * modifying the [[https://github.com/sanskrit-lexicon/CORRECTIONS]] repository
+  * entering the change (s) in the dictionary's ''manualByLine'' file
+  * making the corrections to the dictionary (see [[slfiles:docs:scans:mwscan:2014:pywork:readme_update.txt|]] )
+
+The current system works well and is moderately efficient. However, it is only partly //repository-based//.
+
+**TODO:** redesign the system?
+
+===== Cleaning cfr.tsv =====
+
+Lines added to cfr.tsv via the Correction Form can be malformed.  This could be accidental; this could be
+due to occasional spamming.   Whatever the cause, these malformed lines should be removed.  Currently this is
+done by manually editing the Cologne file (within SSH connection).  I use WINSCP to view server files via ssh;
+this allows me to effectively edit cfr.tsv with my local favorite text editor (EMACS in my case).  In such an
+edit session, I go to the bottom of the file, then look at the new lines.  New lines are identified as those NOT having a ':' in the last field.  Any unprocessed line considered malformed (based upon cursory observation) is deleted. When this examination is complete, if the cfr.tsv file has been modified, it is saved (which uploads the changed file back to the server).  
+
+===== correctionform.txt =====
+
+Having removed malformed lines from cfr.tsv and saved the result to server, the next step involves working in the
+local copy of the [[https://github.com/sanskrit-lexicon/CORRECTIONS| CORRECTIONS]] repository.
+
+Use GitBash terminal to 'cd' into local CORRECTIONS repository, then run a script: ``sh redo_cfr.sh``.
+
+This script downloads to the local CORRECTIONS repository the (modified) cfr.tsv from Cologne server.
+
+Then the script runs python program to regenerate correctionform.txt file of repository.
+In the file, each line of cfr.tsv is parsed into a more readable multi-line record. 
+ 
+<code>Sometimes the parsing fails, as indicated by an error message.  If this happens,
+further cleaning of cfr.tsv is required. Then rerun redo_cfr.sh.
+</code>
+
+**NOTE:**  the python script also 
+regenerates ''dictionaries/MW/MW_correctionform.txt''
+and similarly for other dictionaries; these X_correctionform.txt files have 
+not thus far proved useful. 
+
+**TODO:** should we remove these X_correctionform.txt files ?
+
+
+===== Prepare to process pending MW corrections =====
+
+Each of the parsed corrections has, in correctionform.txt, a last field called 'status'.
+If the correction has not yet been processed, the value of the 'status' field will show as ''PENDING''.
+At the top of correctionform.txt there is also a summary count of the number of PENDING corrections.
+
+The corrections are listed (in correctionform.txt) in reverse order by submission date.
+For this reason, the first pending correction might be for MW, the second for AP90, the third for MW, etc.
+Generally, most corrections are for MW.  
+
+It is efficient to handle all the pending corrections for one dictionary, then all the corrections for another
+dictionary, etc.
+
+Let's suppose we are dealing with MW pending corrections.
+
+We need to edit four files (at once):
+  * server version of cfr.tsv  (for marking status of finished lines)
+  * (local) correctionform.txt
+  * (local) version of the //prior// version of MW digitization
+    * for MW, this prior version is mw2.txt  (see [[slfiles:docs:scans:mwscan:2014:pywork:readme_update.txt]])
+    * If not already available on local computer, you can get it by downloading from AWS. See [[https://github.com/sanskrit-lexicon/Cologne/blob/master/enhancements/code/dictionary_init.sh]].  In this download, orig/mw2.txt is the prior version.
+    * This digitization needs to be viewed //with line numbers//.
+  * Cologne server version of latest manualByLine file for the dictionary. For MW this is file ''manualByLine03.txt'' in MW's pywork directory.
+
+Be sure that the local editor is showing all of these files in utf-8 encoding.
+
+I do a search for 'PENDING' in correctionform.txt, and go to the last PENDING record for MW;  then I work upward
+in this file.
+In editing server version of cfr.tsv, I position to the line corresponding the the correctionform.txt correction.
+In manualByLine file, I go to bottom of file.
+**NOTE:** Comment lines in manualByLine are those beginning with a semicolon.
+Comments are good.  I usually add a comment such as ''; 07/04/2019 Correction Form corrections''; then for each
+MW correction, add a comment based upon the correctionform.txt data.
+
+===== Example correction =====
+
+Since the correction form has been accumulating user corrections since February (currently it is July 4), there
+are 83 PENDING corrections.  The last one is actually an unresolved one from a while back, so I skip it.  The 
+last PENDING MW correction is the one being considered in this example.
+In correctionform.txt, it shows as 
+<code>
+Case 24350: 02/09/2019 dict=MW, L= [ID=175512], hw=rasa, user=Caujolle
+old = charm pleasure, delight,  ib.  [ID=175512]
+new = charm, pleasure, delight,  ib.  [ID=175512]
+status = PENDING
+</code>
+
+In cfr.tsv, it shows as:
+<code>
+02/09/2019 09:53:59	MW	 [ID=175512]	rasa	charm pleasure, delight,  ib.  [ID=175512]	charm, pleasure, delight,  ib.  [ID=175512]	Typo	Caujolle
+</code>
+
+In mw2.txt, search for the ''<L>175512''.  This entry is
+<code>
+<L>175512<pc>869,3<k1>rasa<k2>ra/sa<e>2A
+¦  charm pleasure, delight, <ls>ib.</ls><info lex="inh"/>
+<LEND>
+</code>
+and, further, the line number of the line that needs to be changed is (from the text editor) 587811. We'll need that number in a moment.
+
+The change is so simple (a comma is missing in mw2.txt), and Caujolle is known as a trusted source, so there is no real need to refer to the scanned image. We could get to the scanned image by looking up the headword 'rasa' in any MW displays and following the link to the page.  
+
+So, we are ready to generate the change in manualByLine03.txt.
+<code>
+; dict=MW, L= [ID=175512], hw=rasa
+; old = charm pleasure, delight,  ib.  [ID=175512]
+; new = charm, pleasure, delight,  ib.  [ID=175512]
+587811 old ¦  charm pleasure, delight, <ls>ib.</ls><info lex="inh"/>
+587811 new ¦  charm, pleasure, delight, <ls>ib.</ls><info lex="inh"/>
+</code>
+
+Finally, 
+  * save manualByLine03.txt back to server [In case our connection fails, we won't have to redo this correction].
+  * in cfr.tsv, add text '': : Corrected 07/04/2019'' to end of last field.  The cfr.tsv record now looks like:
+<code>
+  02/09/2019 09:53:59	MW	 [ID=175512]	rasa	charm pleasure, delight,  ib.  [ID=175512]	charm, pleasure, delight,  ib.  [ID=175512]	Typo	Caujolle: Corrected 07/04/2019
+</code>
+  * (optional for now) save edited cfr.tsv to server.  This is a large file, and I may only save occasionally.
+  * (optional) In correctionform.txt, change status from 'PENDING' to 'DONE' and save local file.
+
+===== Add all corrections for MW to manualByLine03.txt =====
+This is done by continuing with all the MW pending corrections, treating each one as above.
+
+===== Install corrections =====
+
+Follow instructions in [[slfiles:docs:scans:mwscan:2014:pywork:readme_update.txt|]], starting with updateByLine.txt
+
+===== Send acknowledgements =====
+
+Send an acknowledgement email to users whose email is known.
+This is done by referring to the cfr.tsv file, and is usually done after all pending corrections have been installed.
+
+===== Dhaval Steps to process a correction ======
+
+
+  - Go to CORRECTIONS repository. Do `sh redo_cfr.sh`. This will generate new local correctionform.txt file.
+  - Open the following files in gedit - (a). local correctionform.txt, (b) local mw2.txt file, (c) remote manualByLine03.txt.
+  - Read from (a) and if there is any change to be made, copy the correctionform to (c).
+  - Comment out the details in (c).
+  - Copy L number or some unique identifier.
+  - Search for that identifier in mw2.txt file. Remember the lineNumber where this record occurs. Copy the line.
+  - Go to (c) and write lineNumber. write " old ". Paste the line.
+  - Copy paste the line. Change 'old' to 'new' and make necessary corrections in the new line.
+  - Save the file (c).
+  - Repeat for all the corrections of the given dictionary.
+  - Open remote cfr.tsv.
+  - Check the corrections made in (c) and write ':Corrected MM/DD/YYYY' at the end of the relevant record in cfr.tsv. DO NOT SAVE FREQUENTLY. Complete the marking for all records corrected. Then only save. This will save some time.
+  - Do as suggested in [[https://www.sanskrit-lexicon.uni-koeln.de/doc/dokuwiki/doku.php?id=slfiles:docs:scans:mwscan:2014:pywork:readme_update.txt]] via terminal to update on Cologne server.
+  - Do redo_cfr.sh from CORRECTIONS repository. Push the changes. Open it in github.
+  - See the changes made highlighted in github and send acknowledgement mails to relevant submitter.
+* slfiles:docs:scans:awork:homepage
+====== Sanskrit-lexicon website homepage ======
+
+The URL of homepage is: https://www.sanskrit-lexicon.uni-koeln.de/index.html.
+
+===== Creation of index.html =====
+
+index.html is created by script in scans/awork/homepage directory.
+This directory is managed by git, and the origin of the repository is currently set at
+https://github.com/sanskrit-lexicon/csl-homepage.
+
+See [[https://github.com/sanskrit-lexicon/csl-homepage/blob/master/redo_index.sh|redo_index.sh]].
+
+===== Other resources used by index.html =====
+
+<code>
+ <link type="text/css" rel="stylesheet" href="/scans/awork/Cologne.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<img src="/images/cologne_univ_seal.gif" id="logo" alt="IITS" title="Cologne Sanskrit Lexicon"/>
+<img src="/images/clarin-400x400.png" 
+       width="90px" height="90px"
+       title="CLARIN - European Research Infrastructure for Language Resources and Technology" >
+</code>
+
+* slfiles:docs:scans:awork:sanhw1
+====== sanhw1, sanhw2, hwnorm1c ======
+
+Each of the various Sanskrit-Lang  (Lang = English, French, German, etc.) dictionaries is indexed by
+particular spellings of Sanskrit headwords.   For a particular headword spelling Y,  sanhw1 shows
+all the dictionaries X that have headword Y.
+For example,
+<code>
+agni:ACC,BEN,BHS,BOP,BUR,CAE,CCS,GRA,GST,IEG,INM,MD,MW,MW72,PD,PE,PUI,PW,PWG,SCH,SHS,STC,VCP,WIL,YAT
+agniH:AP,AP90,SKD
+</code>
+
+sanhw2 is similar, but also includes a Cologne ID. For example:
+<code>
+agni:ACC;31317,BEN;43,BHS;106,BOP;52,BUR;101,CAE;204,CCS;138,GRA;79,GST;351,IEG;152,INM;239,MD;264,MW72;256,MW;890,PD;9424,PE;54,PUI;60,PW;505,PWG;349,SCH;414,SHS;245,STC;156,VCP;246,WIL;246,YAT;206
+agniH:AP90;213,AP;243,SKD;211
+</code>
+
+hwnorm1c is similar to sanhw1,  but applies certain normalization rules. For example, this implies that
+the theoretical normalized headword spelling ''agni''  refers to the headword spelling ''agni'' in most dictionaries and to the headword spelling ''agniH'' in a few other dictionaries.
+<code>
+agni:agni:ACC,BEN,BHS,BOP,BUR,CAE,CCS,GRA,GST,IEG,INM,MD,MW,MW72,PD,PE,PUI,PW,PWG,SCH,SHS,STC,VCP,WIL,YAT;agniH:AP,AP90,SKD
+</code>
+
+sanhw1 and sanhw2 are not used directly in any displays.
+
+hwnorm1c.sqlite is used by the simple-search displays.
+
+hwnorm1c is created from sanhw1.
+
+===== Location of files =====
+The files sanhw1.txt, sanhw2.txt and hwnorm1c.txt currently occur both in the Cologne file system and in
+GitHub repositories.
+
+^file name^Cologne directory^Github repository^Github repository directory^
+|sanhw1.txt|scans/awork/sanhw1|[[https://github.com/sanskrit-lexicon/CORRECTIONS|Sanskrit-lexicon/CORRECTIONS]]|sanhw1|
+|sanhw2.txt|scans/awork/sanhw1|[[https://github.com/sanskrit-lexicon/CORRECTIONS|Sanskrit-lexicon/CORRECTIONS]]|sanhw2|
+|hwnorm1c.txt*|scans/awork/sanhw1|[[https://github.com/sanskrit-lexicon/hwnorm1|Sanskrit-lexicon/hwnorm1]]|ejf/hwnorm1c|
+
+**Note:** Currently, hwnorm1c.txt is not kept directly in Cologne system, but only temporarily as a
+precursor to zipped and sqlite versions.
+
+===== Update trigger =====
+When a change is made to the headword spelling of any dictionary with Sanskrit headwords,  then 
+an update is needed.
+
+
+===== Update procedure =====
+Here are the instructions as they appear in file ''scans/PWGScan/2013/pywork/readme_update.txt'':
+<code>
+7. On local machine, revise CORRECTIONS repository
+# In GitBash terminal,
+ cd ~/Documents/GitHub/CORRECTIONS/
+ sh redo_cfr.sh
+ #edit history.txt, and add note at top.
+ # push to GitHub
+ git add .
+ git commit -m "[message here]"
+ git push origin master
+; ----------------------------------------------------
+; If there are changes to headword spellings, then the following steps
+; also need to be done
+8a. Remake sanhw1, sanhw2 and hwnorm1c at Cologne
+#Change Cologne directory to scans/awork/sanhw1 
+sh redo_all.sh
+8b. Remake sanhw1, sanhw2 directories of CORRECTIONS
+# In local CORRECTIONS repository,
+ cd ~/Documents/GitHub/CORRECTIONS/
+ sh redo_sanhw12.sh
+ # sync with GitHub
+8c. update hworm1c repository
+ cd ~/Documents/GitHub/hwnorm1/ejf/hwnorm1c 
+ sh redo.sh
+ # sync to GitHub
+ NOTE: The hwnorm1c file at GitHub should be same as at Cologne.
+ This is governed by identity of 
+  https://github.com/sanskrit-lexicon/hwnorm1/blob/master/ejf/hwnorm1c/hwnorm1c.py
+  and 
+  /afs/rrz.uni-koeln.de/vol/www/projekt/sanskrit-lexicon/http/docs/scans/awork/sanhw1/hwnorm1c.py
+</code>
+
+**TODO:**  The duplication of files (and code) between Cologne and GitHub should be improved.  
+
+**TODO:**  There may be an additional step needed in the update process. Reason: the 'ngram' files used in
+simple-search use hwnorm1c.  Here, for instance, is  ''scans/awork/apidev/simple-search/ngram0/readme.txt'':
+<code>
+The n-gram files here are based on mw headwords.
+2gram.txt is a copy of ngram_2_mw.txt, taken from
+ https://github.com/sanskrit-lexicon/ApteES/tree/master/ae_saninvert
+And the others are similar.
+</code>
+* slfiles:docs:awork
+====== docs/awork ======
+
+directories with code for api access to dictionaries; backup to s3.
+
+* slfiles:docs
+====== docs directory ======
+
+This contains all the php programs, html programs, update programs (mostly in Python);  everything but some [[slfiles:cgi|]] programs.
+
+===== most important subdirectories of docs directory=====
+^ directory ^ description ^
+| [[slfiles:docs:doc]] | Contains this wiki in the 'docuwiki' folder|
+| [[slfiles:docs:php]] | Actively used 'correction form' programs and data. php transcoder functions used in some deprecated displays|
+| [[slfiles:docs:scans]] | current versions of dictionary data and displays. This is heart of of current system. |
+| [[slfiles:docs:talkMay2008]] | Historically useful summary of MW dictionary digitization and displays |
+| [[slfiles:docs:tamildictionaries]] | Only version of the Tamil Lexicon  (Tamil-English dictionary). |
+
+===== most important files of docs directory=====
+^ file^ description ^
+| index.html | home page of web site. See [[slfiles:docs:scans:awork:homepage|]]|
+| pwgindex.html | scanned image display for pwg |
+| pwindex.html | scanned image display for pw |
+| 404.html  | symbolic link to 404 page |
+| favicon.ico | used by server? |
+| robots.txt | used by server? |
+
+
+===== deprecated subdirectories of docs directory=====
+These contain material that is probably not of current interest, such as early (deprecated) versions of displays.
+
+^ directory ^ description ^
+| [[slfiles:docs:aequery]] | deprecated display of Apte English-Sanskrit dictionary |
+| [[slfiles:docs:apitest]] | probably no current usage |\
+| [[slfiles:docs:css]] | Global style settings. Probably only used in deprecated displays |
+| [[slfiles:docs:data]] | Contains transcoder files.  Probably obsolete |
+| [[slfiles:docs:filter]] | contains transcoding executables developed by Malcolm Hyman. May be used in deprecated displays. |
+| [[slfiles:docs:images]] | A few global images (e.g. Cologne , Brown logos). Used in deprecated displays; also used by index.html (web site home page) |
+| [[slfiles:docs:js]] | some javascript libraries. Probably used only in deprecated displays|
+| [[slfiles:docs:libutil]] | contains mysql Perl connection script.  | Probably used only in deprecated displays]
+| [[slfiles:docs:monier]] | deprecated versions of MW Basic and list displays|
+| [[slfiles:docs:monier1]] | later deprecated versions of MW Basic and list displays|
+| [[slfiles:docs:mwquery]] | deprecated versions of MW Advanced Search display |
+| [[slfiles:docs:mwupdate]] | deprecated version of MW updates. Also current versions of Inflected form data and displays -- these need to be updated. |
+| [[slfiles:docs:old]] | presumably unused versions of some displays|
+| [[slfiles:docs:update]] | probably obsolete. |
+| vcs | symbolic link introduced by Cologne Indology Department. Purpose unclear.|
+| [[slfiles:docs:work]] | Current inflected form displays.  Tests of lucene and other unused stuff.|
+
+
+===== other files within docs directory=====
+^ file^ description ^
+| Cologne.css | used by index.html (web site homepage) |
+| other.html | links to some displays, probably obsolete |
+| reserved.html | reserved |
+* slfiles:docs:scans
+====== docs/scans directory ======
+
+This contains (at Cologne):
+  - a directory for each dictionary spelled as **XScan**, where X is (capitalized) dictionary abbreviation
+  - some 'global' directories  (pertain to more than one dictionary)
+  - a few files of little interest
+
+
+===== Dictionary directories =====
+
+There is a lot of commonality in the directories for each dictionary. See [[slfiles:docs:dictintro|]].
+
+^dictcode ^cologne dir ^dictname^
+|[[slfiles:docs:acc|acc]]|docs/ACCSCAN/2014|Aufrecht Catalogus Catalogorum|
+|[[slfiles:docs:ae|ae]]|docs/AESCAN/2014|Apte Student's English-Sanskrit Dictionary|
+|[[slfiles:docs:ap|ap]]|docs/APSCAN/2014|Apte Practical Sanskrit-English Dictionary, revised edition, 1957|
+|[[slfiles:docs:ap90|ap90]]|docs/AP90SCAN/2014|Apte Practical Sanskrit-English Dictionary, 1890|
+|[[slfiles:docs:ben|ben]]|docs/BENSCAN/2014|Benfey Sanskrit-English Dictionary|
+|[[slfiles:docs:bhs|bhs]]|docs/BHSSCAN/2014|Edgerton Buddhist Hybrid Sanskrit Dictionary|
+|[[slfiles:docs:bop|bop]]|docs/BOPSCAN/2014|Bopp Glossarium Sanscritum|
+|[[slfiles:docs:bor|bor]]|docs/BORSCAN/2014|Borooah English-Sanskrit Dictionary|
+|[[slfiles:docs:bur|bur]]|docs/BURSCAN/2013|Burnouf Dictionnaire Sanscrit-Français|
+|[[slfiles:docs:cae|cae]]|docs/CAESCAN/2014|Cappeller Sanskrit-English Dictionary|
+|[[slfiles:docs:ccs|ccs]]|docs/CCSSCAN/2014|Cappeller Sanskrit Wörterbuch|
+|[[slfiles:docs:gra|gra]]|docs/GRASCAN/2014|Grassman Wörterbuch zum Rig Veda|
+|[[slfiles:docs:gst|gst]]|docs/GSTSCAN/2014|Goldstücker Sanskrit-English Dictionary|
+|[[slfiles:docs:ieg|ieg]]|docs/IEGSCAN/2014|Indian Epigraphical Glossary|
+|[[slfiles:docs:inm|inm]]|docs/INMSCAN/2013|Index to the Names in the Mahabharata|
+|[[slfiles:docs:krm|krm]]|docs/KRMSCAN/2014|Kṛdantarūpamālā|
+|[[slfiles:docs:mci|mci]]|docs/MCISCAN/2014|Mehendale Mahabharata Cultural Index|
+|[[slfiles:docs:md|md]]|docs/MDSCAN/2014|Macdonell Sanskrit-English Dictionary|
+|[[slfiles:docs:mw|mw]]|docs/MWSCAN/2014|Monier-Williams Sanskrit-English Dictionary, 1899|
+|[[slfiles:docs:mw72|mw72]]|docs/MW72SCAN/2014|Monier-Williams Sanskrit-English Dictionary, 1872|
+|[[slfiles:docs:mwe|mwe]]|docs/MWESCAN/2013|Monier-Williams English-Sanskrit Dictionary|
+|[[slfiles:docs:pd|pd]]|docs/PDSCAN/2014|An Encyclopedic Dictionary of Sanskrit on Historical Principles|
+|[[slfiles:docs:pe|pe]]|docs/PESCAN/2014|Puranic Encyclopedia|
+|[[slfiles:docs:pgn|pgn]]|docs/PGNSCAN/2014|Personal and Geographical Names in the Gupta Inscriptions|
+|[[slfiles:docs:pui|pui]]|docs/PUISCAN/2014|The Purana Index|
+|[[slfiles:docs:pwg|pwg]]|docs/PWGSCAN/2013|Böhtlingk and Roth Grosses Petersburger Wörterbuch|
+|[[slfiles:docs:pw|pw]]|docs/PWSCAN/2014|Böhtlingk Sanskrit-Wörterbuch in kürzerer Fassung|
+|[[slfiles:docs:sch|sch]]|docs/SCHSCAN/2014|Schmidt Nachträge zum Sanskrit-Wörterbuch|
+|[[slfiles:docs:shs|shs]]|docs/SHSSCAN/2014|Shabda-Sagara Sanskrit-English Dictionary|
+|[[slfiles:docs:skd|skd]]|docs/SKDSCAN/2013|Sabda-kalpadruma|
+|[[slfiles:docs:snp|snp]]|docs/SNPSCAN/2014|Meulenbeld Sanskrit Names of Plants|
+|[[slfiles:docs:stc|stc]]|docs/STCSCAN/2013|Stchoupak Dictionnaire Sanscrit-Français|
+|[[slfiles:docs:vcp|vcp]]|docs/VCPSCAN/2013|Vacaspatyam|
+|[[slfiles:docs:vei|vei]]|docs/VEISCAN/2014|The Vedic Index of Names and Subjects|
+|[[slfiles:docs:wil|wil]]|docs/WILSCAN/2014|Wilson Sanskrit-English Dictionary|
+|[[slfiles:docs:yat|yat]]|docs/YATSCAN/2014|Yates Sanskrit-English Dictionary|
+
+===== 'Global' directories =====
+
+^directory ^ description^
+|[[slfiles:docs:awork|]] | code for api access to dictionaries; backup to s3; etc.|
+|[[slfiles:docs:websanlexicon|]] | generate web display code|
+|[[slfiles:docs:csldev|]] | the user 'front matter' documentation displays|
+|[[slfiles:docs:KALEScan|]] | displays and data related to Kale Higher Sanskrit Grammar|
+
+===== Old 'Global' directories =====
+
+These are probably no longer useful
+
+^directory ^ description^
+|[[slfiles:docs:csldoc|]] | old user documentation|
+|[[slfiles:docs:csldoc_images|]] | old user documentation images|
+|[[slfiles:docs:csldocprev|]] | a still older version of user documentation|
+|[[slfiles:docs:old|]] | previous versions of some things. |
+
+
+===== Other Files=====
+
+These are probably no longer useful
+^filename ^ description^
+|[[slfiles:docs:readme.org|]] | ?|
+|[[slfiles:docs:search.py|]] | ?|
+|[[slfiles:docs:search_ereg.sh|]] | ?|
+* 
+
+
+
+
+
