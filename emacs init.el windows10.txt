@@ -1,0 +1,7 @@
+In Emacs (version 27.1) for Windows 10:
+Open (or create) init.el
+C-x C-f ~/.emacs.d/init.el
+
+# this changes default font used by Emacs to Consolas, with font-size 11.
+# this font is good for showing combining diacritics.
+(set-face-attribute 'default nil :family "Consolas" :height 110)
