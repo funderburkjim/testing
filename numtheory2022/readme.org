@@ -357,6 +357,62 @@ N* = 1,2,...
  The concept of NidealQ was thought of by me; no doubt many others have
  thought of this idea.
 
+* TODO Bezout Theorem in N.  
+** b = a*q + r (0<r<a) implies gcd(b,a) = gcd(a,r)
+  Proof: Assume 1<=a and 1<=b. 
+  comdivs(b,a) = comdivs(a,r). 
+  gcd(b,a) = Nmax(combdivs(b,a)) = Nmax(comdivs(a,r)) = gcd(a,r)
+  
+** Bezout theorem 
+  If 1 <= a and 1<=b and gcd(a,b) == 1, THEN E[x,E[y, 1<=x , 0<=y, a*x = b*y + 1]]
+  Proof:
+    0 < b <= a
+    a = b*q + r, 0<=r<b.
+   Case r == 0: 
+    a = b*q. Thus, 1 = gcd(a,b) = b;  a*1 = q.
+    q = a, 1<=q.  Set x = 1, y = q-1:  a*x = a; b*y + 1 = b*(q-1)+1 = b*q. 
+   Case r != 0. 
+   0 < r < b
+   1 = gcd(a,b) = gcd(b,r),  
+   By induction on b, E[u,E[v r*u = b*v + 1]].
+   a*u = (b*u)*q + r*u = b*u*q + b*v + 1 = b*(u*q+v) + 1
+--------------
+   eqn(a,b,x,y) : IF 0 < b <= a and gcd(a,b) == 1 THEN
+     E[x,E[y, 1<=x , 0<=y, a*x = b*y + 1]]
+   eqn(a) :  0 < a => A(b, eqn(a,b)
+  (1) A(a, eqn(a))
+  (2) Case: 0 < a, b == a.
+     Then 1 = gcd(a,b) = b.  And a = 1
+     Take x = 1, y = 0.  Then
+     a*x = 1*1 = 1
+     b*y + 1 = 1*0 + 1 = 1
+     So, a*x = b*y + 1
+  Inductive assumption: A(c, c<a implies eqn(c))
+  Inductive step:  eqn(a). Choose b, 0<b<=a and gcd(a,b) == 1.
+  The case b == a is done by (2)
+  Case  b < a.
+   Divide a by b: a = b*q + r, 0<=r<b. 
+   Case r = 0.  Thus a = b*q.  Thus 1 = gcd(a,b) = b. 
+      Also, if q == 0, then a = r, so a = 0. Contrary to assumption 0<b<=a.
+      Thus 1<=q, so q-1 is in N .  Take x = 1, y = q-1.
+      a*x = a.
+      b*y + 1 = 1*(q-1) + 1 = 1*q = b*q = a
+      so a*x = b*y + 1
+   Case r!= 0.
+    Now gcd(b,r) = gcd(a,b) = 1.  
+    We may apply the inductive assumption with 'b' for 'c'
+     Thus eqn(b,r,u,v) holds:
+      IF 0 < r <= b and gcd(b,r) == 1 THEN
+        E[u,E[v, 1<=u , 0<=v, b*u = r*v + 1]]
+    0<r<b. and gcd(b,r) = 1.  So we may choose u, v
+       1<=u , 0<=v, b*u = r*v + 1
+    
+  eqn(a+1,b): IF 0 < b <= a+1 and gcd(a+1,b) == 1 THEN
+     E[x,E[y, 1<=x , 0<=y, a*x = b*y + 1]]
+  Case a = 1.  0<b<=1 implies b == 1, so b == a. So (2) applies for answer
+  Inductive assumption.
+
+   
 * Corollary 1 to Euclid's Lemma: gcd(a,n)=1, a|x, n|x => a*n|x.
   If NgcdQ(a,n,1), NdivQ(a,x) and NdivQ(n,x), then NdivQ(a*n,x).
   Proof:
@@ -612,28 +668,10 @@ a prime, we can cancel (p-1)! to get a^(p-1) = 1 (mod p). QED
   
 ** 2. If 1<=x<=n, then x in relprimes(n) iff E[y,1<=y<=n and x*y = 1 (mod n)]
   a. If 1<=x<=n and 1<=y<=n and x*y = 1 (mod n), then x is in relprimes(n).
-   Proof: Suppose NdivQ(d,x) and NdivQ(d,n).
-    There is k so that x*y = 1 + k*n. (See Bezout theorem)
-    Thus, NdivQ(d,1), so d = 1.
-    Thus, gcd(x,n) ==1, so x is in relprimes(n).
-  b. Suppose x is in relprimes(n).
-    Define f(k) = Rem(x*k,n), for k in relprimes(n).
-    From lemma 1 above, f(k) is also in relprimes(n).
-    So, f is a function from relprimes(n) to relprimes(n).
-     Now, suppose k<=j and j and k are in relprimes(n), and f(j) == f(k). 
-     Thus x*j == x*k (mod n). So there is 1<=c with x*j = x*k + n*c.
-     Thus, NdivQ(n,x*(j-k)). By Corollary to Euclid's Lemma, NdivQ(n,j-k).
-     But 1 <= j-k < n  (since 1 <= k < j <= n), So NdivQ(n,j-k) is false.
-    Conclude, f is injective.
-    Since relprimes(n) is finite,  conclude f is bijection.
-    Now 1 is in relprimes(n). So, there is y in relprimes n with Rem(x*y,n) ==1.
-    Thus, x*y == 1 (mod n) (definition of mod n).
-  2. now follows from a. and b.** 2. If 1<=x<=n, then x in relprimes(n) iff E[y,y in relprimes(n) and x*y = 1 (mod n)]
-  a. If 1<=x<=n and 1<=y<=n and x*y = 1 (mod n), then x is in relprimes(n).
-   Proof: Suppose NdivQ(d,x) and NdivQ(d,n).
-    There is k so that x*y = 1 + k*n. (See Bezout theorem)
-    Thus, NdivQ(d,1), so d = 1.
-    Thus, gcd(x,n) ==1, so x is in relprimes(n).
+   Since 1<=x*y,  n divides x*y-1. So there is q: x*y = n*q + 1.
+   If d divides both x and n, then d divides 1, so d = 1.
+   Thus, comdivs(x,n) = {1}, so gcd(x,n) = Nmax(comdivs(x,n)) = Nmax({1}) = 1.
+   So x is in relprimes(n)
   b. Suppose x is in relprimes(n).
     Define f(k) = Rem(x*k,n), for k in relprimes(n).
     From lemma 1 above, f(k) is also in relprimes(n).
@@ -647,6 +685,7 @@ a prime, we can cancel (p-1)! to get a^(p-1) = 1 (mod p). QED
     Now 1 is in relprimes(n). So, there is y in relprimes n with Rem(x*y,n) ==1.
     Thus, x*y == 1 (mod n) (definition of mod n).
   2. now follows from a. and b.
+
 ** 3. If 1<=x<n, then x is in relprimes(n) iff E[y,y in relprimes(n) and x*y = 1 (mod n)]
    Trivial from 2
 ** 4. Zmod.relprimes(n) is group of multiplicative units in ring Z[n].
@@ -1000,6 +1039,168 @@ f = lambda n: functools.reduce(operator.mul,relprimes(n)) % n
 [n for n in range(3,1000) if f(n) not in [1,n-1]]
 >>> []   
 * Zmod.relprimes(base)
+* Cosets of subgroup are partition of a group (Lagrange)
+ G any group, H any subgroup.
+ Coset(x,H) = {x*y for y in H}
+ C = Cosets(H) = {Coset(x,H) for x in G}.
+ Coset(x,H) is subset of G and contains x*e = x, so is not empty.
+ Suppose x and y in G and z in Coset(x,H) and z in Coset(y,H).
+ Choose u in H with z = x*u and Choose v in H with z = y*v.
+  So, x*u = y*v, so x = y*v*w  (where w = u-inverse; so w in H
+ Now if a is in Coset(x,H) with a = x*b (b in H) then
+  a = (y*v*w)*b = y*(v*w*b)  and v*w*b in H. So a is in Coset(y,H).
+ So Coset(x,H) is subset of Coset(y,H). 
+ Similarly, Coset(y,H) is subset of Coset(x,H).
+ Thus, Coset(x,H) = Coset(y,H).
+ Thus, if c1 and c2 are in C, then either c1 = c2 or c1 and c2 are disjoint.
+ Finally, if x is in G, then e is in H so x*e is in Coset(x,H).
+ So, Union({c in C}) = G.
+ Thus, C is a partition of G
+
+Corollary:  If G is a finite group and H is a subgroup of G, then
+ NCard(H) divides NCard(G).
+ Proof: Since C is partition of G, Sum(NCard(c): c in C) = NCard(G)
+ Also if c is in C, then NCard(c) = NCard(H).  Also, C is finite.
+ Thus NCard(C)*NCard(H) = Sum(NCard(c): c in C) = NCard(G).
+ So NCard(C) divides Ncard(G).
+
+* order of finite group element
+ We know that relprimes(n) is a group (under multiplication modulo n) for 1<=n.
+ And relprimes(n) is finite, of order ephi(n).
+ Consider a finite group G, with neutral element 'e'. Let * denote the
+ group multiplication. And define 'exponentiation' ** in G by
+ x**0 = e, x**(k+1) = x*(x**k) (for 0<=k).
+  So x**1 = x, and x**2 = x*x.
+** (0a) x**(j+k) = (x**j)*(x**k)
+** (0b) x**(j*k) = (x**j)**k
+** (1) ord(x,G)
+ Define the order of an element x in G as
+  ord(x,G) = Nmin(S(k, 1<=k and x**k = e))
+ Since G is assumed finite, ord(x,G) is well defined element of N*,
+ and x**ord(x) = e, and 1<=k<ord(x,G) implies x**k != e.
+  So ord(e,G) = 1.
+** (2) For 1<=k, x**k = x**Rem(k,ord(x))
+   Let ox = ord(x)
+   By division of k by ox in N, k = ox*q + r,
+    where q = Quo(k,ox) and r = Rem(k,ox).
+   Now x**k = x**(ox*q + r) = (x**(ox*q)) * x**r = ((x**ox)**q) * x**r =
+            = (e**q) * (x**r) = e* (x**r) = x**r. QED.
+** (3a) If 1<=j and 1<=k, then x**j = x**k iff Rem(j,ox) = Rem(k,ox)
+   a. If Rem(j,ox) = Rem(k,ox) then x**j = x**k, by (2).
+   b. if x**j = x**k, then Rem(j,ox) = Rem(k,ox).
+    Proof:  Let r = Rem(j,ox) and s = Rem(k,ox). So 0<=r<ox, 0<=s<ox
+    and (by 2) x**j = x**r and x**k = x**s.  
+    We know x**r = x**s, We want to show r = s.
+    Suppose r<s. So s = r+u (and 0<u<ox)
+    x**r = x**s = x**(r+u) = (x**r)*(x**u)
+    Since G is a group, we may cancel x**r:
+    e = x**u. By minimality of ox, ox<=u. contradiction.
+    Thus r = s. QED.
+** (3b) For 1<=k,  x**k = e iff ox divides k.
+   By (3a), 
+    if 1<=ox and 1<=k, then x**ox = x**k iff Rem(ox,ox) = Rem(k,ox).
+   But Rem(ox,ox) = 0, and x**ox = e
+   so x**k = e Iff Rem(k,ox) = 0
+   But (since k!=0), then Rem(k,ox) = 0 iff ox divides k.
+   Thus, x**k = e Iff ox divides k. QED
+
+** (3c) for 1<=k,  x**(k+1) = x Iff ox divides k.
+   Proof: by 3b,  x**k = e iff ox divides k.
+   x**(k+1) = (x**k) * (x**1) = (x**k) * x.
+   If x**(k+1) = x, then e*x = (x**k)*x, so x**k = e
+   if x**k = e, then x**(k+1) = e*x = e.
+   Thus, x**(k+1) = x iff x**k = e.
+   So x**(k+1) = x iff ox divides k
+** (4) Define : G is cyclic iff there is x in G with ord(x) = Card(G).
+** (5) Define : for g in G, gen(x) = {x**k for k in N}.
+          Since x*0 = e, and x**(k1+k2) = (x**k1) * (x**k2))
+          And since we assume G is finite, then
+          gen(x) = S(x**k, 1<=k<=ord(x)), and
+           if 1<=k<=ord(x), inv(x) = x**(ox-k)
+             (x**k) * (x**(ox-k)) = x**ox = e, 
+          So gen(x) is a subgroup of G.
+** (6) if 1<=m and gcd(m,ox) = 1, then gen(x**m) = gen(x).
+  a. If y is in gen(x**m), then y is in gen(x).
+   Easy.  There is k in N with y = (x**m)**k = x**(m*k), so y is in gen(x).
+  b. x is in gen(x**m)
+   divide m by ox:  m = ox*q + r, 0<=r<ox.
+   Case r = 0: m = ox*q.  So gcd(m,ox) = ox.  Thus, ox = 1. 
+    Thus e = x**ox = x**1 = x.  Thus gen(x) = {e}. And x**m = e**m = e
+    So gen(x**m) = {e} . So gen(x**m) = gen(x)
+   Case r!= 0:
+   Rem(m,ox) = Rem(r,ox). So x**m == x**r.
+
+    1 = gcd(m,ox) = gcd(ox,r).  Since r < ox, r is in relprimes(ox).
+    Thus, there is s in relprimes(ox) with r*s = 1 (mod ox).
+    Thus, x**(r*s) = x**1 = x 
+    and x**(r*s) = (x**r)**s
+    x**m = x**(ox*q + r) = (x**(ox*q)) * (x**r) = ((x**ox)**q) * (x**r) =
+         = (e**q) * (x**r) = e * (x**r) = x**r.
+    
+    Now  x = x**(r*s) = (x**r)**s = (x**m)**s, 
+    Thus, x is in gen(x**m)
+  c. If y is in gen(x), then y is in gen(x**m).
+   By (b), we may choose s in N with x = (x**m)**s.
+   And there is k in N with y = x**k
+   Thus, y = ((x**m)**s)**k = (x**m)**(s*k), so y is in gen(x**m).
+  a. and c. provide proof.
+** (7) if 1<=m and gen(x**m) = gen(x), then gcd(m,ox) = 1.
+  [Is this proof more complicated than it needs to be?]
+  Let g = gcd(m,ox), and assume 1<g.
+  g divides m:  m = g*r (1<=r)
+  g divides ox: ox = g*s (1<=s)
+  Also, gcd(r,s) = 1.
+  If m = 1 or ox = 1, then gcd(m,ox) = 1.
+  Suppose 1 < m and 1 < ox.
+  Let t = Rem(m,ox). So m = ox*q + t and 0<=t<ox.
+   Case t = 0: then m = ox*q, so x**m = x**(ox*q) = (x**ox)**q = e**q = e.
+    Thus gen(x**m) = gen(e) = {e}. So gen(x) = {e}, so x = e, and so
+    ox = 1. So gcd(m,ox) = 1.
+   Case t = 1.
+    gcd(m,ox) = gcd(ox,t) = gcd(ox,1) = 1.  QED
+   Case 1 < t:
+    x**m = x**(ox*q + t) = (x**(ox*q))* x**t = x**t.
+    By (3a), Rem(m,ox) = Rem(t,ox), and Rem(t,ox) = t since t < ox.
+    So Rem(m,ox) = t.
+    
+    Since x is in gen(x), it is in gen(x**t), so there is k with 1<=k and
+    x = (x**t)**k = x**(t*k)  and x = x**1
+    Since 1<t and 1<=k, then also 1<t*k.
+    Thus there is u in N with 1+u = t*k, and 1<=u.
+    By (3c), x**(u+1) = x IFF ox divides u.
+    And x**(u+1) = x**(1+u) = x**(t*k) = x (from recent step).
+    So, ox divides u.  
+    If d is in comdivs(m,ox), then d = 1
+     Suppose d in comdivs(m,ox). Then d divides m, and d divides ox.
+     since m = ox*q + t, so also d divides t.  
+     But ox divides u. So also d divides u.
+     And further d divides t*k. so d divides 1+u. 
+     But this implies d divides 1.  So d = 1.
+    Thus, gcd(m,ox) = 1. QED
+** (8) if x is in G, then NCard(y in G with gen(y) = gen(x)) = ephi(ord(x))
+   Proof: Let S = {y in G with gen(y) = gen(x)}.
+   Let S1 = {x**m for m in relprimes(ox)}.
+   Suppose  y is in S. There is m (1<=m<=ox) with y = x**m.
+    Now gen(x**m) = gen(x). By (7), gcd(m,ox) = 1.  Since 1<=m<=ox, 
+    m is in relprimes(ox).  Thus y is in S1.
+   Suppose y is in S1, and choose m in relprimes(ox) so y = x**m.
+    Thus 1<=m<=ox and gcd(m,ox) = 1. By (6), gen(x**m) = gen(x). 
+    So gen(y) = gen(x). So y is in S.
+   Thus S = S1, so NCard(S) = NCard(S1).
+   Suppose m and n are in relprimes(ox), and x**m = x**n.
+   If m < n, choose k so m+k = n.  Since 1<=m<=ox and 1<=n<=ox, then
+    0 < k < ox.  
+    x**n = x**(m+k) = (x**m)*(x**k). So x**k = e. 
+    But this contradicts the minimality of ox.  
+   Conclude n <= m.
+   Similarly, m <= n.  Thus m = n.
+   Thus NCard(S1) = NCard(relprimes(ox)), which, by definiton of ephi,
+   is ephi(ox)). QED
+** (9) ord(x,G) divides NCard(G).
+  NCard(gen(x)) = ord(x,G).  And gen(x) is a subgroup of G.
+  Now Lagrange theorem on Coset partitions yields NCard(gen(x)) divides
+  NCard(G), so Ord(x,G) divdes NCard(G).
+  
 * Primitive roots
  Ref: https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n
  We know that relprimes(n) is a group (under multiplication modulo n) for 1<n.
@@ -1040,3 +1241,52 @@ def testpr(n):
   else:
    print('order of %s = %s (mod %s)' %(k,e,n))
  print('%s has %s primitive roots: %s' %(n,numpr,primroots))
+* Proof that relprimes(p) has a primitive root if p is a prime.
+** If gcd(a,n) = 1, then there is 1<=u with a**u == 1 (mod n).
+  Proof: From Euclid lemma corollary, if gcd(a,n) = 1 and gcd(b,n) = 1,
+   then gcd(a*b,n) = 1.
+   Thus, by induction, for 1<=k,  gcd(a**k,n) = 1, so a**k is in relprimes(n).
+   Since relprimes(n) is finite,  there must be 1 <= j < k with a**j = a**k.
+   There is u in N with k = j+u;  So a**j = (a**j)*(a**u).   Since 
+   relprimes(n) is a group (multiplication mod n), a**u = 1 (mod n).
+** If gcd(a,n) = 1, properties of ord(a,n)
+   1 <= ord(a,n) and a**ord(a,n) = 1 (mod n) 
+   and A(k, if 1<=k and a**k = 1 (mod n), then ord(a,n) <= k).
+** if gcd(a,n) = 1, then ord(a,n) divides NCard(relprimes(n)) = ephi(n)
+ relprimes(n) is a finite group. and 'a' is in relprimes(n). 
+ The result follows from (9) of 'order of finite group element'.
+**  eltOrder(a,n)
+  1<=n, a in relprimes(n), 
+  eltOrder(a,n) = Nmin(S(k, 1<=k and a**k = 1 (mod n)))
+  Another way to say it, take G = relprimes(n) and with 
+  multiplication mod n as binary operation. Then G is a finite group.
+  Then eltOrder(a,n) = ord(a,G) (as order of finite group element).
+** ordCover(n,d)
+  1<=n.  ordCover(n,d) = {a in relprimes(n) and eltOrder(a,n)  = d}.
+  If ordCover(n,d) is not empty, then d divides NCard(relprimes(n)) = ephi(n).
+  Also, even if d divides ephi(n), it MAY be true that ordCover(n,d) is empty.
+** ordCoverF(n)
+  ordCoverF is a function from divisors(ephi(n)) to subsets of relprimes(n)
+  defined by formula ordCoverF(n)(d) = ordCover(n,d).
+  If d1!=d2 are divisors of ephi(n), then ordCover(n,d1) and ordCover(n,d2)
+  are disjoint.
+  Also, if a is in relprimes(n), eltOrder(a,n) is divides ephi(n),
+  and a is in ordCover(n,eltOrder(a,n))
+
+  So relprimes(n) = union(range(ordCoverF(n)))
+  Define ordCoverSizeF(n) sending d to NCard(ordCover(n,d)).
+  Then divisorsum(ordCoverSizeF(n), ephi(n)) = 
+   Sum(NCard(ordCover(n,d)) for d in divisors(ephi(n)))
+** divisorsum(ordCoverSizeF(n), ephi(n))  = ephi(n)
+  This is because range(ordCoverF(n)) is a disjoint cover of relprimes(n).
+** if n is a prime,
+** If n is  a prime and d divides ephi(n), then NCard(ordCover(n,d)) <=  ephi(d)
+  Clear if ordCover(n,d) is empty set. (since 0 <= ephi(d))
+  Case ordCover(n,d) is not empty. 
+  If a is in ordCover(n,d), a is in relprimes(n) and eltOrder(a,n) = d.
+  So, in particular, a**d = 1 (mod n).
+  Thus a is a root of the polynomial X**d - 1 in the mod-n ring.
+  Further, since n is a prime, 
+** 
+ So ephi(n) = divisorsum(
+ 

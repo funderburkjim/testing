@@ -358,6 +358,44 @@ def gcdpartition(n):
   P[d].append(m)
  return P
 
+def eltOrder(a,n):
+ """ 'a' and 'n' integers; 1<=n
+  gcd(a,n) = 1
+  Find smallest k such that a**k == 1 (mod n)
+ """
+ if not ( (type(a) == int) and (type(n) == int) and
+          (a>0) and (1<=n)):
+  return None
+ if gcd(a,n) != 1: # gcd in numtheory1
+  return None
+ k = 1
+ x = 1
+ while True:
+  y = (x*a) % n
+  if y == 1:
+   return k
+  else:
+   k = k + 1
+   x = y
+
+def ordPartition(n):
+ """ 'n' integer, 1<=n
+  For a in relprimes(n), find ordElement(a)
+  return a dictionary ordpart.  A number d is a key of ordpart
+  iff there is a in relprimes(n) with d = ordElement(a).
+  ordpart[d] = Set of all a in relprimes(n) such that ordElement(a) = d.
+ """
+ if not ( (type(n) == int) and (1<=n)):
+  return None
+ rps = relprimes(n)
+ ordpart = {}
+ for a in rps:
+  d = eltOrder(a,n)
+  if d not in ordpart:
+   ordpart[d] = []
+  ordpart[d].append(a)
+ return ordpart
+
 def test1():
  import sys
  a = int(sys.argv[1])
