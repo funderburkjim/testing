@@ -146,8 +146,14 @@ squares_mod(11) -> {1, 3, 4, 5, 9}
 ** divisors(n)
    Assume 1<=n.
    List of d (1<=d<=n) such that d divides n. (i.e. python n % d == 0)
-** divisorsum(f,n)
-  sum of f(d) for d in divisors n. 
+** divisorsum(f,n) 
+  sum of f(d) for d in divisors(n) 
+** gcdpartition(n)
+def eltOrder(a,n):
+ """ 'a' and 'n' integers; 1<=n
+  gcd(a,n) = 1
+  Find smallest k such that a**k == 1 (mod n)
+
 * gcde_coeff_sizes.py
 ** test2()
  reads 'n' from sys.argv[1]
@@ -290,6 +296,130 @@ Models modular arithmetic with the Zmod class. Also polynomials.
 * --------------------------------------
 * Theory
 * --------------------------------------
+* Division algorithm in N: a = b*q + r, r<b
+  Assume 0<a, 0<b. 
+  S := {x, x in N and b*x <= a}
+  b*0 = 0 < a, so 0 is in S. So S is not empty.
+  if x>a, then b*x > b*a >= 1*a = a, so x is Not in S.
+  Thus x in S implies x<=a.  Thus S is finite.
+  set q = Max(S).  Then q is in S and x > q implies x is not in S.
+  b*q <= a.   There is r in N with b*q+r = a.
+  Suppose r >= b.  Then there is c in C with b+c = r
+   So a =  b*q + b+c = b*(q+1) + c.  Thus b*(q+1) <= a so q+1 is in S,
+   contradicting that q is largest in S.
+  Thus r<b.
+  Now show uniqueness.
+  Suppose a = b*q + r with r<b  and also a = b*u + v, with v<b.
+  We aim to show q = u and r = v.
+  Then b*q + r = b*u + v.  
+  Suppose r < v (we will derive a contradiction).
+   Choose d so r+d = v.  Also 0 < d and d<=v and d < b.
+   Then b*q + r = b*u + r + d, hence b*q = b*u + d. 
+   But now u < q, so there is x with u+x=q and 0 < x.
+   So b*u + d = b*q = b*(u+x) = b*u + b*x, so d = b*x.
+   Now 0 < x, since 0 < d. Thuse b*x >= b*1 = b.
+   Which implies d >= b, which contradicts that d < b.
+  So !(r<v).
+  Similarly, !(v<r).
+  Thus, r = v.
+  Now b*q = b*u.  Since 1<=b, we conclude q = u.
+* Quo(a,b) and Rem(a,b)
+  For 1<=a and 1<=b in N.
+  a = b*Quo(a,b) + Rem(a,b),  
+  Quo(a,b) in N, Rem(a,b) in N, and Rem(a,b) < b.
+* N* and NdivQ(a,b) and divisors(n)
+ N* = set of positive integers (1,2,3,...)
+ NdivQ(a,b) Iff 1<=a and 1<=b and Rem(b,a) = 0.  
+   Thus b = b*Quo(b,a).  NOTATION a | b.
+ divisors(n) = {d, 1<=d<=n and NdivQ(d,n)}.  
+   If n in N*, divisors(n) is a finite non-empty subset of N*.
+    divisors(n) always contains elements 1 and n.
+* gcd(a,b) defined in N*.
+  Assume 0<a and 0<b. 
+  gcd(a,b) = Max(divisors(a),divisors(b)).
+  So gcd(a,b) | a and gcd(a,b) | b  and
+  A(d, d|a and d|b implies d<=gcd(a,b))
+* FALSE: 1<=a, 1<=b => a = gcd(a,b)*Quo(a,gcd(a,b)) and gcd(gcd(a,b),Quo(a,gcd(a,b))=1
+  a = 9, b = 15.  gcd(a,b) = 3. 9/3 = 3. gcd(3,3) = 3 != 1.
+  
+* Bezout Theorem in N.  (exact induction statement missing)
+if 1<=a and 1<=b, then (let g = gcd(a,b)):
+  (a) E[x,E[y, 1<=x , 0<=y, a*x = b*y + g]] and
+  (b) E[x,E[y, 1<=x , 0<=y, b*x = a*y + g]]
+** preliminary observation: b = a*q + r (0<r<a) implies gcd(b,a) = gcd(a,r)
+  Proof: Assume 1<=a and 1<=b. 
+  comdivs(b,a) = comdivs(a,r). 
+  gcd(b,a) = Nmax(combdivs(b,a)) = Nmax(comdivs(a,r)) = gcd(a,r)
+  
+** case b = 1
+    So g = gcd(a,1) = 1.
+    (a) Take x = 1 and y = a-1
+        a*x = a*1 = a
+        b*y + g = 1*(a-1) + 1 = 1*a = a
+    (b) Take x = a+1, y = 1
+        b*x = 1*(a+1) = a+1
+        a*y + g = a*1 + 1 = a+1
+** Case a = 1
+   g = gcd(1,b) = 1
+  (a) x = b+1, y = 1
+      a*x = 1*(b+1) = b+1
+      b*y + g = b*1 + 1 = b+1
+  (b) x = b, y = b-1
+     a*x = 1*b = b
+     a*y + g = 1*(b-1) + 1 = b-1+1 = b
+** Case a = b
+    Then g = gcd(b,b) = b
+    (a) x = 2, y = 1
+       a*x = a*2 = b*2 = b+b
+       b*y + g = b*1 + b = b+b
+    (b) x = 2, y = 1
+      b*x = b*2 = b+b
+      a*y +g = b*1 + b = b+b
+** Case a = b*q and 1<q
+    g = gcd(b*q,b) = b
+    (a) x = 1, y = q-1
+      a*x = a*1 = a = b*q
+      b*y + g = b*(q-1) + b = b*q -b + b = b*q  [Note arithmetic in Z!]
+    (b) x = q+1, y = 1
+     b*x = b*(q+1) = b*q + b
+     a*y + g = a*1 + b = b*q + b
+    b*x = b*q*y +b
+** Case a = b*q + r, with 0 < r < b.
+   Note g = gcd(a,b) = gcd(b,r) = gcd(r,b)
+   (a) Choose (by induction on b, applied to r) u and v so
+       1<=u and 0<=v and r*u = b*v + gcd(r,b) 
+       Note r*u = b*v + g
+      Then set  x = u and y = q*u + v, we have a*x = b*y + g.
+      a*x = a*u = (b*q + r)*u = b*q*u + r*u = b*q*u + b*v + g = b*(q*u + v) + g
+      b*y + g = b*(q*u + v) + g
+  (b) Choose (by induction on by applied to r) u and v so
+      1<=u and 0<=v and b*u = r*v + gcd(b,r)
+      Note  b*u = r*v + g
+      Let x = q*v + u , and y = v.
+      b*x = b*(q*v + u)
+      a*y + g = (b*q + r)*v + g = b*q*v + r*v + g = b*q*v + b*u = b*(q*v + u)
+** All cases
+    Proof from previous by induction on b.
+   
+* DA 22a: 1<=a, 1<=b => gcd(Quo(a,gcd(a,b)), Quo(b,gcd(a,b))) = 1
+ Let d = gcd(a,b). Let u = Quo(a,d),  v = Quo(b,d).
+ To show: gcd(u,v) = 1.
+ By Bezout theorem in N, there are 1<=x, 0<=y so  a*x = b*y + d.
+ Since d|a and d|b, we conclude a = d*u, b = d*v.  
+ So d*u*x = d*v*y + d. Thus, u*x = v*y + 1.
+ Now e|u and e|v implies e|1 , so e=1.  Thus,gcd(u,v) = 1. QED.
+
+* DA 22a A simpler proof (no Bezout).
+  Let d = gcd(a,b) 
+  To show gcd((a/d),(b/d)) = 1.
+  d|a and d|b.
+  a = d*(a/d), b = d*(b/d)
+  Suppose e|(a/d) and e|(b/d). We show e = 1
+   (a/d) = e*x, (b/d) = e*y. (where x = Quo((a/d),e) and y = Quo((b/d),e))
+   a = d*e*x, b = d*e*y.
+   Thus d*e|a and d*e|b.
+   Thus d*e <= d.  Thus e = 1.
+  Thus gcd((a/d),(b/d)) = 1.
 * if 1<d, then there is a prime p so that NdivQ(p,d)
 Proof:  By induction on d. 
  Case d = 2.  Take p = 2 (known to be a prime).
@@ -316,16 +446,19 @@ N* = 1,2,...
   A(t,A(u,Implies(And(in(t,S),in(u,S)),in(t+u,S))))
   A(t,A(u,Implies(And(in(t,S),in(u,N*),in(t+u,S)),in(u,S)))) 
  ))
+** If NidealQ(S), then NMin(S) is in S
+** If NidealQ(S), then S = {k*NMin(s), 1<=k}
  Theorem: If S is an ideal in N* then NMin(S) is in S and
  S is the set of all multiples of NMin(S), i.e.
  A(t,Implies(in(t,S),NDivQ(NMin(S),t))) and
  A(t,Implies(And(in(t,N*)),NDivQ(NMin(s),t)),in(t,S))
-** Euclid's Lemma:  NgcdQ(a,n,1) and NdivQ(n,a*b) implies NdivQ(n,b).
- Assume:  in(a,N*), in(n,N*), in(b,N*), NgcdQ(a,n,1) and NdivQ(n,a*b)
+** If NidealQ(S) and 1<=j, then Iff(in(j,S), 1<=j and NDivQ(NMin(s),j))
+** Euclid's Lemma:  NgcdQ(n,a,1) and NdivQ(n,a*b) implies NdivQ(n,b).
+ Assume:  in(n,N*), in(a,N*), in(b,N*), NgcdQ(n,a,1) and NdivQ(n,a*b)
  To Prove:  NdivQ(n,b).
  Proof:
  Let S = S(t in N* such that NdivQ(n,t*b))
- subproof: NidealQ(S)
+*** subproof: NidealQ(S)
   (1) S is not empty.
     By assumption, in(a,S). Also, in(n,S) since NdivQ(n,n*b)
   (2) If t and u are in S, then t+u is in S
@@ -337,91 +470,79 @@ N* = 1,2,...
   (3) if t is in S and u is in N* and t+u is in S, then u is in S
    t in N*, NdivQ(n,t*b).  So t*b = n*x for some x
    NdivQ(n,(t+u)*b).  So (t+u)*b = n*z for some z
-   so n*x + u*b = n*z . Nlt(x,z) so there is w in N* with x+w = z
-   then n*(x+w) = n*x + n*w = n*z.
-   So u*b = n*w (cancellation of addition in N)
-   So Ndivq(n,u*b). so u is in S.
-  Therefore, S is an ideal in N*. 
- Let m = NMin(S).  m is in S. m is in N*. and NdivQ(n,m*b)
-  Note:  A(x, x is in S iff x is in N* and NdivQ(m,x)).
+   so n*x + u*b = n*z . 
+   Thus, n|u*b
+     Since 1<=u, and 1<=b, also 1<=u*b. Thus n*x < n*z.
+     Thus, Nlt(x,z)
+     So, there is w in N* with x+w = z
+     then n*(x+w) = n*x + n*w = n*z.
+     So u*b = n*w (cancellation of addition in N)
+     So Ndivq(n,u*b). 
+   so u is in S.
+   Therefore, S is an ideal in N*. 
+*** Remainder of proof
+ Let m = NMin(S).  m is in S. m is in N* and NdivQ(n,m*b)
  in(n,S) since NdivQ(n,n*b). Thus NdivQ(m,n) 
  in(a,S) since NDivQ(n,a*b) by assumption. Thus NdivQ(m,a)
- So m is a common divisor of a and n. 
- Since NgcdQ(a,n,1),  m <= 1.  Since m is in S, 1<=m.  Thus m = 1.
+ So m is a common divisor of n and a. 
+ Since NgcdQ(n,a,1),  m <= 1.  Since m is in S, 1<=m.  Thus m = 1.
  Thus, 1 is in S.
  Thus, NdivQ(n,1*b) so NdivQ(n,b).
  QED.
-** Source of this proof
+*** Source of this proof
  The idea is from http://www.sci.brooklyn.cuny.edu/~mate/misc/euclids_lemma.pdf
  (saved in resources/euclids-lemma.pdf)
  The concept of NidealQ was thought of by me; no doubt many others have
  thought of this idea.
 
-* TODO Bezout Theorem in N.  
-** b = a*q + r (0<r<a) implies gcd(b,a) = gcd(a,r)
-  Proof: Assume 1<=a and 1<=b. 
-  comdivs(b,a) = comdivs(a,r). 
-  gcd(b,a) = Nmax(combdivs(b,a)) = Nmax(comdivs(a,r)) = gcd(a,r)
-  
-** Bezout theorem 
-  If 1 <= a and 1<=b and gcd(a,b) == 1, THEN E[x,E[y, 1<=x , 0<=y, a*x = b*y + 1]]
-  Proof:
-    0 < b <= a
-    a = b*q + r, 0<=r<b.
-   Case r == 0: 
-    a = b*q. Thus, 1 = gcd(a,b) = b;  a*1 = q.
-    q = a, 1<=q.  Set x = 1, y = q-1:  a*x = a; b*y + 1 = b*(q-1)+1 = b*q. 
-   Case r != 0. 
-   0 < r < b
-   1 = gcd(a,b) = gcd(b,r),  
-   By induction on b, E[u,E[v r*u = b*v + 1]].
-   a*u = (b*u)*q + r*u = b*u*q + b*v + 1 = b*(u*q+v) + 1
---------------
-   eqn(a,b,x,y) : IF 0 < b <= a and gcd(a,b) == 1 THEN
-     E[x,E[y, 1<=x , 0<=y, a*x = b*y + 1]]
-   eqn(a) :  0 < a => A(b, eqn(a,b)
-  (1) A(a, eqn(a))
-  (2) Case: 0 < a, b == a.
-     Then 1 = gcd(a,b) = b.  And a = 1
-     Take x = 1, y = 0.  Then
-     a*x = 1*1 = 1
-     b*y + 1 = 1*0 + 1 = 1
-     So, a*x = b*y + 1
-  Inductive assumption: A(c, c<a implies eqn(c))
-  Inductive step:  eqn(a). Choose b, 0<b<=a and gcd(a,b) == 1.
-  The case b == a is done by (2)
-  Case  b < a.
-   Divide a by b: a = b*q + r, 0<=r<b. 
-   Case r = 0.  Thus a = b*q.  Thus 1 = gcd(a,b) = b. 
-      Also, if q == 0, then a = r, so a = 0. Contrary to assumption 0<b<=a.
-      Thus 1<=q, so q-1 is in N .  Take x = 1, y = q-1.
-      a*x = a.
-      b*y + 1 = 1*(q-1) + 1 = 1*q = b*q = a
-      so a*x = b*y + 1
-   Case r!= 0.
-    Now gcd(b,r) = gcd(a,b) = 1.  
-    We may apply the inductive assumption with 'b' for 'c'
-     Thus eqn(b,r,u,v) holds:
-      IF 0 < r <= b and gcd(b,r) == 1 THEN
-        E[u,E[v, 1<=u , 0<=v, b*u = r*v + 1]]
-    0<r<b. and gcd(b,r) = 1.  So we may choose u, v
-       1<=u , 0<=v, b*u = r*v + 1
-    
-  eqn(a+1,b): IF 0 < b <= a+1 and gcd(a+1,b) == 1 THEN
-     E[x,E[y, 1<=x , 0<=y, a*x = b*y + 1]]
-  Case a = 1.  0<b<=1 implies b == 1, so b == a. So (2) applies for answer
-  Inductive assumption.
-
+** DA 13. If p a prime and 1<=a<p and 1<=b<p, then p does not divide a*b.
+Gauss, Disquisitiones Arithmeticae
+  Fix p and a. Set S = {b,1<=b<p and p|a*b}.  To prove S is empty set.
+  Assume S is not empty, and derive a contradiction.
+  Let t = NMin(S). Then t is in S, so  1<=t<p and p|a*t.
+*** t != 1
+  If t = 1, then p|a, so p<=a, contradiction assumption a<p.
+*** Divide p by t:  p = t*c + r, 0<=r<t.
+*** r<p.  
+    Since r<t and t<p
+*** 1<=r
+  If r = 0, then p = t*c. Since t!=1 and t|p and p a prime, then t = p.
+  But this contradicts t<p.
+  So 1<=r
+*** p|a*r
+  a*p = a*t*c + a*r.  p|a*p.  And p|a*t*c.  Thus p|a*r.
+*** r is in S.
+*** Thus NMin(S) <= r, or t <= r. Contradicting r<t.
+** DA 14. If p is a prime and 1<=a and 1<=b and p | a*b, then p|a or p|b.
+Gauss proof.
+  Let r = Rem(a,p), s = Rem(b,p).
+  Then 0<=r<p and 0<=s<p.
+  If r = 0, then p|a, so we are done.
+  If s = 0, then p|b, so we are done.
+  If 1<=r and 1<=s.
+   a = r (mod p) and b = s (mod p). So, a*b = r*s (mod p).
+   Thus, p|r*s, contradicting DA 13.
    
+** DA 14 (proved from Euclid's Lemma)
+   See 'Corollary 2 to Euclid's Lemma'
 * Corollary 1 to Euclid's Lemma: gcd(a,n)=1, a|x, n|x => a*n|x.
   If NgcdQ(a,n,1), NdivQ(a,x) and NdivQ(n,x), then NdivQ(a*n,x).
   Proof:
   Let b = Nquo(x,a). So in(b,N*) and x = a*b.
   Thus, NdivQ(n,a*b).
   By Euclid Lemma, NdivQ(n,b).
-  b = n*k (where k = Nquo(b,n)
+  b = n*k (where k = Nquo(b,n))
   x = a*(n*k) = (a*n)*k.
   Thus, NdivQ(a*n,x). QED.
+* Corollary 1a: gcd(a,n) = 1, a|x, n|x => n|Quo(x,a).
+  By Cor. 1, a*n | x. Let y = Quo(x,a*n). 
+  Then a*n*y = x.
+  Let q = Quo(x,a) So q = n*y. Thus n|q.
+* gcd(a,n) = 1 and x=y(mod a) and x=y(mod n) => x=y(mod a*n)
+  Pf: case x = y. True.
+  Case x > y:  Set z = x-y, so 1<=z.   and z = 0 (mod a) and z = 0 (mod n).
+  So a|z and n|z.  By Cor. 1, a*n|z.  Thus z = 0 (mod a*n). 
+  Thus x = y (mod a*n)
 * Definition of prime number
   NprimeQ(p)
   p is a prime iff 
@@ -440,12 +561,128 @@ N* = 1,2,...
    NdivQ(k,m) and k!=1 and k!=m.
    So k <= n. and 2<=k.  Thus, by inductive assumption,
    E(p,NprimeQ(p) and NdivQ(p,k)).   Now also NdivQ(p,m). QED
-* NprimeQ(p) and 1<=a and 1<=b and NdivQ(p,a*b) implies NdivQ(p,a) or NdivQ(p,b)
+* Corollary 2 to Euclid's Lemma: If p is prime and p|a*b, then p|a or p|b.
+ If p is prime and 1<=a and 1<=b and p|a*b, then p|a or p|b.
  Proof: Special cases when a=1 or b=1.
  Suppose 1<a and 1<b.
-  Suppose !NdivQ(p,a). Suppose NdivQ(d,p) and NdivQ(d,a).
-  Then d = 1 or d = p since NprimeQ(p). Since !NdivQ(p,a), d != p, so d = 1.
+  Suppose !NdivQ(p,a). 
+   Suppose NdivQ(d,p) and NdivQ(d,a).
+   Then d = 1 or d = p since NprimeQ(p). Since !NdivQ(p,a), d != p, so d = 1.
   Thus gcd(p,a) = 1.  Thus (Euclid's Lemma), NdivQ(p,b).
+* Corollary 3 to Euclid's Lemma: gcd(a,n)=1 & gcd(b,n)=1 =>  gcd(a*b,n) = 1
+  Suppose gcd(a,n) = 1 and gcd(b,n) = 1
+  Now, Suppose NdivQ(d,a*b) and NdivQ(d,n). 
+  The assumption d!=1 leads to a contradiction, as follows.
+   There is a prime p so that NdivQ(p,d) (defn of 'prime').
+   Thus, NdivQ(p,a*b) and NdivQ(p,n)
+   Not p|a:
+    If p|a, then p|a and p|n, so p<=gcd(a,n) = 1,
+     but 1<p since p is a prime.  
+    Thus, p does not divide 'a'.
+   Thus, gcd(p,a) == 1 (defn of prime).
+   Now by Euclid's Lemma Corollary 2, NdivQ(p,b).
+   But this contradicts gcd(b,n) = 1.
+ Thus, d = 1.  
+ Thus gcd(a*b,n) =1.
+ QED.
+  
+* Quo properties with Division. Quo(a,b) == (a/b) NOTATION
+  For 1<=a, 1<=b,   Quo(a,b) and Rem(a,b) are the unique q,r in N with
+  (a) a = b*q + r and (b) 0<=r<b.
+  If b|a, then a = b*Quo(a,b)
+  If a|b|c, then Quo(c,a) = Quo(c,b)*Quo(b,a)
+  
+* DA 22: k|a, k|b, a=b (mod m), gcd(k,m) = 1 => Quo(a,k) = Quo(b,k) (mod m)
+  Clear if a = b. Otherwise, assume a>b
+  Let x = Quo(a,k), y = Quo(b,k). So 1<=x, 1<=y and
+  a = k*x, b = k*y.
+  Let z = x-y. So 1<=z, k*z = 0 (mod m). So m|k*z.  Thus, m|z (Euclid Lemma)
+  So, z = 0 (mod m) So x = y (mod m).
+ 
+  Corollary:
+  If k|c and m|c and gcd(k,m) = 1, then Quo(c,k) = 0 (mod m)
+  Proof:
+  Thus, k*m | c (Corollary 1 to Euclid Lemma).
+  k | k*m | c. 
+  c = (c/k)*k = (c/m)*m.
+  m | (c/k)*k and gcd(m,k)=1 implies m|(c/k).  Euclid Lemma.
+* DA 22x: k|c and m|c and gcd(k,m) = 1  => m | Quo(c,k).
+  By Euclid Lemma, k*m|c. So c = (k*m) * Quo(c,k*m) = k* (m*Quo(c,k*m))
+  Since k|c, c = k*Quo(c,k).
+  Thus  k*(m*Quo(c,k*m)) = k*Quo(c,k).
+  So m*Quo(c,k*m) = Quo(c,k).
+  Thus, m | Quo(c,k). QED.
+  
+* DA 22by:  k|c, m|c, d=gcd(k,m) => Quo(m,d) | Quo(Quo(c,d), Quo(k,d))
+  d = gcd(k,m).   d|k and d|m.
+  gcd((k/d), (m/d)) = 1 (DA 22a)
+  Apply DA 22x: 
+  (k/d)|(c/d) and (m/d)|(c/d) and gcd((k/d),(m/d)) = 1 implies
+     (m/d) | Quo((c/d),(k/d))
+  d|k|c thus: (c/d) = (c/k)*(k/d)  [so (k/d)|(c/d)]
+  d|m|c thus: (c/d) = (c/m)*(m/d)  [so (m/d)|(c/d)]
+  So, (m/d) | Quo((c/d),(k/d))).
+
+* DA 22bx k|c, m|c => Quo(m,gcd(k,m)) | Quo(c,k)
+   d = gcd(k,m)
+   d|k|c Thus (c/d) = (c/k)*(k/d)
+   d|m|c Thus (c/d) = (c/m)*(m/d).
+
+   To show: (m/d) | (c/k)
+   (m/d) | (c/k)*(k/d).
+   gcd((k/d),(m/d)) = 1
+   Quo(m,d) | Quo( Quo(c,d), Quo(k,d) )
+   6 | 36, 12 | 36,  gcd(6,12)=6  => Quo(12,6) | Quo(36,6) [2 | 6]
+   
+* DA 22b: k|a, k|b, a=b (mod m) => Quo(a,k) = Quo(b,k) (mod Quo(m,gcd(k,m)))
+   6 | 36, 6 | 0, 36 = 0 (mod 9) => Quo(36,6) = 0 (mod 3)  Check.
+  Let d = gcd(k,m), x = Quo(a,k), y = Quo(b,k). 
+  Let m1 = (m/d) d|m, so m = d*(m/d)
+  To show: (a/k) = (b/k) (mod (m/d))
+
+  k | a, so a = k*(a/k)
+  k | b, so b = k*(b/k)
+
+  By DA22a, gcd((k/d), (m/d)) = 1. 
+  d|k|a Thus : (a/d) = (a/k)*(k/d)
+  d|k|b Thus : (b/d) = (b/k)*(k/d)
+
+  Assume a>b and c = a-b.   
+  Thus c = 0 (mod m).
+  d|k|c  Thus (c/d) = (c/k)*(k/d)
+  To Show: (c/k) = 0 (mod (m/d)) i.e., (m/d) | (c/k)
+ 
+  d|m|c. Thus (c/d) = (c/m)*(m/d)
+
+  
+  (k/d) | (a/d),  (k/d) | (b/d)
+  
+  (a/k) = (b/k) (mod (m/d)) ?
+   a = b (mod m)
+   
+   m | c.  c = (c/m)*m
+   k | c,  m | c.  
+   To Show: (c/k) = 0 (mod (m/d))
+   
+   
+  Suppose k1|a1 and k1|b1, and a1=b1 (mod m1)  TO SHOW
+  Then by DA22, Quo(a1,k1) = Quo(b1,k1) (mod m1).
+  Quo(a1,k1):   a = a1*d, k = k1*d, m = m1*d .
+
+  a|b|c => Quo(c,a) = Quo(c,b)*Quo(b,a)
+     Quo(c,b)|Quo(c,a)  and Quo(b,a) | Quo(c,a)
+  Quo(Quo(c,a),Quo(b,a)) = Quo(c,b)
+  ((c/a)/(b/a)) = (c/b).
+
+   Proof:
+   a|c.  Thus, c = a*Quo(c,a)
+   b|c.  c = b*Quo(c,b)
+   a|b.  b = a*Quo(b,a)
+    c = a*Quo(b,a)*Quo(c,b)
+   Thus Quo(c,a) = Quo(b,a)*Quo(c,b) = Quo(c,b)*Quo(b,a)
+   (c/a) = (c/b)*(b/a)
+   
+  
 * Legendre theorem on number of roots of a polynomial.
 Let K be a field, and let f be a non-zero polynomial 'over' K.
 Let d be the degree of f and let R be the set of roots of f in K.
@@ -649,23 +886,23 @@ a prime, we can cancel (p-1)! to get a^(p-1) = 1 (mod p). QED
   For 1<=n, relprimes(n) = S(x,1<=x<=n and gcd(x,n) == 1)
   Zmod.relprimes(n) = S(Zmod(x,n), 1<=x<=n and gcd(x,n) == 1)
     This is subset of the ring Z[n] of integers mod n.
-** 1. gcd(a,n) == 1 and gcd(b,n) == 1 implies gcd(a*b,n) == 1.
- Proof: 
-  Suppose gcd(a,n) = 1 and gcd(b,n) = 1
-  Now, Suppose NdivQ(d,a*b) and NdivQ(d,n). 
-  The assumption d!=1 leads to a contradiction, as follows.
-   There is a prime p so that NdivQ(p,d) (Previous theorem - defn of 'prime').
-   Thus, NdivQ(p,a*b) and NdivQ(p,n)
-   If NdivQ(p,a), then p is a common divisor of a and n, so p<=gcd(a,n);
-    but 1<p since p is a prime.  
-   Thus, p does not divide 'a'.
-   Thus, gcd(p,a) == 1 (defn of prime).
-   Now by Euclid's Lemma, NdivQ(p,b).
-   But this contradicts gcd(b,n) = 1.
- Thus, d == 1.  
- Thus gcd(a*b,n) == 1.
- QED.
-  
+** 0a. if 1<=a<=n, then a is in relprimes(n) iff  and E[x,E[y, and 1<=x and 1<=y and a*x = n*y + 1]]
+   If 1<=a and 1<=n, there are x and y with 0<=x and 1<=y and a*x = n*y + gcd(a,n).
+   If a is in relprimes, then gcd(a,n) = 1, so a*x = n*y + 1.
+   Conversely, Suppose a*x = n*y + 1 
+    If  d|a and d|n, then d|1.  Thus gcd(a,n) = 1.
+** 0b. if 1<=a<=n, then a is in relprimes(n) iff E[x, 1<=x with a*x = 1 (mod n)]
+   Restatement of 0a.
+
+** 0c. If a and b are in relprimes(n), then Rem(a*b,n) is in relprimes(n)
+   gcd(a,n) = 1 There is x so that a*x = 1 (mod n)
+   gcd(b,n) = 1 There is y so that b*y = 1 (mod n)
+   Then (a*b)*(x*y) = 1 (mod n).  Thus, Rem(a*b,n)*Rem(x*y,n) = 1 (mod n)
+   And  1<=Rem(a*b,n)<=n  so Rem(a*b,n) in relprimes(n).
+** 0d. if 1<n, then the set n (with elements 0,1,...,n-1) is a ring under (mod n) operations.
+** 0e. If 1<n, relprimes(n) with (mod n) multiplication is a subgroup with (mod n) multiplication.
+** 1. Corollary 3 to Euclid's Lemma (see above)
+
 ** 2. If 1<=x<=n, then x in relprimes(n) iff E[y,1<=y<=n and x*y = 1 (mod n)]
   a. If 1<=x<=n and 1<=y<=n and x*y = 1 (mod n), then x is in relprimes(n).
    Since 1<=x*y,  n divides x*y-1. So there is q: x*y = n*q + 1.
@@ -691,14 +928,12 @@ a prime, we can cancel (p-1)! to get a^(p-1) = 1 (mod p). QED
 ** 4. Zmod.relprimes(n) is group of multiplicative units in ring Z[n].
    This is a matter of definitions.
    This is a finite group.  We will later show this group to be cyclic.
-** ephi(n) = Card(relprimes(n))  (Euler totient function)
+** Definition ephi(n) = Card(relprimes(n))  (Euler totient function)
    1<=n
 * Euler phi function (number of relatively prime numbers)
-* divisors(n), divisorsum(f,n), N*, number-theoretic function, multiplicative
- These are functions defined for positive integers (1<=n). See numtheor1.py
-** N* = set of positive integers (1,2,3,...)
-**  divisors(n) = S(d, 1<=d<=n and NdivQ(d,n)).  
-   This is a finite subset of N*.
+* divisorsum(f,n), number-theoretic function, multiplicative
+ These are functions defined on N*. See numtheory1.py
+ The function values could be in  Z, Q, R, or C. But usually are in N.
 ** number-theoretic function
  Ref: https://en.wikipedia.org/wiki/Arithmetic_function
   A number-theoretic function or number-theoretic function 
@@ -723,8 +958,8 @@ a prime, we can cancel (p-1)! to get a^(p-1) = 1 (mod p). QED
   D1(n):  Card(divisors(n)) -> divisors(n)
   is any other bijection, then divisorsum(f,N,D1(n)) == divisorsum(f,N,D(n)).
 ** multiplicative number-theoretic function
- f: N* -> C is multiplicative if gcd(n,m) == 1 implies f(n*m) == f(n)*f(m).
- (for 1<=n, 1<=m)
+ f: N* -> C is multiplicative if gcd(m,n) == 1 implies f(m*n) == f(m)*f(n).
+ (for 1<=m, 1<=n)
 * gcdpartitionF(n), gcdpartition(n)
  These are introduced to prove that divisorsum(ephi,n) = n.
 ** This partition of [1..n] is usually un-named. 
@@ -762,7 +997,7 @@ a prime, we can cancel (p-1)! to get a^(p-1) = 1 (mod p). QED
   numtheory1.gcdpartition(15)
   {1: [1, 2, 4, 7, 8, 11, 13, 14], 3: [3, 6, 9, 12], 5: [5, 10], 15: [15]}
 
-* divisorsum(ephi,n) == n.
+* If 1<=n, divisorsum(ephi,n) == n.
 In this section, 
   1 <= n, 
   S(n,d) = gcdpartitionF(n)(d) 
@@ -860,6 +1095,7 @@ for d in divisors(n), define
  So divisorsum(ephi,n) = n.
  QED.
 * Python code to illustrate divisorsum(ephi,n) == n 
+ This result attributed to Gauss.
 from numtheory1 import gcd, divisors, relprimes
 def S(n,d):
  return [m for m in range(1,n+1) if gcd(m,n) == d]
@@ -1201,7 +1437,7 @@ Corollary:  If G is a finite group and H is a subgroup of G, then
   Now Lagrange theorem on Coset partitions yields NCard(gen(x)) divides
   NCard(G), so Ord(x,G) divdes NCard(G).
   
-* Primitive roots
+* Primitive root examples
  Ref: https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n
  We know that relprimes(n) is a group (under multiplication modulo n) for 1<n.
  Theorem (Gauss) relprimes(n) is a cyclic group iff
@@ -1222,50 +1458,73 @@ Corollary:  If G is a finite group and H is a subgroup of G, then
  n = 13. 13 has 4 primitive roots: [2, 6, 7, 11]
          14 has 2 primitive roots: [3, 5]
      15. relprimes: [1, 2, 4, 7, 8, 11, 13, 14] no prim. roots
-def testpr(n):
+from numtheory1 import *
+# relprimes,
+
+def testpr(n,dbg=False):
  rp = relprimes(n)
  nrp = len(rp)
- print('(%s) relprimes: %s' %(nrp,rp))
+ if dbg: print('(%s) relprimes: %s' %(nrp,rp))
  numpr = 0
  primroots = []
  for k in rp:
-  e = 1
-  v = k
-  while v != 1:
-   e = e + 1
-   v = (v * k) % n
+  e = eltOrder(k,n)
   if e == nrp:
-   print('order of %s = %s (mod %s)  primitive root' %(k,e,n))
+   if dbg: print('order of %s = %s (mod %s)  primitive root' %(k,e,n))
    numpr = numpr + 1
    primroots.append(k)
   else:
-   print('order of %s = %s (mod %s)' %(k,e,n))
+   if dbg: print('order of %s = %s (mod %s)' %(k,e,n))
  print('%s has %s primitive roots: %s' %(n,numpr,primroots))
-* Proof that relprimes(p) has a primitive root if p is a prime.
-** If gcd(a,n) = 1, then there is 1<=u with a**u == 1 (mod n).
-  Proof: From Euclid lemma corollary, if gcd(a,n) = 1 and gcd(b,n) = 1,
+ return primroots
+* -------------------------------------------------------------
+* primitive roots
+* -------------------------------------------------------------
+* relprimes(p) has a primitive root if p is a prime.
+ Recall definition of relprimes(n), defined for 1<=n.
+  relprimes(n) =  S(k, 1<=k<=n and  gcd(k,n) = 1.
+  By this definition, relprimes(1) = {1}
+  If 1 < n, then relprimes(n) = S(k, 1<=k<n and gcd(k,n) = 1).
+  And thus, if 1<n we may consider relprimes(n) to be a subset of 'n',
+  and may apply the mod-n arithmetic to it.  In this case,
+  relprimes(n) is the set of multiplicatively invertible elements.
+  and relprimes(n) is a group under mod-n multiplication.
+ NOTE: some of the following may not make sense for n=1.
+ However, it is useful to include relprimes(1), with cardinality 1
+ so that ephi(1) = 1 is defined.
+** (1) If gcd(a,n) = 1, then there is 1<=u with a**u == 1 (mod n).
+***  Proof 1
+   From Euclid lemma corollary, if gcd(a,n) = 1 and gcd(b,n) = 1,
    then gcd(a*b,n) = 1.
    Thus, by induction, for 1<=k,  gcd(a**k,n) = 1, so a**k is in relprimes(n).
    Since relprimes(n) is finite,  there must be 1 <= j < k with a**j = a**k.
    There is u in N with k = j+u;  So a**j = (a**j)*(a**u).   Since 
    relprimes(n) is a group (multiplication mod n), a**u = 1 (mod n).
-** If gcd(a,n) = 1, properties of ord(a,n)
+*** Proof2
+   By Bezout's theorem in N*, there are x and y with 0<=u and 1<=y and
+   a*u = n*y + gcd(a,n) = n*y + 1.
+   Thus a*
+** (2) If gcd(a,n) = 1, properties of ord(a,n)
    1 <= ord(a,n) and a**ord(a,n) = 1 (mod n) 
    and A(k, if 1<=k and a**k = 1 (mod n), then ord(a,n) <= k).
-** if gcd(a,n) = 1, then ord(a,n) divides NCard(relprimes(n)) = ephi(n)
+** (3) if gcd(a,n) = 1, then ord(a,n) divides NCard(relprimes(n)) = ephi(n)
  relprimes(n) is a finite group. and 'a' is in relprimes(n). 
  The result follows from (9) of 'order of finite group element'.
-**  eltOrder(a,n)
+** (4) eltOrder(a,n) divides ephi(n)
   1<=n, a in relprimes(n), 
   eltOrder(a,n) = Nmin(S(k, 1<=k and a**k = 1 (mod n)))
   Another way to say it, take G = relprimes(n) and with 
   multiplication mod n as binary operation. Then G is a finite group.
   Then eltOrder(a,n) = ord(a,G) (as order of finite group element).
-** ordCover(n,d)
+  By Lagrange theorem on subgroups of a finite group,
+  eltOrder(a,n) divides NCard(G) = ephi(n).
+  When n = 1, relprimes(1) = {1} so a must be 1.
+  Note eltOrder(1,1) = 1.
+** (5) ordCover(n,d)
   1<=n.  ordCover(n,d) = {a in relprimes(n) and eltOrder(a,n)  = d}.
-  If ordCover(n,d) is not empty, then d divides NCard(relprimes(n)) = ephi(n).
+  If ordCover(n,d) is not empty, then d divides ephi(n).
   Also, even if d divides ephi(n), it MAY be true that ordCover(n,d) is empty.
-** ordCoverF(n)
+** (6) ordCoverF(n)
   ordCoverF is a function from divisors(ephi(n)) to subsets of relprimes(n)
   defined by formula ordCoverF(n)(d) = ordCover(n,d).
   If d1!=d2 are divisors of ephi(n), then ordCover(n,d1) and ordCover(n,d2)
@@ -1274,19 +1533,1065 @@ def testpr(n):
   and a is in ordCover(n,eltOrder(a,n))
 
   So relprimes(n) = union(range(ordCoverF(n)))
-  Define ordCoverSizeF(n) sending d to NCard(ordCover(n,d)).
-  Then divisorsum(ordCoverSizeF(n), ephi(n)) = 
-   Sum(NCard(ordCover(n,d)) for d in divisors(ephi(n)))
-** divisorsum(ordCoverSizeF(n), ephi(n))  = ephi(n)
+** (7) If 1<=n, define function ordCoverSizeF(n) divisors(ephi(n)) ->  N
+  Recall ephi(n) = NCard(relprimes(n)).
+  Function from divisors(ephi(n)) to N defined by formula
+  val(ordCoverSizeF(n),d) = NCard(ordCover(n,d)).
+** (8) If 1<=n, then divisorsum(ordCoverSizeF(n), NCard(relprimes(n))) = ephi(n)
   This is because range(ordCoverF(n)) is a disjoint cover of relprimes(n).
-** if n is a prime,
-** If n is  a prime and d divides ephi(n), then NCard(ordCover(n,d)) <=  ephi(d)
+** (9) If n is prime, then divisorsum(ordCoverSizeF(n), n) = n-1
+  Since ephi(n) = n-1.
+** (10) if n is a prime and d divides ephi(n) and ord(u,n) = d, then roots(X**d -1) is cyclic group
+  Let f = X**d - 1 (polynomial with mod n arithmetic).
+  H = roots(f) = {a, 0 <= a < n and  a**d = 1 (mod n)}
+  We have proved NCard(H) = d.
+  H is a subgroup of relprimes(n).
+   a**d = 1 and b**d = 1 -> (a*b)**d = (a**d)*(b**d) = 1*1 = 1 (mod n).
+   1**d = 1.
+   If a**d = 1 and a*b = 1 (mod n) then 1 = (a*b)**d = (a**d)*(b**d) = b**d,
+   so b (the inverse of a) is also a root.
+  Since ord(u,n) = d,  u**d = 1 , so u is in H.
+  And, H1 = gen(u) = {u**k (1<=k<=d)} is a subset of H, AND has d elements.
+  Thus, H = H1, so H is cyclic.
+** (11) If n is a prime and d divides ephi(n), then NCard(ordCover(n,d)) <=  ephi(d)
   Clear if ordCover(n,d) is empty set. (since 0 <= ephi(d))
   Case ordCover(n,d) is not empty. 
-  If a is in ordCover(n,d), a is in relprimes(n) and eltOrder(a,n) = d.
-  So, in particular, a**d = 1 (mod n).
-  Thus a is a root of the polynomial X**d - 1 in the mod-n ring.
-  Further, since n is a prime, 
-** 
- So ephi(n) = divisorsum(
- 
+   If a is in ordCover(n,d), then a is in relprimes(n) and eltOrder(a,n) = d.
+   So, in particular, a**d = 1 (mod n).
+   Let H = roots of X**d - 1 in the mod-n ring. The previous section showed
+   that H = gen(a) is the cyclic group generated by 'a'.
+   Now suppose b is also in ordCover(n,d).  Then similarly
+   b is in H and so b is in gen(a).
+   Thus, ordCover(n,d) = S(b, b in gen(a) and gen(b) = gen(a))
+   By section (8) of section 'order of finite group element'
+   We may conclude that NCard(ordCover(n,d)) = ephi(ord(a)) = ephi(d)
+   So, in particular, NCard(ordCover(n,d)) <=  ephi(d).
+** (12) If 1<n, then divisorsum(ephi,n-1) = n-1.
+   This is Gauss's theorem applied to n-1.
+** (13) if n is a prime, then divisorsum(ephi,n-1) = n-1.
+  Since 1<n.
+** (14) if n in N and f:N->R and g:N->R and sum(f) = sum(g) and A(i,f(i)<=g(i)), then
+   A(i, f(i) = g(i)).
+   Proof: consider h = g-f. Then g:n->R and sum(h) = sum(g)-sum(f) = 0.
+   And also A(i,0<=h(i)).  
+   Suppose k in n and 0 < h(k)
+    Then 0 < h(k) < sum(h) = 0. So 0 < 0, which is false.
+   Thus A(i, 0 = h(i) = g(i) - f(i)) QED
+** (15) if n is a prime, then A(d, if d divides n-1, then NCard(ordCover(n,d)) = ephi(d).
+  Let m = NCard(relprimes(n)) (= ephi(n)) and let D = divisors(m).
+  Let f and g be the two functions from D to N defined by
+  f(d) = NCard(ordCover(n,d)- and g(d) = ephi(d).
+  By (9), sum(f,D) = n-1 
+  By (12), sum(g,D) = n-1
+  By (11), for all d in D, f(d) <= g(d).
+  Of course, D is finite.
+  By (14), A(d in D, f(d) = g(d))
+  QED.
+** (16) if n is a prime and d divides n-1, then roots(X^d - 1) is cyclic.
+ Proof: By (15), NCard(ordCover(n,d)) = ephi(d). 
+ Since 0 < ephi(d), we conclude ordCover(n,d) is not empty.
+ Thus, there is u in ordCover(n,d).
+ Thus ord(u,n) = d. 
+ By (10), roots(X^d - 1) is cyclic.
+ QED
+** (17) if n is a prime, then relprimes(n) is a cyclic group.
+  Proof: relprimes(n) = {1,...,n-1}.
+  1<n. So n-1 divides n-1.  
+  By (16), roots(X^(n-1) - 1) is a cyclic group.
+** (18) if n is a prime, then relprimes(n) has ephi(n) primitive roots.
+  A restatement of (17).
+* if 1 < n and relprimes(n) is cyclic, and gcd(2,n) = 1 then so is relprimes(2*n).
+ Proof:
+ Since gcd(2,n) = 1, relprimes(2*n) is isomorphic to group product
+   relprimes(2) X relprimes(n)  (See Proof of 'ephi is multiplicative', under
+   Chinese remainder theorem).
+ But relprimes(2) = {1}.  So relprimes(2*n) is isomorphic to relprimes(n).
+ So relprimes(2*n) is cyclic.
+* relprimes(2) and relprimes(4) are cyclic
+  relprimes(2) = {1}
+  relprimes(4) = {1,3} and 3**2 = 1 (mod 4), so relprimes(4) = gen(3)
+* If p is a prime and 1 <= k, then formulas for relprimes(p**k) and ephi(p**k)
+  relprimes(p**k) = {p*i + j, with 0 <= i < p**(k-1), and 1 <= j < p}
+  So ephi(p**k) = (p**(k-1)) * (p-1)
+* if 3<=n, then ephi(n) is an even number 
+  (1) Case n a power of 2: n = 2**k.  Since 3<=n, then 2<=k.
+  ephi(n) = ephi(2**k) = 2**(k-1).  Since 1<=k-1, 2 | 2**(k-1) so 2 | ephi(n)
+  (2) Case n not a power of 2. Then there are p, k, and m such that
+     p is an odd prime,
+     1<=k, 1<=m,  n = (p**k)*m and gcd(p,m) = 1.
+   Thus gcd(p**k,m) = 1.
+   Since ephi is multiplicative,
+     ephi(n) = ephi((p**k)*m) = ephi(p**k)*ephi(m)
+   ephi(p**k) = (p**(k-1)) * (p-1), so (p-1) | ephi(p**k)
+   so (p-1) | ephi(n).  Now 2|(p-1).  so 2|ephi(n)
+
+* If 3<=k, then relprimes(2**k) is NOT cyclic.
+ if 1<=k, then  relprimes(2**k) = {2*i + 1, with 0 <= i < p**(k-1)}
+ So ephi(2**k) = 2**(k-1)
+ Also, relprimes(2**k) = {x: 1 <= x <= 2**k and x is odd}
+ (1) if 3<=k and x is odd, then x**(2**(k-2)) = (1 mod 2**k),
+  so order(x,2**k) <= 2**(k-2). Since 2**(k-2) < 2**(k-1), x cannot
+  generate relprimes(2**k). So relprimes(2**k) is not cyclic.
+** (1) is proved by induction on k.
+  If k = 3, then 2**k = 8, k-2 = 1, 2**(k-2) = 2.
+  There is j with x = 2*j + 1.  Then x**2 = 4*(j**2) + 4*j + 1 =
+   4*j*j + 4*j + 1 = 4*j*(j+1) + 1.
+   Now either j or j+1 is even, so j*(j+1) is even, say = 2*i for some i.
+   x**2 = 4*2*i + 1 = 8*i + 1 = 1(mod 8).
+  Now make the inductive assumption for k: 
+   (a)  x**(2**(k-2)) = 1 (mod 2**k)
+  The k+1 equation is
+    lhs = x**(2**((k+1)-2) = 1 (mod 2**(k+1))
+    (k+1) - 2 = (k-2) + 1
+    2**((k+1)-2) = 2**((k-2)+1) = (2**(k-2))*(2**1) = (2**(k-2))*2
+    lhs = x**((2**(k-2))*2) = (x**(2**(k-2)))**2)
+   From (a), there is 1<=m with x**(2**(k-2)) = (2**k)*m + 1
+   So lhs = ((2**k)*m + 1)**2 = ((2**k)*m)**2 + 2*((2**k)*m)*1 + 1 
+      ((2**k)*m)**2 = ((2**k)**2) * (m**2)
+      (2**k)**2 = 2**(k*2) = 2**((k+1) + (k-1)) =
+                = (2**(k+1)) * (2**(k-1))
+    So, ((2**k)*m)**2 = (2**(k+1)) * (2**(k-1)) * (m**2) = 
+    So, ((2**k)*m)**2 = 0 (mod 2**(k+1))
+    And 2*((2**k)*m)*1 = 2*((2**k)*m) = (2*(2**k)*m) = 
+        = ((2**1)*(2**k))*m = (2**(1+k))*m = (2**(k+1))*m
+    So  2*((2**k)*m)*1 = 0 (mod 2**(k+1))
+    So lhs = 0 + 0 + 1 (mod 2**(k+1))
+    This completes the proof for k+1.
+  By induction, the formula holds for all 3<=k.
+  QED.
+** Second proof of (1) 
+   Suppose a is odd and 1<=n, Then a**(2**n) = 1 (mod 2**(n+2))
+   a = 2*k + 1
+   n = 1
+    2**n = 2**1 = 2. 
+    a**2 = 4*(k**k) + 4*k + 1 = 4*(k*(k+1)) + 1
+     Now k*(k+1) is even so k*(k+1) = 2*j and
+    a**2 = 8*j + 1 == 1 (mod 8) and 8 = 2**(1+2) 
+    Done for case n=1
+   Assume a**(2**n) = 1 + j*(2**(n+2))
+    lhs = a**(2**(n+1)). To show lhs = 1+u*(2**(n+3)) for some u
+    Let C = 2**(n+3)
+    2**(n+1) = (2**n)*2 = 
+    lhs = (a**(2**n))**2 = (1 + j*(2**(n+2)))**2 =
+        = (j**2)*[(2**(n+2))**2] + 2*j*(2**(n+2))) + 1 = 
+               A                 +        B        + 1
+          2*(2**(n+2)) = 2**(n+3)
+          B = j*C
+         (2**(n+2))**2 = 2**((n+3)+(n+1)) = (2**(n+1))*C
+          A = (j**2)*(2**(n+1))*C  = v*C
+    lhs = (j + v)*C + 1, as desired
+* Binomial theorem
+**  Factorial
+  0! = 1,  if 0 <= n, (n+1)! = (n+1)*n!
+  n! = NCard(Perm(n))  (number of permutations of (the finite set) n.
+  1! = 1
+  2! = 2
+** C(n,k) 
+  C(n,k) = n!/k!*(n-k)!   (0<=k<=n)
+  C(0,0) = 1
+  C(1,0) = 1,
+  C(1,1) = 1
+  C(n,0) = 1
+  C(n,1) = n
+  C(n,2) = (n*(n-1))/2
+** Binomial theorem:
+  if 1 <= n, then (a+b)**n = sum(C(n,k)*(a**(n-k))*(b**k), 0<=k<=n)
+  We need to have a**0 = 1 for any a, even a = 0!
+
+  If 2<=n, then (a+b)**n = a**n + n*(a**(n-1))*b (mod b**2)
+  if 3<=n, then (a+b)**n = a**n + C(n,1)*(a**(n-1))*(b**1) + C(n,2)*(a**(n-2))*(b**2) + (mod b**3)
+* if 2<p is a prime, then p**2 has a primitive root
+NOTE: Another proof is given under (18) of a section below
+  relprimes(p**2) = {p*i + j, with 0 <= i < p**(2-1), and 1 <= j < p}
+                  = {p*i + j, with 0 <= i < p, and 1 <= j < p}
+  relprimes(3**2) = {3*i + j, with 0 <= i < 3, and 1 <= j < 3}
+                    { 3*0 + 1, 3*0 + 2, 3*1 + 1, 3*1 + 2, 3*2 + 1, 3*2 + 3}
+                    {1,2,4,5,7,8}
+  So ephi(p**2) = ( p**(2-1)) * (p-1)
+                = p*(p-1)
+  Suppose a is in relprimes(p**2). 
+   Then  1 <= a < p**2 , and gcd(a,p**2) = 1.
+   Let d = ord(a,p**2).  So a**d = 1 (mod p**2), and 1<=d and
+   1<=k<d implies a**k != 1 (mod p**2).
+   'a' is a primitive root of p**2 if d = p*(p-1).
+  Notations:
+    a|b for a divides b (in N)
+    PR(r,n) r is a primitive root of n.
+** (1) if p is a prime and PR(r,p), then (p-1) | ord(r,p**2) | p*(p-1)
+   Proof:
+   1<=r<p. set d = ord(r,p) = p-1.  
+   r**(p-1) = 1 (mod p) and 1<=k<p-1 implies r**k != 1 (mod p)
+   Let e = ord(r,p**2). So, r**e = 1 (p**2) 
+    e divides p*(p-1) (the size of relprimes(p**2), and 1<=e.
+    Also r**e = 1 (mod p) 
+     (p**2 divides r*e - 1, p divides p**2, so p divides r**e - 1.)
+    Thus p-1 divides e. [Cf. (3b) of 'order of finite group element']
+** (2) if p is a prime and 1<=a and a|e and e|a*p, then e = a or e = a*p
+   Proof: Let s and t be quotients, so 
+   e = a*s, a*p = e*t
+   Thus a*p = a*s*t.  So p = s*t.
+   Thus either (s=1 and t=p) or (s=p and t=1), since p is prime.
+   If s=1 then e = a.
+   If t=1, then e = a*p
+   QED
+** (3) if p is a prime and PR(r,p) and r**(p-1) != 1 (mod p**2), then PR(r,p**2).
+   1<=r<p so 1<=r<p*2.  gcd(r,p) = 1.  If d divides r and p**2, then d divides r and p.
+   So gcd(r,p**2) = 1.
+   Let e = ord(r,p**2). So e is smallest positive integer such that r**e = 1 (mod p**2)
+   By (1), (p-1) | e | p*(p-1).  
+   By (2), either e = (p-1) or e = p*(p-1), since p is prime..
+   If e = (p-1), then r**(p-1) = 1 (mod p**2), contrary to assumption.
+   Thus, e = p*(p-1), which is the size of relprimes(p**2). 
+   Thus, r is a primitive root for p**2
+** (4) If 1<=r<p, then 1<=(r+p)<p*p and gcd(r+p,p*p) = 1
+   Let d divide r+p and p*p.  Then d divides p (since p is prime).
+   so, also d divides r.  But gcd(r,p) = 1 (since p is prime and 1<=r<p),
+   so d = 1.  QED
+** (5) If a and b are numbers, then (a+b)**(p-1) = (a**(p-1)) + (p-1)*(a**(p-2))*b (mod p*p)
+  Apply special case of binomial theorem:
+     If 2<=n, then (a+b)**n = a**n + n*(a**(n-1))*b (mod b**2)
+   with n = p-1  (Note since p is an odd prime, 2<=(p-1))
+** (6) if p is a prime and PR(r,p) and r**(p-1) = 1 (mod p**2), then (r+p)**(p-1) != 1 (mod p**2).
+   So 1<=r<p.  
+   (r+p)**(p-1) = (r**(p-1)) + (p-1)*(r**(p-2))*p (mod p**2)
+                = 1 - (r**(p-2))*p (mod p**2)
+   Since PR(r,p), r is in relprimes(p), so gcd(r,p) = 1.
+   Thus, gcd(r**(p-2),p) = 1. 
+   So p does not divide r**(p-2). Thus p*p does not divide (r**(p-2))*p.
+   So (- (r**(p-2))*p)  != 0 (mod p**2).
+   Thus, 1 - (r**(p-2))*p != 1 (mod p**2).
+   Thus, (r+p)**(p-1) != 1 (mod p**2).
+** (7) if p is a prime and PR(r,p) and NOT PR(r,p**2), then PR(r+p,p**2)
+   Let e = ord(r,p**2). By (1), (p-1) | e | p*(p-1). 
+   By (2), e = (p-1) or e = p*(p-1).
+   If e = p*(p-1), then PR(r,p**2), which we are assuming is not the case.
+   Thus, e = (p-1).
+   By (3),  r**(p-1) = 1 (mod p**2)
+   (*) By (6), (r+p)**(p-1) != 1 (mod p**2)
+   Let f = ord(r+p,p**2). We must show f = p*(p-1).
+   By defn. of ord, f is the smallest positive integer k such that (r+p)**k = 1 (mod p**2).
+   By (4), r+p is in relprimes(p**2).  and p*(p-1) is the cardinality of relprimes(p**2).
+   So f | p*(p-1).
+   assert: (p-1) | f
+    (r+p) = r (mod p), so for any 1<=k,  (r+p)**k = r**k (mod p).
+    In particular, since 1 <= (p-1), then (r+p)**(p-1) = r**(p-1) (mod p).
+    Since ord(r,p) = (p-1), r**(p-1) = 1 (mod p).
+    Thus,  (r+p)**(p-1) = 1 (mod p)
+    And (r+p)**f = 1 (mod p**2), so also (r+p)**f = 1 (mod p) (since p divides p**2).
+    Thus r**f = (r+p)**f  = 1 (mod p).
+    Thus ord(r,p) | f. Thus (p-1) | f.
+   PR(r+p,p**2):
+    By (2), either either f = (p-1) or f =  p*(p-1).
+    Now, (r+p)**f = 1 (mod p**2) (defn. of ord). 
+    Combine this with (*) to get f != (p-1).
+    Thus f = p*(p-1).  Thus (r+p) is primitive element for p**2.
+   QED
+** (8) if p is prime and PR(r,p), then PR(r,p**2) or PR(r+p,p**2).
+   Immediate from (7)
+** (9) if p is an odd prime, then there exists s so that PR(s,p**2)
+   We know that p has a primitive root r.  Thus p**2 has a primitive root, by (8)
+
+** (10) if p is an odd prime and PR(r,p**2), then A(k, 2<=k implies PR(r,p**k))
+   Proof by induction on k>=2. 
+   By assumption, 1<=r<p**2 and gcd(r,p**2) = 1. 
+   Let e = ord(r,p**2). So e is smallest positive integer such that r**e = 1 (mod p**2)
+   By the PR(r,p**2) assumption, e = Card(relprimes(p**2)) = ephi(p**2) = p*(p-1).
+   Since p-1 < p*(p-1), r**(p-1) != 1 (mod p**2).
+   To prove by induction:
+    2<=k implies r**((p**(k-2))*(p-1)) != 1 (mod p**k).
+   Case k=2:  k-2 = 0, p**(k-2) = p**0 = 1, and we have assumed the result.
+   Now, suppose 2<=k and r**((p**(k-2))*(p-1)) != 1 (mod p**k).
+   To prove for k+1:  r**((p**((k+1)-2))*(p-1)) != 1 (mod p**(k+1)).
+     i.e., r**((p**(k-1))*(p-1)) != 1 (mod p**(k+1))
+   Now ((p**(k-2))*(p-1)) = ephi(p**(k-1)),
+   Since gcd(r,p**2) = 1, then also gcd(r,p) = 1, so also gcd(r,p**(k-1)) = 1.
+   Thus, r**(ephi(p**(k-1))) = 1 (mod p**(k-1))  (Euler's generalization of Fermat's little theorem)
+   Thus, r**((p**(k-1))*(p-1)) = 1 (mod p**(k-1))
+   So there is 'a' with 
+    (eqn) r**((p**(k-2))*(p-1)) = 1 + a*(p**(k-1))
+          lhs                   = rhs
+   Assert: p does not divide a.
+    Assume the contrary, that p | a. There is b, with a = p*b.
+    Then  r**((p**(k-2))*(p-1)) = 1 + p*b*(p**(k-1)) = 1+b*(p**k) = 1 (mod p**k), 
+     which is contrary to inductive hypothesis.  
+   Raise both sides of eqn to p-th power.
+    lhs**p = (r**((p**(k-2))*(p-1)))**p = r**((p**(k-1))*(p-1))
+    rhs**p = (1 + (a*(p**(k-1))))**p = (Binomial theorem)
+    If 2<=p, then (1+(a*(p**(k-1))))**p = 1**p + p*(1**(p-1))*(a*(p**(k-1))) (mod (a*(p**(k-1)))**2)
+        = 1 + p*(a*(p**(k-1))) (mod (a*(p**(k-1)))**2)  
+        = 1 + a*(p**k) mod ((a*a)* (mod (p**((2*k)-2))))
+     
+     Let n = (a*(p**(k-1)))**2 = (ASSUME 3<=k)
+           (a*a*(p**(k-3)))*(p**(k+1)) = m*u
+     Let c = 1 + a*(p**k)
+      rhs = c mod (n).  so rhs = c + d*n = c + d*m*u
+      so rhs = c (mod (p**((2*k)-2)))
+ Case k = 2
+  Assume: r**((p**(2-2))*(p-1)) != 1 (mod p**2).  or r**(p-1) != 1 (mod p**2)
+
+  To prove for 2+1:  r**((p**((2+1)-2))*(p-1)) != 1 (mod p**(2+1)).
+        r**(p*(p-1)) != 1 (mod p**3)
+  r**(ephi(p)) = 1 (mod p)
+  ephi(p) = p-1
+  r**(p-1) = 1 (mod p)
+  So r**(p-1) = 1 + a*p, and p does not divide a.
+  (r**(p-1))**p = (1 + (a*p))**p 
+                = 1**p + p*(1**(p-1))*(a*p) (mod (a*p)**2)
+).              = 1 + a*(p**2) (mod a*a*p*p)
+* numerical
+2<=k and r**((p**(k-2))*(p-1)) != 1 (mod p**k).
+
+ p = 3, r= 2.  (p-1) = 2.)
+  k = 2: r**(p-1) = 2**2 = 4 = 1 (mod p).   
+         r**(p-1) != 1 (mod p**2)
+            2**2 = 4 != 1 (mod 9)
+  Try for k+1
+  r**2 = 1 (mod p) Euler
+  r**(p-1) = 1 + 1*3
+  (r**(p-1))**p = (1 + 1*3)**3 = (1 + a*p)**3 = 1 +
+  (a+b)**3 = a**3 + 3 a**2 * b + 3 a * b**2 + b**3
+  (1+b)**3 = 1**3 + 3 1**2 * b + 3 1 * b**2 + b**3
+  (1+b)**3 = 1 + p*(a*p) + x*((a*p)**2) + (a*p)**3
+  
+  (1+a
+  k = 3. r**((p-1)*p) = 2**6 = 64 = 1 (mod 3**2 = 9)
+          2**6 != 1 (mod 27)  (64 = 10 (mod 27))
+         r**((p-1)*p) = 1 (mod p)
+ r**(p-1) = 1 
+  (1+b)**p = 1**n + p*(1**(p-1))*b (mod b**2)
+           = 1 + p*b (mod b**2)
+  b = a*(p**(k-1))  k = 2
+  b = a*p
+  (1+(a*p))**p = 1 + p*(a*p) (mod (a*p)**2))  
+
+* if p is prime and 2<p and 1<=n, then there is a primitive root for p**n (i.e. relprimes(p**n) is cyclic group)
+from http://ramanujan.math.trinity.edu/rdaileda/teach/f20/m3341/lectures/lecture16_slides.pdf
+Assume a,n,etc are in N* (1<=a, etc)
+Let 1<=n.
+Let G = relprimes(n) = {a, 1<=a<=n and gcd(a,n) = 1}.
+  If 1 < n, then G = {a, 1<=a<n and gcd(a,n) = 1}, since gcd(n,n) = n != 1.
+   Let R = {a, 0<=a<n}.  Let addition and multiplication be modulo n.
+   1 = multiplicative identity in R.
+   Units(R) = {a, a in R and E(b, b in R and a*b = 1 (mod n))}
+
+**  (1) Units(R) = G.
+   (a) a in Units(R). Note a != 0. b in R and a*b = 1 (mod n).
+      Note n | (a*b - 1). Le q be the quotient:  n*q = a*b - 1.
+      Then a*b = 1 + n*q.
+      Let d | a and d | n.  Then d|1 so d = 1. Thus gcd(a,n) = 1. Thus a is in G.
+   (b) a in G.  Then 1<=a<n and gcd(a,n) = 1.
+      There are (Variation of Bezout Theorem) b and c so that
+      a*b = 1 + n*c.  Thus a*b = 1 (mod n). So a is a Unit.
+**  (2) Units(R) is a group (under multiplication mod n)
+      Let a,b in U = Units(R).
+      Choose c,d in R so that a*c = 1 and b*d = 1 (mod n)
+      Then (a*b)*(c*d) = 1*1 = 1 (mod n)
+      so (a*b) is in Units(R).
+      1 is the multiplicative identity/
+      Similarly. Let a in U.  Choose b in U so a*b = 1 (mod n).
+      Thus b is the inverse of a.  Since b*a = 1 (mod n), then b is also in U.
+**  (3) G is a group (under multiplication mod n)
+    By (2), Since G = Units(R)
+**  (4) If a in G and b in G, then gcd(a*b,n) = 1.
+     G is a group. So a*b (mod n) is in G. Thus gcd(a*b,n) = 1.
+**  (5) G is a finite set, NCard(G) = ephi(n)
+**  (6) If a is in G, then a**ephi(n) = 1 (mod n) (Euler's Theorem)
+   Proof: G is a finite abelian group.
+   Let P = product of the elements of G.  Let m = NCard(G).
+    Choose an ordering  x1, x2, ..., xm of the elements of G.
+    Then P = x1*x2*...*xm.
+    Let f: G->G be multiplication by a. Then x1*a,...,xm*a is also an enumeration of G.
+    Since G is abelian, P = (x1*a)*...*(xm*a) 
+    and also (x1*a)*...*(xm*a) = (x1*...*xm)*(a*...*a) = P*(a**m)
+    Since G is a group, a**m = 1.
+**  (6a) If 1<=n and 1<=a and gcd(a,n) = 1, then a**ephi(n) = 1 (mod n) (Euler's Theorem)
+    By (6), if a<=n, then a is in G and the result follows.
+    Case n = 1: Then a**ephi(1) = a = 1 (mod 1), SO done.
+    Case n != 1:
+     Set b = Rem(a,n) so 0<=b<n.  And gcd(b,n) = gcd(a,n) = 1. 
+     So 1<=b<n. Thus b is G. So b**ephi(n) = 1 (mod n) by (6) applied to 'b'.
+     But a**ephi(n) = b**ephi(n) (mod n).  So a**ephi(n) = 1 (mod n)
+**  (7) If p is a prime and 1<=k, then ephi(p**k) = (p-1)*(p**(k-1))
+**  (8) if 1<=n  and  gcd(a,n) = 1, Define Nord(a,n) = min(k, 1<=k and a**k = 1 (mod n))
+    Note when n = 1 and 1<=a,  Nord(a,n) = 1.
+    Let r = Rem(a,n).  Then a = r (mod n), and 0<=r<n.  And Also r != 0.
+    And gcd(r,n) = gcd(a,n).  Thus, r is in relprimes(n).  Thus, by (6),
+    1<=NCard(G) and a**NCard(G) = 1 (mod n).  So Nord is well-defined.
+**  (9) if gcd(a,n) = 1 and 1<=m and a**m = 1 (mod n), then Nord(a,n) | m.
+    Let S = {k, 1<=k and a**k = 1 (mod n)}. Then S is an Nideal, i.e.,
+      j in S and k in S implies j+k is in S.
+      j in S and 1<=k and j+k in S implies k is in S.
+    Thus S = {k*min(S): 1<=k} = {k, 1<=k and Nord(a,n) | k}.
+**  (9a) if gcd(a,n) = 1 then Nord(a,n) | ephi(n).
+    By (6), a**ephi(n) = 1 (mod n)
+    By (9), with m = ephi(n),  we conclude Nord(a,n) | ephi(n)
+**  (9b) if 1<=n  and  gcd(a,n) = 1 and 1<=u and A(k,1<=k implies ((a**k = 1 (mod n)) IFF  u|k)) => u=Nord(a,n)
+    S = {k, 1<=k and a**k = 1 (mod n)}. Since k is an N ideal and Nord(a,n) = min(S),
+    S = all multiples of Nord(a,n). In particular, Nord(a,n) is in S, so
+    1<=Nord(a,n) and a**Nord(a,n) = 1 (mod n); thus u|Nord(a,n).
+    Now 1<=u implies ((a**u = 1 (mod n)) IFF  u|u).  Since u|u,  a**u = 1 (mod n).
+    Thus, u is in S.  So also Nord(a,n)|u.  
+    Thus, u = Nord(a,n)
+**  (10) if m | n and gcd(a,n) = 1, then Nord(a,m) | Nord(a,n).
+   Proof: If d | a and d | m, then d|a and d|n, so d = 1.  Thus, gcd(a,m) = 1.
+   So a**Nord(a,b) = 1 (mod n).
+   Now n | (a**Nord(a,n) - 1).  Thus m | (a**Nord(a,n) - 1).  Thus a**Nord(a,n) = 1 (mod m).
+   Now by (9), Nord(a,m) | Nord(a,n)
+**  (11) gen(a,n) = {a**k (mod n), 1<=k} This makes sense for 1<=a, 1<=n.
+**  (12) Define: pr(a,n) iff 1<=a, 1<=n, gcd(a,n) = 1 and and gen(a,n) = G.
+      Close to this Author's definition of "a is a primitive root modulo n"
+**  (13) If p is prime and a in relprimes(p), then Nord(a,p)|(p-1).
+   Proof: NCard(relprimes(p)) = ephi(p) = p-1, since p is a prime.
+   Now apply (9a).
+**  (14) 1<=m<n, gcd(a,n) = 1 => Nord(a**m,n) = Nord(a,n)/gcd(m,Nord(a,n)).
+  Let b = a**m. Let d = Nord(a,n). Let  e = Nord(b,n). Let g = gcd(m,d).
+  Let f = Quo(d,g).  To show: e = f.
+  Apply 9b:  If 1<=n and gcd(b,n) = 1 and 1<=f and 
+             A(k, 1<=k implies ((b**k = 1 (mod n)) IFF  f|k))  implies  f = e
+   Now gcd(b,n) = 1  (since G is a group)
+   Now g|d, so 1<=f and d = g*f and gcd(g,f) = 1.
+   Assume 1<=k.  
+   b**k = (a**m)**k = a**(m*k).
+   Let M = Quo(m,g).  So 1<=M and m = g*M and gcd(g,M) = 1.
+*** Suppose b**k = 1 (mod n). To show f|k.
+       So d | m*k.
+     g*f | m*k so g|m*k.  
+     So g*f | g*M*k ; so f|M*k.    
+       Claim gcd(f,M) = 1 
+         Suppose x|f and x|M.  To show: x = 1
+         d = g*f and gcd(g,f) = 1.
+         m = g*M and gcd(g,M) = 1.
+            Thus, x|d and x|m.  Thus x|g
+            Since x|f and x|g, then x|gcd(g,f), so x|1,  so x = 1.
+        Thus, gcd(f,M) = 1.
+    So, f|k.
+*** Suppose f|k. To show: b**k = 1 (mod n). 
+    Say q = Quo(f,k), so k = f*q.
+    m*k = m*f*q = g*M*f*q = (g*f)*(M*q) = d*(M*q)
+    Thus, d|m*k.  Hence, a**(m*k) = 1 (mod n)
+    Thus b**k = 1 (mod n)
+*** Now, by 9b, f = e.
+  
+**  (15) If p is prime and a in relprimes(p) and f = X**d - 1 (mod p), then roots(f) = {a**1,...,a**Nord(a,p)}
+   Let d = Nord(a,p).  So d | (p-1).
+   The ring R = {0,1,...,p-1} with (mod p) operations is a Field, since p is a prime.
+   Let f = polynomial X**d - 1 in (mod p).
+   Since R is a field, NCard(roots(f)) <= d.
+   Consider T = {a**k, 1<=k<=d}.  By definition of Nord(a,p), T has 'd' elements,
+   Further if 1<=k, then (a**k)**d = a**(k*d) = 1 (mod p) (see (9)).
+   Thus T is subset of roots(f).  Thus NCard(roots(f)) = d (and T = Roots(f))
+
+**  (16) if p is prime and a in relprimes(p), then ephi(Nord(a,p)) = NCard({b in relprimes(p) and Nord(b,p) = Nord(a,p)})
+   Let T = {b in relprimes(p) and Nord(b,p) = Nord(a,p)}   
+   Let d = Nord(a,p).  
+   To show ephi(d) = NCard(T).
+   Recall ephi(d) = NCard(relprimes(d)).
+   
+   Choose 1<=m<=d and set b = a**m and e = Nord(b,p).
+   Let g = gcd(m,d).
+   By (14), e = d/g.  Thus, e = d Iff g = 1 Iff m in relprimes(d)
+
+   Thus, the formula m -> a**m defines a function F from relprimes(d) to T.
+   And F is a bijection.
+   Thus NCard(relprimes(d)) = NCard(T). QED.
+**  (17) If p is prime and a in relprimes(p) and Nord(a,p) = p-1, then Nord(a,p**2) is p-1 or p*(p-1).
+     Set d = Nord(a,p**2). 
+     a is in relprimes(p**2). NCard(relprimes(p**2)) =  p*(p-1).
+     So d | p*(p-1).
+     Apply (10): if p | p**2 and gcd(a,p**2) = 1, then Nord(a,p) | Nord(a,p**2)
+     So, Nord(a,p)|d.  So, by assumption, (p-1)|d.
+     Let q = Quo(d,p-1).  Thus d = (p-1)*q.
+     So q | p.  Since p is prime, either q=1 or q=p.
+     So either d=(p-1) or d = (p-1)*p.
+**  (18) If p is prime and 2<p and pr(a,p), then either pr(a,p**2) or pr(a+p,p**2)
+    By assumption, a in relprimes(p) and Nord(a,p) = p-1.
+    NCard(relprimes(p**2)) = ephi(p**2) = p*(p-1).
+    Now a is in relprimes(p**2). And also gcd(a+p,p**2) = 1, so a+p is in relprimes(p**2).
+    Thus, pr(a,p**2) iff Nord(a,p**2) = p*(p-1)
+      and pr(a+p,p**2) Iff Nord(a+p,p**2) = p*(p-1)
+    If Nord(a,p**2) = p*(p-1), then we are done.
+    Suppose Nord(a,p**2) != p*(p-1).  To show: Nord(a+p,p**2) = p*(p-1).
+      By (17), Nord(a,p**2) is p-1 or p*(p-1).
+      Thus Nord(a,p**2) = (p-1).  So a**(p-1) = 1 (mod p**2)
+      Apply (10): if p | p**2 and gcd(a+p,p**2) = 1, then Nord(a+p,p) | Nord(a+p,p**2)
+      Since a+p = a (mod p), also Nord(a+p,p) = Nord(a,p) = p-1.
+      Also by (17)(? NOT QUITE!) Nord(a+p,p**2) is p-1 or p*(p-1)
+      TO SHOW: (a+p)**(p-1) != 1 (mod p**2)
+       Apply Binomial theorem: If 2<=n, then (a+b)**n = a**n + n*(a**(n-1))*b (mod b**2) with n = p-1, b = p
+       By assumption, 2<p, so 2<=(p-1).
+       So (a+p)**(p-1) = a**(p-1) + (p-1)*(a**((p-1)-1))*p (mod p**2)
+                      = a**(p-1) - (a**(p-2))*p (mod p**2)
+                      = 1 - (a**(p-2))*p (mod p**2)
+       Thus, (a+p)**(p-1) = 1 (mod p**2) implies (a**(p-2))*p = 0 (mod p**2)
+        implies p | a**(p-2). But, we assume gcd(a,p) = 1, so does not divide any power of 'a'.
+        Thus, (a+p)**(p-1) != 1 (mod p**2).
+**  (19) If p is prime and 2<p and 3<=n and pr(a,p**(n-1)), then pr(a,p**n)
+    Since pr(a,p**(n-1)), a is in relprimes(p**(n-1)).
+     So 1<=a and gcd(a,p**(n-1))=1, and also a<p**(n-1).
+     Nord(a,p**(n-1)) = NCard(relprimes(p**(n-1))) 
+                      = ephi(p**(n-1)) = (p-1)*(p**(n-2)) since p is prime.
+    To show pr(a,p**n), require
+     (a) 1<=a<=p**n : true since a<p**(n-1) and p**(n-1) < p**n.
+     (b) gcd(a,p**n) = 1: true since p is prime and gcd(a,p) = 1.
+     (c) Nord(a,p**n) = ephi(p**n)  THIS IS TO BE SHOWN
+     Since p is prime, ephi(p**n) = (p-1)*(p**(n-1)), so we must show
+         Nord(a,p**n) = (p-1)*(p**(n-1))
+    Let d = Nord(a,p**n).   Note a**d = 1 (mod p**n). 
+*** (a1) IF a**((p-1)*(p**(n-2))) != 1 (mod p**n), then  d = ephi(p**n)
+    By (9a), d | ephi(p**n); and ephi(p**n) = (p-1)*(p**(n-1))
+     so d | (p-1)*(p**(n-1))
+    Apply (10):  if p**(n-1) | (p**n) and gcd(a,p**n) = 1, then Nord(a,p**(n-1)) | Nord(a,p**n)
+     so Nord(a,p**(n-1)) | d.
+    So, (p-1)*(p**(n-2)) | d | (p-1)*(p**(n-1))
+       Let x = p**(n-2). So (p-1)*x | d | (p-1)*x*p. So Quo(d,(p-1)*x) | p
+       So Quo(d,(p-1)*x) is 1 or p, since p is prime.
+       If Quo(d,(p-1)*x) = 1, whence d = (p-1)*(p**(n-2)) We must show this case does not occur.
+       If Quo(d,(p-1)*x) = p, whence d = (p-1)*(p**(n-1)) In this case, the conclusion d=ephi(p**n) is proved.
+   Let us show that a**((p-1)*(p**(n-2))) != 1 (mod p**n), as this implies d != (p-1)*(p**(n-2))
+*** (b1) Choose k so that a**((p-1)*(p**(n-3))) = 1 + k*(p**(n-2))
+    Apply Euler's theorem (6a) :
+     We have 1<=p**(n-2) and 1<=a and gcd(a,p**(n-2)) = 1,
+      conclude:  a**ephi(p**(n-2)) = 1 (mod p**(n-2))
+      Now, Since 3<=n, 1<=n-2. So ephi(p**(n-2)) = (p-1)*(p**(n-3))
+     So a**((p-1)*(p**(n-3))) = 1 (mod p**(n-2))
+     Thus we may choose k as indicated.
+*** (b2) p does not divide k
+   Suppose a**((p-1)*(p**(n-3))) = 1 (mod p**(n-1)).
+    Then  Nord(a,p**(n-1))  <= (p-1)*(p**(n-3))   (by defn of Nord)
+    So  (p-1)*(p**(n-2)) <= (p-1)*(p**(n-3)) 
+    But 0 <= n-3 < n-2, so p**(n-3)  < p**(n-2)
+    And 0 < (p-1), so (p-1)*(p**(n-3))  < (p-1)*(p**(n-2))
+    Having arrived at a contradiction, we may conclude
+   a**((p-1)*(p**(n-3))) != 1 (mod p**(n-1))
+    Thus 1 + k*(p**(n-2)) != 1 (mod p**(n-1))
+    Thus k*(p**(n-2)) != 0 (mod p**(n-1))
+    Thus p**(n-1) does not divide k*(p**(n-2))
+    Thus p*(p**(n-2)) does not divide k*(p**(n-2))
+    Thus 
+  p does not divide k.
+*** let lhs = (a**((p-1)*(p**(n-3))))**p = a**((p-1)*(p**(n-2)))
+  Take pth power of  = 1 + k*(p**(n-2)):
+   Set lhs = (a**((p-1)*(p**(n-3))) ** p) = (1 + k*(p**(n-2)))**p  = rhs
+   u = ((p-1)*(p**(n-3))), v = p
+   lhs = (a**((p-1)*(p**(n-3))) ** p) = (a**u)**v = a**(u*v)
+   x = p-1, y = p**(n-3).   u = x*y.   u*v = (x*y)*v = x*(y*v)
+   y*v = (p**(n-3))*p = p**((n-3)+1) = p**(n-2)
+   u*v = (p-1)*(p**(n-2))
+  lhs = (a**((p-1)*(p**(n-3))) ** p) = a**((p-1)*(p**(n-2)))
+*** (a2) if lhs != 1 (mod p**n), then d = ephi(p**n).
+
+   From (a1) and previous formula.
+*** (a3) let rhs = (1 + k*(p**(n-2)))**p = 1 + k*(p**(n-1)) (mod (k**2)*(p**(2*(n-2))))
+  By Binomial theorem: If 2<=n, then (a+b)**n = a**n + n*(a**(n-1))*b (mod b**2)
+  Let b = k*(p**(n-2)). 
+   example n = 3.  p**(3-2) = p**1 = p
+           b = k*p,  b**2 = k*k*(p**2) = k*k*(p**(n-1))
+   example n = 4. p**(4-2) = p**2
+           b = k*p, b**2 = k*k*(p**4) = k*k*(p**n)
+  Since 2 <= p,
+   rhs = (1+b)**p = 1**p + p*(1**(p-1))*b (mod b**2) = 1 + p*b (mod b**2)
+       = 1 + k*(p**(n-1)) (mod b**2)
+   Now b**2 = k*k*(p**(n-2))*(p**(n-2)) = (k**2)*(p**(2*(n-2)))
+    
+   rhs = 1 + k*(p**(n-1)) (mod (k**2)*(p**(2*(n-2))))
+*** (b3) if rhs != 1 (mod p**n), then d = ephi(p**n)
+   lhs = rhs from (b1). Then result follows from (a2)
+*** (b4) if 4<=n, then rhs != 1 (mod p**n)
+    Assume 4<=n.
+    Assume rhs = 1 (mod p*n) and search for contradiction.
+    Thus p**n | (rhs - 1)
+    Now there is j so that 
+    rhs - 1 = k*(p**(n-1)) + j*(k**2)*(p**(2*(n-2)))
+     n <= 2*(n-2) IFF n <= n+n-4) Iff 0 <= n-4 Iff 4<=n
+    So, assuming 4<=n, we have n <= 2*(n-2)
+    so p**n | p**(2*(n-2))
+    Thus p**n | k*(p**(n-1))  Thus p|k, contradicting (b2).
+    Thus rhs != 1 (mod p*n).
+*** (b5) if 4<=n, then d = ephi(p**n)
+    From (b3) and (b4)
+*** (b6) if n = 3, then d = ephi(p**n)
+    We must show rhs != 1 mod (p**3).
+
+  By Binomial theorem: if 3<=n, then (a+b)**n = a**n + C(n,1)*(a**(n-1))*(b**1) + C(n,2)*(a**(n-2))*(b**2) + (mod b**3)
+  b = k*(p**(n-2))  Apply with n = p. We are assuming 3<=p.
+  rhs =   (1+b)**p = 1**p + C(p,1)*(1**(p-1))*(b**1) + C(p,2)*(1**(p-2))*(b**2) + (mod b**3)
+             = 1 + p*b + C(p,2)*(b**2) + j*(b**3) (for some j).
+  b = k*p.
+             = 1 + k*(p**2) + C(p,2)*(k**2)*(p**2) + j*(k**3)*(p**3)
+  C(p,2) = (p*(p-1))/2  and is divisible by p. So there is u
+             = 1 + k*(p**2) + u*(k**2)*(p**3) + j*(k**3)*(p**3)
+  Thus rhs = 1 + k*(p**2) (mod p**3).
+  Now if rhs = 1 (mod p**3), then k*(p**2) = 0 (mod p**3), so p**3 | k*(p**2), so p | k, which is not true by (b2).
+  Thus rhs != 1 (mod p**3)
+***
+*** (b7) if 3<=n, then d = ephi(p**n)  THIS COMPLETES THE PROOF
+    from (b5) and (b6)
+
+**  (20) If p is prime and 2<p and pr(a,p) and pr(a,p**2) and 2<=n, then pr(a,p**n)
+    Induction on n:  A(n, 2<=n implies pr(a,p**n))
+    Case n = 2. Assumed
+    Inductive assumption: pr(a,p**n)
+    To show: pr(a,p**(n+1)).
+    Proof: Apply (19).
+**  (21) if p is prime and 2<p and pr(a,p) and pr(a+p,p**) and 2<=n, then pr(a+p,p**n)
+   Similar to proof of (20)
+** (22) If p is prime and 2<p and 1<=n, then there is 'a' so that pr(a,p**n).
+   Case n=1. We have proved that there is 'a' so that pr(a,p).
+   Case n=2. We know there is 'a' so that pr(a,p). By (18), either pr(a,p**2) or pr(a+p,p**2)
+   case n<=2. Use case n=2 and (20) and (21).
+* if gcd(m,n) = 1 and 3<=m and 3<=n, then relprimes(m*n) is not cyclic
+   if 3<=n, then ephi(n) is even (proved above)
+   Similarly, ephi(m) is even; also ephi(m*n) is even. 
+   Let q = Quo(ephi(m*n),2). so ephi(m*n) = 2*q
+    Suppose a is in relprimes(m*n). We will show a**q = 1 mod (m*n).
+    Thus Nord(a,m*n) <= q < ephi(m*n), so a is NOT a primitive root of m*n.
+   Now show a**q = 1 (mod m*n).
+   Now, gcd(a,m*n) = 1, so also gcd(a,m) = 1 and gcd(a,n) = 1.
+   Also, ephi(m*n) = ephi(m)*ephi(n).
+   Let j = Quo(ephi(m,2)) and k = Quo(ephi(n),2). So
+   ephi(m) = 2*j, ephi(n0 = 2*k.
+   2*q = ephi(m*n) = ephi(m)*ephi(n) = 2*j*2*k 
+   q = (2*j)*k = ephi(m)*k
+   Similarly, q = ephi(n)*j
+   Apply Euler theorem to m:  Since gcd(a,m) = 1, a**ephi(m) = 1 (mod m)
+   Thus, a**q = (a**(ephi(m)))**k = 1**k (mod m) = 1 (mod m).
+   Similarly, a**q = 1 (mod n)
+   Now, m | (a**q - 1) and n | (a**q - 1).
+   Since gcd(m,n) = 1,  we conclude m*n | (a**q - 1).
+   Thus, a**q = 1 (mod m*n).
+   As above, we now know that a is not a cyclic generator of relprimes(m*n).
+   Thus, relprimes(m*n) is not cyclic.
+
+
+* if p is prime, 2<p and q is prime, 2<q p!=q and p*q | k, then relprimes(k) is not cyclic.
+  We can write k = (p**j)*k, where 1<=j, 3<=k, gcd(p,k)=1. Now previous theorm applies.
+* if p is prime, 2<p, 2<=j and 1<=k, then relprimes((2**j)*(p**k)) is not cyclic.
+  3<=2**j, 3<=p**k and gcd(2**j,p**k) = 1. Conclusion follows from prior theorem.
+* numerical experiments for primitive roots of p**k (2<p a prime)
+** Case p = 3
+  primitive roots of 3 = {2}.  
+  r = 2.  
+  k = 2.  r**(p-1) = 2**2 = 4 != 1 (mod 3**2).  2 is primroot of 3**2.
+  k = 3   r**(p*(p-1)) = 2**(3*2) = 64 = 10 (mod 3**3)
+          ephi(3**3) = 18.  eltOrder(2,3**3) = 18. So 2 is prim root of 3**3)
+  k = 4   r**((p*p)*(p-1) = 2**(18) (mod 3*3*3*3) = 28.  ephi(3**4) = 54.  eltOrder(2,3**4) = 54
+  So, 2 appears to be a primitive root for 3**k for all 2<=k
+** Case p = 5
+  primitive roots of 5 = {2,3}
+  r = 2. 2**(5-1) = 2**4 = 16 != 1 (mod 5**2).  ephi(5**2) = 20. eltOrder(2,5**2) = 20.  2 a prim root of 5**2
+   k = 3  r**(p*(p-1)) = 2**(5*4) = 76 (mod 5**3) ephi(5**3) = 100. eltOrder(2,5**3) = 100. 2 a prim root of 5**3
+   k = 8  r**((p**6)*(p-1) = 2**((5**6)*4) = 234376 != 1 (mod 5**8).  ephi(5**8) = 312500. eltOrder(2,5**8) = 312500. 2 pr of 5**4
+  r = 3. 3**(5-1) = 81 = 6 != 1 (mod 5**2)  eltOrder(3,5**2) = 20. So 3 is prim root of 5**2
+   k = 8 r**((p**6)*(p-1) = 3**((5**6)*4) = 78126 != 1 (mod 5**8).  ephi(5**8) = 312500. eltOrder(3,5**8) = 312500.
+  So, 3 appears to be a primitive root for 5**k for all 2<=k.
+** Case p = 7
+  primitive roots of 7 = {3,5}
+  r = 3. r**(p-1) = 3**6 (mod 7**2) = 7 (mod 7**2) != 1 so expect 3 to be a primitive root of 7**k for 2<=k.
+  r = 5. r**(p-1) = 5**6 (mod 7**2) = 43 (mod 7**2) != 1, so expect 5 to be a prim root of 7**k for 2<=k
+  Validated that 3 and 5 are among the primitive roots for 7**4
+** Case p = 11
+  primitive roots of 11 = {2,6,7,8}
+  For all prim roots r, r**10 != 1 (mod 11**2)
+  r = 2. r**(p-1) = 2**10 (mod 11**2) = 7 (mod 7**2) != 1 so expect 3 to be a primitive root of 7**k for 2<=k.
+** Case p = 13
+  primitive roots of 13 = {2,6,7,11}
+  For all prim roots r, r**12 != 1 (mod 13**2)
+** Case p = 29  PR(14,29), not PR(14,29**2), PR(14+29,29**2)
+  primitive roots of 29 = [2, 3, 8, 10, 11, 14, 15, 18, 19, 21, 26, 27]
+  Case r = 14
+  eltOrder(14, 29**2) = 28 (= (p-1))
+  ephi(29**2) = 812
+  So r is NOT a primitive root for 29**2
+  r1 = r+29 = 43 eltOrder(43,29**2) = 812, so r1 IS a primitive root of 29**2.
+** Case p = 37
+  primitive roots of 37 = [2, 5, 13, 15, 17, 18, 19, 20, 22, 24, 32, 35]
+  Case r = 18
+  eltOrder(18,37**2) = 36  ephi(37**2) = 1332.  Thus 18 is NOT a primitive root of 37**2
+  r1 = 18 + 37 = 55. eltOrder(55,37**2) = 1332.  so, r1 IS a primitive root of 37**2
+  Also eltOrder(55,37**3) = 49284   = ephi(37**3), so r1 is a primitive root of 37**3
+  Also eltOrder(55,37**4) = 1823508 = ephi(37**4), so r1 is a primitive root of 37**4
+  
+* ==================================================================
+* indexes in finite groups
+Following http://ramanujan.math.trinity.edu/rdaileda/teach/f20/m3341/lectures/lecture17_slides.pdf
+http://ramanujan.math.trinity.edu/rdaileda/index.shtml
+http://ramanujan.math.trinity.edu/    San Antonio, Texas.
+* ==================================================================
+* Gauss Lemma on primitive polynomials.
+** polynomial terminology
+   Z[X] polynomials with integer coefficients
+   Q[X] polynomials with rational coefficients
+   Maybe think of a polynomial f in R (R[X]) as a sequence f:N->R
+   such that f(k) = 0 for all sufficiently large k.
+   Then deg[f] = Max(S(k, k in N and f(k)!=0)). 
+    When f has no non-zero coefficients, then deg[f] could be taken as 0.
+   f = 0 means f(k) = 0 for all k in N.
+** multiplication
+   For k in N, the set of all pairs (i,j) in N such that i+j = k.
+   f*g(k) = sum(f(i)*f(j) for i+j = k.
+** content(f) defined for f in Z[X] with f != 0
+   Let support(f) = {k for k in N and f(k) != 0}
+    support(f) is a finite, non-empty subset of Z.
+   Let nonzerodivisors(f) = {d in N such that A(k in support(f), d|f(k))}.
+     nonzerodivisors(f) is a finite subset of N
+     1 is in nonzerodivisors(f), so nonzerodivisors(f) is not empty set.
+   Then content(f) = NMax(nonzerodivisors(f)).
+** Theorem 1: divisors(a*b) = {d*e where d|a and e|b}. 
+   Assume all numbers (a,b, etc.) are positive integers.
+   Let lhs(a,b) = divisors(a*b).
+   Let rhs(a,b) = {d*e where d|a and e|b}
+   Let thm(a,b) = lhs(a,b) == rhs(a,b).
+*** 0. rhs(a,b) is subset of lhs(a,b)
+   If d|a and e|b, then d*e|a*b
+    x = Quo(a,d), y = Quo(b,e). Thus, a = d*x, b = e*y.
+    a*b = (d*x)*(e*y) = (d*e)*(x*y)
+   Thus, d in rhs(a,b) implies d in lhs(a,b).
+*** 1. thm(a,b) iff thm(b,a)
+   clear, sincie multiplication is commutative.
+*** 2. thm(1,b)
+   lhs(1,b) = divisors(1*b) = divisors(b)
+   rhs(1,b) = {d*e where d|1 and e|b}
+            = {1*e where e|b}  since d|1 iff d = 1
+            = {e where e|b} = divisors(b)
+*** 3. if p is prime, then thm(p,b).
+   Let x in lhs(p,b). So, x | p*b.
+   We search for d,e where d*e = x and d|p and e|b
+**** Case p|x.
+    Choose d = p.  So d|p.
+    Choose e = Quo(x,p), so x = p*e = d*e.
+    Thus, p*e | p*b.  Since 1<=p, thus e|b.
+**** Case p does not divide x.
+    Thus, gcd(p,x) = 1.
+    Choose y so p*b = x*y.
+    Now p | x*y.
+    Thus, p|y (Corollary to Euclid lemma on divisors)
+    Let z = Quo(y,p), so y = p*z.
+    Thus p*b = x*y = x*(p*z) = p*(x*z).
+    Thus, b = x*z. So, x|b.
+    Choose d = 1, e = x.
+    Thus, d*e = 1*x = x, and d|p, and e|b.
+    QED.
+***
+   Case x|p.
+    Take d = x and e = 1.  Then d*e = x*1 = x, and d|p ane e|b.
+   Case x does NOT divide p.
+    Then x = 1 or x = p, since p is prime.
+    Case x = 1. 
+     Take d = 1 and e = 1. 
+    Case x = p.
+     Take d = x and e = 1
+   Assume a,b in N*.
+   lhs = divisors(a*b), rhs = {d*e where d|a and e|b}.
+   Clearly,  rhs is a subset of lhs.
+   Prove lhs is a subset of rhs by induction on a.
+   Case a = 1. divisors(1*b) =  divisors(b)
+    {d*e where d|1 and e|b} = {1*e where e|b} = divisors(b).
+   Let x in lhs.  So x | a*b. to find d,e so x = d*e where d|a and e|b.
+   Case x a prime.
+    Let p be a prime p divide a*b, where p is a prime.
+    Then p|a or p|b (Euclid lemma corollary).
+    Case p|a. Choose d = p and e = 1. Then d*e = p and d*e in rhs.
+    Case p|b. Choose d = 1 and e = p. Then d*e = p and d*e in rhs.
+   Case x !=1 and x not a prime.
+   Let p be a prime divisor of x: p|x.
+   x = p*q for 1<q<x.
+   a*b = x*y for some y.
+   a*b = p*q*y.  
+   Now let a be arbitrary, but a!=1 and a not a prime.
+    Choose a prime p so p|a.
+    Choose y so a = p*y.
+   Assume 1 < a and for any 1<=c<a, divisors(c*b) = {d*e where d|c and e|b}.
+   Case where a is a prime p.
+   lhs = divisors(p*b). rhs = {d*e where d|p and e|b}.
+   Let r | p*b. So p*b = r*x for some x in N.
+   Not p divides r*x.
+*** 4. if p is prime, then thm(a,p).
+*** 5. thm(a,b)
+   By induction on a.  Case a=1 is by (2.)
+   Assume A(c, c<a implies thm(c,b)) (inductive hypothesis)
+   To show lhs(a,b) is subset of rhs(a,b).
+****   Case a = 1 is Case 2.
+****   Case a != 1.
+     There is a prime p such that p|a.
+     Let c = Quo(a,p). So a = p*c, so a*b = (p*c)*b = p*(c*b)
+     Let x in lhs(a,b), so x|a*b, so x|p*(c*b).
+     By 3., there are y,z so that x = y*z and y|p and z|c*b.
+     By inductive hypothesis, 
+      there are u and v so that z = u*v and u|c and v|b.
+      Now, x = y*z = y*(u*v) = (y*u)*v.
+      And y*u | p*c = a.
+      take d = y*u and e = v.  Then
+     d*e = x, and d|a and e|b.  
+     Thus, x in rhs(a,b).
+    This completes the inductive step.
+**** Now thm(a,b) by induction
+**** Case x = 1 
+     Take d = 1 and e = 1.
+**** Case x != 1.  
+    Thus p|a*b.
+     Thus, p|a or p|b.
+** Theorem 2: gcd(a*b,a*c) = a*gcd(b,c).
+  Let lhs(a,b,c) = gcd(a*b,a*c).
+  Let rhs(a,b,c) = a*gcd(b,c).
+  Let thm(a,b,c) = lhs(a,b,c) == rhs(a,b,c).
+*** 1. rhs(a,b,c)|lhs(a,b,c).
+  Let h = gcd(b,c). Thus h|b and h|c. So a*h|a*b and a*h|a*c.
+  Thus, a*h | lhs(a,b,c).
+*** 1a. if lhs(a,b,c) <= rhs(a,b,c), then thm(a,b,c)
+*** 2. Case a=1
+  obvious
+*** 3. if p is a prime, then thm(p,b,c).
+  Let L = gcd(p*b,p*c), h = gcd(b,c), R = p*h. 
+  To show L = R.
+  By 1., R <= L.
+  Now L|p*b. So by Theorem 1, choose u,v and L = u*v and u|p and v|b.
+  And L|p*c. So by Theorem 1, choose x,y and L = x*y and x|p and y|c.
+  Since p is prime, u=1 or u=p.
+  Since p is prime, x=1 or x=p.
+  It remains to show L <= R.
+**** case u=1 and x=1 (lead to contradiction)
+  L = u*v = 1*v = v. So, L|b.
+  L = x*y = 1*y = y. So, L|c.
+  Thus, L<=h.  Since 1<p, h< R.  Thus, L<R. Thus L<=R. 
+  NOTE: Since we know R<=L, we conclude L = R.  But this contradicts L<R.
+**** case u=1 and x=p.
+  L = u*v = 1*v = v.   Thus, L|b.
+  L = p*y. 
+  Thus, p*y | p*b, so y|b.
+  Since also y|c, we conclude y<=h.
+  Thus p*y <= p*h.  i.e., L <= R.
+**** case u=p and x=1
+  L = x*y = 1*y = y.
+  L = p*v.  Thus v|L, so v|y.  Thus v|c.
+  Since also v|b, we conclude v<=h.
+  Thus, p*v <= p*h, so L <= R.
+**** case u=p and x=p
+  L = p*v
+  L = p*y
+  Thus, v = y.
+  Thus v <= h.
+  Thus p*v <= p*h.   
+  Thus L <= R.
+*** thm(a,b,c) inductive step on a.
+  case a=1 by lemma 2.
+  case a is a prime, by lemma 3
+  a !=1, a not a prime, p a prime divisor of a.
+  Let p be a prime divisor of a. So a = p*q,
+  note 1< q < a
+  Let L = lhs(a,b,c), R = lhs(a,b,c) = a*gcd(b,c)
+  L = lhs(p*q,b,c) = gcd((p*q)*b, (p*q)*c) =
+     gcd(p*(q*b),p*(q*c)) = by Lemma 3
+     p*gcd(q*b,q*c))
+  gcd(q*b,q*c) = q*gcd(b,c)  by inductive hypothesis, since q < a.
+  L = p*(q*gcd(b,c)) = (p*q)*gcd(b,c) = R.
+*** thm(a,b,c)
+ By induction.
+** Theorem 3: gcd1
+   We want to apply Theorem 2 to the statement content(a*f) = a*content(f) .
+   Prepare to introduce an alternate definition of content.
+   Extend gcd to gcd1
+    gcd1(a,0) = gcd1(0,a) = a, for a in N. Note gcd1(0,0) = 0.
+    gcd1(a,b) = gcd(a,b) for a!=0 and b!=0.
+    Note gcd1(a,b) = gcd1(b,a).
+    
+*** Theorem 3a: gcd1(x*a,x*b) = x*gcd1(a,b).
+    Proof: 
+     case x = 0.  
+      gcd1(0*a,0*b) = gcd1(0,0) = 0
+      0*gcd1(a,b) = 0
+     case x != 0 and a = 0
+      lhs = gcd1(x*0,x*b) = gcd1(0,x*b) = x*b
+      rhs = x*gcd1(0,b) = x*b
+     case x != 0 and b = 0.
+      lhs = gcd1(x*a,0) = x*a
+      rhs = x*gcd1(a,0) = x*a
+     case x!=0 and a!=0 and b != 0
+      Since x*a!=0 and x*b != 0,
+      lhs = gcd(x*a,x*b) 
+       Now =  x*gcd(a,b) By Theorem 1
+          = rhs since a!=0 and b!=0
+*** gcdseq(s) for a non-empty sequence s in N.
+   recursively define gcdseq(s) by
+   gcdseq(s)[0] = s[0]
+   for n in N, gcdseq(s)[n+1] = gcd1(gcdseq(s)[n],s[n+1])
+*** theorem 3b: gcdseq(x*s) = x*gcdseq(s) (equality of sequences in N)
+   Let G(s) = gcdseq(s) for any sequence
+   for n in N, G(s)[n+1] = gcd1(G(s)[n],s[n+1])
+   Let t = x*s, sequence.
+     So t[n] = x*s[n] for all n.
+   L = G(t), R = x*G(s) To show L[n] = R[n] for all n.
+   Proof by induction
+****  n = 0
+    L[0] = (x*s)[0] = x*s[0]
+    G(s)[0] = s[0]
+    R[0] = x*s[0]
+****  Inductive hypothesis. n in N, L[n] = R[n].  
+   L[n] = G(t)[n] 
+   R[n] = x*G(s)[n]
+   Assume L[n] = R[n].
+   To prove L[n+1] = R[n+1].
+   L[n+1] = G(t)[n+1]  = gcd1(G(t)[n],t[n+1])
+      = gcd1(G(t)[n],x*s[n+1])
+      = gcd1(x*G(s)[n], x*s[n+1])  inductive hypothesis
+      = x*gcd1(G(s)[n], s[n+1])  Theorem 3a
+   R[n+1] = x*G(s)[n+1] = x*gcd1(G(s)[n],s[n+1])
+   Thus, L[n+1] = R[n+1]
+****
+*** theorem 3c: if 0<=k<m, gcdseq(X^m)[k] = 0
+   Proof by induction on k.
+   s = X^m.
+**** Case k = 0.
+   k < m. 
+   gcdseq(s)[0] = s[0] 
+   s[0] = 0
+   Thus, gcdseq(s)[k] = 0
+**** inductive step
+  Assume gcdseq(s)[k] = 0 and that k+1 < m.
+  gcdseq(s)[k+1] = gcd1(gcdseq(s)[k],s[k+1])
+                 = gcd1(0,s[k+1])  by inductive hypothesis
+                 = s[k+1]  by definition of gcd1
+                 = 0  since k+1 < m and s = X^m.
+*** theorem 3d: gcdseq(X^m)[m] = 1.
+    0<=m.  s = X^m.  s[m] = 1
+**** case m = 0.
+    gcdseq(s)[m] = gcdseq(s)[0] = s[0] = s[m] = 1.
+**** case m != 0.
+   k = m-1.  k is in n and 0<=k<m.
+   and k+1 = m.
+   gcdseq(s)[m] = gcdseq(s)[k+1] = gcd1(gcdseq(s)[k],s[k+1])
+         = gcd1(0,s[k+1]) by theorem 3c.
+         = s[k+1] 
+         = s[m]
+         = 1.
+*** theorem 3e: if A(k, 0 <= k <= n implies s[k] = t[k]), then gcdseq(s)[n] = gcdseq(t)[n].
+    Proof by inductions, since gcdseq is defined recursively
+
+*** TODO content(f,n) = Max({d: d in N, A(k,k<=n => d | f[k])}) DEFINITION
+    Suppose A(k,f[k] != 0)
+    gcdseq(f,n) = gcdseq(f)[n] (new term)
+    Claim: A(k, k<=n => d|f[k]) => d|content(f,n).
+    induction on n.
+    n = 0
+     A(k, k<=0 => d|f[k])
+     d|s[0].
+     content(f,0) = s[0]
+     Thus, d|content(f,0).
+    Let s = {d: A(k,k<=n => d|f[k])}
+    s is not-empty, finite set by assumption.
+    Let c = content(f,n) = Max(s), by defn. 
+    Thus c is in s.
+
+    Let S = {d: A(k,k<=n+1 => d|f[k])}
+    Let C = content(f,n+1) = Max(S)
+    S is a finite, non-empty set by assumption.
+    Thus C is in S.
+<<<< START HERE.
+    Inductive hypothesis: A(d,if d is in s, then d|c)
+    To prove: A(d,if d is in S, then d|C)
+    
+     Now, A(k, k<=n => d|f[k]) (since n < n+1)
+     So d|c. 
+     Also, d|s[n+1].
+     Thus, d | gcd(content(f,n),s[n+1])
+    In particular,  A(k, k<=n+1 => C|f[k]). So, 
+     C | g =gcd(c,s[n+1])
+    Let g = gcd(c,s[n+1])
+    So C | g.
+    Hence, C <= g.
+    Now, g|c and g|s[n+1].
+     Also, A(k, k<=n => c|f[k]) (by defn of c)
+     Thus A(k, k<=n+1 => g|f[k])
+     Thus g<=C (by definition of C).
+
+    Thus A(k,k<=n => c|f[k])
+    And inductive hypothesis is that d|c.
+    Thus, A(k,k<=n => d|f[k]).
+    and also d|s[n+1]. Thus we may conclude d <= C, though not useful.
+    
+    Claim: content(f,n) = gcdseq(f,n) 
+    Induction on n.
+    n = 0.
+     content(f,0) = Max({d: d in N, A(k,k<=0 => d | f[k])})
+                  = Max({d: d in N, d|s[0]})
+                  = s[0] since, by assumption, s(0) != 0.
+     gcdseq(f,n) = s[0] by definition
+   Case 1:
+    content(f,1) = Max({d: d in N, A(k,k<=1 => d | f[k])})
+                 = Max({d: d|s[0] and d|s[1]})
+                 = gcd(s[0],s[1])  by definition of gcd
+                 = gcdseq(f,0+1)  by definition of gcdseq
+    content(f,2) = Max({d: d in N, A(k,k<=2 => d | f[k])})
+                 = Max({d: d|s[0] & d|s[1] & d|s[2]})
+    gcdseq(f,1+1) = gcd(gcdseq(f,1),s[2])
+                  = gcd(content(f,1),s[2]) Inductive step above.
+                  = Max({d: d|content(f,1) and d|s[2]})
+    f             
+   Inductive hypothesis: content(f,n) = gcdseq(f,n).
+   lhs =  content(f,n+1), rhs = gcdseq(f,n+1).
+   To show: lhs = rhs.
+   rhs = gcd(gcdseq(f,n),s[n+1]) by defn of gcdseq.
+       = gcd(content(f,n),s[n+1]) by inductive assumption.
+   lhs = content(f,n+1) = Max({d: d in N, A(k,k<=n+1 => d | f[k])})
+       = Max({d: A(k,k<=n => d|f[k]) and d|s[n+1]})
+    
+*** theorem 4b: content(f) = gcdseq(f)[deg(f)] if f is non-zero polynomial in N.
+   Assume f != zero. Let m = deg(f).
+   Assume A(k, if k<=m then f[k] != 0) Special assumption.
+   Trivial for m = 0.
+   Inductive hypothesis.
+   Let deg(f) = m+1
+   Let g[k] = f[k] for 0<=k<=m  and g[m+1] = 0.
+   By induction, content(g) = gcdseq(g)[m].
+   and gcdseq(f)[m+1] = gcd(gcdseq(f)[m],f[m+1])
+   Also, gcdseq(g)[m] = gcdseq(f)[m] by theorem 3e.
+   Can we prove content(f) = gcd(gcdseq(f)[m],f[m+1]) ?
+*** theorem 4b: content(f) = gcdseq(f)[deg(f)] if f is non-zero polynomial in N.
+  Assume all polynomials have coefficients in N.
+  Assume 
+   C(f) = content(f)
+   G(f) = gcdseq(f)
+   To show C(f) = G(f)[deg(f)].
+**** Case deg(f) = 0.
+   Then, support(f) = {0}, and f[0] != 0.
+   So nonzerodivisors(f) = divisors(f[0])
+   So C(f) = NMax(divisors(f[0])) = f[0], since f[0] != 0.
+   G(f)[0] = f[0] by definition of gcdseq
+   Thus C(f) = G(f)[deg(f)]
+**** inductive step
+   inductive hypothesis: For all h with deg(g) <= m, C(g) = G(g)[m].
+   Given f with deg(f) = m+1, to show C(f) = G(f)[m+1].
+   Define  g by 
+    g[m+1] = 0, A(k, k != m+1 g[k] = f[k]).
+   g is clearly a sequence, but g might be the zero polynomial (e.g. f=X^(m+1))
+   Now g is also a polynomial, and deg(g) <= m.
+   So C(g) = G(g)[m] by inductive hypothesis.
+   Also support(f) = Union(support(g),list(m)) and m not in support(g).
+**** case g is the zero polynomial.
+   n = m+1. = deg(f)
+   Let a = f[n]
+   f = a*(X^n), since g is zero. and a != 0.
+
+   support(g) = 0 (empty set), so support(f) = list(n)
+   So nonzerodivisors(f) = {d in N so that d|a} 
+   C(f) = NMax(nonzerodivisors(f)) = a.
+   On the other hand, 
+   G(f) = gcdseq(a*(X^n)) = a*gcdseq(X^n)  by theorem 3b
+   G(f)[n] = (a*gcdseq(X^n))[n] = 
+        = a*(gcdseq(X^n)[n]) = 
+        = a*1 by theorem 3d
+        = a
+   Thus G(f)[n] = C(f)
+**** case g is not the zero polynomial.
+   d is in nonzerodivisors(f) IFF d is in nonzerodivisors(g) AND d | f[m+1].
+   Now C(f) = NMax(nonzerodivisors(f)) and
+   C(g) = NMax(nonzerodivisors(g)).
+   Choose d in nonzerodivisors(f). Thus d in nonzerodivisors(g).
+   So d <= C(g).
+   C(g) is in nonzerodivisors(g).
+   
+   Now f(k) = g(k) for 0<=k<=m.
+   Thus G(f)[m] = G(g)[m].
+   So 
+** content(a*f) = a*content(f) if a in Z, 0 < a and f in Z[X], f != 0.
+  Proof: Let d = content(f) and e = content(a*f). To show e = a*d.
+  nonzero(a*f) = {a*x for x in nonzero(f)}.
