@@ -1,0 +1,156 @@
+/* scans/WILScan/web/main.css */
+#titlediv {
+ position: absolute;
+ left: 5px;
+ top : 1px;
+ width: 310px;
+ height: 100px;
+ background-color: white;
+ font-weight: bold;
+ font-size: 120%;
+ color: maroon;
+}
+#citationdiv {
+ position: absolute;
+ left: 5px;
+ top : 110px;
+ width: 310px;
+ height: 500px;
+ background-color: white;
+/*  overflow:auto; */
+}
+#keydiv {
+ position: absolute;
+ left: 5px;
+ top: 5px;
+ width: 150px;
+}
+#key {
+ position: absolute;
+ left: -3px;
+}
+#translitdiv {
+ position: absolute;
+ right: 5px;
+ top: 5px;
+}
+#botleftdiv {
+ position: absolute;
+ left: 5px;
+ /* top : 50px; 10-09-2020 */
+ top : 75px;
+ height: 450px;
+ width: 310px;
+ background-color: white;
+ overflow:auto;
+ white-space: nowrap;
+}
+.wordlist {
+ background-color: white;
+}
+.curword {
+ font-weight: bold;
+}
+#rightpane {
+ position: absolute;
+ left: 325px;
+ top : 1px;
+ right: 5px;
+ height: 97%;
+ background-color: white;
+ overflow:auto;
+}
+#rightpanebk {
+ position: absolute;
+ left: 325px;
+ top : 1px;
+ right: 5px;
+ height: 97%;
+ background-color: white;
+/* overflow:auto; */
+}
+#hilitediv {
+position:absolute;
+background-color: yellow;
+opacity:0.3;
+/* this is for ie. it gives firefox css error, but works fine otherwise */
+filter:alpha(opacity=30); 
+left: 0%; width: 1%; /* these will be updated by js */
+top: 15%; height: 1%;
+}
+.prevpage {position: fixed; right: 25px; top: 10px;}
+span.lplink {
+/*
+	color: #00008b;
+*/
+}
+
+span.lplink:visited {
+/*
+	color: #36648b;
+*/
+        color: red;
+}
+span.lplink:hover {
+	background-color: #ffffcc;
+	color: #000033;
+}
+
+span.lplink:active {
+	color: #4876ff;
+}
+
+.san {
+/* font-style: italic; */
+ color: #0000ff;
+}
+.section {
+ color: #ff0000;
+}
+#pagenav {
+ position: fixed; 
+ left: 335px; /* 10 more than for rightpane */
+ top: 10px;  
+/*  width: 30px; height: 30px; */
+  background-color: #EBF4FD;
+}
+
+span.nppage1 {
+  font-weight: bold;
+  font-size: 24pt;
+opacity:0.3;
+/* this is for ie. it gives firefox css error, but works fine otherwise */
+filter:alpha(opacity=30); 
+/*background-color: #DBE4ED;  */
+}
+
+a.nppage:link {
+        text-decoration: none;
+}
+a.nppage:visited {
+        text-decoration: none;       
+}
+a.nppage:hover {
+	color: #FF0000;
+        text-decoration: none;
+        cursor: pointer;
+}
+span.iddisp {
+ color : blue;
+ font-size: larger;
+}
+a.iddisp1:link {
+        text-decoration: none;
+}
+a.iddisp1:visited {
+        color: #00FF00;   
+        text-decoration: none;    
+}
+a.iddisp1:hover {
+	color: #FF0000;
+        text-decoration: none;
+        cursor: pointer;
+}
+a.iddisp1:active {
+	color: #4876ff;
+}

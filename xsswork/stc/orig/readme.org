@@ -1,0 +1,190 @@
+scans/STCScan/readme.org
+begun: 09-08-2008
+ejf:
+* TODO ideas from Odile Caujolle re stc advanced search (Sep/Oct 2013)
+** October 8, 2013
+Looking within the body of the text is a very good feature. the point is that it should be looking for (when it is looking for deva as the prefix) for " deva"  that is "blank followed by deva" (and also a beginning of paragraph deva) because at present , take your example of in the 'deva' search, we see aDidEvata among the selected headwords since 'devatam' (which starts with 'deva') it is °daiva- nt. id.; °devatam not daiva- nt. id.; devatam that is, in an unshortened form, adhidaiva- nt. id.; adhi-devatam. where you can see that neither daiva nor deva is a prefix. That search would work very well for the infix or substring search.
+ 
+when I search for deva as a prefix, I see: daivata
+[L=10950] [p= 327,2] 	daivata- nt. (m.) = devatā- (qqf. coll.); ifc. ayant pour
+divinité, révérant comme un dieu.
+which is relevant; here I can learn that daivata- nt. (m.) = devatā- .
+But I suppose this kind of cases are rare.
+in the example of deva as a prefix, all the other cases are cases where deva  is the second word of the compound (and where to explain that it is written °deva)
+** October 9, 2013
+About the Advanced Search page, Stchoupak,
+
+Looking in the body of the text might be a suggestion of mine; that suggestion was made to bring as searchable words those words which were not reachable despite of being in the dictionary, for example devāgāra, devātman, devendra etc, all these words are not reachable directly, you must look at deva for them; this is something you understand when using the semidigitalzed version but with the full digital version, it is not so obvious, as you don't know how things go in the dictionary.
+
+Anyway, in the prefix search in the French Advanced Search page, looking at devA, the page deva will appear as a link in the left and that is a very good thing, because this page (deva) have many words begining with devA like devāgāra- devātithi- devātideva- devātman- devātma-śakti- devādhipa- devānīka- devānucara- devāntaka- devānna- devāpi- devāyatana- etc.
+
+the rest, that which is a problem, due to the disregard of "°" I already told you yesterday.
+
+** October 20, 2013
+In the future I think I would like to write a help for the Stch advanced search. Even if you did not yet add a condition to properly treat the words begining with "°" (needed in the exact and prefix searches), I find it usefull and did use it now I understood how it works.
+Actually looking at it right now, I notice that I still don't understand (others than exact and prefix searches): I looked for manas:
+exact and prefix search gives the same words (56), that is not surprising me (because it is disgarding the "°" at the begining of a "word" (°manas-) and wrongly understanding it as a word begining with manas; adiina is one of these words (that is the translation of adiinamanas is given under adiina, after the form "°manas-"), but then I looked at "suffix" to see how it is treated, and I dont see adiina in the headwords list as it should.
+It seems you have implemented the condition to disgard those words begining with ° in the suffix search instead implementing it in the exact and prefix searches. I have check all the list given out from a manas suffix search and I see it gives out saMprahRS (hk) for example which contains  -°manas- in it (which is good) but not adiina (and all those words) which contains °manas- in it (note there is no - in the begining) so I concluded that it is because of the - (that "word" begins by "-" and not by "°") that it was not disregarded. It is from that fact that I inferred you implemented the disgard condition of those words begining with ° in the suffix search instead implementing it in the exact and prefix searches. Am I right?
+
+** October 17, 2013 - remember words
+one thing I find missing is that we cannot go back to the last (or the 3 or 4 latest)  word searched. This feature I have on my (not in line) French and French and English dictionaries, but it probably can be implemented online also.  I miss this often when I'm looking for a compound as I often want to go back to the first word when I am looking to the second. That is just an idea for the future.
+
+* how to update the 2008 version
+ejf notes of 11-25-2011.
+1.  To make a change to the keys used by the web application
+ http://www.sanskrit-lexicon.uni-koeln.de/scans/STCScan/web/index.php
+ a. work in directory STCScan/mysql/stcscan
+ b. edit file updinp.txt
+    Make the needed corrections to the keys  (the transliteration is HK)
+    save the file
+ c. sh init.sh
+   This shell command loads updinp.txt into mysql table stcscan
+
+
+---------------------------------------------------------------------
+* 2013  (May 13, 2013)
+This is a new version of Stchoupak dictionary. 
+stc.txt was provided by TM
+stc
+* May 13, 2013
+mv STCScantif ../MWEScan
+Probably, the STCScantif directory can be removed, since apparently there
+are now jpg versions of the scan in directory STCScanjpg.
+The move was made because the STCScan mount point was almost full.
+The moved files took up 5% of the MWEScan mount point
+* web/sqlite
+php make_xml.php  constructs stc.xml from stc.txt and stchw2.txt.
+php make_input.php   constructs input.txt from stc.xml
+sh redo.sh  construct sqlite database stc.sqlite from input.txt
+
+Discussion:
+Uses stchw2.txt to get the slp form of the keys.
+Structure is same as that of monier:  key,lnum,data
+the 'lnum' is simply sequence number within stchw2.
+The data are all the lines from stc.txt for the given key, separated
+by <br/> character. Further this data is transformed into xml. 
+In order to have valid xml, several adjustments to the coding of stc.txt
+are required:
+** coding changes from stc.txt to stc.xml
+  $x = preg_replace("|<P>|","",$x);
+  $x = preg_replace("|\xe7|","<xe7/>",$x); // small letter c with cedilla, s4
+  $x = preg_replace("|\xc7|","<xc7/>",$x); // captial letter c with cedilla, S4
+  $x = preg_replace("|\xb0|","<xb0/>",$x); // &deg;
+  $x = preg_replace("|\xa4|","<xa4/>",$x); // &curren;
+  $x = preg_replace("|\xab|","<xab/>",$x); // left double quote
+  $x = preg_replace("|\xbb|","<xbb/>",$x); // right double quote
+  $x = preg_replace("|\xd7|","<xd7/>",$x); // multiplication sign
+  $x = preg_replace("|\x9c|","<x9c/>",$x); // oe coeur lowercase oe ligature x153 latin extended-A
+  $x = preg_replace("|\xe6|","<xe6/>",$x); // ae lowercase ae ligature
+  $x = preg_replace("|\x91|","<x91/>",$x); // left single quote x2018
+
+  // sometimes <F>...</F> is seen, sometimes just <F>
+  $x = preg_replace("|</F>|","<FEND/>",$x);
+  $x = preg_replace("|<F>|","<F/>",$x);
+
+
+* web/sqlite/check_as_edit.txt
+php check_as.php 
+writes check_as.txt, which consists of all letter-number character sequences
+in stc.txt that should be converted to Roman characters.
+This file is used to modify web/utilities/transcoder/as_roman.xml.
+It also brings to attention a couple of likely coding errors in stc.txt, namely:
+check_as.txt was edited to check_as_edit.txt.  Many likely errors from stc.txt
+were noted.
+
+* ----------------------------------------------
+* BELOW ARE OLD Old notes	
+11-25-2011 (ejf)Old notes.  Probably irrelevant to Stchoupak. Probably should be deleted.
+
+NOTE: In following, All directories are relative to scans/WILScan/
+
+* work directory
+ See log.txt therein for more details.
+
+** wilson-c.txt
+ Digitization file from Malten.
+ This is a copy of the  file 
+  /http/docs/update/wilwork/orig/Wilson-c
+
+** Starting from wilson-c.txt, file wilson-d1.txt is created so each
+   line corresponds to a paragraph, coded as follows:
+00101<P>.{#a#}<166> The first letter of the alphabet, and inherent short vowel.
+00102<P>.{#a#}<166> ind. <164>1 No, not. <164>2 A privative, prohibitive, and diminutive particle. <164>3 An interjection of pity.  It also implies degrees of difference, and similarity.  As a negative prefix to words beginning with a vowel, {#a#} is changed to {#an,#} as {#a#} and {#anta#} form {#ananta.#}
+00103<P>.{#a#}<166> m. ({#aH#}) A name of VISHN4U.
+
+** wilson-d2b.txt is constructed from wilson-d1.txt for purpose of
+  locating the position on the page of the paragraphs:
+00100<PH>.<d>0004-04-004-082</d>{#a#}
+00101<P>.<d>0065-01-005-082</d>{#a#}
+00102<P>.<d>0274-04-009-082</d>{#a#}
+
+
+* mysql/wilscan/
+ see log.txt therein
+ mysql table 'wilscan' from file work/wilson-d2b.txt mentioned above.
+
+* WILScanpng/
+ scanned images of pages of Wilson's dictionary, in png format, 
+uploaded by Malten
+
+* WILScanjpg/
+ scanned images in jpg format (see next for conversion from WILScanpng/)
+
+* convert2jpg.pl (current directory)
+ perl convert2jpg.pl
+ converts files from WILScanpng/ to WILScanjpg/ using imagemagick program.
+ Also, decreases the image size.
+
+* wilfiles.txt
+  File containing the file names of the scanned images. Used
+  by form.php and by mysql/wilscanfiles/
+
+wil-001-a
+wil-002-ahas
+wil-003-akulIna
+
+* index.php, form.php,empty.html
+ index.php is main entry point for web application:
+ http://www.sanskrit-lexicon.uni-koeln.de/scans/MDScan/index.php?sfx=jpg
+ link from home page (Wilson scanned images).
+ NOTE: Can also use sfx=png.
+
+* mysql/wilscanfiles/
+ see log.txt therein
+ mysql table 'wilscanfiles' from file wilfiles.txt.
+ The 'key' is the number '001','002',etc and the data is 'wil-001-a', etc.
+ Used in Wilson scan dictionary lookup (see web/ directory).
+
+* web/
+Contains alpha version of web application in index.php
+for lookup up a word in the scanned edition. User enters a word,
+and sees a display of the appropriate scanned page, with the word 
+highlited on the page.  The positional information from the highlighting
+uses the mysql table 'wilscan'; the mysql table 'wilscanfiles' is also used.
+There are currently various imperfections in the display:
+1. line position and column position are estimated from the wilson-d1.txt
+file.  These estimates are sometimes inaccurate, but usually not by a lot.
+2. The scanned images themselves are irregular (e.g., sometimes tilted),
+so the line position, even if accurate, would still not highlight properly.
+3. There are no column breaks indicated in the wilson-d1.txt file; these
+also have to be estimated.
+
+* update/
+  See log.txt therein for more details.
+  This File begins with work/wilson-d1.txt, which is copied to
+  wilson-begin.txt
+  and constructs, by a possibly multistep process,
+  wilson-corrected.txt.  This file has the same overall format, but
+  changes are made which are deemed 'corrections', typically to misspellings.
+
+* mysql/wilson/
+  creates table wilson from input file update/wilson-corrected.txt
+
+* disp1/
+ This contains web appliction displaying 'wilson' table.
+
+* ODDITIES:
+ a. rmma  , e.g., karma
+ b. roots:
+   - tapa = MW tap
+   - rama(au, u) auramu = MW ram

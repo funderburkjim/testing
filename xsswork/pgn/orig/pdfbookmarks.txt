@@ -1,0 +1,420 @@
+t001:tit_001.pdf:SKIP
+t002:tit_002.pdf:SKIP
+t003:tit_003.pdf:SKIP
+t004:tit_004.pdf:SKIP
+t005:tit_005.pdf:SKIP
+t006:tit_006.pdf:SKIP
+t007:tit_007.pdf:Title
+t008:tit_008.pdf:Publisher
+t009:tit_009.pdf:Dedication
+t010:tit_010.pdf:SKIP
+t011:tit_011.pdf:Foreward, vii
+t012:tit_012.pdf:Foreward, viii
+t013:tit_013.pdf:Foreward, ix
+t014:tit_014.pdf:SKIP
+t015:tit_015.pdf:Contents
+t016:tit_016.pdf:Contents
+t017:tit_017.pdf:Preface, xiii
+t018:tit_018.pdf:Preface, xiv
+t019:tit_019.pdf:Preface, xv
+t020:tit_020.pdf:SKIP
+t021:tit_021.pdf:Coded Abbreviations, xvii
+t022:tit_022.pdf:Coded Abbreviations, xviii
+t023:tit_023.pdf:Coded Abbreviations, xix
+t024:tit_024.pdf:Coded Abbreviations, xx
+t025:tit_025.pdf:Coded Abbreviations, xxi
+t026:tit_026.pdf:Coded Abbreviations, xxii
+t027:tit_027.pdf:Code of Inscriptions, xxiii
+t028:tit_028.pdf:Code of Inscriptions, xxiv
+t029:tit_029.pdf:Code of Inscriptions, xxv
+t030:tit_030.pdf:Code of Inscriptions, xxvi
+t031:tit_031.pdf:Transliteration Table, xxvii
+t032:tit_032.pdf:India in Gupta Age, Map
+001:pg_001.pdf:Personal Names
+002:pg_002.pdf:blank
+003:pg_003.pdf:Prologue, 3
+004:pg_004.pdf:Prologue, Vedic Period
+005:pg_005.pdf:Prologue, Sutra Period
+006:pg_006.pdf:Prologue, Sutra Period
+007:pg_007.pdf:Prologue, Sutra Period
+008:pg_008.pdf:Prologue, Smrti Period
+009:pg_009.pdf:Prologue, Nibandha Period
+010:pg_010.pdf:Prologue, Nibandha Period
+011:pg_011.pdf:Prologue, References
+012:pg_012.pdf:Prologue, References
+013:pg_013.pdf:Prologue, References
+014:pg_014.pdf:Gupta Kings and Queens
+015:pg_015.pdf:Gupta Kings and Queens
+016:pg_016.pdf:Gupta Kings and Queens
+017:pg_017.pdf:Gupta Kings and Queens
+018:pg_018.pdf:Gupta Kings and Queens
+019:pg_019.pdf:Gupta Kings and Queens
+020:pg_020.pdf:gupta
+021:pg_021.pdf:candragupta
+022:pg_022.pdf:candragupta
+023:pg_023.pdf:govindagupta
+024:pg_024.pdf:skandagupta
+025:pg_025.pdf:kumAragupta
+026:pg_026.pdf:narasiMhagupta
+027:pg_027.pdf:kumAragupta
+028:pg_028.pdf:vEnyagupta
+029:pg_029.pdf:BAnugupta
+030:pg_030.pdf:dattadevI
+031:pg_031.pdf:SrIvadevI
+032:pg_032.pdf:REFERENCE
+033:pg_033.pdf:REFERENCE
+034:pg_034.pdf:REFERENCE
+035:pg_035.pdf:REFERENCE
+036:pg_036.pdf:REFERENCE
+037:pg_037.pdf:REFERENCE
+038:pg_038.pdf:Feudatory Kings, gaRapati
+039:pg_039.pdf:nAgadatta
+040:pg_040.pdf:ugrasena
+041:pg_041.pdf:DanyavizRu
+042:pg_042.pdf:vizRugopa
+043:pg_043.pdf:devarAja
+044:pg_044.pdf:nIlarAja
+045:pg_045.pdf:rAja
+046:pg_046.pdf:viSvavarmman
+047:pg_047.pdf:kubera
+048:pg_048.pdf:harizeRa
+049:pg_049.pdf:gopasvAmin
+050:pg_050.pdf:cirAtadatta
+051:pg_051.pdf:revajjasvAmin
+052:pg_052.pdf:SaRqaka
+053:pg_053.pdf:REFERENCE
+054:pg_054.pdf:REFERENCE
+055:pg_055.pdf:REFERENCE
+056:pg_056.pdf:Local Officers, cCandaka
+057:pg_057.pdf:vargga
+058:pg_058.pdf:skandapAla
+059:pg_059.pdf:praBucandra
+060:pg_060.pdf:narandin
+061:pg_061.pdf:viBudatta
+062:pg_062.pdf:DftivizRu
+063:pg_063.pdf:kumAradeva
+064:pg_064.pdf:gozWaka
+065:pg_065.pdf:Sivanandin
+066:pg_066.pdf:DruvaSarman
+067:pg_067.pdf:vatsaBawwi
+068:pg_068.pdf:REFERENCE
+069:pg_069.pdf:REFERENCE
+070:pg_070.pdf:REFERENCE
+071:pg_071.pdf:HouseHolders, acyutaBadra
+072:pg_072.pdf:mAtfdAsa
+073:pg_073.pdf:Badradeva
+074:pg_074.pdf:piccakuRqa
+075:pg_075.pdf:BavanATa
+076:pg_076.pdf:himaSarmman
+077:pg_077.pdf:SukkraSarmman
+078:pg_078.pdf:jayasvAmin
+079:pg_079.pdf:BAskara
+080:pg_080.pdf:kaNkuwi
+081:pg_081.pdf:vElinaka
+082:pg_082.pdf:kumAraBUti
+083:pg_083.pdf:kapila
+084:pg_084.pdf:REFERENCE
+085:pg_085.pdf:REFERENCE
+086:pg_086.pdf:REFERENCE
+087:pg_087.pdf:Brahmanas, devaBawwa
+088:pg_088.pdf:amaradatta
+089:pg_089.pdf:amftadeva
+090:pg_090.pdf:duqika
+091:pg_091.pdf:haritrAta
+092:pg_092.pdf:Bawwisoma
+093:pg_093.pdf:jitasena
+094:pg_094.pdf:pArSva
+095:pg_095.pdf:udicAryya
+096:pg_096.pdf:bali
+097:pg_097.pdf:kfzRa
+098:pg_098.pdf:sagara
+099:pg_099.pdf:yuDizWira
+100:pg_100.pdf:REFERENCE
+101:pg_101.pdf:REFERENCE
+102:pg_102.pdf:REFERENCE
+103:pg_103.pdf:Women, dAmasvAminI
+104:pg_104.pdf:padmAvatI
+105:pg_105.pdf:SAmAQyA
+106:pg_106.pdf:CONCLUSION Part One
+107:pg_107.pdf:CONCLUSION
+108:pg_108.pdf:CONCLUSION
+109:pg_109.pdf:CONCLUSION
+110:pg_110.pdf:CONCLUSION
+111:pg_111.pdf:CONCLUSION
+112:pg_112.pdf:CONCLUSION
+113:pg_113.pdf:CONCLUSION
+114:pg_114.pdf:CONCLUSION
+115:pg_115.pdf:CONCLUSION
+116:pg_116.pdf:CONCLUSION
+117:pg_117.pdf:REFERENCE
+118:pg_118.pdf:REFERENCE
+119:pg_119.pdf:REFERENCE
+120:pg_120.pdf:REFERENCE
+121:pg_121.pdf:REFERENCE
+122:pg_122.pdf:REFERENCE
+123:pg_123.pdf:REFERENCE
+124:pg_124.pdf:REFERENCE
+125:pg_125.pdf:Tribes, ABIra
+126:pg_126.pdf:ABIra
+127:pg_127.pdf:ArjunAyanas
+128:pg_128.pdf:AwavikarAja
+129:pg_129.pdf:dEvaputra
+130:pg_130.pdf:dEvaputra
+131:pg_131.pdf:hURa
+132:pg_132.pdf:hURa
+133:pg_133.pdf:hURa
+134:pg_134.pdf:hURa
+135:pg_135.pdf:kAkas
+136:pg_136.pdf:kotas
+137:pg_137.pdf:kurus
+138:pg_138.pdf:licCavis
+139:pg_139.pdf:licCavis
+140:pg_140.pdf:licCavis
+141:pg_141.pdf:licCavis
+142:pg_142.pdf:licCavis
+143:pg_143.pdf:madrakas
+144:pg_144.pdf:madrakas
+145:pg_145.pdf:madrakas
+146:pg_146.pdf:mAlava
+147:pg_147.pdf:mAlava
+148:pg_148.pdf:mAlava
+149:pg_149.pdf:mlecCa
+150:pg_150.pdf:mlecCa
+151:pg_151.pdf:mlecCa
+152:pg_152.pdf:muruRqas
+153:pg_153.pdf:muruRqas
+154:pg_154.pdf:prArjUnas
+155:pg_155.pdf:puzyamitras
+156:pg_156.pdf:puzyamitras
+157:pg_157.pdf:sAhAnuzAhi
+158:pg_158.pdf:zAhi
+159:pg_159.pdf:sEMhalaka
+160:pg_160.pdf:sEMhalaka
+161:pg_161.pdf:Saka
+162:pg_162.pdf:Saka
+163:pg_163.pdf:Saka
+164:pg_164.pdf:Saka
+165:pg_165.pdf:Saka
+166:pg_166.pdf:sanakAnIka
+167:pg_167.pdf:vAhlika
+168:pg_168.pdf:vAhlika
+169:pg_169.pdf:vAhlika
+170:pg_170.pdf:bAhlika
+171:pg_171.pdf:yODeya
+172:pg_172.pdf:yODeya
+173:pg_173.pdf:yODeya
+174:pg_174.pdf:yODeya
+175:pg_175.pdf:yODeya
+176:pg_176.pdf:CONCLUSION
+177:pg_177.pdf:CONCLUSION
+178:pg_178.pdf:CONCLUSION
+179:pg_179.pdf:REFERENCE
+180:pg_180.pdf:REFERENCE
+181:pg_181.pdf:REFERENCE
+182:pg_182.pdf:REFERENCE
+183:pg_183.pdf:REFERENCE
+184:pg_184.pdf:REFERENCE
+185:pg_185.pdf:REFERENCE
+186:pg_186.pdf:REFERENCE
+187:pg_187.pdf:REFERENCE
+188:pg_188.pdf:REFERENCE
+189:pg_189.pdf:REFERENCE
+190:pg_190.pdf:REFERENCE
+191:pg_191.pdf:REFERENCE
+192:pg_192.pdf:REFERENCE
+193:pg_193.pdf:REFERENCE
+194:pg_194.pdf:REFERENCE
+195:pg_195.pdf:REFERENCE
+196:pg_196.pdf:REFERENCE
+197:pg_197.pdf:REFERENCE
+198:pg_198.pdf:REFERENCE
+199:pg_199.pdf:REFERENCE
+200:pg_200.pdf:REFERENCE
+201:pg_201.pdf:REFERENCE
+202:pg_202.pdf:REFERENCE
+203:pg_203.pdf:REFERENCE
+204:pg_204.pdf:REFERENCE
+205:pg_205.pdf:REFERENCE
+206:pg_206.pdf:REFERENCE
+207:pg_207.pdf:REFERENCE
+208:pg_208.pdf:REFERENCE
+209:pg_209.pdf:Place Names, rAzwra
+210:pg_210.pdf:devarAzwra
+211:pg_211.pdf:Bukti
+212:pg_212.pdf:Bukti
+213:pg_213.pdf:vizaya
+214:pg_214.pdf:gayA
+215:pg_215.pdf:KAdpAra
+216:pg_216.pdf:kowwvarza
+217:pg_217.pdf:kfmilA
+218:pg_218.pdf:lAwa
+219:pg_219.pdf:vEvya
+220:pg_220.pdf:pradeSa
+221:pg_221.pdf:deSa
+222:pg_222.pdf:ErAvatagorAjya
+223:pg_223.pdf:AdyapaTa
+224:pg_224.pdf:pur
+225:pg_225.pdf:ajapura
+226:pg_226.pdf:candrApura
+227:pg_227.pdf:indrapura
+228:pg_228.pdf:kartfpura
+229:pg_229.pdf:krIpura
+230:pg_230.pdf:pAwaliputra
+231:pg_231.pdf:pAwaliputra
+232:pg_232.pdf:pAwaliputra
+233:pg_233.pdf:pizwapura
+234:pg_234.pdf:nagara
+235:pg_235.pdf:nOyoga
+236:pg_236.pdf:vAsaka
+237:pg_237.pdf:ayoDyA
+238:pg_238.pdf:ISvaravAsaka
+239:pg_239.pdf:vinDyAwavI
+240:pg_240.pdf:BadrapuzkarakagrAma
+241:pg_241.pdf:gozAwapuYjaka
+242:pg_242.pdf:gulmaganDikA
+243:pg_243.pdf:kAnteqadakagrAma
+244:pg_244.pdf:sAwuvanASramaka
+245:pg_245.pdf:eraRqapalla
+246:pg_246.pdf:gohAlI
+247:pg_247.pdf:palASAwwapArSvika
+248:pg_248.pdf:vihAra
+249:pg_249.pdf:budDAkakzetra
+250:pg_250.pdf:KaRqaviquggurikakzetra
+251:pg_251.pdf:naKaddArccarikakzetra
+252:pg_252.pdf:sUryyakzetra
+253:pg_253.pdf:gaReSvaravitAlapuzkariRI
+254:pg_254.pdf:kAYcI
+255:pg_255.pdf:kAYcI
+256:pg_256.pdf:kASI
+257:pg_257.pdf:kosala
+258:pg_258.pdf:kowwUra
+259:pg_259.pdf:nepAla
+260:pg_260.pdf:pratyanta
+261:pg_261.pdf:veNgI
+262:pg_262.pdf:avaqara
+263:pg_263.pdf:AryAvartta
+264:pg_264.pdf:AryAvartta
+265:pg_265.pdf:kAkanAdabowa
+266:pg_266.pdf:vaNga
+267:pg_267.pdf:vaNga
+268:pg_268.pdf:REFERENCE
+269:pg_269.pdf:REFERENCE
+270:pg_270.pdf:REFERENCE
+271:pg_271.pdf:REFERENCE
+272:pg_272.pdf:REFERENCE
+273:pg_273.pdf:REFERENCE
+274:pg_274.pdf:REFERENCE
+275:pg_275.pdf:REFERENCE
+276:pg_276.pdf:REFERENCE
+277:pg_277.pdf:REFERENCE
+278:pg_278.pdf:REFERENCE
+279:pg_279.pdf:REFERENCE
+280:pg_280.pdf:REFERENCE
+281:pg_281.pdf:REFERENCE
+282:pg_282.pdf:REFERENCE
+283:pg_283.pdf:REFERENCE
+284:pg_284.pdf:REFERENCE
+285:pg_285.pdf:REFERENCE
+286:pg_286.pdf:REFERENCE
+287:pg_287.pdf:REFERENCE
+288:pg_288.pdf:REFERENCE
+289:pg_289.pdf:REFERENCE
+290:pg_290.pdf:REFERENCE
+291:pg_291.pdf:REFERENCE
+292:pg_292.pdf:REFERENCE
+293:pg_293.pdf:Names of Rivers,gaNgA
+294:pg_294.pdf:hacAtagaNga
+295:pg_295.pdf:padmA
+296:pg_296.pdf:sinDu
+297:pg_297.pdf:sudarSana
+298:pg_298.pdf:kElASa
+299:pg_299.pdf:Urjayat
+300:pg_300.pdf:vizRupada
+301:pg_301.pdf:REFERENCE
+302:pg_302.pdf:REFERENCE
+303:pg_303.pdf:REFERENCE
+304:pg_304.pdf:REFERENCE
+305:pg_305.pdf:CONCLUSION
+306:pg_306.pdf:CONCLUSION
+307:pg_307.pdf:APPENDICES
+308:pg_308.pdf:blank
+309:pg_309.pdf:APP. I, King Chandra
+310:pg_310.pdf:APP. I, King Chandra
+311:pg_311.pdf:APP. I, King Chandra
+312:pg_312.pdf:REFERENCE
+313:pg_313.pdf:REFERENCE
+314:pg_314.pdf:APP. II, Mother of Budhagupta
+315:pg_315.pdf:APP. II, Mother of Budhagupta
+316:pg_316.pdf:APP. III, "Paishtapuraka..."
+317:pg_317.pdf:APP. III, "Paishtapuraka..."
+318:pg_318.pdf:APP. IV, "Daivaputra..."
+319:pg_319.pdf:APP. IV, "Daivaputra..."
+320:pg_320.pdf:APP. IV, "Daivaputra..."
+321:pg_321.pdf:APP. V, Rivers of Junagarh
+322:pg_322.pdf:APP. V, Rivers of Junagarh
+323:pg_323.pdf:APP. V, Rivers of Junagarh
+324:pg_324.pdf:Bibliography, Agrawala
+325:pg_325.pdf:Bibliography, Levi
+326:pg_326.pdf:Bibliography, Sankalia
+327:pg_327.pdf:Bibliography, Adhya
+328:pg_328.pdf:Bibliography, Allan
+329:pg_329.pdf:Bibliography, Baidyanathan
+330:pg_330.pdf:Bibliography, Beveride
+331:pg_331.pdf:Bibliography, Bloomfield
+332:pg_332.pdf:Bibliography, Campbell
+333:pg_333.pdf:Bibliography, Chettiar
+334:pg_334.pdf:Bibliography, Dasgupta
+335:pg_335.pdf:Bibliography, Dutta
+336:pg_336.pdf:Bibliography, Gupta
+337:pg_337.pdf:Bibliography, Hoernle
+338:pg_338.pdf:Bibliography, Kantawala
+339:pg_339.pdf:Bibliography, Lalman
+340:pg_340.pdf:Bibliography, Law
+341:pg_341.pdf:Bibliography, Majumdar
+342:pg_342.pdf:Bibliography, Mirchandani
+343:pg_343.pdf:Bibliography, Narain
+344:pg_344.pdf:Bibliography, Pargiter
+345:pg_345.pdf:Bibliography, Puri
+346:pg_346.pdf:Bibliography, Raza
+347:pg_347.pdf:Bibliography, Sankalia
+348:pg_348.pdf:Bibliography, Shastri
+349:pg_349.pdf:Bibliography, Sircar
+350:pg_350.pdf:Bibliography, Sundara
+351:pg_351.pdf:Bibliography, Trivedi
+352:pg_352.pdf:Bibliography, Viyogi
+353:pg_353.pdf:Bibliography, Boyer
+354:pg_354.pdf:Bibliography, Dictionary
+355:pg_355.pdf:Bibliography, Kamasutra
+356:pg_356.pdf:Bibliography, Journals
+357:pg_357.pdf:Bibliography, 
+358:pg_358.pdf:Bibliography, 
+359:pg_359.pdf:Plates
+360:pg_360.pdf:List of Plates
+p001:plate_001.pdf:I, Allahabad Pillar
+p002:plate_002.pdf:II, Mathura Pillar
+p003:plate_003.pdf:III, Junagarh Inscription
+p004:plate_004.pdf:IV, Mehrauli Pillar
+p005:plate_005.pdf:V and VI Paharpur plates
+p006:plate_006.pdf:XI, XII, XIII Darmodarpur
+p007:plate_007.pdf:XIV, XV Darmodarpur
+p008:plate_008.pdf:XVII, XVII Nalanda, Mandasor
+p009:plate_009.pdf:XIX, XX Baigram
+p010:plate_010.pdf:XXI, Gunaighar
+361:pg_361.pdf:Index, A
+362:pg_362.pdf:Index, B
+363:pg_363.pdf:Index, D
+364:pg_364.pdf:Index, H
+365:pg_365.pdf:Index, L
+366:pg_366.pdf:Index, N
+367:pg_367.pdf:Index, N
+368:pg_368.pdf:Index, N
+369:pg_369.pdf:Index, N
+370:pg_370.pdf:Index, N
+371:pg_371.pdf:Index, N
+372:pg_372.pdf:Index, N
+373:pg_373.pdf:Index, N
+374:pg_374.pdf:Index, N
+375:pg_375.pdf:Index, O
+376:pg_376.pdf:Index, R
+377:pg_377.pdf:Index, T
+378:pg_378.pdf:Index, U
