@@ -296,15 +296,55 @@ Models modular arithmetic with the Zmod class. Also polynomials.
 * --------------------------------------
 * Theory
 * --------------------------------------
+* N set of natural numbers
+  informally, N = set of non-negative integers (0,1,2,3,...)
+  But I use a set-theoretic definition, very close to the defintion
+  proposed by John von Neuman. Ref: https://en.wikipedia.org/wiki/Natural_number
+  A natural number is a certain set.
+  The symbol '0' represents the empty set; the natural number named
+    'zero' in English IS this empty set.
+  list(a) is the singleton set containing 'a'. ['a' need not be a set]
+  next(s) = union(s,list(s))  (the successor set to 's'; 's' assumed a set)
+  'a' is an 'ordinal' iff 
+   'a' is a set
+   and every element of 'a' is a subset of 'a'
+   and for any two elements x and y of 'a', 
+     either (a) x=y, or (b) x is an element of y, or (c) y is an element of x.
+  'a' is a 'natural number' iff
+    'a' is an ordinal
+     and if 'b' is a non-empty subset of 'a', there is an element 'x' of 'b'
+         such that which is not an element of any element of 'b'
+    NOTE?: 'x' is the largest element of 'b'.
+  Finally, a form of the 'Axiom of Infinity' is used to assert the existence
+   of a set containing precisely all natural numbers; this set we call N.
+  The first few natural numbers are DEFINED 
+   0 = empty set, 1 = next(0), 2 = next(1), 3 = next(2).   
+  But no FORMAL naming process  (such as base 10) is used.
+  e.g., 1776 is not 'defined'.  
+* N* = set of positive integers (1,2,3,...)
+* addition, multiplcation, ordering N
+  All these have been defined by me 'pyfol4c/norm/06/06-prep.org'
+  But they are used informally, with common notation (+, *, <, <=, >, >=)
+  power also 2**3 or 2^3.
+  Subtraction is only defined partially. i.e. if a>=b then a-b is the
+  the element 'c' of N so that a = b+c.
+  In particular we try to avoid
+  talk about the sets Z of integers, Q of rationals, R of reals, C of complex.
+  We also use 'informal' definitions for rings (such as integers mod 5,
+  polynomials, etc.
 * Division algorithm in N: a = b*q + r, r<b
-  Assume 0<a, 0<b. 
+  Assume 0<=a, 0<b. 
   S := {x, x in N and b*x <= a}
-  b*0 = 0 < a, so 0 is in S. So S is not empty.
-  if x>a, then b*x > b*a >= 1*a = a, so x is Not in S.
-  Thus x in S implies x<=a.  Thus S is finite.
+  b*0 = 0 <= a, so 0 is in S. So S is not empty.
+  if x>a, then b*x > b*a since 0 < b;
+   and b*a >=  1*a = a, since b >= 1;
+   so b*x >a ;
+   so x is not in S.
+  thus if x is in S, then x<=a.  Thus S is a finite subset of N.
   set q = Max(S).  Then q is in S and x > q implies x is not in S.
-  b*q <= a.   There is r in N with b*q+r = a.
-  Suppose r >= b.  Then there is c in C with b+c = r
+  Thus, b*q <= a.
+  There is r in N with b*q+r = a.
+  Suppose r >= b.  Then there is c in N with b+c = r
    So a =  b*q + b+c = b*(q+1) + c.  Thus b*(q+1) <= a so q+1 is in S,
    contradicting that q is largest in S.
   Thus r<b.
@@ -314,46 +354,142 @@ Models modular arithmetic with the Zmod class. Also polynomials.
   Then b*q + r = b*u + v.  
   Suppose r < v (we will derive a contradiction).
    Choose d so r+d = v.  Also 0 < d and d<=v and d < b.
-   Then b*q + r = b*u + r + d, hence b*q = b*u + d. 
-   But now u < q, so there is x with u+x=q and 0 < x.
-   So b*u + d = b*q = b*(u+x) = b*u + b*x, so d = b*x.
-   Now 0 < x, since 0 < d. Thuse b*x >= b*1 = b.
-   Which implies d >= b, which contradicts that d < b.
+   Then b*q + r = b*u + r + d.
+   Hence b*q = b*u + d. 
+   So b*u < b*q, since 0 < d.
+   So u < q, since 0 < b.
+   So there is x with u+x=q and 0 < x.
+   So b*u + d = b*q = b*(u+x) = b*u + b*x;
+   So d = b*x.
+   Now 0 < x, since 0 < d. 
+   So x >= 1.
+   Thus b*x >= b*1 = b.
+   Thus d >= b, which contradicts that d < b.
   So !(r<v).
   Similarly, !(v<r).
   Thus, r = v.
-  Now b*q = b*u.  Since 1<=b, we conclude q = u.
-* Quo(a,b) and Rem(a,b)
-  For 1<=a and 1<=b in N.
-  a = b*Quo(a,b) + Rem(a,b),  
-  Quo(a,b) in N, Rem(a,b) in N, and Rem(a,b) < b.
-* N* and NdivQ(a,b) and divisors(n)
- N* = set of positive integers (1,2,3,...)
- NdivQ(a,b) Iff 1<=a and 1<=b and Rem(b,a) = 0.  
-   Thus b = b*Quo(b,a).  NOTATION a | b.
- divisors(n) = {d, 1<=d<=n and NdivQ(d,n)}.  
-   If n in N*, divisors(n) is a finite non-empty subset of N*.
-    divisors(n) always contains elements 1 and n.
-* gcd(a,b) defined in N*.
+  Now b*q = b*u.  
+  Thus q = u, since 0 < b.
+  Thus r=v and q=u, as was to be proved.
+* Quo(a,n) and Rem(a,n)
+  For 0<=a and 1<=n in N.
+  a = n*Quo(a,n) + Rem(a,n),  
+  Quo(a,n) in N, Rem(a,n) in N, and Rem(a,n) < n.
+  if 1<=n and  a = n*q + r and r<n, then q = Quo(a,n) and r = Rem(a,n)
+  Note: Quo(a,0) and Rem(a,0) are not defined. ("Can't divide by 0")
+** If a<n, then Quo(a,n) = 0 and Rem(a,n) = a
+  a = n*0 + a,  By uniqueness of quotient and remainder,  conclude
+  Quo(a,n) = 0 and Rem(a,n) = a.
+** If a in N, then Quo(Rem(a,n),n) = 0 and Rem(Rem(a,n),n) = Rem(a,n)
+   By previous applied to Rem(a,n), conclude
+   Quo(Rem(a,n),n) = 0 and Rem(Rem(a,n),n) = Rem(a,n)
+** Quo(c*n,n) = c and Rem(c*n,n) = 0
+   c*n = c*n + 0.  Conclusion follows from uniqueness of division
+** if a,b in N, then Rem(a+b,n) = Rem(Rem(a,n)+Rem(b,n),n)
+  a = n*q + r (0<=r<n), b = n*s + t (0<=t<n), a+b = n*u + v (0<=v<n)
+    q = Quo(a,n), r = Rem(a,n);  s = Quo(b,n), t = Rem(b,n);
+    u = Quo(a+b,n), v = Rem(a+b,n).
+  a+b = n*(q+s) + (r+t)
+  r+t = n*c + d (0<=d<n) also by div algorithm.  
+    c = Quo(r+t,n), d = Rem(r+t,n).
+  a+b = n*(q+s+c) + d, and 0<=d<n.
+  By uniqueness, q+s+c = u and d = v.
+  i.e., Rem(Rem(a,n) + Rem(b,n),n) = Rem(a+b,n).
+** if a,b in N, then Rem(a+b,n) = Rem(Rem(a,n)+b,n)
+  Rem(Rem(a,n)+b,n) = Rem(Rem(Rem(a,n),n)+Rem(b,n),n) =
+    = Rem(Rem(a,n)+Rem(b,n),n) 
+    = Rem(a+b,n).
+** if a,b in N, then Rem(a*b,n) = Rem(Rem(a,n)*Rem(b,n),n)
+    a = n*q + r (0<=r<n), b = n*s + t (0<=t<n), a*b = n*u + v (0<=v<n)
+    q = Quo(a,n), r = Rem(a,n);  s = Quo(b,n), t = Rem(b,n);
+    u = Quo(a*b,n), v = Rem(a*b,n).
+    Also, a*b = (n*q + r)*(n*s + t) = n*(q*n*s + q*t + r*s) + r*t.
+  So Rem(a*b,n) = Rem(n*(q*n*s + q*t + r*s) + r*t,n)
+                = Rem(Rem(n*(q*n*s + q*t + r*s),n) + Rem(r*t,n),n)
+                = Rem(0 + Rem(r*t,n),n)
+                = Rem(Rem(r*t,n),n)
+                = Rem(r*t,n) which is Rem(R(a,n)*Rem(b,n),n)
+** if a,b in N, then Rem(a*b,n) = Rem(Rem(a,n)*b,n) = Rem(a*Rem(b,n),n)
+   Rem(Rem(a,n)*b,n) = Rem(Rem(Rem(a,n),n)*Rem(b,n),n)
+                     = Rem(Rem(a,n)*Rem(b,n),n) 
+                     = Rem(a*b,n)
+   And similarly Rem(a*Rem(b,n),n) = Rem(a*b,n)
+* NdivQ(n,a) and divisors(n)
+ NdivQ(n,a) "n divides a" Iff 1<=n and 0<=a and Rem(a,n) = 0.  
+ NOTATION n | a.
+ if 0<n, then NdivQ(n,0)
+ if in(a,N) and in(n,N*),  then Iff(NdivQ(n,a), a = n*Quo(a,n))
+ Iff(NdivQ(n,a), And(in(n,N*), in(a,N) , E(q, a = n*q)))
+ divisors(n) = {d, 1<=d<=n and NdivQ(d,n)}.  No
+ If n in N*, then 
+  a. divisors(n) is a finite non-empty subset of N*.
+  b. divisors(n) contains elements 1 and n.
+
+* NgcdQ(a,b,d) 
+  "d is the greatest common divisor of a and b"
+  iff (NgcdQ(a,b,d), And
+    in(a,N*),in(b,N*),in(d,N*), NdivQ(d,a) ,NdivQ(d,b),
+    A(k, implies(And(NdivQ(k,a) ,NdivQ(k,b)), Nleq(k,d))
+  if a and b are in N*, then 
+  Assume a and b are in N*, and consider the set of common divisors of
+  a and b; i.e. D = S(d, NgcdQ(a,b,d)). 
+  Since
+  Ngcd(a,b,d) = Solution()  (there is exactly one such d)
+* gcd(a,b) defined in N*
   Assume 0<a and 0<b. 
-  gcd(a,b) = Max(divisors(a),divisors(b)).
+  gcd(a,b) = Max(intersection(divisors(a),divisors(b))).
   So gcd(a,b) | a and gcd(a,b) | b  and
   A(d, d|a and d|b implies d<=gcd(a,b))
+* gcd(a,b) = gcd(b,a)
+  intersection(divisors(a),divisors(b)) = intersection(divisors(b),divisors(a))
+  so apply max to both sides
+* d|a implies (d|(a+b) Iff d|b)
+  Assume a, b > 0
+  So also a+b > 0.
+  Suppose a = d*x.
+  if d|b, then there is y with  b = d*y;
+   then a+b = (d*x) + (d*y) = d*(x+y), so d|(a+b)
+  if d|(a+b), then there is so that a+b = d*z
+  So d*x + b = d*z.
+  Since b>0, then d*x < d*z.
+  Thus, x < z (since 0<d).
+  Thus there is 0<y with x+y = z
+  so d*z = d*(x+y) = d*x + d*y.
+  Thus, b = d*y.
+  Then d|b.
+* b = a*q + r (0<r<a, 0<=q) implies gcd(b,a) = gcd(a,r)
+  Proof: Assume 1<=a and 1<=b. 
+  Case q = 0.  Then b = r. So gcd(b,a) = gcd(r,a) = gcd(a,r) 
+  Case q != 0.
+  Then a*q > 0. 
+  if d in comdivs(b,a), then d|b and d|a, so d|b and d|a*q, so
+   d|(a*q + r) and d|(a*q), so d|(a*q) and d|(a*q + r) so d|r, so
+   d in comdivs(a,r)
+  if d in comdivs(a,r), then d|a and d|r, so d|a*q and d*r, so d|b,
+   so d in comdivs(b,a)
+  Thus comdivs(b,a) = comdivs(a,r).
+  Thus gcd(b,a) = gcd(a,r)
+  
+* gcd(a,1) = 1
+  divisors(1) = {1} and divisors(1) is subset of divisors(a).
+  comdivs(a,1) = intersection(divisors(a),divisors(1)) = divisors(1) 
+  So NMax(comdivs(a,1) = Nmax({1}) = 1.
 * FALSE: 1<=a, 1<=b => a = gcd(a,b)*Quo(a,gcd(a,b)) and gcd(gcd(a,b),Quo(a,gcd(a,b))=1
   a = 9, b = 15.  gcd(a,b) = 3. 9/3 = 3. gcd(3,3) = 3 != 1.
   
-* Bezout Theorem in N.  (exact induction statement missing)
-if 1<=a and 1<=b, then (let g = gcd(a,b)):
-  (a) E[x,E[y, 1<=x , 0<=y, a*x = b*y + g]] and
-  (b) E[x,E[y, 1<=x , 0<=y, b*x = a*y + g]]
-** preliminary observation: b = a*q + r (0<r<a) implies gcd(b,a) = gcd(a,r)
-  Proof: Assume 1<=a and 1<=b. 
-  comdivs(b,a) = comdivs(a,r). 
-  gcd(b,a) = Nmax(combdivs(b,a)) = Nmax(comdivs(a,r)) = gcd(a,r)
-  
-** case b = 1
-    So g = gcd(a,1) = 1.
-    (a) Take x = 1 and y = a-1
+
+* Awkward Proof Bezout Theorem in N.  (See 'Bezout Theorem in N using NidealQ')
+ thm(a,b) = if 1<=a and 1<=b, then 
+   (E[x,E[y, 1<=x , 0<=y, a*x = b*y + gcd(a,b)]] and
+    E[x,E[y, 1<=x , 0<=y, b*x = a*y + gcd(a,b)]])
+** thm(a,b) IFF thm(b,a).
+ thm(b,a) = if 1<=b and 1<=a, then 
+   (E[x,E[y, 1<=x , 0<=y, b*x = a*y + gcd(b,a)]] and
+    E[x,E[y, 1<=x , 0<=y, a*x = b*y + gcd(b,a)]])
+  Since gcd(a,b) = gcd(b,a), thm(a,b) IFF thm(b,a)
+** thm(a,1)
+    So g = gcd(a,1) = 1. 
+    (a) Take x = 1 and y = a-1. Note 1<=x and 0<=y.
         a*x = a*1 = a
         b*y + g = 1*(a-1) + 1 = 1*a = a
     (b) Take x = a+1, y = 1
@@ -400,46 +536,7 @@ if 1<=a and 1<=b, then (let g = gcd(a,b)):
       a*y + g = (b*q + r)*v + g = b*q*v + r*v + g = b*q*v + b*u = b*(q*v + u)
 ** All cases
     Proof from previous by induction on b.
-   
-* DA 22a: 1<=a, 1<=b => gcd(Quo(a,gcd(a,b)), Quo(b,gcd(a,b))) = 1
- Let d = gcd(a,b). Let u = Quo(a,d),  v = Quo(b,d).
- To show: gcd(u,v) = 1.
- By Bezout theorem in N, there are 1<=x, 0<=y so  a*x = b*y + d.
- Since d|a and d|b, we conclude a = d*u, b = d*v.  
- So d*u*x = d*v*y + d. Thus, u*x = v*y + 1.
- Now e|u and e|v implies e|1 , so e=1.  Thus,gcd(u,v) = 1. QED.
-
-* DA 22a A simpler proof (no Bezout).
-  Let d = gcd(a,b) 
-  To show gcd((a/d),(b/d)) = 1.
-  d|a and d|b.
-  a = d*(a/d), b = d*(b/d)
-  Suppose e|(a/d) and e|(b/d). We show e = 1
-   (a/d) = e*x, (b/d) = e*y. (where x = Quo((a/d),e) and y = Quo((b/d),e))
-   a = d*e*x, b = d*e*y.
-   Thus d*e|a and d*e|b.
-   Thus d*e <= d.  Thus e = 1.
-  Thus gcd((a/d),(b/d)) = 1.
-* if 1<d, then there is a prime p so that NdivQ(p,d)
-Proof:  By induction on d. 
- Case d = 2.  Take p = 2 (known to be a prime).
- Make inductive assumption: 1<e<d implies there is prime q so that NdivQ(q,e)
- Take 1<d.
- If d is a prime, then take p = d.
- Otherwise, there is e (1 < e < d) so that NdivQ(e,d).
- By induction, there is prime q so that NdivQ(q,e). Also NdivQ(q,d).
- Then take q = p.
-QED by induction.
-* Euclid's Lemma: NgcdQ(n,a,1) and NdivQ(n,a*b) implies NdivQ(n,b)
-Further assume a,b, and n are in N*, where
-N = 0,1,...
-N* = 1,2,...
-** NdivQ(a,b) iff in(a,N*) and in(b,N*) and E[k, in(k,N*) and b = a*k]
-** NgcdQ(a,b,d) 
-  iff a,b,d are in N* and NdivQ(d,a) and NdivQ(d,b) and 
-  A(k, NdivQ(k,a) and NdivQ(k,b) implies Nleq(k,d))
-  Ngcd = Solution(S(d, NgcdQ(a,b,d)))  (there is exactly one such d)
-** NidealQ(S)  
+* NidealQ(S)
  Iff(NidealQ(S), And(
   leq(S,N*),
   Not(eq(S,0)),  (i.e., S is not an empty set)
@@ -452,7 +549,115 @@ N* = 1,2,...
  S is the set of all multiples of NMin(S), i.e.
  A(t,Implies(in(t,S),NDivQ(NMin(S),t))) and
  A(t,Implies(And(in(t,N*)),NDivQ(NMin(s),t)),in(t,S))
-** If NidealQ(S) and 1<=j, then Iff(in(j,S), 1<=j and NDivQ(NMin(s),j))
+* If NidealQ(S) and 1<=j, then Iff(in(j,S), 1<=j and NDivQ(NMin(S),j))
+* NidealQ(N*)
+  Let K = N*.
+  K is not empty, as 1 is in N*.
+  if c1 and c2 are in N*, then c1+c2 is in N*.
+  if c1 and c2 are in N* and c1 > c2, then c1-c2 is in N*.
+  Thus, NidealQ(N*).
+  Note NMin(N*) = 1, and N* = {k*1, for 1<=k}.
+* Bezout Theorem in N using NidealQ
+  Given 1<=a and 1<=b.
+  Let S = S(a,b) = S(d, 1<=d and E[x,E[y, 1<=x , 0<=y, a*x = b*y + d]]).
+  Then S is an Nideal, generated by gcd(a,b).
+** S is a subset of N*.  True since 1<=d iff d is in N*.
+** a is in S, and also b is in S.so S is not empty
+  a*1 = b*0 + a, and 1<=a.  Thus, a is in S.
+  a*b = b*(a-1) + b   (and 0<=a-1 since 1<=a; and 1<=b). so b is in S
+** if t and u are in S, then t+u is in S.
+   1<=t and choose x,y so 1<=x, 0<=y and a*x = b*y + t
+   1<=u and choose z,w so 1<=z, 0<=w and a*z = b*w + u
+   Thus a*(x+z) = b*(y+w) + (t+u), and 1<=x+z, and 0 <= y+w.
+   And 1<=(t+u).
+  Thus t+u is in S.
+** If t in S and u in N* and t+u is in S, then u is in S.
+   1<=t and choose x,y so 1<=x, 0<=y and a*x = b*y + t
+   1<=u. 
+   Choose m,n so 1<=m, 0<=n, and a*m = b*n + (t+u)
+   To find: z,w so 1<=z, 0<=w and a*z = b*w + u.
+   a*x = b*y + t
+   a*m = b*n + (t+u)
+   Motivation from Z: If 1<=(m-x) and 0<=(n-y), then we would be done.
+    In Z, t = a*x - b*y
+     a*m = b*n + (a*x - b*y) + u
+     a*(m-x) = b*(n-y) + u.   
+   There are many choices for x and y
+   a*x = b*y + t
+   a*(x+k*b) = b*(y+k*a) + t? for any k in N
+    lhs = a*x + a*k*b = b*y + a*k*b + t
+    rhs = b*(y+k*a) + t = b*y + b*k*a + t
+    So, lhs = rhs.
+   Similarly, for any k in N
+   a*(m+k*b) = b*(n+k*a) + (t+u).
+   Choose k so that x < m + k*b and y <= n + k*a.
+   Take k = max(x,y)
+   Set z = m + k*b and w = n + k*a.
+   Then 1<=z and 0<=w.
+   And a*z = a*(m + k*b) = a*m + a*k*b = b*n + a*k*b + (t+u)
+   b*w + u = b*(n + k*a) + u =           b*n + b*k*a + u
+           = a*z + t  
+  Thus 
+     1<=b and 1<=x so x <= x*b.
+     1<=m, so x*b < m + x*b.  Thus x < z.
+   set z = n + 
+** NidealQ(S).
+   We have established that S satisfies all conditions of NidealQ
+** Let D = NMin(K). Then in(c,K) Iff E[u, 1<=u and c = D*u]
+** G = gcd(a,b).  We show D = G.
+*** Since D is in S, we may choose 1<=x, 0<=y so a*x = b*y + D.
+*** If c|a and c|b, then c|D.
+    Thus, c|a*x and c|b*y.  Since a*x = b*y + D, also c|D.
+*** G<=D
+  G|a and G|b. Thus G|a*x and G|b*y.  Thus, G|D.  
+  Thus G<=D.
+*** D|a and D|b
+  Since a is in S, D|a.  Since b is in S, D|b.
+*** Thus, D <= G 
+  D is a common divisor of a,b and G is the largest such.
+*** Thus, G = D.
+  Since G<=D and D<=G.
+** If c|a and c|b, then c|G.
+   Since G = D and c|D from above.
+
+** S = all positive multiples of G.
+   S = all positive multiples of D, and D = G.
+** S(b,a) = S(a,b).
+   S(a,b) = all positive multiples of gcd(a,b)
+   S(b,a) = all positive multiples of gcd(b,a).
+   But gcd(a,b) = gcd(b,a).
+   Thus, S(a,b) = S(b,a).
+* DA 22a: 1<=a, 1<=b => gcd(Quo(a,gcd(a,b)), Quo(b,gcd(a,b))) = 1
+ Let d = gcd(a,b). Let u = Quo(a,d),  v = Quo(b,d).
+ To show: gcd(u,v) = 1.
+ By Bezout theorem in N, there are 1<=x, 0<=y so  a*x = b*y + d.
+ Since d|a and d|b, we conclude a = d*u, b = d*v.  
+ So d*u*x = d*v*y + d. Thus, u*x = v*y + 1.
+ Now e|u and e|v implies e|1 , so e=1.  Thus,gcd(u,v) = 1. QED.
+
+* DA 22a: 1<=a, 1<=b => gcd(Quo(a,gcd(a,b)), Quo(b,gcd(a,b))) = 1 (No Bezout)
+  Let d = gcd(a,b) 
+  To show gcd((a/d),(b/d)) = 1.
+  d|a and d|b.
+  a = d*(a/d), b = d*(b/d)
+  Suppose e|(a/d) and e|(b/d). We show e = 1
+   (a/d) = e*x, (b/d) = e*y. (where x = Quo((a/d),e) and y = Quo((b/d),e))
+   a = d*e*x, b = d*e*y.
+   Thus d*e|a and d*e|b.
+   Thus d*e <= d.  Thus e = 1.
+  Taking gcd((a/d),(b/d)) for e, we conclude gcd((a/d),(b/d)) = 1.
+* if 1<d, then there is a prime p so that NdivQ(p,d)
+Proof:  By induction on d. 
+ Case d = 2.  Take p = 2 (known to be a prime).
+ Make inductive assumption: 1<e<d implies there is prime p so that NdivQ(p,e)
+ Take 1<d.
+ If d is a prime, then take p = d.
+ If d is not a prime, then by definition of prime,
+  there is e (1 < e < d) so that NdivQ(e,d).
+ By induction, there is prime p so that NdivQ(p,e). Also NdivQ(p,d).
+ 
+QED by induction.
+* Euclid's Lemma: 1<=a, 1<=b, NgcdQ(n,a,1) and NdivQ(n,a*b) implies NdivQ(n,b)
 ** Euclid's Lemma:  NgcdQ(n,a,1) and NdivQ(n,a*b) implies NdivQ(n,b).
  Assume:  in(n,N*), in(a,N*), in(b,N*), NgcdQ(n,a,1) and NdivQ(n,a*b)
  To Prove:  NdivQ(n,b).
@@ -499,9 +704,10 @@ N* = 1,2,...
 Gauss, Disquisitiones Arithmeticae
   Fix p and a. Set S = {b,1<=b<p and p|a*b}.  To prove S is empty set.
   Assume S is not empty, and derive a contradiction.
-  Let t = NMin(S). Then t is in S, so  1<=t<p and p|a*t.
+  Let t = NMin(S). Since S is not empty, t is in S.
+  So  1<=t<p and p|a*t.
 *** t != 1
-  If t = 1, then p|a, so p<=a, contradiction assumption a<p.
+    If t = 1, then p|a, so p<=a, contradiction assumption a<p.
 *** Divide p by t:  p = t*c + r, 0<=r<t.
 *** r<p.  
     Since r<t and t<p
@@ -511,8 +717,10 @@ Gauss, Disquisitiones Arithmeticae
   So 1<=r
 *** p|a*r
   a*p = a*t*c + a*r.  p|a*p.  And p|a*t*c.  Thus p|a*r.
-*** r is in S.
-*** Thus NMin(S) <= r, or t <= r. Contradicting r<t.
+*** Thus, r is in S.
+*** Thus t <= r. Contradicting r<t.
+*** Thus, we conclude S IS empty set.
+
 ** DA 14. If p is a prime and 1<=a and 1<=b and p | a*b, then p|a or p|b.
 Gauss proof.
   Let r = Rem(a,p), s = Rem(b,p).
@@ -525,8 +733,8 @@ Gauss proof.
    
 ** DA 14 (proved from Euclid's Lemma)
    See 'Corollary 2 to Euclid's Lemma'
-* Corollary 1 to Euclid's Lemma: gcd(a,n)=1, a|x, n|x => a*n|x.
-  If NgcdQ(a,n,1), NdivQ(a,x) and NdivQ(n,x), then NdivQ(a*n,x).
+* Corollary 1 to Euclid's Lemma: gcd(a,n)=1, 1<=x, a|x, n|x => a*n|x.
+  If NgcdQ(a,n,1), 1<=x, and NdivQ(a,x) and NdivQ(n,x), then NdivQ(a*n,x).
   Proof:
   Let b = Nquo(x,a). So in(b,N*) and x = a*b.
   Thus, NdivQ(n,a*b).
@@ -1137,38 +1345,188 @@ def test2(n):
   print(' (%s) %s = S(%s,%s)' %(len(gcdk),gcdk,n,k))
   print()
 
-* Chinese remainder theorem 
-  This discusses chinese remainder theorem for 2 moduli
-  Statement: Take 1<a, 1<b.
-   Define f: a*b to carprod(a,b) by f(x) = (Rem(x,a),Rem(x,b)) for x in a*b.
-   Then f is a ring homomorphism.
-
-  Note: gcd(a,b) = 1 and a divides b*c => a divides c. (Euclid lemma)
-  ? Factor of c that is not in a = min(S(t, c divides a*t)).
-  ? If gcd(a,b) = 1, Let c = a*b.
+* ring structures Nring(n)
+** The set N*
   Let N* = 1,2,3,... (positive integers)
   By one definition, for n in N*,  n = S(k,in(k,N) and Nlt(k,n)).
   e.g., 1 = {0}, 2 = {0,1}, 3 = {0,1,2}, etc.  
   This definition due to Von Neumann (ref: https://en.wikipedia.org/wiki/Natural_number)
-  For n in N, the cardinality of the set n is n:  Card(n) = n.
-  Let Quo(a,n) and Rem(a,n) be the pair of numbers guaranteed by the
-  division algorithm in N (for a in N, n in N*).
-  Let carprod(a,b) be the cartesian product of sets a and b.
-  For a in N*, we have ring structures on 'a':
-    prod(x,y) = Rem(x*y,a), sum(x,y) = Rem(x+y,a).
-  0 in a is the additive identity.
-  If 1<a, the 1 in a is the multiplicative identity and 0!=1 in a.
-   Assume Further gcd(a,b) = 1.
-  Then for x in a*b, f(x) = (0,0) implies NdivQ(a,x) and NdivQ(b,x) 
-   By corollary 1 to Euclid Lemma, NdivQ(a*b,x).
-   And since also 0<=x<a*b, we conclude x = 0.
-  Thus, f is an injection.
-  Now Card(a*b) = a*b, and Card(carprod(a,b)) = Card(a)*Card(b) = a*b.
-  Thus, f is a surjection (an injection between sets of same cardinality is
-    a surjection).
-  Thus f is a ring isomorphism.
-  
-  Chinese remainder theorem: f is a bijection, as just proved.
+** For n in N, the cardinality of the set n is n:  Card(n) = n.
+** Ring structure of a in N* modulo n in N*. 
+  Let n be in N*.
+  Nring(n) is the ring of integers modulo n.  Its underlying set is n.
+  For a, b in N define modular product and sum,
+   NProd(n)(a,b) = Rem(a*b,n), NSum(n)(a,b) = Rem(a+b,n).
+  By defining properties of Rem, we have NProd(n)(a,b) and NSum(n)(a,b) in 'n'.
+  Let R(a) = Rem(a,n). 
+** commutativity of NSum(n)
+  Let f(a,b) = R(a+b)
+  Let lhs = f(a,b), rhs = f(b,a)
+  lhs = R(a+b)
+      = R(b+a)
+      = rhs
+** associativity of Nsum(n)
+  Let f(a,b) = R(a+b)
+  lhs = f(f(a,b),c) = R(f(a,b)+c) = R(R(a+b)+c) = R((a+b)+c)
+  rhs = f(a,f(b,c)) = R(a+f(b,c)) = R(a+R(b+c)) = R(a+(b+c))
+  Since (a+b)+c = a+(b+c)  (associativity in N addition),
+  conclude R((a+b)+c) = R(a+(b+c)).
+  So, lhs = rhs.
+** commutativity of NProd(n)
+  Let f(a,b) = R(a*b)
+  Let lhs = f(a,b), rhs = f(b,a)
+  lhs = R(a*b)
+      = R(b*a), since a*b = b*a in N
+      = rhs
+** associativity of NProd(n)
+  a,b,c in N  
+  Let f(a,b) = R(a*b).
+  lhs = f(f(a,b),c) = R(f(a,b)*c) = R(R(a*b)*c) = R((a*b)*c)
+  rhs = (a,f(b,c)) = R(a*f(b,c)) = R(a*R(b*c)) = R(a*(b*c))
+  (a*b)*c = a*(b*c) by associativity in N.
+  so R((a*b)*c) = R(a*(b*c))
+  so lhs = rhs.
+
+** distributivity of NProd(n) over NSum(n)
+  Let f(a,b) = R(a+b),  Let g(a,b) = R(a*b).
+  Let a,b,c in set 'n'. [Roughly, to show (a+b)*c = (a*b) + (a*c)]
+  lhs = g(f(a,b),c) 
+      = R(f(a,b)*c) 
+      = R(R(a+b)*c)
+      = R((a+b)*c)
+      = R((a*c)+(b*c)) by distributivity in N,+,*
+  rhs = f(g(a,c),g(b,c))
+      = f(R(a*c),R(b*c))
+      = R(R(a*c)+R(b*c))
+      = R((a*c)+(b*c))
+  lhs = R((a+b)*c) 
+** 0 in n is the additive identity for NSum(n)  (Since 0<n)
+  Since 0<n,  0 is in n.
+  Let f(a,b) = R(a+b) for a,b in N.
+  Now, let 'a' be in the set 'n'. Then a is also in N. So
+  Then f(a,0) = R(a+0) = R(a)
+   = a, since a in 'n'.
+** If 1<n, then 1 is the multiplicative identity in 'n', and and 0!=1 in 'n'.
+  Let f(a,b) = R(a*b) for a,b in N.
+  Since 1 < n, we have 1 is an element of set 'n'.
+  Let 'a' also be in set 'n'. (i.e., a is in N and a<n)
+  f(a,1) = R(a*1) = R(a) = a.
+* homomorphism Nring(a,n) to Nring(b,m)
+  x, y in a
+  h(x) = Rem(x,m), h(y) = Rem(y,m)
+  z = prod(x,y,n) = Rem(x*y,n)
+  h(z) = Rem(z,m) = Rem(Rem(x*y,n),m)
+  w = prod(h(x),h(y),m) = Rem(
+  In Nring(a,n), x*!y = Rem(x*y,a)
+  In Nring(b,m), h(x)*@h(y)
+* Chinese remainder theorem 
+  This discusses chinese remainder theorem for 2 moduli.
+  Let carprod(a,b) = cartesian product of a and b.
+  Statement: Take 1<=m, 1<=n
+   Define h: m*n to carprod(m,n) by h(x) = (Rem(x,m),Rem(x,n)) for x in m*n.
+   We aim to prove that h is a ring isomorphism WHEN gcd(m,n) = 1.
+  We prove that h is a ring homomorphism provided 1<=m and 1<=n;
+  and then that h is bijection when, further, gcd(m,n) = 1.
+  Some statements require only 1<=m and 1<=n. The 1<m and 1<n statements
+  are relevant when discussing mutliplicative identity.
+
+** Lemma a: 1<=m, 1<=k, NDivQ(m,k), u in N => Rem(Rem(u,k),m) = Rem(u,m)
+   u = k*Quo(u,k) + Rem(u,k)
+   Rem(u,m) = Rem(Rem(k*Quo(u,k),m) + Rem(Rem(u,k),m),m)
+   Since m|k, also m|k*Quo(u,k).  Thus, Rem(Rem(k*Quo(u,k),m),m) = 0
+   Rem(u,m) = Rem(Rem(Rem(u,k),m),m) = Rem(Rem(u,k),m)
+** Lemma b: 1<=m, 1<=n, u in N => Rem(Rem(u,m*n),m) = Rem(u,m)
+   From lemma a, since NDivq(m,k*m).
+** 1<=m, 1<=n, fcn f from m*n to m by f(x) = Rem(x,m). 
+** f preserves addition
+  NSum(m*n)(a,b) = Rem(a+b,m*n)
+  NSum(m)(a,b) = Rem(a+b,m)
+  f(a) = Rem(a,m), f(b) = Rem(b,m)
+  lhs = f(NSum(m*n)(a,b)) = f(Rem(a+b,m*n)) = Rem(Rem(a+b,m*n),m)
+  rhs = NSum(m)(f(a),f(b)) = Rem(f(a)+f(b),m)
+   = Rem(Rem(a,m)+Rem(b,m),m) = Rem(a+b,m) property of Rem
+  By Lemma b, Rem(Rem(a+b,m*n),m) = Rem(a+b,m).
+  Thus, lhs = rhs. 
+** f preserves multiplication
+  NProd(m*n)(a,b) = Rem(a*b,m*n)
+  NProd(m)(a,b) = Rem(a*b,m)
+  f(a) = Rem(a,m), f(b) = Rem(b,m)
+  lhs = f(NProd(m*n)(a,b)) = f(Rem(a*b,m*n)) = Rem(Rem(a*b,m*n),m)
+  rhs = NProd(m)(f(a),f(b)) = Rem(f(a)*f(b),m)
+   = Rem(Rem(a,m)*Rem(b,m),m) = Rem(a*b,m) property of Rem
+  By Lemma b, Rem(Rem(a*b,m*n),m) = Rem(a*b,m).
+  Thus, lhs = rhs.
+** 1<=m, 1<=n, fcn g from m*n to n by g(x) = Rem(x,n). 
+** Similarly, g preserves addition
+  NSum(m*n)(a,b) = Rem(a+b,m*n)
+  NSum(m)(a,b) = Rem(a+b,n)
+  f(a) = Rem(a,n), f(b) = Rem(b,n)
+  lhs = f(NSum(m*n)(a,b)) = f(Rem(a+b,m*n)) = Rem(Rem(a+b,m*n),n)
+  rhs = NSum(m)(f(a),f(b)) = Rem(f(a)+f(b),n)
+   = Rem(Rem(a,n)+Rem(b,n),n) = Rem(a+b,n) property of Rem
+  By Lemma b, Rem(Rem(a+b,m*n),n) = Rem(a+b,n).
+  Thus, lhs = rhs. 
+** Similarly, g preserves multiplication
+  NProd(m*n)(a,b) = Rem(a*b,m*n)
+  NProd(m)(a,b) = Rem(a*b,n)
+  f(a) = Rem(a,n), f(b) = Rem(b,n)
+  lhs = f(NProd(m*n)(a,b)) = f(Rem(a*b,m*n)) = Rem(Rem(a*b,m*n),n)
+  rhs = NProd(m)(f(a),f(b)) = Rem(f(a)*f(b),n)
+   = Rem(Rem(a,n)*Rem(b,n),n) = Rem(a*b,n) property of Rem
+  By Lemma b, Rem(Rem(a*b,m*n),n) = Rem(a*b,n).
+  Thus, lhs = rhs.
+** ring structure on carprod(m,n).
+   Sumc((x,y),(z,w)) 
+   = (NSum(m)(x,z), NSum(n)(y,w))
+   = (Rem(x+z,m),Rem(y+w,n))
+   Prodc((x,y),(z,w)) = (NProd(m)(x,z), NProd(n)(y,w))
+   c1 = (1,1) is multiplicative identity in carprod(m,n).
+   c0 = (0,0) is additive identity in carprod(m,n).
+** h preserves addition
+   lhs = h(NSum(m*n)(x,y)) 
+   = h(Rem(x+y,m*n)) 
+   = (Rem(Rem(x+y,m*n),m),Rem(Rem(x+y,m*n),n)
+   = (Rem(x+y,m),Rem(x+y,n)) by lemmab, twice
+   rhs = Sumc(h(x),h(y))
+   = Sumc((Rem(x,m),Rem(x,n)) , (Rem(y,m),Rem(y,n)))
+   = (Rem(Rem(x,m)+Rem(y,m),m) , Rem(Rem(x,n)+Rem(y,n),n))
+   = (Rem(x+y,m),Rem(x+y,n))  by properties of Rem(-,m) and Rem(-,n).
+** Similarly, h preserves multiplication
+** h preserves multiplicative identity (provided 1<m and 1<n)
+   1 in m*n is multiplicative identity (relative to NProd(m*n)).
+   h(1) = (Rem(1,m),Rem(1,n)) = (1,1)  since 1<m and 1<n
+** h preserves additive identity
+   0 in m*n (since 1<=m*n). 0 in m since 1<=m, and 0 in n since 1<=n
+   h(0) = (Rem(0,m),Rem(0,n)) = (0,0)
+** h is a ring homomorphism.  Summarizes.
+** If gcd(m,n) = 1 and x is in m*n and h(x) = (0,0), then x = 0.
+   Since h(x) = (Rem(x,m),Rem(x,n)), then Rem(x,m) = 0 and Rem(x,n) = 0.
+   Thus m divides x, and n divides x.
+   By corollary 1 to Euclid's Lemma, we conclude m*n divides x.
+   Thus Rem(x,m*n) = 0.  Since x is in m*n, then x < m*n, so x = 0.
+** If gcd(m,n) = 1 then h is an injection.
+   Suppose x and y are in m*n and h(x) = h(y). We want to show x = y.
+   Since x and y are in N, either x<=y or y<=x.
+   We show proof assuming x<=y.  The proof for y<=x is analogous.
+   There is z in N so that x+z = y. Since x<m*n and y<m*n, then also z<m*n.   
+   So z is in m*n.  
+   NSum(m*n)(x,z) = Rem(x+z,m*n) = x+z  since x+z < m*n
+   h(y) = h(NSum(m*n)(x,z)) = Sumc(h(x),h(z)).
+   Since carprod has additive inverses  (carprod is a group under addition),
+   and since h(x) = h(y), we may conclude h(z) = zero = (0,0).
+   Since gcd(m,n) = 1, prior statement implies z = 0.
+   Thus, x = y.
+** Card(m*n) = Card(carprod(m,n))
+   For k in N, Card(k) = k.  (this is proved elsewhere when Card is introduced)
+   So, Card(m*n) = m*n, Card(m) = m, and Card(n) = n.
+   Since m and n are finite, Card(carprod(m,n)) = Card(m)*Card(n) = m*n.
+** h is bijection.
+   h is injection from m*n to carprod(m,n), and these two sets are finite
+   with the same cardinality.
+   We have a theorem such as 'if h is an injection from finite set 'a' into
+   finite set 'b', and if Card(a) = Card(b), then h is a surjection'.
+   Thus, h is a surjection.
+   Thus, h is a bijection.
 * ephi is multiplicative
   Assume the notation 'f' of Chinese remainder theorem
   for 1<a, 1<b
@@ -2292,13 +2650,6 @@ Proof:
 ** NidealQ(K)
   We have shown that K satisfies the properties required.
   QED.
-* NidealQ(N*)
-  Let K = N*.
-  K is not empty, as 1 is in N*.
-  if c1 and c2 are in N*, then c1+c2 is in N*.
-  if c1 and c2 are in N* and c1 > c2, then c1-c2 is in N*.
-  Thus, NidealQ(N*).
-  Note NMin(N*) = 1, and N* = {k*1, for 1<=k}.
 * TODO: NgenIdeal(S) The Nideal generated by non-empty subset S of N*.
   Define this as the intersection of all ideals I that contain S.
   Let U = {I, NidealQ(I) and leq(S,I)} (set of all ideals containing S)
@@ -2416,7 +2767,7 @@ Proof:
 ** Theorem: NidealQ(M)
    Proof: From Lemma4a, Lemma4c, Lemma4d, and Lemma4e.
 ** TODO M = NgenIdeal(S)
-* Gauss Lemma on primitive polynomials.
+* Gauss Lemma 1 on primitive polynomials.
 ** polynomial terminology
    Z[X] polynomials with integer coefficients
    Q[X] polynomials with rational coefficients
@@ -2425,28 +2776,29 @@ Proof:
    Then deg[f] = Max(S(k, k in N and f(k)!=0)). 
     When f has no non-zero coefficients, then deg[f] could be taken as 0.
    f = 0 means f(k) = 0 for all k in N.
-** multiplication
-   For k in N, the set of all pairs (i,j) in N such that i+j = k.
-   f*g(k) = sum(f(i)*f(j) for i+j = k.
+** polynomial multiplication
+   For k in N, we have the set of all pairs (i,j) in N such that i+j = k.
+   f*g(k) = sum(f(i)*f(j) for i+j = k).
 ** content(f) defined for f in Z[X] with f != 0
    Let support(f) = {k for k in N and f(k) != 0}
-    support(f) is a finite, non-empty subset of Z.
+   if f!=0, then support(f) is a finite, non-empty subset of Z
    Let nonzerodivisors(f) = {d in N such that A(k in support(f), d|f(k))}.
-     nonzerodivisors(f) is a finite subset of N
+    if f!=0, then nonzerodivisors(f) is a finite subset of N
      1 is in nonzerodivisors(f), so nonzerodivisors(f) is not empty set.
    Then content(f) = NMax(nonzerodivisors(f)).
-** Theorem 1: divisors(a*b) = {d*e where d|a and e|b}. 
+** Theorem 1: divisors(a*b) = {x such that x = d*e where d|a and e|b}. 
    Assume all numbers (a,b, etc.) are positive integers.
-   Let lhs(a,b) = divisors(a*b).
+   Let lhs(a,b) = divisors(a*b) = {x where x|a*b}
    Let rhs(a,b) = {d*e where d|a and e|b}
    Let thm(a,b) = lhs(a,b) == rhs(a,b).
 *** 0. rhs(a,b) is subset of lhs(a,b)
-   If d|a and e|b, then d*e|a*b
-    x = Quo(a,d), y = Quo(b,e). Thus, a = d*x, b = e*y.
-    a*b = (d*x)*(e*y) = (d*e)*(x*y)
-   Thus, d in rhs(a,b) implies d in lhs(a,b).
+   Let z in rhs(a,b). Choose d|a and e|b so that z = d*e.
+   To show d*e|a*b,
+    let x = Quo(a,d), y = Quo(b,e). Thus, a = d*x, b = e*y.
+    a*b = (d*x)*(e*y) = (d*e)*(x*y). Thus d*e|a*b
+   Thus, z in lhs(a,b).
 *** 1. thm(a,b) iff thm(b,a)
-   clear, sincie multiplication is commutative.
+   clear, since multiplication is commutative.
 *** 2. thm(1,b)
    lhs(1,b) = divisors(1*b) = divisors(b)
    rhs(1,b) = {d*e where d|1 and e|b}
@@ -2505,30 +2857,29 @@ Proof:
    Let r | p*b. So p*b = r*x for some x in N.
    Not p divides r*x.
 *** 4. if p is prime, then thm(a,p).
+    thm(p,a) by (3)
+    thm(a,p) by (1)
 *** 5. thm(a,b)
-   By induction on a.  Case a=1 is by (2.)
+   By induction on a.  Case a=1 is by (2)
    Assume A(c, c<a implies thm(c,b)) (inductive hypothesis)
-   To show lhs(a,b) is subset of rhs(a,b).
+   To show: lhs(a,b) is subset of rhs(a,b).
 ****   Case a = 1 is Case 2.
 ****   Case a != 1.
+     Choose x in lhs(a,b), so x|a*b, 
      There is a prime p such that p|a.
      Let c = Quo(a,p). So a = p*c, so a*b = (p*c)*b = p*(c*b)
-     Let x in lhs(a,b), so x|a*b, so x|p*(c*b).
-     By 3., there are y,z so that x = y*z and y|p and z|c*b.
+     Let so x|p*(c*b).
+     By (3), there are y,z so that x = y*z and y|p and z|c*b.
      By inductive hypothesis, 
       there are u and v so that z = u*v and u|c and v|b.
       Now, x = y*z = y*(u*v) = (y*u)*v.
       And y*u | p*c = a.
       take d = y*u and e = v.  Then
-     d*e = x, and d|a and e|b.  
+     x = d*e and d|a and e|b.  
      Thus, x in rhs(a,b).
     This completes the inductive step.
 **** Now thm(a,b) by induction
-**** Case x = 1 
-     Take d = 1 and e = 1.
-**** Case x != 1.  
-    Thus p|a*b.
-     Thus, p|a or p|b.
+
 ** Theorem 2: gcd(a*b,a*c) = a*gcd(b,c).
   Let lhs(a,b,c) = gcd(a*b,a*c).
   Let rhs(a,b,c) = a*gcd(b,c).
@@ -2794,3 +3145,39 @@ Proof:
 ** content(a*f) = a*content(f) if a in Z, 0 < a and f in Z[X], f != 0.
   Proof: Let d = content(f) and e = content(a*f). To show e = a*d.
   nonzero(a*f) = {a*x for x in nonzero(f)}.
+* Gauss Lemma 1 on primitive polynomials:  more abstract proof
+Ref: https://planetmath.org/gaussslemmai
+f,g primitive in Z[X] implies f*g is primitive.
+Let h = f*g.
+Otherwise, there is a prime p in Z that divides all coefficients of h.
+I=<p>  is the ideal of Z generated by p.
+W = Z/I is the quotient ring.  Which we know to be a field.
+An element of Z/I is the coset x+I = {x+i, i in I}, where x is in Z.
+The function r: Z->Z/I is x->x+I; it is a surjective ring homomorphism.
+r 'induces' a function R of polynomial rings Z[X] -> W[X] so that, for
+any f in Z[X], R(f) is in W[X] and for any index i, R(f)(i) = r(f(i)).
+R is also a ring surjection.
+Also: W[X] is an integral domain. 
+ For if f1,f2 in W[X] and f1 != 0 and f2 != 0.  
+ Let m1 = deg(f1), m2 = deg(f2).
+ So in W, f1(m1) != 0 and f2(m2) != 0.
+ Since W is an integral domain, f1(m1)*f2(m2) != 0 in W.
+ Now, by definition of polynomial multiplication,
+  (f1*f2)(m1+n1) = f1(m1)*f2(m2).
+  Thus, (f1*f2)(m1+n1) != 0 in W.
+ Thus, f1*f2 != 0 in W[X].
+
+Now, back to assumption that f,g in Z[X] are primitive.
+Assume that in fact f*g is NOT primitive.
+Then, choose a prime 'p' so that p divides all (non-zero) coefficients of f*g.
+ The existence of p is very close to the definition of primitive polynomial.
+ We identify 'p' with the zero-degree polynomial P, where P(0) = p.
+ Proceed as above R(f*g) = R(f)*R(g). Now R(f*g) = 0  in W[X].
+ So also R(f)*R(g) = 0 in W[X].  Since W[X] is integral domain, R(f)=0 or
+ If R(g) = 0 in W[X], then for all i, g(i) + I = 0 + I, so g(i) in I, i.e.,
+ p divides g(i).  Thus, 1<p is a common divisor of coefficients of g,
+ So, g is not primitive, contrary to assumption.
+ Similarly, if R(f) = 0 in W[X], then f is not primitive.
+ Thus, we have a contradiction to the assumption that f,g are primitive.
+ QED.
+* more to come
