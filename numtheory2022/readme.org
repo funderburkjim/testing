@@ -371,12 +371,15 @@ Models modular arithmetic with the Zmod class. Also polynomials.
   Now b*q = b*u.  
   Thus q = u, since 0 < b.
   Thus r=v and q=u, as was to be proved.
-* Quo(a,n) and Rem(a,n)
+* Quo(a,n) and Rem(a,n), divalgF(n)
   For 0<=a and 1<=n in N.
   a = n*Quo(a,n) + Rem(a,n),  
   Quo(a,n) in N, Rem(a,n) in N, and Rem(a,n) < n.
   if 1<=n and  a = n*q + r and r<n, then q = Quo(a,n) and r = Rem(a,n)
   Note: Quo(a,0) and Rem(a,0) are not defined. ("Can't divide by 0")
+  divalgF(n): carprod(N,n) -> N,  divalgF(n)(q,r) = n*q + r.
+** if 1<=n, then divalgF(n) is a bijection from carprod(N,n) onto N.
+   inverse(divalgF(n))(a) = (Quo(a,n),Rem(a,n))
 ** If a<n, then Quo(a,n) = 0 and Rem(a,n) = a
   a = n*0 + a,  By uniqueness of quotient and remainder,  conclude
   Quo(a,n) = 0 and Rem(a,n) = a.
@@ -414,35 +417,158 @@ Models modular arithmetic with the Zmod class. Also polynomials.
                      = Rem(Rem(a,n)*Rem(b,n),n) 
                      = Rem(a*b,n)
    And similarly Rem(a*Rem(b,n),n) = Rem(a*b,n)
-* NdivQ(n,a) and divisors(n)
- NdivQ(n,a) "n divides a" Iff 1<=n and 0<=a and Rem(a,n) = 0.  
- NOTATION n | a.
- if 0<n, then NdivQ(n,0)
- if in(a,N) and in(n,N*),  then Iff(NdivQ(n,a), a = n*Quo(a,n))
- Iff(NdivQ(n,a), And(in(n,N*), in(a,N) , E(q, a = n*q)))
- divisors(n) = {d, 1<=d<=n and NdivQ(d,n)}.  No
- If n in N*, then 
+* NprodSeq, NprodSet,  NsumSeq, NsumSet 
+  NprodSeq(f) 'product of a finite sequence of numbers'
+  NprodSet(S) 'product of a finite subset of numbers'
+  if k in N, f:k->N a function.  Then NprodSeq(f) can be definied recursively by
+     NprodSeq(f) = 1 if k = 0
+     NprodSeq(f) = NprodSeq(res(f,k))*f(k) if domain(f) = k+1.
+  Since * is commutative and associative,
+  If k in N and  if g:k->k is a bijection, then NprodSeq(f#g) = NprodSeq(f)  where domain(f) = k.
+
+  Similarly, NsumSeq(f) and NsumSet(S) can be defined.
+** TO PROVE: If S1 and S2 are finite subsets of N, and isect(S1,S2) = 0 (empty), then
+   NprodSet(union(S1,S2)) = NprodSet(S1)*NprodSet(S2)
+   Proof?
+* Nprimes, NprimePowers, PrimePowerRep(n), Fundamental theorem of arithmetic
+  Nprimes = {p:NprimeQ(p}  the set of all primes
+  FTA informal 1: Any positive number but 1 is uniquely expressable as
+    a product of positive prime powers.
+  FTA informal 2: every integer greater than 1 can be represented uniquely as a product of 
+    prime numbers, up to the order of the factors. (wikipedia)
+  I'm unsure how to 'formalize' FTA.
+  Let NprimePowers = {p^k where p is a prime and 1<=k}.  Here '^' is exponentiation operation.
+  If p^j = q^k  (p,q prime  1<=j, 1<=k) then p = q and j = k.
+  If S is a finite non-empty subset of NprimePowers, then 1 < NprodSet(S).
+   Further, if T is also a finite non-empty subset of NprimePowers, and
+    if NprodSet(S) = NprodSet(T), then S = T.
+  And if 1 < n, then there exists a finite non-empty subset S of NprimePowers 
+   such that n = NprodSet(S).
+  We can define PrimePowerRep(n) = S for 1<n
+* NevenQ and NoddQ
+  iff (NevenQ(n) (in(n,N) && NdivQ(2,n)))
+  iff (NoddQ(n)  (in(n,N) && ! NdivQ(2,n)))
+** 1. if in(n,N), then NevenQ(n) or NoddQ(n)
+if in(n,N), then (NdivQ(2,n) or ! NdivQ(2,n))
+** 2. Iff NevenQ(n) (in(n,N) && Rem(n,2) = 0)
+ iff(NdivQ(2,n) (1<=2 && 0<=n && Rem(n,2) = 0))
+ Iff (in(n,N), 0<=n)  definition of <= in N
+  0 < 1 < 2, so 1<=2.
+
+** 3. Iff NoddQ(n) (in(n,N) && Rem(n,2) = 1)
+   1<=2.
+   Assume n in N.
+   Then, Iff (NdivQ(2,n) (Rem(n,2) = 0))
+   So, Iff(!NdivQ(2,n) (Rem(n,2) != 0)).
+   But Rem(n,2) < 2.
+   So Rem(n,2) = 0 or Rem(n,2) = 1.
+   Thus (Iff (Rem(n,2) != 0)  (Rem(n,2) = 1)).
+
+** 4. 0 is even
+   0 = 2*0, so 2 | 0
+** 5. 1 is odd
+   1 = 2*0 + 1, and 1 < 2.  So Rem(1,2) = 1. So NoddQ(1)
+** 6 is even
+   2 = 2*1 + 0 = 2.  So, 2 | 2. So 2 is even.
+** 7. if p is prime and p!=2, then p is odd
+** 8. if n is odd, then n-1 is even
+   n = 2*Quo(n,2) + 1.
+   Thus, (n-1) = 2*Quo(n,2)
+    Thus 2 | (n-1).  Thus n-1 is even.
+** 9. if n is even and n != 0, then n-1 is odd
+  n is in N.
+  n = 2*Quo(n,2).
+  Since n != 0, Quo(n,2) != 0.
+  Thus, 1<=Quo(n,2).  Thus 2<=n.
+  Thus n-2 is in N.
+  n-2 = 2*q - 2 = 2*(q-1) 
+  n-1 = (n-2)+1 = 2*(q-1) + 1
+  So Rem(n-1,2) = 1.
+  Thus n-1 is odd
+** 10. if n is even and m in N, then n*m is even
+   n = 2*x, m = 2*y
+   n*m = 2*(2*x*y) so n*m is even
+** 11. if n is odd and m is odd, then n*m is odd
+   n = 2*x + 1, m = 2*y + 1
+   n*m = 2*x*2*y + 2*x + 2*y + 1*1 = 2*(x*2*y + x + y) + 1.
+   So n*m is odd.
+** 12. if n is even and 1<=k, then n**k is even
+   By 10 and induction
+** 13. if n is odd and 1<=k, then n**k is odd
+   By 11 and induction induction
+* NdivQ(d,a) and divisors(a), nondivisors, multiples, nonmultiples
+ "d divides n"  iff(NdivQ(d,n) (1<=d && 0<=n && Rem(n,d) = 0))
+ NOTATION d | n.
+
+ if 1<=d, then 0 = d*0 + 0, so Rem(0,d) = 0 and Quo(0,d) = 0.
+  Thus NdivQ(d,0).
+ if in(n,N) and in(d,N*), then Iff(NdivQ(d,n), n = d*Quo(n,d))
+ Iff(NdivQ(d,n), And(in(d,N*), E(q, n = d*q)))
+ 
+ divisors(n) := {d : NdivQ(d,n)}.  
+  Note: Iff(in(d,divisors(n)), NdivQ(d,n))
+  Note: by this definitions, divisors(0) = diff(N,{0}) = N*.
+
+ For rest of this article, assume 1<=n.
+ 
   a. divisors(n) is a finite non-empty subset of N*.
   b. divisors(n) contains elements 1 and n.
+  c. leq(divisors(n),n+1).
 
-* NgcdQ(a,b,d) 
-  "d is the greatest common divisor of a and b"
-  iff (NgcdQ(a,b,d), And
-    in(a,N*),in(b,N*),in(d,N*), NdivQ(d,a) ,NdivQ(d,b),
-    A(k, implies(And(NdivQ(k,a) ,NdivQ(k,b)), Nleq(k,d))
-  if a and b are in N*, then 
-  Assume a and b are in N*, and consider the set of common divisors of
-  a and b; i.e. D = S(d, NgcdQ(a,b,d)). 
-  Since
-  Ngcd(a,b,d) = Solution()  (there is exactly one such d)
-* gcd(a,b) defined in N*
-  Assume 0<a and 0<b. 
-  gcd(a,b) = Max(intersection(divisors(a),divisors(b))).
-  So gcd(a,b) | a and gcd(a,b) | b  and
-  A(d, d|a and d|b implies d<=gcd(a,b))
-* gcd(a,b) = gcd(b,a)
-  intersection(divisors(a),divisors(b)) = intersection(divisors(b),divisors(a))
-  so apply max to both sides
+ nondivQ(d,n) " d is a non-divisor of n" Iff 1<=d and 0<=n and Rem(n,d) != 0.  
+ nondivisors(n) := {d : nondivQ(d,n)}
+  Note: iff(in(d,nondivisors(n)), nondivQ(d,n))
+  Note: isect(divisors(n),nondivisors(n)) = 0
+  Note: union(divisors(n),nondivisors(n)) = N*
+ 
+ 1<=n, multiples(n) := image(divalgF(n),carprod(N,{0}))
+       = {a: 0<=a and Rem(a,n) = 0}
+       = {a: NdivQ(n,a)}  recall: NdivQ(n,a) Iff 1<=n and 0<=a and Rem(a,n) = 0
+       = {a: in(n,divisors(a))}
+  Note: in(0,multiples(n))  0 = n*0 + 0
+  Note: in(n,multiples(n))  n = n*1 + 0
+ 1<=n, 1<=b multiples(n,b) := isect(multiples(n),b)
+
+ 1<=n, nonmultiples(n) := image(divalgF(n),carprod(N,diff(n,{0})))
+       = {a: 0<=a and Rem(a,n) != 0}
+       = {a: nondivQ(n,a)}
+       = {a: in(n,nondivisors(a)) }
+ 1<=n, 1<=b nonumultiples(n,b) := isect(nonmultiples(n),b)
+  Note: isect(multiples(n),nonmultiples(n)) = 0
+  Note: union(multiples(n),nonmultiples(n)) = N
+
+ Let Fn = divalgF(n)
+ Let res = restriction
+** iff in(a,multiples(n)) E(q in N and a = n*q)
+** 1<=b, iff in a multiples(n,b) (a < b and E(q in N and a = n*q))
+** res(Fn,carprod(N,{0})) is bijection onto multiples(n)
+** if 1<=m , res(Fn,carprod(m,{0})) bijection onto multiples(n,n*m)
+   Note: iff(in(q,m), q<m). 
+   if q < m, then Fn(q,0) = n*q, and n*q < n*m. 
+    Thus Fn(q,0) in multiples(n,n*m).
+   If a in multiples(n,n*m) then a < n*m and there is q with a = n*q)
+    Thus n*q < n*m.  Thus q < m, thus (q,0) in carprod(m,{0}).
+** if 1<=m, NCard(multiples(n,n*m)) = m
+   Let A = carprod(m,{0}). Let B = multiples(n,n*m).
+   proof. Let g = res(Fn,A). g is bijection from A onto B.
+   Thus NCard(B) = NCard(A) = NCard(m)*NCard({0}) = m*1 = m.
+** --------------------------------------------------------------
+** --------------------------------------------------------------
+** iff in(a,nonmultiples(n)) E(q, E[r in q N, r in n, r!=0 and a = n*q+r))
+** iff in(a,nonmultiples(n,b)) (a < b) and E(q, E[r in q N, r in n, r!=0 and a = n*q+r))
+** if 1<=b, then Iff in(a,nonmultiples(n,b) (a < b AND  (not n|a))
+** if 1<=b, then Iff in(a,nonmultiples(n,b) (a < b AND in(n,nondivisors(a))
+** if 1<=m, res(Fn,carprod(m,diff(n,{0}))) bijection onto nonmultiples(n,n*m)
+** if 1<=m, NCard(nonmultiples(n,n*m)) = m*(n-1).
+   Let A = carprod(m,diff(n,{0})), let B = nonmultiples(n,n*m).
+   Let g = res(Fn,A). Thus g is a bijection from A onto B.
+   Thus NCard(B) = NCard(A) = NCard(m)*NCard(diff(n,{0})) =
+     m * (NCard(n) - NCard({0})) = m*(n-1).
+** if 1<=k, NCard(nonmultiples(n,n**k)) = (n**(k-1))*(n-1)
+   m = (n**(k-1)).  So n**k = n*m.  
+   Since 1<=n m and 1<=k, we have 1<=m.
+   Thus the previous result applies
+
 * d|a implies (d|(a+b) Iff d|b)
   Assume a, b > 0
   So also a+b > 0.
@@ -457,10 +583,30 @@ Models modular arithmetic with the Zmod class. Also polynomials.
   so d*z = d*(x+y) = d*x + d*y.
   Thus, b = d*y.
   Then d|b.
-* b = a*q + r (0<r<a, 0<=q) implies gcd(b,a) = gcd(a,r)
-  Proof: Assume 1<=a and 1<=b. 
+* NgcdQ(a,b,d), gcd(a,b), comdivs(a,b) 
+  "d is the greatest common divisor of a and b"
+  iff (NgcdQ(a,b,d), And
+    in(a,N*),in(b,N*),in(d,N*), NdivQ(d,a) ,NdivQ(d,b),
+    A(k, implies(And(NdivQ(k,a) ,NdivQ(k,b)), Nleq(k,d))
+  if a and b are in N*, then 
+  Assume a and b are in N*, and consider the set of common divisors of
+  a and b; i.e. D = S(d, NgcdQ(a,b,d)). 
+?  Since Ngcd(a,b,d) = Solution(D)  (there is exactly one such d)
+** gcd(a,b) defined in N*; comdivs(a,b)
+  Assume 0<a and 0<b. 
+  gcd(a,b) = Max(intersection(divisors(a),divisors(b))).
+  So gcd(a,b) | a and gcd(a,b) | b  and
+  A(d, d|a and d|b implies d<=gcd(a,b))
+  Let comdivs(a,b) = intersection(divisors(a),divisors(b)).
+    So, gcd(a,b) = Max(comdivs(a,b))
+** gcd(a,b) = gcd(b,a)
+  intersection(divisors(a),divisors(b)) = intersection(divisors(b),divisors(a))
+  Apply max to both sides to get gcd(a,b) = gcd(b,a)
+** if 0<r<a and 0<=q, then gcd(a*q+r,a) = gcd(a,r)
+  Proof: Let b = a*q + r.
   Case q = 0.  Then b = r. So gcd(b,a) = gcd(r,a) = gcd(a,r) 
   Case q != 0.
+  We show comdivs(b,a) = comdivs(a,r).
   Then a*q > 0. 
   if d in comdivs(b,a), then d|b and d|a, so d|b and d|a*q, so
    d|(a*q + r) and d|(a*q), so d|(a*q) and d|(a*q + r) so d|r, so
@@ -470,14 +616,12 @@ Models modular arithmetic with the Zmod class. Also polynomials.
   Thus comdivs(b,a) = comdivs(a,r).
   Thus gcd(b,a) = gcd(a,r)
   
-* gcd(a,1) = 1
+** gcd(a,1) = 1
   divisors(1) = {1} and divisors(1) is subset of divisors(a).
   comdivs(a,1) = intersection(divisors(a),divisors(1)) = divisors(1) 
   So NMax(comdivs(a,1) = Nmax({1}) = 1.
-* FALSE: 1<=a, 1<=b => a = gcd(a,b)*Quo(a,gcd(a,b)) and gcd(gcd(a,b),Quo(a,gcd(a,b))=1
+** FALSE: 1<=a, 1<=b => a = gcd(a,b)*Quo(a,gcd(a,b)) and gcd(gcd(a,b),Quo(a,gcd(a,b))=1
   a = 9, b = 15.  gcd(a,b) = 3. 9/3 = 3. gcd(3,3) = 3 != 1.
-  
-
 * Awkward Proof Bezout Theorem in N.  (See 'Bezout Theorem in N using NidealQ')
  thm(a,b) = if 1<=a and 1<=b, then 
    (E[x,E[y, 1<=x , 0<=y, a*x = b*y + gcd(a,b)]] and
@@ -549,8 +693,8 @@ Models modular arithmetic with the Zmod class. Also polynomials.
  S is the set of all multiples of NMin(S), i.e.
  A(t,Implies(in(t,S),NDivQ(NMin(S),t))) and
  A(t,Implies(And(in(t,N*)),NDivQ(NMin(s),t)),in(t,S))
-* If NidealQ(S) and 1<=j, then Iff(in(j,S), 1<=j and NDivQ(NMin(S),j))
-* NidealQ(N*)
+**  If NidealQ(S) and 1<=j, then Iff(in(j,S), 1<=j and NDivQ(NMin(S),j))
+** NidealQ(N*)
   Let K = N*.
   K is not empty, as 1 is in N*.
   if c1 and c2 are in N*, then c1+c2 is in N*.
@@ -560,7 +704,7 @@ Models modular arithmetic with the Zmod class. Also polynomials.
 * Bezout Theorem in N using NidealQ
   Given 1<=a and 1<=b.
   Let S = S(a,b) = S(d, 1<=d and E[x,E[y, 1<=x , 0<=y, a*x = b*y + d]]).
-  Then S is an Nideal, generated by gcd(a,b).
+  We first prove that S is an Nideal, generated by gcd(a,b).
 ** S is a subset of N*.  True since 1<=d iff d is in N*.
 ** a is in S, and also b is in S.so S is not empty
   a*1 = b*0 + a, and 1<=a.  Thus, a is in S.
@@ -603,8 +747,8 @@ Models modular arithmetic with the Zmod class. Also polynomials.
    set z = n + 
 ** NidealQ(S).
    We have established that S satisfies all conditions of NidealQ
-** Let D = NMin(K). Then in(c,K) Iff E[u, 1<=u and c = D*u]
-** G = gcd(a,b).  We show D = G.
+** Let D = NMin(S). Then in(c,S) Iff E[u, 1<=u and c = D*u] Iff D|c
+** Let G = gcd(a,b).  We show D = G.
 *** Since D is in S, we may choose 1<=x, 0<=y so a*x = b*y + D.
 *** If c|a and c|b, then c|D.
     Thus, c|a*x and c|b*y.  Since a*x = b*y + D, also c|D.
@@ -618,7 +762,8 @@ Models modular arithmetic with the Zmod class. Also polynomials.
 *** Thus, G = D.
   Since G<=D and D<=G.
 ** If c|a and c|b, then c|G.
-   Since G = D and c|D from above.
+  Since D is in S, we conclude c|D.
+  Since G = D, we conclude c|G.
 
 ** S = all positive multiples of G.
    S = all positive multiples of D, and D = G.
@@ -627,15 +772,20 @@ Models modular arithmetic with the Zmod class. Also polynomials.
    S(b,a) = all positive multiples of gcd(b,a).
    But gcd(a,b) = gcd(b,a).
    Thus, S(a,b) = S(b,a).
-* DA 22a: 1<=a, 1<=b => gcd(Quo(a,gcd(a,b)), Quo(b,gcd(a,b))) = 1
+* Bezout Theorem corollaries
+** Bezout Corollary 1: if 1<=a, 1<=b, c|a and c|b, then c|gcd(a,b)
+  This was a step in the proof of Bezout's theorem.
+** Bezout Corollary 2: if gcd(a,b) = 1, then there is x in N* so that a*x = 1(mod b)
+  proof. By Bezout, choose x (1<=x) and y (0<=y) so that a*x = b*y + gcd(a,b).
+  So, a*x = gcd(a,b) (mod b) = 1 (mod b)
+** DA 22a: 1<=a, 1<=b => gcd(Quo(a,gcd(a,b)), Quo(b,gcd(a,b))) = 1
  Let d = gcd(a,b). Let u = Quo(a,d),  v = Quo(b,d).
  To show: gcd(u,v) = 1.
  By Bezout theorem in N, there are 1<=x, 0<=y so  a*x = b*y + d.
  Since d|a and d|b, we conclude a = d*u, b = d*v.  
  So d*u*x = d*v*y + d. Thus, u*x = v*y + 1.
  Now e|u and e|v implies e|1 , so e=1.  Thus,gcd(u,v) = 1. QED.
-
-* DA 22a: 1<=a, 1<=b => gcd(Quo(a,gcd(a,b)), Quo(b,gcd(a,b))) = 1 (No Bezout)
+** DA 22a: 1<=a, 1<=b => gcd(Quo(a,gcd(a,b)), Quo(b,gcd(a,b))) = 1 (No Bezout)
   Let d = gcd(a,b) 
   To show gcd((a/d),(b/d)) = 1.
   d|a and d|b.
@@ -646,7 +796,24 @@ Models modular arithmetic with the Zmod class. Also polynomials.
    Thus d*e|a and d*e|b.
    Thus d*e <= d.  Thus e = 1.
   Taking gcd((a/d),(b/d)) for e, we conclude gcd((a/d),(b/d)) = 1.
-* if 1<d, then there is a prime p so that NdivQ(p,d)
+* =========================================================
+* NprimeQ definition, and first properties
+  NprimeQ(p)
+  p is a prime iff 
+   (1) p is in N and 1<p and
+   (2) A(d,NdivQ(d,p) implies d=1 or d=p)
+** 1. 0 is not prime
+   since not (1 < 0)
+** 2. 1 is not prime
+   since not (1<1)
+** 3. if p is prime, then 2<=p
+   1+1 <= p, since p is in N and 1 < p, 
+   and 2 = 1+1.
+** 4. NprimeQ(2)
+  Proof: 1<2.  NdivQ(d,2) => Nleq(1,d) and Nleq(d,2). Thus d = 1 or d = 2.
+** 5. if p is prime and p!= 2 then 2<p
+   since 2<=p and p!=2
+** 6. if 1<d, then there is a prime p so that NdivQ(p,d)
 Proof:  By induction on d. 
  Case d = 2.  Take p = 2 (known to be a prime).
  Make inductive assumption: 1<e<d implies there is prime p so that NdivQ(p,e)
@@ -657,13 +824,30 @@ Proof:  By induction on d.
  By induction, there is prime p so that NdivQ(p,e). Also NdivQ(p,d).
  
 QED by induction.
+** 7. 1 < n implies E(p,NprimeQ(p) and NdivQ(p,n))
+ Proof:
+  By induction on n. 
+  Case n = 2.  NprimeQ(2).  and NdivQ(2,2)
+  Assume 2<=n and A(k,2<k<=n implies E(p,NprimeQ(p) and NdivQ(p,k))
+  Let m = n+1. To show E(p,NprimeQ(p) and NdivQ(p,m))
+  If m is a prime, choose p = m.
+  If m is not a prime, then (by defn of prime), there is k such that
+   NdivQ(k,m) and k!=1 and k!=m.
+   So k <= n. and 2<=k.  Thus, by inductive assumption,
+   E(p,NprimeQ(p) and NdivQ(p,k)).   Now also NdivQ(p,m). QED
+** 8. If NprimeQ(p) and 0<a and p does not divide a, then gcd(p,a) = 1.
+  Let d be a divisor of both p and a.
+  Since p is a prime, d = 1 or d = p.
+   If d = p, the p | a, contrary to assumption.
+  Thus, d = 1.
+  Thus, comdivs(p,a) = {1}.  So gcd(p,a) = 1.
 * Euclid's Lemma: 1<=a, 1<=b, NgcdQ(n,a,1) and NdivQ(n,a*b) implies NdivQ(n,b)
 ** Euclid's Lemma:  NgcdQ(n,a,1) and NdivQ(n,a*b) implies NdivQ(n,b).
  Assume:  in(n,N*), in(a,N*), in(b,N*), NgcdQ(n,a,1) and NdivQ(n,a*b)
  To Prove:  NdivQ(n,b).
  Proof:
  Let S = S(t in N* such that NdivQ(n,t*b))
-*** subproof: NidealQ(S)
+*** subproof: 1<=n and 1<=b implies NidealQ(S)
   (1) S is not empty.
     By assumption, in(a,S). Also, in(n,S) since NdivQ(n,n*b)
   (2) If t and u are in S, then t+u is in S
@@ -700,27 +884,19 @@ QED by induction.
  The concept of NidealQ was thought of by me; no doubt many others have
  thought of this idea.
 
-** DA 13. If p a prime and 1<=a<p and 1<=b<p, then p does not divide a*b.
+** DA 13. If p a prime and 0<a<p and 0<b<p, then p does not divide a*b.
 Gauss, Disquisitiones Arithmeticae
-  Fix p and a. Set S = {b,1<=b<p and p|a*b}.  To prove S is empty set.
+  Fix prime p and 0<a<p. Set S = {b,1<=b<p and p|a*b}. To prove S is empty set.
   Assume S is not empty, and derive a contradiction.
-  Let t = NMin(S). Since S is not empty, t is in S.
-  So  1<=t<p and p|a*t.
-*** t != 1
-    If t = 1, then p|a, so p<=a, contradiction assumption a<p.
-*** Divide p by t:  p = t*c + r, 0<=r<t.
-*** r<p.  
-    Since r<t and t<p
-*** 1<=r
-  If r = 0, then p = t*c. Since t!=1 and t|p and p a prime, then t = p.
-  But this contradicts t<p.
-  So 1<=r
-*** p|a*r
-  a*p = a*t*c + a*r.  p|a*p.  And p|a*t*c.  Thus p|a*r.
-*** Thus, r is in S.
-*** Thus t <= r. Contradicting r<t.
-*** Thus, we conclude S IS empty set.
-
+  Show gcd(p,a) = 1.
+  Let d be divisor of both p and a.
+  Since p is a prime, d must be 1 or p.
+  if p | a, then p<=a, contradicting a<p.
+  Thus d must be 1.
+  Thus gcd(p,a) = 1.
+  Now suppose b is in S.  Then 0<b<p and p|a*b
+   By Euclid's lemma implies p|b, hence p<=b, contradicting b<p. 
+  Thus, S is empty, so p does not divide a*b
 ** DA 14. If p is a prime and 1<=a and 1<=b and p | a*b, then p|a or p|b.
 Gauss proof.
   Let r = Rem(a,p), s = Rem(b,p).
@@ -733,7 +909,8 @@ Gauss proof.
    
 ** DA 14 (proved from Euclid's Lemma)
    See 'Corollary 2 to Euclid's Lemma'
-* Corollary 1 to Euclid's Lemma: gcd(a,n)=1, 1<=x, a|x, n|x => a*n|x.
+* Corollaries to Euclid's Lemma
+** 1.  gcd(a,n)=1, 1<=x, a|x, n|x => a*n|x.
   If NgcdQ(a,n,1), 1<=x, and NdivQ(a,x) and NdivQ(n,x), then NdivQ(a*n,x).
   Proof:
   Let b = Nquo(x,a). So in(b,N*) and x = a*b.
@@ -742,34 +919,16 @@ Gauss proof.
   b = n*k (where k = Nquo(b,n))
   x = a*(n*k) = (a*n)*k.
   Thus, NdivQ(a*n,x). QED.
-* Corollary 1a: gcd(a,n) = 1, a|x, n|x => n|Quo(x,a).
+** 1a. gcd(a,n) = 1, a|x, n|x => n|Quo(x,a).
   By Cor. 1, a*n | x. Let y = Quo(x,a*n). 
   Then a*n*y = x.
   Let q = Quo(x,a) So q = n*y. Thus n|q.
-* gcd(a,n) = 1 and x=y(mod a) and x=y(mod n) => x=y(mod a*n)
+** 1b. gcd(a,n) = 1 and x=y(mod a) and x=y (mod n) => x=y(mod a*n)
   Pf: case x = y. True.
   Case x > y:  Set z = x-y, so 1<=z.   and z = 0 (mod a) and z = 0 (mod n).
   So a|z and n|z.  By Cor. 1, a*n|z.  Thus z = 0 (mod a*n). 
   Thus x = y (mod a*n)
-* Definition of prime number
-  NprimeQ(p)
-  p is a prime iff 
-   (1) p is in N and 1<p and
-   (2) A(d,NdivQ(d,p) implies d=1 or d=p)
-* NprimeQ(2)
-  Proof: 1<2.  NdivQ(d,2) => Nleq(1,d) and Nleq(d,2). Thus d = 1 or d = 2.
-* 1 < n implies E(p,NprimeQ(p) and NdivQ(p,n))
- Proof:
-  By induction on n. 
-  Case n = 2.  NprimeQ(p).  and NdivQ(p,p)
-  Assume 2<=n and A(k,2<k<=n implies E(p,NprimeQ(p) and NdivQ(p,k))
-  Let m = n+1. To show E(p,NprimeQ(p) and NdivQ(p,m))
-  If m is a prime, choose p = m.
-  If m is not a prime, then (by defn of prime), there is k such that
-   NdivQ(k,m) and k!=1 and k!=m.
-   So k <= n. and 2<=k.  Thus, by inductive assumption,
-   E(p,NprimeQ(p) and NdivQ(p,k)).   Now also NdivQ(p,m). QED
-* Corollary 2 to Euclid's Lemma: If p is prime and p|a*b, then p|a or p|b.
+** 2. If p is prime and p|a*b, then p|a or p|b.
  If p is prime and 1<=a and 1<=b and p|a*b, then p|a or p|b.
  Proof: Special cases when a=1 or b=1.
  Suppose 1<a and 1<b.
@@ -777,23 +936,35 @@ Gauss proof.
    Suppose NdivQ(d,p) and NdivQ(d,a).
    Then d = 1 or d = p since NprimeQ(p). Since !NdivQ(p,a), d != p, so d = 1.
   Thus gcd(p,a) = 1.  Thus (Euclid's Lemma), NdivQ(p,b).
-* Corollary 3 to Euclid's Lemma: gcd(a,n)=1 & gcd(b,n)=1 =>  gcd(a*b,n) = 1
+** 3. gcd(a,n)=1 & gcd(b,n)=1 =>  gcd(a*b,n) = 1
   Suppose gcd(a,n) = 1 and gcd(b,n) = 1
   Now, Suppose NdivQ(d,a*b) and NdivQ(d,n). 
   The assumption d!=1 leads to a contradiction, as follows.
    There is a prime p so that NdivQ(p,d) (defn of 'prime').
    Thus, NdivQ(p,a*b) and NdivQ(p,n)
-   Not p|a:
+   By Euclid's Lemma Corollary 2, p|a or p|b.
+   But p does not divide a.
     If p|a, then p|a and p|n, so p<=gcd(a,n) = 1,
      but 1<p since p is a prime.  
-    Thus, p does not divide 'a'.
-   Thus, gcd(p,a) == 1 (defn of prime).
-   Now by Euclid's Lemma Corollary 2, NdivQ(p,b).
-   But this contradicts gcd(b,n) = 1.
+     Thus, p does not divide 'a'.
+   Similarly: p does not divide 'b'
+   We have a contradiction.
  Thus, d = 1.  
- Thus gcd(a*b,n) =1.
+ Thus gcd(a*b,n) = 1.
  QED.
   
+** 4, if 1<=m and f:m->N* is a finite sequence and A(i, in(i,m) implies gcd(f(i),n) = 1), then
+  gcd(NprodSeq(f),n) = 1.  Informally, gcd(f(1)*...*f(m),n) = 1.
+  Proof by induction on m.
+  Case m=1 trivial.
+  Assume for 1<=m. To prove for f:m+1->N*.
+   A(i, in(i,m+1) implies gcd(f(i),n) = 1)
+  NprodSeq(f) = NprodSeq(restriction(f,m)) * f(m)
+  Inductive assumption applies to restriction(f,m),
+   so gcd(NprodSeq(restriction(f,m)),n) = 1>
+  Also, gcd(f(m),n) = 1.
+  Now Corollary 3 Implies gcd(NprodSeq(restriction(f,m)) * f(m),n) = 1.
+  QED
 * Quo properties with Division. Quo(a,b) == (a/b) NOTATION
   For 1<=a, 1<=b,   Quo(a,b) and Rem(a,b) are the unique q,r in N with
   (a) a = b*q + r and (b) 0<=r<b.
@@ -891,7 +1062,7 @@ Gauss proof.
    (c/a) = (c/b)*(b/a)
    
   
-* Legendre theorem on number of roots of a polynomial.
+* Legendre theorem on number of roots of a polynomial over a field
 Let K be a field, and let f be a non-zero polynomial 'over' K.
 Let d be the degree of f and let R be the set of roots of f in K.
 Then R is a finite set with d or fewer elements.
@@ -906,6 +1077,9 @@ For any
   Thus Card(roots(f)) <= deg(f)
 Inductive hypothesis Assume for n.
   Let f be a non-zero polynomial with deg(f) = n+1.
+  Case f has no roots, then roots(f) = 0 empty set; so Card(roots(f)) = Card(0) = 0,
+   and 0 <= n+1, so Card(roots(f)) <= deg(f).
+  Case f has a root.
   Let a be a root of f. Let g = X-a (polynomial in K). deg(g) = 1.
   Since K is a field, the division algorithm applies to division of f by g.
   Thus there are polynomials q and r in K[X] with
@@ -925,38 +1099,172 @@ Inductive hypothesis Assume for n.
                   <= card(roots(g)) + card(roots(q))
                   <= 1 + n = deg(f).
 Now the proof is completed by induction.
-* Wilson's theorem
-If p is a prime, then (p-1)! = -1 (mod p).
+* ring structures Nring(n)  (NSum(n), NProd(n))
+** The set N*
+  Let N* = 1,2,3,... (positive integers)
+  By one definition, for n in N*,  n = S(k,in(k,N) and Nlt(k,n)).
+  e.g., 1 = {0}, 2 = {0,1}, 3 = {0,1,2}, etc.  
+  This definition due to Von Neumann (ref: https://en.wikipedia.org/wiki/Natural_number)
+** For n in N, the cardinality of the set n is n:  Card(n) = n.
+  This has been proved in pyfol4c.  Specific reference?
+** Nring(n), NSum(n), NProd(n)
+  Let n be in N*.
+  Nring(n) is the ring of integers modulo n.  Its underlying set is n.
+  For a, b in N define modular product and sum,
+   NSum(n)(a,b)  = Rem(a+b,n).
+   NProd(n)(a,b) = Rem(a*b,n)
+  By defining properties of Rem, we have NProd(n)(a,b) and NSum(n)(a,b) in 'n'.
+  Let R(a) = Rem(a,n).  
+** commutativity of NSum(n)
+  Let f(a,b) = R(a+b)
+  Let lhs = f(a,b), rhs = f(b,a)
+  lhs = R(a+b)
+      = R(b+a)
+      = rhs
+** associativity of Nsum(n)
+  Let f(a,b) = R(a+b)
+  lhs = f(f(a,b),c) = R(f(a,b)+c) = R(R(a+b)+c) = R((a+b)+c)
+  rhs = f(a,f(b,c)) = R(a+f(b,c)) = R(a+R(b+c)) = R(a+(b+c))
+  Since (a+b)+c = a+(b+c)  (associativity in N addition),
+  conclude R((a+b)+c) = R(a+(b+c)).
+  So, lhs = rhs.
+** commutativity of NProd(n)
+  Let f(a,b) = R(a*b)
+  Let lhs = f(a,b), rhs = f(b,a)
+  lhs = R(a*b)
+      = R(b*a), since a*b = b*a in N
+      = rhs
+** associativity of NProd(n)
+  a,b,c in N  
+  Let f(a,b) = R(a*b).
+  lhs = f(f(a,b),c) = R(f(a,b)*c) = R(R(a*b)*c) = R((a*b)*c)
+  rhs = (a,f(b,c)) = R(a*f(b,c)) = R(a*R(b*c)) = R(a*(b*c))
+  (a*b)*c = a*(b*c) by associativity in N.
+  so R((a*b)*c) = R(a*(b*c))
+  so lhs = rhs.
+
+** distributivity of NProd(n) over NSum(n)
+  Let f(a,b) = R(a+b),  Let g(a,b) = R(a*b).
+  Let a,b,c in set 'n'. [Roughly, to show (a+b)*c = (a*b) + (a*c)]
+  lhs = g(f(a,b),c) 
+      = R(f(a,b)*c) 
+      = R(R(a+b)*c)
+      = R((a+b)*c)
+      = R((a*c)+(b*c)) by distributivity in N,+,*
+  rhs = f(g(a,c),g(b,c))
+      = f(R(a*c),R(b*c))
+      = R(R(a*c)+R(b*c))
+      = R((a*c)+(b*c))
+  lhs = R((a+b)*c) 
+** 0 in n is the additive identity for NSum(n)  (Since 0<n)
+  Since 0<n,  0 is in n.
+  Let f(a,b) = R(a+b) for a,b in N.
+  Now, let 'a' be in the set 'n'. Then a is also in N. So
+  Then f(a,0) = R(a+0) = R(a)
+   = a, since a in 'n'.
+** If 1<n, then 1 is the multiplicative identity in 'n', and and 0 != 1 in 'n'.
+  Let f(a,b) = R(a*b) for a,b in N.
+  Since 1 < n, we have 1 is an element of set 'n'.
+  Let 'a' also be in set 'n'. (i.e., a is in N and a<n)
+  f(a,1) = R(a*1) = R(a) = a.
+* RemF(n): N -> n  compatible with sums and products
+  RemF(n)(x) = Rem(x,n), by definition.
+  Let x, y in N.
+** RemF(n)(x+y) = NSum(n)(RemF(n)(x),RemF(n),y)
+  lhs = Rem(x+y,n)
+  rhs = NSum(n)(Rem(x,n),Rem(y,n)) 
+      = Rem(Rem(x,n)+Rem(y,n),n)
+  Apply division of x by n and of y by n. 
+  x = a*n + Rem(x,n)
+  y = b*n + Rem(y,n)
+  Also divide Rem(x,n)+Rem(y,n) by n
+  Rem(x,n)+Rem(y,n) = c*n + Rem(Rem(x,n)+Rem(y,n),n) = c*n + rhs
+  Thus,
+   x+y = (a+b+c)*n + rhs.
+  Since rhs < n, we conclude rhs = Rem(x+y,n) = lhs.
+** RemF(n)(x*y) = NProd(n)(RemF(n)(x),RemF(n),y)
+  lhs = Rem(x*y,n)
+  rhs = NProd(n)(Rem(x,n),Rem(y,n)) 
+      = Rem(Rem(x,n)*Rem(y,n),n)
+  Apply division of x by n and of y by n. 
+  1) x = a*n + Rem(x,n)
+  2) y = b*n + Rem(y,n)
+  Also divide Rem(x,n)*Rem(y,n) by n
+  3) Rem(x,n)*Rem(y,n) = c*n + Rem(Rem(x,n)*Rem(y,n),n) = c*n + rhs
+  Also, divide x*y by n:
+  4) x*y = e*n + lhs where lhs < n 
+  Now apply 1-3 to get another expression for x*y:
+  5) x*y = (a*n)*(b*n) + (a*n)*Rem(y,n) + (b*n)*Rem(x,n) + Rem(x,n)*Rem(y,n)
+  Also, divide Rem(x,n)*Rem(y,n) by n:
+  6)  Rem(x,n)*Rem(y,n) = c*n + rhs where rhs < n
+  Apply 6) to 5), 
+  7) x*y = d*n + rhs  (where d = a*n*b + a*Rem(y,n) + b*Rem(x,n) + c
+  Compare expressions 4 and 7; 
+  By uniqueness of Quotient and remainder, lhs = rhs  (and also e = d)
+  QED.
+* If p is a prime, then Nring(p) is a field
+  It remains to show the existence of multiplicative inverse for non-zero elements of 'p'.
+  Let a in p and a != 0. Thus 1<=a<p. 
+  We search for 'z' in p with Nring(a,z) = 1.
+  Since p is a prime, gcd(a,p) = 1.
+  Thus, by Bezout corollary 2 there is x with 1<=x and Rem(a*x,p) = 1.
+  Let z = Rem(x,p). Then z is in p.
+  To show: NProd(p)(a,z) = 1.
+   NProd(p)(a,z) = Rem(a*z,p) = Rem(a*Rem(x,p),p).
+                 = Rem(a*x,p)  [property of Rem]
+                 = 1.
+  Thus z is a multiplicative inverse of 'a' in Nring(p).
+  if also w is a multiplicative inverse of 'a' in Nring(p), then
+   Nring(p)(a,w) = Rem(a*w,p) = 1.
+  (incomplete)  a*z = a*w, so a*(z-w) = 0 (mod p). Since a!=0, we must have z-w = 0 or z=w. 
+  So we may speak of 'the' multiplicative inverse of 'a' in Nring(p)
+* Wilson's theorem: If p is a prime, then (p-1)! = -1 (mod p).
+
 Proof:
  Consider the set A of numbers from 1 to p-1.
+ Recall that Nring(p) is a field.
+ For x in A, there is y in A with x*y = 1 (mod p)
  Define function f from A to subsets of A by
  f(x) = union({x},{inverse(x)}), where inverse(x) in A is the multiplicative
- inverse of x modulo p.
+ inverse of x modulo p (inverse(x) exists by 
    (e.g. if p = 5, inverse(2) = 3 since 2*3 = 6 == 1 (mod 5)).
- Now f(1) = 1 and f(p-1) = p-1.
- And if 1 < x < (p-1),  then inverse(x) != x:
+** f(1) = {1}
+ inverse(1) = 1.
+** f(p-1) = {p-1}
+  (p-1)*(p-1) = p*p -2*p + 1 = 1(mod p).
+  Thus, inverse(p-1) = p-1.
+  So, f(p-1) = {p-1}
+** if 1 < x < (p-1),  then inverse(x) != x:
    Proof: Let y = inverse(x), so x*y = 1 (mod p). Suppose y = x.
    Then x*x = 1 so (x-1)*(x+1) = 0 (mod p). Thus, since p is a prime,
    x = 1 (mod p) or x = p-1 (mod p).  But by assumption, x is neither 1 nor
    p-1.  Thus, y != x.
- Let P = range(f).  Then P consists of two one-element sets {1) and {p-1} and,
+** Let P = range(f). Then P is a partition of A
+ Then P consists of two one-element sets {1) and {p-1} and,
  any other subsets have 2 elements.
  Further, the elements of P are disjoint.
-  Proof.  Tedious but shallow.
+  Proof.  Tedious but believed elementary.
  And Further, any element a in A is a member of some element of P.
  Thus, P is a partition of A.
- Thus, (p-1)! = product(prod(p) for p in P).  
- But prod({1}) = 1, prod({p-1}) = p-1, and if p = {x,inverse(x)} (with
- x !=1 and x!= p-1) then prod(p) = x*inverse(x) mod(p) = 1.
- Thus, (p-1)! = p-1 (mod p)
+** (p-1)! = p-1 (mod p)
+ Thus, (p-1)! = product(prod(s) for s in P). Weak notation!
+   prod({1}) = 1,
+   prod({p-1}) = p-1, 
+   if x !=1 and x!= p-1  then f(x) = {x,inverse(x)} 
+     So,  prod(f(x)) = x*inverse(x) mod(p) = 1.
+  Thus, (p-1)! = p-1 (mod p)
+** Example: p = 7
+  A = {1,2,...,6}
+  P = {{1},{2,4},{3,5},{6}}
+  (p-1)! = 1*(2*4)*(3*5)*6 = 1*6 (mod p) = p-1
 
-* Fermat's little theorem (using Wilson's theorem)
-If p is a prime and p does not divide a, then a^(p-1) = 1 (mod p).
+* Fermat's little theorem: If p is prime and gcd(p,a) = 1, then a^(p-1) = 1 (mod p).
+i.e. p does not divide a, and a != 0.
 Let A be the set of integers x such that 1 <= x <= p-1.
 We can assume a is in A.
   other wise, replace a with its remainder upon division by p.
 Let f be the function from A to A defined be f(x) == a*x (mod p).
-(i.e., f(x) is the remainder mod p of a*x).
+  (i.e., f(x) is the remainder mod p of a*x).
 Now if f(x) = f(y), then a*(x-y) = 0 (mod p). Since p is a prime,
 Euclid's lemma applies to show p divides a or p divides x-y.
 But p does not divide a (since 1<=a<=p-1), so p divides x-y.  
@@ -1027,24 +1335,24 @@ a prime, we can cancel (p-1)! to get a^(p-1) = 1 (mod p). QED
  Let n = (p-1)/2. Then in Z/Zp,
  (-1|p) = (-1)^n. But both sides are either 1 or -1, and p is odd, so
  the two sides are equal in Z. (-1)^n is 1 IFF n is even IFF p == 1 (mod 4).
-* d Solutions of x^d - 1 = 0 (mod p) (when d divides (p-1))
-  When d == p-1, there are p-1 solutions to x^(p-1) - 1 == 0 (mod p) [Fermat]
+* TODO if p is a prime and d divides p-1, then x^d - 1 = 0 (mod p) has d solutions.
+  When d == p-1, there are p-1 solutions to x^(p-1) - 1 == 0 (mod p) [Fermat Little Theorem]
   Also clear when d == 1.
   Let d be some other divisor of p-1: p-1 = d*k  (1<d<p-1 and 1<k<p-1).
   Let F = the field of residues mod p: {0,1,...,p-1}
-  Let h = X^(p-1) - 1  (as polynomial in F[X]). deg(h) = p-1
+  Let h = X^(p-1) - 1  (a polynomial in F[X]). deg(h) = p-1
   Let f = X^d - 1 (also in F[X]). deg(f) = d
 ** Preliminary: 1<=n implies Y-1 divides Y^n - 1 in R[Y].
  Assume R is a ring with unit. Work in polynomials in R.
  n = 1:  Y-1 divides Y^1 - 1  (Y-1)*1 = Y^1 - 1 
  Induction:There is f in R[Y] so that (Y-1)*f = Y^n -1
  Y^(n+1) - 1 = Y*Y^n - 1 = Y*(Y^n - 1) + (Y - 1) = 
-        Y*(Y-1)*f + (Y-1) = (Y-1)*(Y*f + 1)  [so Y-1 divides Y^(n+1)
+        Y*(Y-1)*f + (Y-1) = (Y-1)*(Y*f + 1)  [so Y-1 divides Y^(n+1)]
  QED by induction.
  If we define g(1) = 1, g(k+1) = Y*g(k) + 1, then for all n>=1,
   Y^n - 1 = (Y-1)*g(n).  
  In fact, g(n+1) = 1 + Y + ... + Y^n  
-** Alternately. y-1 divides y^n - 1 for n>=1 and y in R with y!=1
+** Alternately: y-1 divides y^n - 1 for n>=1 and y in R with y!=1
  If R is a ring with unit, and y is in R and y-1!=0 in R, and
  if n>=1, then y-1 divides y^n - 1.
  Define sequence g in R (starting at 1) by :
@@ -1090,13 +1398,19 @@ a prime, we can cancel (p-1)! to get a^(p-1) = 1 (mod p). QED
    Thus, Card(roots(f)) == deg(f).
    Similarly, Card(roots(g)) == deg(g).
    QED
-* relprimes(n), ephi(n)
-  For 1<=n, relprimes(n) = S(x,1<=x<=n and gcd(x,n) == 1)
-  Zmod.relprimes(n) = S(Zmod(x,n), 1<=x<=n and gcd(x,n) == 1)
-    This is subset of the ring Z[n] of integers mod n.
-** 0a. if 1<=a<=n, then a is in relprimes(n) iff  and E[x,E[y, and 1<=x and 1<=y and a*x = n*y + 1]]
+* =========================================================
+* relprimes(n) 
+  For 1<=n, 
+  Define relprimes(n) = S(x,1<=x<=n and gcd(x,n) == 1)
+
+  Note:
+  For the rest of this section, Assume 1<n
+  if 1<n, then relprimes(n) = S(x,1<=x<n and gcd(x,n) == 1).
+   Thus, relprimes(n) is a subset of 'n' when 1<n
+** 0.  relprimes(1) = {1}
+** 0a. if 1<=a<n, then a is in relprimes(n) iff  and E[x,E[y, and 1<=x and 1<=y and a*x = n*y + 1]]
    If 1<=a and 1<=n, there are x and y with 0<=x and 1<=y and a*x = n*y + gcd(a,n).
-   If a is in relprimes, then gcd(a,n) = 1, so a*x = n*y + 1.
+   If a is in relprimes(n), then gcd(a,n) = 1, so a*x = n*y + 1.
    Conversely, Suppose a*x = n*y + 1 
     If  d|a and d|n, then d|1.  Thus gcd(a,n) = 1.
 ** 0b. if 1<=a<=n, then a is in relprimes(n) iff E[x, 1<=x with a*x = 1 (mod n)]
@@ -1107,9 +1421,26 @@ a prime, we can cancel (p-1)! to get a^(p-1) = 1 (mod p). QED
    gcd(b,n) = 1 There is y so that b*y = 1 (mod n)
    Then (a*b)*(x*y) = 1 (mod n).  Thus, Rem(a*b,n)*Rem(x*y,n) = 1 (mod n)
    And  1<=Rem(a*b,n)<=n  so Rem(a*b,n) in relprimes(n).
-** 0d. if 1<n, then the set n (with elements 0,1,...,n-1) is a ring under (mod n) operations.
+** 0d. Nring(n) if 1<n, then the set n (with elements 0,1,...,n-1) is a ring under (mod n) operations.
 ** 0e. If 1<n, relprimes(n) with (mod n) multiplication is a subgroup with (mod n) multiplication.
-** 1. Corollary 3 to Euclid's Lemma (see above)
+** 0f. if 1<=a<=n, then a in relprimes(n) iff comdivs(a,n) = {1}.
+       Assume 1<=a<=n.
+       gcd(a,n) = max(comdivs(a,n)) (one defintion of gcd)
+       relprimes(n) = {b, 1<=b<=n and gcd(b,n) = 1}. 
+       Now, 1 is in comdivs(a,n) (since 1<=a and 1<=n).
+       So leq({1},comdivs(a,n))
+***    if a is in relprimes(n), then comdivs(a,n) = {1}.
+        Then gcd(a,n) = 1. Thus max(comdivs(a,n)) = 1.
+        Suppose d is in comdivs(a,n). Then 1<=d.
+         if d != 1,  then 1 < d <= max(comdivs(a,n)), a contradiciton.
+        Thus d = 1. So leq(comdivs(a,n), {1}).
+        Since also leq({1},comdivs(a,n)), we conclude comdivs(a,n) = {1}
+***    if comdivs(a,n) = {1}, then a is in relprimes(n).
+       Then gcd(a,n) = max(comdivs(a,n)) = max({1}) = 1.
+       Thus, a is in relprimes(n)
+** -------------------------------------------------------------
+** 1. if x and y are in relprimes(n), then NProd(n)(x,y) is in relprimes(n)
+   Corollary 3 to Euclid's Lemma (see above)
 
 ** 2. If 1<=x<=n, then x in relprimes(n) iff E[y,1<=y<=n and x*y = 1 (mod n)]
   a. If 1<=x<=n and 1<=y<=n and x*y = 1 (mod n), then x is in relprimes(n).
@@ -1119,11 +1450,11 @@ a prime, we can cancel (p-1)! to get a^(p-1) = 1 (mod p). QED
    So x is in relprimes(n)
   b. Suppose x is in relprimes(n).
     Define f(k) = Rem(x*k,n), for k in relprimes(n).
-    From lemma 1 above, f(k) is also in relprimes(n).
+    From lemma 0c above, f(k) is also in relprimes(n).
     So, f is a function from relprimes(n) to relprimes(n).
      Now, suppose k<=j and j and k are in relprimes(n), and f(j) == f(k). 
      Thus x*j == x*k (mod n). So there is 1<=c with x*j = x*k + n*c.
-     Thus, NdivQ(n,x*(j-k)). By Corollary to Euclid's Lemma, NdivQ(n,j-k).
+     Thus, NdivQ(n,x*(j-k)). By Corollary to Euclid's Lemma, NdivQ(n,j-k), since gcd(x,n)=1.
      But 1 <= j-k < n  (since 1 <= k < j <= n), So NdivQ(n,j-k) is false.
     Conclude, f is injective.
     Since relprimes(n) is finite,  conclude f is bijection.
@@ -1133,12 +1464,96 @@ a prime, we can cancel (p-1)! to get a^(p-1) = 1 (mod p). QED
 
 ** 3. If 1<=x<n, then x is in relprimes(n) iff E[y,y in relprimes(n) and x*y = 1 (mod n)]
    Trivial from 2
-** 4. Zmod.relprimes(n) is group of multiplicative units in ring Z[n].
+** 4. If 1<n, then relprimes(n) is the group of multiplicative units in ring Nring(n).
    This is a matter of definitions.
-   This is a finite group.  We will later show this group to be cyclic.
-** Definition ephi(n) = Card(relprimes(n))  (Euler totient function)
-   1<=n
-* Euler phi function (number of relatively prime numbers)
+   This is a finite group.  Often (always?) this group is cyclic (a generator called a 'primitive root')
+** 5. if n is prime, then relprimes(n) = {x in N: 1<=x<n}
+   Let A = relprimes(n)
+   Let B = {x: 1<=x<n}
+   if x in A, then 1<x<n, so x in B.
+   if x in B, then 1<=x<n.
+    if d | x and d | n, then
+     d = 1 or d = n, since n is prime.
+     Also d<=x, so d<n.  Thus d = 1.
+    Thus the set of common divisors of x and n is {1}. Thus gcd(x,n) = 1
+    Thus, x in A.
+   Thus A = B.
+** 6. if 1<=n and 1<=k and 0<=i<=k, then n**i|n**k
+      There is j in N with k = i+j.
+      n**k = n**(i+j) = (n**i)*(n**j) by a 'law of exponents' in N.
+      Thus n**i | n**k.
+** 7. if n is prime and 1<=k and q is prime and q | n**k, then q = n.
+      Induction on k.
+      Case k = 1. Then n**k = n. So q | n. 
+       Since n is prime, q = 1 or q = n.  
+       Since q is prime, q != 1.  Thus, q = n.
+      Inductive hypothesis: Assume 1<=k and that q|n**k implies q = n.
+       Now assume q | n**(k+1).  
+       n**(k+1) = (n**k)*n  (a law of exponents)
+       So q | (n**k)*n. By Corollary2 to Euclid's lemma,
+        q|n**k  or q |n.
+        if q|n, then q|n**1, so q = n by case k=1
+        and if q|n**k, then q = n by inductive hypothesis.
+      By induction, if 1<=k and q|n**k, then q = n. QED.
+** 8. if n is prime and 1<=k, then divisors(n**k) = {n**i, i<=k}
+      Let A = divisors(n**k) and B = {n**i, i<=k}.
+      By 6, B is a subset of A.
+***   Use induction on k to prove that A is subset of B.
+      For 1<=k, let A(k) = divisors(n**k) and B(k) = {n**i, i<=k}.
+      To prove A(k) is subset of B(k) for all k in N with 1<=k.
+      Case k = 1.
+       n**1 = n. Since n is prime, A(1) = divisors(n) = {1,n} = B(1). So leq(A(1),B(1)).
+      Inductive hypothesis: leq(A(k), B(k)).
+      To show A(k+1) is subset of B(k+1).
+       Let d be an element of A(k+1).  Thus d | n**(k+1).
+       We must show d is in B(k+1).
+       Choose a prime q such that q | d. So q | n**(k+1).
+       By 7, q = n.
+       Thus d = n*a (a = Quo(d,n))
+       Thus n*a | n*(n**k).  
+       Thus a | n**k.
+       i.e, a is in A(k).  By inductive hypothesis, a is in B(k). Choose i<=k with
+       a = n**i.
+       Thus d = n*(n**i) = n**(i+1), and i+1 <= k+1.  Thus d is in B(k+1).
+      By induction, A(k) is a subset of B(k) for all k.
+***   Thus A = B.
+** -------------------------------------------------------------
+** 9. if n is prime and 1<=k, then relprimes(n**k) = nonmultiples(n,n**k)
+    Let m = n**k
+    note 1<=n and 1<=m. In fact 1 < m.
+    A = relprimes(m), B = nonmultiples(n,m). We must show A = B.
+    Since 1 < m, 
+    iff (in(x,A) 1<=x<m && gcd(x,m) = 1)
+    iff (in(x,B),  (x < m && (not n|x)))
+      Since 1<=n, n | 0.  Thus,
+    iff (in(x,B), (1<=x<m && (not n|x))
+*** Now suppose 1<=x<m. to show:  iff(gcd(x,m) = 1, (not n|x)).
+     
+     equivalently to show: iff(gcd(x,m) != 1, n|x).
+      First, suppose gcd(x,m) != 1, and show n | x.
+       Now gcd(x,m)|x and gcd(x,m)|m.
+       Since n is prime, statement 8 above impies there is i (0<=i<=k) such that gcd(x,m) = n**i.
+       Since gcd(x,m) != 1, in fact 0 < i, so 1<=i.
+       Thus, n | n**i.  thus n | gcd(x,m). 
+       Since gcd(x,m) | x, we conclude n | x
+      Next, suppose n|x and show gcd(x,m) != 1.
+       Since 1<=k, we also have n|m.
+       Thus, n is in comdivs(x,m). 
+       Since n is prime, 1 < n.
+       Since gcd(x,m) = max(comdivs(x,m), n <= gcd(x,m).
+       Thus 1 < gcd(x,m). So gcd(x,m) != 1
+     Thus, iff(gcd(x,m) != 1, n|x).
+     Thus, iff(gcd(x,m) = 1, (not n|x))
+     QED
+*** Thus Iff( in(x,A), in(x,B). So A = B
+** 10. If n is prime and 1<=k, then NCard(relprimes(n**k)) = (n**(k-1))*(n-1)
+   By 9, relprimes(n**k) = nonmultiples(n,n**k). Thus
+   NCard(relprimes(n**k)) = NCard(nonmultiples(n,n**k))
+   Since n is prime, 1<=n.
+   Since 1<=n and 1<=k, we may have the general fact about nonmultiples that
+   NCard(nonmultiples(n,n**k)) =  (n**(k-1))*(n-1) 
+   Thus, NCard(relprimes(n**k)) = (n**(k-1))*(n-1)
+   QED.
 * divisorsum(f,n), number-theoretic function, multiplicative
  These are functions defined on N*. See numtheory1.py
  The function values could be in  Z, Q, R, or C. But usually are in N.
@@ -1151,149 +1566,227 @@ a prime, we can cancel (p-1)! to get a^(p-1) = 1 (mod p). QED
   This is also represented in numtheory1.py.
   Let f be a number-theoretic function.
   divisorsum(f,n) is sum of f(d) over all divisors d of n.
+   = f(d1) + f(d2) + ... + f(dk) where {d1,...,dk} 
+     is an enumeration of the divisors of n.
   Let divisorsumF(f) be the function with domain N* with 
-   val(divisorsumF(f),n) = divisorsum(f,n).
+   val(divisorsumF(f),n) = divisorsum(f,n)
   Then divisorsumF(f) is also a number-theoretic function.
 
   In one sense this is a simple notion.
   A more exact definition requires some background, which is rarely discussed.
-  Let Card(divisors(n)) in N be the number of divisors of n.
+  For n in N*,  Card(divisors(n)) in N be the number of divisors of n;
   Assume f(d) is in N, for each divisor d of n.
-  Let D(n): Card(divisors(n)) -> divisors(n) be any bijection.
+  Let D(n): Card(divisors(n)) -> divisors(n) be any bijection;
+    there are such bijections since divisors(n) is a finite set.
+
   Let f#D(n) denote the composition function from Card(divisors(n)) to N.
-  Then divisorsum(f,n,D(n)) is f(D(n)(0)) + ... + f(D(n)(n-1)).
+  Then divisorsum(f#D(n)) is f(D(n)(0)) + ... + f(D(n)(n-1)).
   Since addition in N is commutative and associative, if  
   D1(n):  Card(divisors(n)) -> divisors(n)
-  is any other bijection, then divisorsum(f,N,D1(n)) == divisorsum(f,N,D(n)).
+  is any other bijection, then divisorsum(f#D1(n)) == divisorsum(f#D(n)).
 ** multiplicative number-theoretic function
- f: N* -> C is multiplicative if gcd(m,n) == 1 implies f(m*n) == f(m)*f(n).
+ f: N* -> C is multiplicative if gcd(m,n) = 1 implies f(m*n) == f(m)*f(n).
  (for 1<=m, 1<=n)
+* ephi(n) definition and first properties
+  When 1<=n, define ephi(n) = NCard(relprimes(n))  (Euler totient function)
+** 1. if 1<=n, 1<=ephi(n)<=n.
+   relprimes(n) is subset of (n+1), hence finite.
+   Also 0 is not in relprimes(n). Thus leq(relprimes(n), diff(n+1,{0}))
+   Thus ephi(n) <= n.
+   Since in(1,relprimes(n), Ncard({1}) <= NCard(relprimes(n)).
+   And NCard({1}) = 1.
+   Thus, 1 <= ephi(n)
+** 2. if 1 < n, then ephi(n) < n.
+   Since n | n and 1 <= n, gcd(n,n) = n.
+   Since 1 < n, gcd(n,n) != 1.
+   Thus n is not in relprimes(n). Thus,
+    leq(relprimes(n), diff(n+1,{0,n})).
+    Thus NCard(relprimes(n)) <= NCard(diff(n+1,{0,n})) = (n+1) - 2 = n-1.
+    Thus ephi(n) < n.
+** 3. ephi(1) = 1, since relprimes(1) = {1}
+** 4. ephi(2) = 1, since relprimes(2) = {1}
+** 5. ephi(3) = 2, since relprimes(3) = {1,2}
+** 6. ephi(4) = 2, since relprimes(4) = {1,3}
+** 7. ephi(5) = 4, since  relprimes(5) = {1,2,3,4}
+** 8. if n is prime and 1<=k, then ephi(n**k) = (n**(k-1))*(n-1)
+   Statement 10 under relprimes is
+     NCard(relprimes(n**k)) = (n**(k-1))*(n-1); Apply definition of ephi.
+** 9. if n is prime, then ephi(n) = (n-1).
+   Assume n is prime.
+*** Proof 1:
+    Apply 8 with k = 1.  ephi(n**1)  = (n**0)*(n-1)
+    n**1 = n and n**0 = 1.
+    Thus ephi(n) = n-1
+*** Proof 2
+   From statement 5 of relprimes above,
+    relprimes(n) = {x in N: 1<=x<n}
+    Thus, NCard(relprimes(n)) = NCard({x in N: 1<=x<n}) = n-1
+    Thus ephi(n) = n-1
+** 10. if n is prime and n != 2 and 1<=k, then ephi(n**k) is even.
+   Since n is prime, 2<=n.  Thus 2<n by assumption.
+   since n is prime, 2 does not divide n.
+   Thus NoddQ(n).  Thus NevenQ(n-1).
+   By 8, ephi(n) = (n**(k-1))*(n-1). Thus NevenQ(ephi(n)).
+** Two important theorems (to be proved later)
+***   - divisorsum(ephi,n) = n
+     Example: n = 15. divisors(15) = {1,3,5,15}
+      divisorsum(ephi,15) = 
+       ephi(1) + ephi(3) + ephi(5) + ephi(15) = 
+       1 + 2 + 4 + 8 = 15
+***   - gcd(m,n) = 1 implies ephi(m*n) = ephi(m)*ephi(n)
+     Example: gcd(3,5) = 1
+     relprimes(15) = {1,2,4,7,8,11,13,14}. ephi(15) = 8
+     ephi(3)*ephi(5) = 2*4 = 8.
 * gcdpartitionF(n), gcdpartition(n)
- These are introduced to prove that divisorsum(ephi,n) = n.
-** This partition of [1..n] is usually un-named. 
+ These are introduced to prove that divisorsum(ephi,n) = n 
+ This partition of [1..n] is usually un-named. 
  Its properties are used in proving that ephi is a multiplicative function.
  Fix 1<=n. range(1,n+1) = S(m, 1 <= m <= n). 
  card(range(1,n+1)) = n
 
- Define a function gcdpartitionF(n) with domain divisors(n) by
-  gcdpartitionF(n)(d) = S(m, 1 <= m <= n and gcd(m,n) == d) (where d divides n)
- Call this f.
- Note that gcdpartitionF(n)(1) = relprimes(n) and gcdpartitionF(n)(n) = {n} .
+ Define a function gcdpartitionF(n) from divisors(n) by
+  gcdpartitionF(n)(d) = S(m, 1 <= m <= n and gcd(m,n) == d) 
+ Let f = gcdpartitionF(n).
+ Define function F: divisors(n) -> N* by F(d) = NCard(f(d))
 
+ Note that f(1) = relprimes(n) and f(n) = {n} .
  Define gcdpartition(n) = range(f). 
-** gcdPartition(n) is a partition of S(m, 1 <= m <= n)
-  Let 1<=n.
-  Let s = S(m, 1 <= m <= n). Let f = gcdpartitionF(n)
-  Let P = gcdPartition(n) == range(f).
-  To prove: P is a partition of s.
+ Let P = gcdpartition(n).
+ Let s = S(m, 1 <= m <= n)  
+ Note Card(s) = n.
+** P is a partition of s
   f is a function from divisors(n) to subsets(s).
-  P is a collection of subsets of s.
-  if d in divisors(n), then 1<=d<=n, and gcd(d,n) == d;
-  So d is in f(d), so f(d) is not empty.
-  if e is in divisors(n), then 1<=e<=n, and suppose m is in f(d) and f(e).
-  Then 1<=m<=n, and gcd(m,n) == d and gcd(m,n) == e; so d == e.
+  Thus, P is a collection of subsets of s.
+  if d is in divisors(n), then 1<=d<=n, and gcd(d,n) == d;
+    So d is in f(d), so f(d) is not empty.
+  Suppose both d and e are in divisors(n). 
+   We show intersection(f(d),f(e)) is empty set unless d = e.
+   Suppose this intersection is not empty; 
+   Choose m in both f(d) and f(e).
+   Then 1<=m<=n, and gcd(m,n) = d and gcd(m,n) = e; so d = e.
   Also 1 is in divisors(n), so f(1) is in P, so P is not empty.
   Now take m with 1<=m<=n.  Then gcd(m,n) is in divisors(n) and
-  so m is in f(gcd(m,n)).
+   so m is in f(gcd(m,n)). 
+   Thus, union(P) = s.
   Thus, P is a partition of S.
 ** sum(NCard(e), e in P) = n
- Since P is a partition of the finite set s,
+   Since P is a partition of the finite set s,
   sum(NCard(e), e in P) = NCard(s),
- and NCard(s) = n  (how to prove ?)
+ and NCard(s) = n  
+  Proof: s = diff(n+1,{0}) 
+  NCard(s) = NCard(n+1) - NCard({0}) = (n+1) - 1 = n.
  So, sum(NCard(e), e in P) = n.
-** code example
+** f is an injection from divisors(n) to Subsets of N
+   Take divisors d, d1 of n such that f(d) = f(d1). To show d = d1
+   f(d) = S(m, 1 <= m <= n and gcd(m,n) == d)
+   f(d1) = S(m, 1 <= m <= n and gcd(m,n) == d1)
+   Now since 1<=d<=n and gcd(d,n) = n (since d divides n), we conclude d is in f(d)
+   Similarly, d1 is in f(d1).
+   so d = gcd(m,n) = d1.
+** Thus, f is a bijection from divisors(n) onto range(f) == P
+** divisorsum(F,n) = n
+   Suppose k = Card(divisors(n)) and d1,...,dk is an enumeration of divisors(n)
+   Then f(d1), ..., f(dk) is an enumeration of P
+   Thus sum(NCard(e), e in P) = divisorsum(F,n) = F(d1) + F(d2) + ... + F(dk)
+   So, Since n = sum(NCard(e), e in P), we get divisorSum(F,n) = n.
+* Python code illustrating divisorsum(ephi,n) = n.
+** code example  n = 15
+  Recall notation: gcdpartitionF(n)(d) = S(m, 1 <= m <= n and gcd(m,n) == d) 
   numtheory1.gcdpartition(15)
   {1: [1, 2, 4, 7, 8, 11, 13, 14], 3: [3, 6, 9, 12], 5: [5, 10], 15: [15]}
+  divisors(15) = {1,3,5,15}
+  f(1) = S(m, 1<=m<=15 and gcd(m,15) = 1) = [1, 2, 4, 7, 8, 11, 13, 14] = relprimes(Quo(15,1))
+  f(3) = S(m, 1<=m<=15 and gcd(m,15) = 3) = [3, 6, 9, 12] ~ relprimes(Quo(15,3))
+  f(5) = S(m, 1<=m<=15 and gcd(m,15) = 5) = [5, 10] ~ relprimes(Quo(15,5))
+  f(15) = S(m, 1<=m<=15 and gcd(m,15) = 15) = [15]  ~ relprimes(Quo(15,15))
+  The '~' symbol means 'has same cardinality as'.
+* Theorem: If 1<=n, then divisorsum(ephi,n) == n.
+  This theorem is attributed to Gauss.
+  In this section, 
+  1 <= n. 
+  set f = gcdpartitionF(n)
+  When d is in divisors(n), 
+  set f(d) = S(m, 1 <= m <= n and gcd(m,n) == d)
+  Let Quo(x,y) be the quotient of x divided by y (for 1<=x, 1<=y).
+  So if y divides x, then 1<=Quo(x,y) and x = y*Quo(x,y)
+ for d in divisors(n), define 
+ function g: f(d) -> N* by g(m) = Quo(m,d) (where gcd(m,n) = d)
+ function h: divisors(n) -> N* by h(d) = Quo(n,d)
+ function F: divisors(n) -> N* by F(d) = NCard(f(d))
+** a) If 1<=m<=n and d divides both m and n, then Quo(m,d)<=Quo(n,d)
+   m = d*Quo(m,d) and n = d*Quo(n,d).
+   Since m<=n, Quo(m,d) <= Quo(n,d)
+** b) If 1<=m and 1<=n, then gcd(Quo(m,gcd(m,n)),Quo(n,gcd(m,n))) = 1
+   Let g = gcd(m,n). So g divides both m and n.
+   Let a = Quo(m,g), b = Quo(n,g)
+   So, m = g*a, and n = g*b.
 
-* If 1<=n, divisorsum(ephi,n) == n.
-In this section, 
-  1 <= n, 
-  S(n,d) = gcdpartitionF(n)(d) 
-         = S(m, 1 <= m <= n and gcd(m,n) == d)
-Let quo(x,y) be the quotient of x divided by y (for 1<=x, 1<=y).
-  So if y divides x, then 1<=quo(x,y) and x = y*quo(x,y)
-for d in divisors(n), define 
- function g: S(n,d) -> N* by g(m) = quo(m,d)
- function h: divisors(n) -> N* by h(d) = quo(n,d)
- function f: divisors(n) -> N* by f(d) = NCard(gcdpartitionF(n)(d))
-** a) If 1<=m<=n and d divides both m and n, then quo(m,d)<=quo(n,d)
-   m = d*quo(m,d) and n = d*quo(n,d).
-   Since m<=n, quo(m,d) <= quo(n,d)
-** b) If 1<=m, 1<=n, then gcd(quo(m,gcd(m,n)),quo(n,gcd(m,n))) = 1
-   Let q = quo(m,d), r = quo(n,d)
-   m = d*q, and n = d*r.
-   Suppose e divides both q and r.
-   u = quo(q,e), v = quo(e,r). Then 
-   q = e*u and r = e*v.
-   m = (d*e)*u and n = (d*e)*v.
-   Thus d*e divides both m and n.  Thus d*e <= gcd(m,n) 
-   So d*e <= d.  Thus, e = 1.
-   Thus gcd(q,r) = 1.
-** c) If 1<=k, 1<=q, gcd(k,q) = 1, and 1<=d, then gcd(d*k,d*q) = d.
-  Let e = gcd(d*k,d*q).  To show e = d.
-  1<=e.
-  Now 1<=d*k and 1<=d*q, so  gcd(quo(d*k,e),quo(d*q,e)) = 1, by (b).
-  Set a = quo(d*k,e),  b = quo(d*q,e). So,  gcd(a,b) = 1.
-  And d*k = e*a, d*q = e*b
-  Since d divides d*k and d*q,  Then d divides e.
-  Let s = quo(e,d). So e = d*s.
-  d*k = e*a = d*s*a, so k = s*a. And,
-  d*q = e*b = d*s*b, so q = s*b.
-  Thus, s divides both k and q, so s <= gcd(k,q) = 1, so s = 1.
-  Thus e = d*s = d*1 = d.
-  QED
-** c1) If 1<=k, 1<=q, and 1<=d, then gcd(d*k,d*q) = d*gcd(k,q)
+   Suppose e divides both a and b. So 1<=e. We show e == 1
+    Set u = Quo(a,e), v = Quo(b,e). Then 
+    a = e*u and b = e*v.
+    So, m = g*(e*u) and n = g*(e*v).
+    Thus g*e divides both m and n.  Thus g*e <= gcd(m,n) 
+    So g*e <= g.  Thus, e <= 1.  Thus, e == 1
+   Thus gcd(a,b) = 1.
+** c) If 1<=k, 1<=q, and 1<=d, then gcd(d*k,d*q) = d*gcd(k,q)
   Let e = gcd(d*k,d*q). Let g = gcd(k,q) To show e = d*g.
   1<=e.
   Step 1: e <= d*g.
-   1<=d*k and 1<=d*q, so  gcd(quo(d*k,e),quo(d*q,e)) = 1, by (b).
-   Set a = quo(d*k,e),  b = quo(d*q,e). So,  gcd(a,b) = 1.
+   1<=d*k and 1<=d*q, so  gcd(Quo(d*k,e),Quo(d*q,e)) = 1, by (b).
+   Set a = Quo(d*k,e),  b = Quo(d*q,e). So,  gcd(a,b) = 1.
    And d*k = e*a, d*q = e*b
-   Since d divides d*k and d*q,  Then d divides e.
-   Let s = quo(e,d). So e = d*s.
+
+   Since d divides d*k and d*q,  Then d divides e. (Corollary 1 Bezout)
+   Let s = Quo(e,d). So e = d*s.
    d*k = e*a = d*s*a, so k = s*a. And,
    d*q = e*b = d*s*b, so q = s*b.
-   Thus, s divides both k and q, so s divides gcd(k,q) = g
-   So e = d*s divides d*g, so e <= d*g.
+   Thus, s divides both k and q, so s <= g 
+   Thus, d*s <= d*g
+   i.e., e <= d*g.
   Step 2: d*g <= e
    g divides both k and q, so
    d*g divides both d*k and d*q. So d*g <= gcd(d*k,d*q) = e.
   Thus e = d*g.
-  QED
-** d) g is a bijection from S(n,d) to relprimes(quo(n,d))
+  
+** d) g is a bijection from f(d) to relprimes(Quo(n,d))
  Assume 1<=m<=n and gcd(m,n) = d.
  Thus d divides both m and n, and 1<=d.
- By (a), 1 <= quo(m,d) <= quo(n,d), so 1 <= g(m) <= quo(n,d)
- By (b) gcd(quo(m,d),quo(n,d)) = 1, so gcd(g(m),quo(n,d)) = 1.
- Thus, g(m) is in relprimes(quo(n,d)).
- Thus, range(g) is a subset of relprimes(quo(n,d)).
- If k is in relprimes(quo(n,d)), then 1<=k<=quo(n,d)) and
-  gcd(k,quo(n,d)) = 1, so gcd(d*k,d*quo(n,d)) = d by (c).
-  So d*k is in S(n,d) and g(d*k) = quo(d*k,d) = k.
-  So g is surjection from S(n,d) to relprimes(quo(n,d)).
+ By (a), 1 <= Quo(m,d) <= Quo(n,d), so 1 <= g(m) <= Quo(n,d)
+ By (b) gcd(Quo(m,d),Quo(n,d)) = 1, so gcd(g(m),Quo(n,d)) = 1.
+ Thus, g(m) is in relprimes(Quo(n,d)).
+ Thus, range(g) is a subset of relprimes(Quo(n,d)).
+ If k is in relprimes(Quo(n,d)), then 1<=k<=Quo(n,d) and
+  gcd(k,Quo(n,d)) = 1, so gcd(d*k,d*Quo(n,d)) = d by (c).
+  Note d*Quo(n,d) = n, since d|n.
+  and 1 <= d*k <= d*Quo(n,d), since 1<=d, and 1<=k<=Quo(n,d).
+  Thus, 1 <= d*k <= n, and gcd(d*k,n) = d.
+  So d*k is in f(d).
+  Note g(d*k) = Quo(d*k,d) = k. (since d | d*k).
+  So g is surjection from f(d) to relprimes(Quo(n,d)).
 
- Finally, if m1 and m2 are in S(n,d) and g(m1) = g(m2), then
-  quo(m1,d) = quo(m2,d); Also,
- m1 = d*quo(m1,d) = d*quo(m2,d) = m2;  thus, g is an injection.
- Thus, g is a bijection S(n,d) -> relprimes(quo(n,d))
-** e) If d in divisors(n), then NCard(S(n,d)) = ephi(quo(n,d)) 
+ Finally, if m1 and m2 are in f(d) and g(m1) = g(m2), then
+  Quo(m1,d) = Quo(m2,d); 
+  Since m1 in f(d), d | m1; similarly, d | m2.
+  Thus, m1 = d*Quo(m1,d) = d*Quo(m2,d) = m2;  thus, g is an injection.
+ Thus, g is a bijection f(d) -> relprimes(Quo(n,d))
+** e) If d in divisors(n), then NCard(f(d)) = ephi(Quo(n,d)) 
  From (d), g is a bijection of (finite) sets.
- Thus, NCard(S(n,d)) = NCard(relprimes(quo(n,d))) 
- Thus, NCard(S(n,d)) = ephi(quo(n,d)) (definition of ephi)
+ Thus, NCard(f(d)) = NCard(relprimes(Quo(n,d))) 
+ Thus, NCard(f(d)) = ephi(Quo(n,d)) (definition of ephi)
 ** f) h is a permutation of divisors(n)
- if NdivQ(d,n), then n = d*quo(n,d) = d*h(d),  so NdivQ(h(d),n).
+ if NdivQ(d,n), then n = d*Quo(n,d) = d*h(d),  so NdivQ(h(d),n).
  Thus h(d) is in divisors(n).
  Suppose e is in divisors(n).  Then there is d with n = e*d.
- And d is in divisors(n) and e = quo(n,d) = h(d). 
+ And d is in divisors(n) and e = Quo(n,d) = h(d). 
  So, h is a surjection from divisors(n) onto divisors(n). 
  Since divisors(n) is finite, h is a bijection. 
-   (alternately, h(d) = h(e) => quo(n,d) = quo(n,e),
-    n = d*quo(n,d), and n = e*quo(n,e).
-    and d*quo(n,d) = d*quo(n,e), so
-    and d*quo(n,e) = e*quo(n,e) ,so d = e. So h is injection.)
+   (alternately, h(d) = h(e) => Quo(n,d) = Quo(n,e),
+    n = d*Quo(n,d), and n = e*Quo(n,e).
+    and d*Quo(n,d) = d*Quo(n,e), so
+    and d*Quo(n,e) = e*Quo(n,e) ,so d = e. So h is injection.)
 ** g) divisorsum(ephi,n) = n  
  For d in divisors(n),
-  NCard(S(n,d)) = ephi(quo(n,d)) (by (e))
+  NCard(f(d)) = ephi(Quo(n,d)) (by (e))
   i.e., f(d) = val(ephi#h)(d)
  So f = ephi#h
  divisorsum(f,n) = divisorsum(ephi#h,n)
@@ -1302,10 +1795,58 @@ for d in divisors(n), define
           gcdpartitionF(n) section above.
  So divisorsum(ephi,n) = n.
  QED.
-* Python code to illustrate divisorsum(ephi,n) == n 
- This result attributed to Gauss.
+* TODO delete Redundant ?
+** h) If 1<=k, 1<=q, gcd(k,q) = 1, and 1<=d, then gcd(d*k,d*q) = d.
+  From c), gcd(d*k,d*q) = d*gcd(k,q)
+  = d*1  (by assumption gcd(k,q)=1)
+  = d.
+  
+** i) If d in divisors(n), then g is a bijection from f(d) to relprimes(Quo(n,d))
+  g is injective
+      Let m in f(d). So 1 <= m <= n and gcd(m,n) = d
+      g(m) = Quo(m,d). so m = d*g(m)
+      If m1 is in f(d), then m1 = d*g(m1)
+      if g(m) = g(m1), then m = m1. So g is injective.
+  g(m) is in relprimes(Quo(n,d)).
+  Proof: Apply (b): gcd(Quo(m,gcd(m,n)),Quo(n,gcd(m,n)) = 1
+   But gcd(m,n) = d. So  gcd(Quo(m,d),Quo(n,d)) = 1.
+   So gcd(g(m),Quo(n,d)) = 1
+   Thus, g(m) is in relprimes(Quo(n,d))
+ g is surjective
+  Proof: Choose j in relprimes(Quo(n,d)). 
+  We search for m in f(d) so that g(m) = j.
+  Thus 1<=j<=Quo(n,d)  and gcd(j,Quo(n,d)) = 1.
+  
+  Set m = d*j. Then 1<=j. And d*j<=n:
+     Since n = d*Quo(n,d),  and j<=Quo(n,d), thus d*j <= d*Quo(n,d) = n
+  gcd(m,n) = gcd(d*j,d*Quo(n,d)). By (c), gcd(d*j,d*Quo(n,d)) = d*gcd(j,Quo(n,d)) = d*1 = d
+  Thus, m is in f(d).  Thus g(m) = Quo(m,d). = Quo(d*j,d) = j
+** j) If d in divisors(n), then F(d) = ephi(h(d)).
+     Since g is bijection, Card(f(d)) = Card(relprimes(Quo(n,d))) = ephi(Quo(n,d))
+** k) h is a permutation of divisors(n)
+   if d divides n, then n = d*Quo(n,d) = d*h(d).  and h(d) is thus also in divisors(n)
+   h is injective:
+    If d and d1 are in divisors(n) and h(d) = h(d1), then d = d1
+     n = d*Quo(n,d) and n = d1*Quo(n,d1) 
+     so d*h(d) = d1*h(d1).
+     Since we are assuming h(d) = h(d1), it follows that d = d1.
+  Since h is an injective function from the finite set divisors(n) to itself, it
+  follows that h is a bijection.  
+  i.e., h is a permutation of divisors(n)
+**
+** l) divisorsum(ephi,n) = divisorsum(ephi#h,n).
+    Let D be an enumeration of divisors(n). Let k = Card(divisors(n)).
+    Let D1 = h#D.
+    Then also D1 is an enumeration of divisors(n), since h permutes divisors(n).
+    lhs = ephi(D(1)) + ephi(D(2)) + ... + ephi(D(k))
+    rhs = ephi(h(D(1)) + ... + ephi(h(D(k)) =
+        = ephi(D1(1)) + ... + ephi(D1(k))
+        = lhs.
+** m) 
+* TODO Python code to illustrate divisorsum(ephi,n) == n 
+  Is this code useful?
 from numtheory1 import gcd, divisors, relprimes
-def S(n,d):
+def f(d):
  return [m for m in range(1,n+1) if gcd(m,n) == d]
 ** a -> a*b is isorphism from relprimes(a) to S(a*b,b)
   [x*b for x in relprimes(a)] == S(a*b,b)
@@ -1318,7 +1859,7 @@ def test1(a,b):
  print('v2 = S(x, 1<=x<=%s and gcd(x,%s) == %s) = %s' %(a*b,a*b,b,v2))
 
 ** gcdpartition(n) is a partition of [1,...,n] (1<=n)
-S(n,d) is non-empty iff NdivQ(d,n) iff d is in divisors(n)
+f(d) is non-empty iff NdivQ(d,n) iff d is in divisors(n)
 d1 and d2 are divisors of n, and m is in in S(n,d1) and S(n,d2), then d1 == d2.
 And if 1<=m<=n, then m is in S(n,gcd(m,n)).
 Thus {S(n,d) for d in divisors(n)} is a partition of n.
@@ -1338,173 +1879,78 @@ def test2(n):
  
  for d in divs:
   k = n // d
-  print('divisor %s of %s, quotient = %s' %(d,n,k))
+  print('divisor %s of %s, Quotient = %s' %(d,n,k))
   gcdk = S(n,k) 
   rpd = relprimes(d)
   print(' (%s) %s = relprimes(%s)' %(len(rpd),rpd,d))
   print(' (%s) %s = S(%s,%s)' %(len(gcdk),gcdk,n,k))
   print()
 
-* ring structures Nring(n)
-** The set N*
-  Let N* = 1,2,3,... (positive integers)
-  By one definition, for n in N*,  n = S(k,in(k,N) and Nlt(k,n)).
-  e.g., 1 = {0}, 2 = {0,1}, 3 = {0,1,2}, etc.  
-  This definition due to Von Neumann (ref: https://en.wikipedia.org/wiki/Natural_number)
-** For n in N, the cardinality of the set n is n:  Card(n) = n.
-** Ring structure of a in N* modulo n in N*. 
-  Let n be in N*.
-  Nring(n) is the ring of integers modulo n.  Its underlying set is n.
-  For a, b in N define modular product and sum,
-   NProd(n)(a,b) = Rem(a*b,n), NSum(n)(a,b) = Rem(a+b,n).
-  By defining properties of Rem, we have NProd(n)(a,b) and NSum(n)(a,b) in 'n'.
-  Let R(a) = Rem(a,n). 
-** commutativity of NSum(n)
-  Let f(a,b) = R(a+b)
-  Let lhs = f(a,b), rhs = f(b,a)
-  lhs = R(a+b)
-      = R(b+a)
-      = rhs
-** associativity of Nsum(n)
-  Let f(a,b) = R(a+b)
-  lhs = f(f(a,b),c) = R(f(a,b)+c) = R(R(a+b)+c) = R((a+b)+c)
-  rhs = f(a,f(b,c)) = R(a+f(b,c)) = R(a+R(b+c)) = R(a+(b+c))
-  Since (a+b)+c = a+(b+c)  (associativity in N addition),
-  conclude R((a+b)+c) = R(a+(b+c)).
-  So, lhs = rhs.
-** commutativity of NProd(n)
-  Let f(a,b) = R(a*b)
-  Let lhs = f(a,b), rhs = f(b,a)
-  lhs = R(a*b)
-      = R(b*a), since a*b = b*a in N
-      = rhs
-** associativity of NProd(n)
-  a,b,c in N  
-  Let f(a,b) = R(a*b).
-  lhs = f(f(a,b),c) = R(f(a,b)*c) = R(R(a*b)*c) = R((a*b)*c)
-  rhs = (a,f(b,c)) = R(a*f(b,c)) = R(a*R(b*c)) = R(a*(b*c))
-  (a*b)*c = a*(b*c) by associativity in N.
-  so R((a*b)*c) = R(a*(b*c))
-  so lhs = rhs.
-
-** distributivity of NProd(n) over NSum(n)
-  Let f(a,b) = R(a+b),  Let g(a,b) = R(a*b).
-  Let a,b,c in set 'n'. [Roughly, to show (a+b)*c = (a*b) + (a*c)]
-  lhs = g(f(a,b),c) 
-      = R(f(a,b)*c) 
-      = R(R(a+b)*c)
-      = R((a+b)*c)
-      = R((a*c)+(b*c)) by distributivity in N,+,*
-  rhs = f(g(a,c),g(b,c))
-      = f(R(a*c),R(b*c))
-      = R(R(a*c)+R(b*c))
-      = R((a*c)+(b*c))
-  lhs = R((a+b)*c) 
-** 0 in n is the additive identity for NSum(n)  (Since 0<n)
-  Since 0<n,  0 is in n.
-  Let f(a,b) = R(a+b) for a,b in N.
-  Now, let 'a' be in the set 'n'. Then a is also in N. So
-  Then f(a,0) = R(a+0) = R(a)
-   = a, since a in 'n'.
-** If 1<n, then 1 is the multiplicative identity in 'n', and and 0!=1 in 'n'.
-  Let f(a,b) = R(a*b) for a,b in N.
-  Since 1 < n, we have 1 is an element of set 'n'.
-  Let 'a' also be in set 'n'. (i.e., a is in N and a<n)
-  f(a,1) = R(a*1) = R(a) = a.
-* homomorphism Nring(a,n) to Nring(b,m)
-  x, y in a
+* restriction(RemF(m),n) function from Nring(n) to Nring(m)  (1<=n, 1<=m)
+  h = Res(RemF(m),n) is a function from Nring(n) to Nring(m) ,
+   where 'Res' means 'restriction''
+  This makes sense since : If in(n,N), then 'n' is a subset of N.
+  for x in n, h(x) = Rem(x,m).
+* If m divides n, then Res(RemF(m),n) is a ring homomorphism
+** Lemma 1: if NDivQ(m,n) and x in N, then Rem(Rem(x,n),m) = Rem(x,m)
+  Write n = m*k.
+  Divide x by n:  x = n*q + r (r <= n).   r = Rem(x,n)
+  Divide r by m:  r = m*u + s (s <= m)    s = Rem(r,m)
+  x = (m*k)*q + m*u + s = m*(k*q + u) + s (s <= m)
+    So s = Rem(x,m).
+  QUED
+** if NDivQ(m,n), then h is compatible with sums
+  Take x,y in n.  
+  h(NSum(n)(x,y)) = NSum(m)(h(x),h(y)) ?
+  lhs = rhs ?
+  NSum(n)(x,y) = Rem(x+y,n)
+  lhs = Rem(Rem(x+y,n),m)
   h(x) = Rem(x,m), h(y) = Rem(y,m)
-  z = prod(x,y,n) = Rem(x*y,n)
-  h(z) = Rem(z,m) = Rem(Rem(x*y,n),m)
-  w = prod(h(x),h(y),m) = Rem(
-  In Nring(a,n), x*!y = Rem(x*y,a)
-  In Nring(b,m), h(x)*@h(y)
-* Chinese remainder theorem 
+  rhs = Rem(h(x)+h(y),m)
+      = Rem(Rem(x,m) + Rem(y,m),m)
+      = Rem(x+y,m)  Since RemF(m) is compatible with NSum and NSum(m)
+  By lemma 1, 
+  lhs = Rem(x+y,m)
+  Thus, lhs = rhs.
+** if NDivQ(m,n), then h is compatible with products
+  Completely analogous proof
+  
+* Chinese remainder theorem  CRF(m,n)
   This discusses chinese remainder theorem for 2 moduli.
   Let carprod(a,b) = cartesian product of a and b.
   Statement: Take 1<=m, 1<=n
-   Define h: m*n to carprod(m,n) by h(x) = (Rem(x,m),Rem(x,n)) for x in m*n.
-   We aim to prove that h is a ring isomorphism WHEN gcd(m,n) = 1.
-  We prove that h is a ring homomorphism provided 1<=m and 1<=n;
-  and then that h is bijection when, further, gcd(m,n) = 1.
-  Some statements require only 1<=m and 1<=n. The 1<m and 1<n statements
-  are relevant when discussing mutliplicative identity.
+   Define CRF(m,n): m*n to carprod(m,n) by h(x) = (Rem(x,m),Rem(x,n)) for x in m*n.
+  i.e.,
+   h(x) = (Res(RemF(m),m*n)(x),Res(RemF(n),m*n)(x))
+  Since m divides m*n, Res(RemF(m),m*n) is a ring homomorphism.
+  Since n divides m*n, Res(RemF(n),m*n) is a ring homomorphism.
+  By definition of direct product of rings, conclude h is a ring homomorphism..
+  
+  if gcd(m,n) = 1, then h is a bijection.
 
-** Lemma a: 1<=m, 1<=k, NDivQ(m,k), u in N => Rem(Rem(u,k),m) = Rem(u,m)
-   u = k*Quo(u,k) + Rem(u,k)
-   Rem(u,m) = Rem(Rem(k*Quo(u,k),m) + Rem(Rem(u,k),m),m)
-   Since m|k, also m|k*Quo(u,k).  Thus, Rem(Rem(k*Quo(u,k),m),m) = 0
-   Rem(u,m) = Rem(Rem(Rem(u,k),m),m) = Rem(Rem(u,k),m)
-** Lemma b: 1<=m, 1<=n, u in N => Rem(Rem(u,m*n),m) = Rem(u,m)
-   From lemma a, since NDivq(m,k*m).
-** 1<=m, 1<=n, fcn f from m*n to m by f(x) = Rem(x,m). 
-** f preserves addition
-  NSum(m*n)(a,b) = Rem(a+b,m*n)
-  NSum(m)(a,b) = Rem(a+b,m)
-  f(a) = Rem(a,m), f(b) = Rem(b,m)
-  lhs = f(NSum(m*n)(a,b)) = f(Rem(a+b,m*n)) = Rem(Rem(a+b,m*n),m)
-  rhs = NSum(m)(f(a),f(b)) = Rem(f(a)+f(b),m)
-   = Rem(Rem(a,m)+Rem(b,m),m) = Rem(a+b,m) property of Rem
-  By Lemma b, Rem(Rem(a+b,m*n),m) = Rem(a+b,m).
-  Thus, lhs = rhs. 
-** f preserves multiplication
-  NProd(m*n)(a,b) = Rem(a*b,m*n)
-  NProd(m)(a,b) = Rem(a*b,m)
-  f(a) = Rem(a,m), f(b) = Rem(b,m)
-  lhs = f(NProd(m*n)(a,b)) = f(Rem(a*b,m*n)) = Rem(Rem(a*b,m*n),m)
-  rhs = NProd(m)(f(a),f(b)) = Rem(f(a)*f(b),m)
-   = Rem(Rem(a,m)*Rem(b,m),m) = Rem(a*b,m) property of Rem
-  By Lemma b, Rem(Rem(a*b,m*n),m) = Rem(a*b,m).
-  Thus, lhs = rhs.
-** 1<=m, 1<=n, fcn g from m*n to n by g(x) = Rem(x,n). 
-** Similarly, g preserves addition
-  NSum(m*n)(a,b) = Rem(a+b,m*n)
-  NSum(m)(a,b) = Rem(a+b,n)
-  f(a) = Rem(a,n), f(b) = Rem(b,n)
-  lhs = f(NSum(m*n)(a,b)) = f(Rem(a+b,m*n)) = Rem(Rem(a+b,m*n),n)
-  rhs = NSum(m)(f(a),f(b)) = Rem(f(a)+f(b),n)
-   = Rem(Rem(a,n)+Rem(b,n),n) = Rem(a+b,n) property of Rem
-  By Lemma b, Rem(Rem(a+b,m*n),n) = Rem(a+b,n).
-  Thus, lhs = rhs. 
-** Similarly, g preserves multiplication
-  NProd(m*n)(a,b) = Rem(a*b,m*n)
-  NProd(m)(a,b) = Rem(a*b,n)
-  f(a) = Rem(a,n), f(b) = Rem(b,n)
-  lhs = f(NProd(m*n)(a,b)) = f(Rem(a*b,m*n)) = Rem(Rem(a*b,m*n),n)
-  rhs = NProd(m)(f(a),f(b)) = Rem(f(a)*f(b),n)
-   = Rem(Rem(a,n)*Rem(b,n),n) = Rem(a*b,n) property of Rem
-  By Lemma b, Rem(Rem(a*b,m*n),n) = Rem(a*b,n).
-  Thus, lhs = rhs.
-** ring structure on carprod(m,n).
+** (1) ring structure on carprod(m,n).
    Sumc((x,y),(z,w)) 
    = (NSum(m)(x,z), NSum(n)(y,w))
    = (Rem(x+z,m),Rem(y+w,n))
    Prodc((x,y),(z,w)) = (NProd(m)(x,z), NProd(n)(y,w))
    c1 = (1,1) is multiplicative identity in carprod(m,n).
    c0 = (0,0) is additive identity in carprod(m,n).
-** h preserves addition
-   lhs = h(NSum(m*n)(x,y)) 
-   = h(Rem(x+y,m*n)) 
-   = (Rem(Rem(x+y,m*n),m),Rem(Rem(x+y,m*n),n)
-   = (Rem(x+y,m),Rem(x+y,n)) by lemmab, twice
-   rhs = Sumc(h(x),h(y))
-   = Sumc((Rem(x,m),Rem(x,n)) , (Rem(y,m),Rem(y,n)))
-   = (Rem(Rem(x,m)+Rem(y,m),m) , Rem(Rem(x,n)+Rem(y,n),n))
-   = (Rem(x+y,m),Rem(x+y,n))  by properties of Rem(-,m) and Rem(-,n).
-** Similarly, h preserves multiplication
-** h preserves multiplicative identity (provided 1<m and 1<n)
+** (2) h preserves multiplication and addition
+  Straightforward, but details are omitted.
+** (3) h preserves multiplicative identity (provided 1<m and 1<n)
    1 in m*n is multiplicative identity (relative to NProd(m*n)).
    h(1) = (Rem(1,m),Rem(1,n)) = (1,1)  since 1<m and 1<n
-** h preserves additive identity
+** (4) h preserves additive identity
    0 in m*n (since 1<=m*n). 0 in m since 1<=m, and 0 in n since 1<=n
    h(0) = (Rem(0,m),Rem(0,n)) = (0,0)
-** h is a ring homomorphism.  Summarizes.
-** If gcd(m,n) = 1 and x is in m*n and h(x) = (0,0), then x = 0.
+** (5) If gcd(m,n) = 1 and x is in m*n and h(x) = (0,0), then x = 0.
    Since h(x) = (Rem(x,m),Rem(x,n)), then Rem(x,m) = 0 and Rem(x,n) = 0.
    Thus m divides x, and n divides x.
    By corollary 1 to Euclid's Lemma, we conclude m*n divides x.
    Thus Rem(x,m*n) = 0.  Since x is in m*n, then x < m*n, so x = 0.
-** If gcd(m,n) = 1 then h is an injection.
+** (6) If gcd(m,n) = 1 then h is an injection.
+   A special case of theorem that a ring homomorphism g:R1->R2 is injective
+    provided A(z, if z in R1 and g(z)=0 then z=0).
    Suppose x and y are in m*n and h(x) = h(y). We want to show x = y.
    Since x and y are in N, either x<=y or y<=x.
    We show proof assuming x<=y.  The proof for y<=x is analogous.
@@ -1516,78 +1962,119 @@ def test2(n):
    and since h(x) = h(y), we may conclude h(z) = zero = (0,0).
    Since gcd(m,n) = 1, prior statement implies z = 0.
    Thus, x = y.
-** Card(m*n) = Card(carprod(m,n))
+** (7) Card(m*n) = Card(carprod(m,n))
    For k in N, Card(k) = k.  (this is proved elsewhere when Card is introduced)
    So, Card(m*n) = m*n, Card(m) = m, and Card(n) = n.
    Since m and n are finite, Card(carprod(m,n)) = Card(m)*Card(n) = m*n.
-** h is bijection.
+** (8) if gcd(m,n) = 1 then h is bijection.
    h is injection from m*n to carprod(m,n), and these two sets are finite
    with the same cardinality.
    We have a theorem such as 'if h is an injection from finite set 'a' into
    finite set 'b', and if Card(a) = Card(b), then h is a surjection'.
    Thus, h is a surjection.
    Thus, h is a bijection.
-* ephi is multiplicative
-  Assume the notation 'f' of Chinese remainder theorem
-  for 1<a, 1<b
-  Define f: a*b to carprod(a,b) by f(x) = (Rem(x,a),Rem(x,b)) for x in a*b.
-   Then f is a ring homomorphism.
-  If gcd(a,b) = 1 then f is a ring isomorphism.
-  Now, we show that (for gcd(a,b) = 1),
-   image(f,relprimes(a*b)) = carprod(relprimes(a),relprimes(b))
+** (9) if gcd(m,n) = 1 then image(h,relprimes(m*n)) = carprod(relprimes(m),relprimes(n)
+  Assume gcd(m,n) = 1  (Do some statements require also 1<m and 1<n?)
+  h is function m*n to carprod(m,n) by h(x) = (Rem(x,m),Rem(x,n)) for x in m*n.
+  h is m ring homomorphism.
+  Since gcd(m,n) = 1 h is m ring isomorphism.
+  Let rp(a) = relprimes(a)
+  To show:
+   image(h,rp(m*n)) = carprod(rp(m),rp(n))
   And from this conclude that 
-   Card(relprimes(a*b)) = Card(relprimes(a))*Card(relprimes(b)).
-  Thus, ephi(a*b) = ephi(a)*ephi(b).
+   Card(rp(m*n)) = Card(rp(m))*Card(rp(n)).
+  Thus, ephi(m*n) = ephi(m)*ephi(n).
   Proof:
-  Choose x in relprimes(a*b). Since 1<a and 1<b, then also 1<a*b,
-  and x!= a*b, so 1<=x<a*b (so x is 'in' a*b) 
-  f(x) = (Rem(x,a),Rem(x,b)).  We will show Rem(x,a) is in relprimes(a),
-   and, similarly, Rem(x,b) is in relprimes(b).
-  Since x is in relprimes(a*b), we may, by Lemma3 under relprimes, choose
-  y in relprimes(a*b) so that x*y = 1 mod(a*b).  
-  Also, since 1<a*b, then also y < a*b, so y is in a*b.
+  Choose x in rp(m*n). Since 1<m and 1<n, then also 1<m*n,
+  and x!= m*n, so 1<=x<m*n (so x is 'in' m*n) 
+  h(x) = (Rem(x,m),Rem(x,n)).  We will show Rem(x,m) is in rp(m),
+   and, similarly, Rem(x,n) is in rp(n).
+  Since x is in rp(m*n), we may, by Lemma3 under rp, choose
+  y in rp(m*n) so that x*y = 1 mod(m*n).  
+  Also, since 1<m*n, then also y < m*n, so y is in m*n.
   
-  Now f(x*y) = (Rem(x*y,a),Rem(x*y,b)) and, since f preserves
-  multiplication from Zmod(a*b), we have
-  f(x*y) = f(1) = (1,1).
-  We now show: Rem(x,a) is in relprimes(a)
-   Then f(Rem(x*y,a*b)) = f(1) = (Rem(1,a),Rem(1,b)) = (1,1) and
-   f(Rem(x*y,a*b))  = (Rem(x*y,a),Rem(x*y,b)) 
-   So Rem(x*y,a) = 1 and Rem(x*y,b) = 1.
-   and  Rem(x*y,a) = Rem(Rem(x,a)*Rem(y,a),a) = 1
-   and Rem(x,a) is in a and Rem(y,a) is in a. So by Lemma 3 under relprimes,
-   Rem(x,a) is in relprimes(a).
-  Similarly, Rem(x,b) is in relprimes(b)
+  Now h(x*y) = (Rem(x*y,m),Rem(x*y,n)) and, since h preserves
+  multiplication from Zmod(m*n), we have
+  h(x*y) = h(1) = (1,1).
+  We now show: Rem(x,m) is in rp(m)
+   Then h(Rem(x*y,m*n)) = h(1) = (Rem(1,m),Rem(1,n)) = (1,1) and
+   h(Rem(x*y,m*n))  = (Rem(x*y,m),Rem(x*y,n)) 
+   So Rem(x*y,m) = 1 and Rem(x*y,n) = 1.
+   and  Rem(x*y,m) = Rem(Rem(x,m)*Rem(y,m),m) = 1
+   and Rem(x,m) is in m and Rem(y,m) is in m. So by Lemma 3 under rp,
+   Rem(x,m) is in rp(m).
+  Similarly, Rem(x,n) is in rp(n)
  
-  So f(x) is in carprod(relprimes(a),relprimes(b)).
-  Conversely, if (u,v) in carprod(relprimes(a),relprimes(b)), then
-   (u,v) is in cardprod(a,b), so there is x in a*b with f(x) = (u,v).
-   Choose (r,s) in carprod(a,b) so that Rem(u*r,a) = 1 and Rem(v*s,b) = 1.
-   And choose y in a*b so that f(y) = (r,s). (since f is known bijective)
-   Then f(Rem(x*y,a*b)) = (1,1) and also f(1) = (1,1)
-    so Rem(x*y,a*b) = 1.  Thus x has the inverse y in ring a*b, and
-    So again, by Lemma 3 of relprimes, x is in relprimes(a*b).
-  Thus, the restriction of f to relprimes(a*b) is a bijection from
-    relprimes(a*b) to carprod(relprimes(a),relprimes(b)).
+  So h(x) is in carprod(rp(m),rp(n)).
+  Conversely, if (u,v) in carprod(rp(m),rp(n)), then
+   (u,v) is in cardprod(m,n), so there is x in m*n with h(x) = (u,v);
+   such an x exists since h is m bijection.
+   Choose (r,s) in carprod(m,n) so that Rem(u*r,m) = 1 and Rem(v*s,n) = 1.
+   And choose y in m*n so that h(y) = (r,s). (since h is known bijective)
+   Then h(Rem(x*y,m*n)) = (1,1) and also h(1) = (1,1)
+    so Rem(x*y,m*n) = 1.  Thus x has the inverse y in ring m*n, and
+    So again, by Lemma 3 of rp, x is in rp(m*n).
+* TODO 11. If 2<n and 2 does not divide n, then NevenQ(ephi(n)).
+   Since 1 < n, then 1<=NCard(PrimePowerRep(n)) 
+   Proof by induction on m = NCard(PrimePowerRep(n)).
+   If m = 1, then n = p^k, where p is prime and 1<=k.
+    By 10, NevenQ(ephi(n)).
+   Assume 1<=m and theorem true for all n with m = NCard(PrimePowerRep(n))
+   Choose n with NCard(PrimePowerRep(n)) = m+1.
+   Let T = PrimePowerRep(n). Thus T is a finite non-empty subset of NprimePowers.
+   and NprodSet(T) = n.
+Choose t in T. Let S = diff(T,{t}). So,
+   T = union(S,{t}), and S is non-empty subset of Nprimepowers, and t is an element
+   of Nprimepowers, and t is not in S.
+   Let n1 = NprodSet(S).
+   And n = NprodSet(T) = NprodSet(S)*t.
+   Now gcd(n1,t) = 1
+   Also m = NCard(S).  Thus, NprodSet(S) 
+* ephi is multiplicative 
+  Assume gcd(m,n) = 1.
+  Thus, the restriction of CRF(m,n) to relprimes(a*b) is a bijection between
+    relprimes(a*b) and carprod(relprimes(a),relprimes(b)).
    Thus these two sets have the same cardinality.
-   i.e. phi(a*b) = Card(carprod(relprimes(a),relprimes(b)) =
-         Card(relprimes(a))*Card(relprimes(b)) = phi(a)*phi(b).
+   i.e. ephi(a*b) = Card(carprod(relprimes(a),relprimes(b)) =
+         Card(relprimes(a))*Card(relprimes(b)) = ephi(a)*ephi(b).
   This concludes proof of Euler's totient theorem.
+** TODO 1<=m Suppose f:m -> N* and A(i,A(j) if 1<=i and 1<=j and i!=j  implies gcd(f(i),f(j) = 1.))
+   Let n = f(1)*f(2)*...*f(m).
+   Then ephi(n) = ephi(f(1))*ephi(f(2))*...*ephi(f(m))
+   Proof by induction on m.
+   Case m = 1 trivial
+   
+** Let 1 < n. Let S = PrimePowerRep(n), Then ...
+  Let m = NCard(S), Let f:m->S be a bijection.
+  Let ephiF: N* -> N be function ephiF(n) = ephi(n)
+  Let g(k) = ephi(f(k)) function m to N.
+  Thus n = f(1)*f(2)*...*f(m) = NprodSeq(f)
+  So ephi(n) = ephi(f(1)*f(2)*...*f(m)).
+   And this is equal to ephi(f(1))*ephi(f(2))*...*ephi(f(m))
+* properties of ephi
+** (1) ephi(1) = 1
+   proof: relprimes(1) = {1}, so 
+   ephi(1) = NCard(relprimes(1))
+           = NCard({1})
+           = 1
+** (2) if n is prime, then ephi(n) = n - 1
+   rel
+** if 1 < n, then ephi(n) is even.
+  
 * Euler's generalization of Fermat's little theorem
   For 1 < n, and for x in relprimes(n),  x^ephi(n) = 1 (mod n).
-  Note: since phi(p) = p-1 for p a prime, this generalizes Fermat's little thm.
+  Note: since ephi(p) = p-1 for p a prime, this generalizes Fermat's little thm.
   The proof is quite similar to that of Fermat's little theorem.
-  Let k = phi(n). 
+  Let k = ephi(n). 
   Let f(a) = Rem(a*x,n) define a function for a in relprimes(n).
-  Then, f is a permultation of relprimes(n).
+  Then, f is a permultation of relprimes(n). 
   Let a1,...,ak name the elements of relprimes(n)
   Let a = product of all numbers in relprimes(n) = a1*...*ak
-  Then f(a) = f(a1)*...*f(ak) (mod n)
   and f(a1),...,f(ak) is a permutation of relprimes(n)
-  so f(a) = a (mod n)
-  But also f(a) = (a1*x)*...*(ak*x) = a*x^k.
-  so a*x^k = a*1. We can cancel a (since it has an inverse b in relprimes(n).
-   x^k = 1 (mod n).
+  f(a1)*...*f(ak) = a1*...*ak
+
+  But also f(a1)*...*f(ak) = (a1*x)*...*(ak*x) = (a1*...*ak)*(x^k).
+  Now in Nring(n), Nrem(x^k,n) = 1.
   QED
 ** Question is a1*...*ak = -1 (mod n)?  NO
   We can separate a1,...,ak into 3 parts: 1, -1, and the set of pairs
@@ -1600,10 +2087,328 @@ def test2(n):
   5*5 = 25 = 1 (mod 8).
   Thus, 1*3*5*7 = 1*-1*-1 = 1 (mod 8). So a1*...*ak = 1(mod 8)
   
+* Gauss-Wilson Theorem: numerical experiments
+ Given n (1<n), computer the remainder 'r' of the
+  product of the numbers <=n and relatively prime to n
+  And also show the prime factorization of n.
+
+** code
+def rpprod(n):
+ import math
+ import numtheory1
+ rps = numtheory1.relprimes(n) # list of numbers relatively prime to n
+ p = math.prod(rps)  # cumulative product
+ q,r = divmod(p,n)
+ return r
+
+def rpprod1(n):
+ r = rpprod(n)
+ # for convenience of perusal, when r = n-1,  replace it with -1
+ if r == (n-1):
+  r = -1
+ import prime
+ return (n,r,prime.prime_factors(n))
+
+for i in range(100):
+ n = i+2
+ n,r,rps = rpprod1(n)
+ print(n,r,rps)
+
+** results of first 100
+2 -1 {2: 1}
+3 -1 {3: 1}
+4 -1 {2: 2}
+5 -1 {5: 1}
+6 -1 {2: 1, 3: 1}
+7 -1 {7: 1}
+8 1 {2: 3}
+9 -1 {3: 2}
+10 -1 {2: 1, 5: 1}
+11 -1 {11: 1}
+12 1 {2: 2, 3: 1}
+13 -1 {13: 1}
+14 -1 {2: 1, 7: 1}
+15 1 {3: 1, 5: 1}
+16 1 {2: 4}
+17 -1 {17: 1}
+18 -1 {2: 1, 3: 2}
+19 -1 {19: 1}
+20 1 {2: 2, 5: 1}
+21 1 {3: 1, 7: 1}
+22 -1 {2: 1, 11: 1}
+23 -1 {23: 1}
+24 1 {2: 3, 3: 1}
+25 -1 {5: 2}
+26 -1 {2: 1, 13: 1}
+27 -1 {3: 3}
+28 1 {2: 2, 7: 1}
+29 -1 {29: 1}
+30 1 {2: 1, 3: 1, 5: 1}
+31 -1 {31: 1}
+32 1 {2: 5}
+33 1 {3: 1, 11: 1}
+34 -1 {2: 1, 17: 1}
+35 1 {5: 1, 7: 1}
+36 1 {2: 2, 3: 2}
+37 -1 {37: 1}
+38 -1 {2: 1, 19: 1}
+39 1 {3: 1, 13: 1}
+40 1 {2: 3, 5: 1}
+41 -1 {41: 1}
+42 1 {2: 1, 3: 1, 7: 1}
+43 -1 {43: 1}
+44 1 {2: 2, 11: 1}
+45 1 {3: 2, 5: 1}
+46 -1 {2: 1, 23: 1}
+47 -1 {47: 1}
+48 1 {2: 4, 3: 1}
+49 -1 {7: 2}
+50 -1 {2: 1, 5: 2}
+51 1 {3: 1, 17: 1}
+52 1 {2: 2, 13: 1}
+53 -1 {53: 1}
+54 -1 {2: 1, 3: 3}
+55 1 {5: 1, 11: 1}
+56 1 {2: 3, 7: 1}
+57 1 {3: 1, 19: 1}
+58 -1 {2: 1, 29: 1}
+59 -1 {59: 1}
+60 1 {2: 2, 3: 1, 5: 1}
+61 -1 {61: 1}
+62 -1 {2: 1, 31: 1}
+63 1 {3: 2, 7: 1}
+64 1 {2: 6}
+65 1 {5: 1, 13: 1}
+66 1 {2: 1, 3: 1, 11: 1}
+67 -1 {67: 1}
+68 1 {2: 2, 17: 1}
+69 1 {3: 1, 23: 1}
+70 1 {2: 1, 5: 1, 7: 1}
+71 -1 {71: 1}
+72 1 {2: 3, 3: 2}
+73 -1 {73: 1}
+74 -1 {2: 1, 37: 1}
+75 1 {3: 1, 5: 2}
+76 1 {2: 2, 19: 1}
+77 1 {7: 1, 11: 1}
+78 1 {2: 1, 3: 1, 13: 1}
+79 -1 {79: 1}
+80 1 {2: 4, 5: 1}
+81 -1 {3: 4}
+82 -1 {2: 1, 41: 1}
+83 -1 {83: 1}
+84 1 {2: 2, 3: 1, 7: 1}
+85 1 {5: 1, 17: 1}
+86 -1 {2: 1, 43: 1}
+87 1 {3: 1, 29: 1}
+88 1 {2: 3, 11: 1}
+89 -1 {89: 1}
+90 1 {2: 1, 3: 2, 5: 1}
+91 1 {7: 1, 13: 1}
+92 1 {2: 2, 23: 1}
+93 1 {3: 1, 31: 1}
+94 -1 {2: 1, 47: 1}
+95 1 {5: 1, 19: 1}
+96 1 {2: 5, 3: 1}
+97 -1 {97: 1}
+98 -1 {2: 1, 7: 2}
+99 1 {3: 2, 11: 1}
+100 1 {2: 2, 5: 2}
+101 -1 {101: 1}
+
+** product of 2 or 3 odd primes
+Experiments suggest that rpprod(n) = 1 when 
+a) n = p1*p2  (two distinct primes)
+b) n = p1*p2*p3 (three distinct primes)
+
+def rpprod_2_primes(mtrials):
+ from primes_lt_1000 import primes_lt_1000 # 168
+ primes = [x for x in primes_lt_1000 if 2 < x < 100] # 24
+ import random
+ nfound = 0
+ for _temp in range(mtrials):
+  p = random.choice(primes)
+  while True:
+   q = random.choice(primes)
+   if q != p: 
+    break
+  n = p*q
+  n,r,rps = rpprod1(n)
+  if r != 1:
+   print(n,r,rps)
+   nfound = nfound + 1
+ print('%s trials' % mtrials)
+ print('%s pairs of primes < 100 found with rpprod1(n) != 1' % nfound)
+
+rpprod_2_primes(50)
+50 trials
+0 pairs of primes < 100 found with rpprod1(n) != 1
+
+def rpprod_3_primes(mtrials):
+ from primes_lt_1000 import primes_lt_1000 # 168
+ primes = [x for x in primes_lt_1000 if 2 < x < 100] # 24
+ import random
+ nfound = 0
+ for _temp in range(mtrials):
+  p1 = random.choice(primes)
+  while True:
+   p2 = random.choice(primes)
+   if p2 != p1: 
+    break
+  while True:
+   p3 = random.choice(primes)
+   if p3 not in (p1,p2):
+    break
    
+  n = p1*p2*p3
+  n1,r,rps = rpprod1(n)
+  if r != 1:
+   print(n,r,rps)
+   nfound = nfound + 1
+ print('%s trials' % mtrials)
+ print('%s triples of primes < 100 found with rpprod1(n) != 1' % nfound)
 
+** observations
+  rp(n) = the product of relprimes(n)  is always 1 or -1 (mod n)
+  For n a prime, the product is -1 (Wilson's Theorem)
+  ('r' = rp(n) (mod n))
+  for n = 2**k, r is 
+    -1 = 1 for k=1,   (1 = -1 modulo 2)
+    -1 for k=2, 1*3 = 3 = -1 (mod 4)
+    +1 for k=3..11
+  for n = 3**k, r is -1 for k=1..10
+  for n = 5**k, r is -1 for k=1..8  (compute time long for 7<=k).
+  for n = 7**k, r is -1 for k=1..6  (compute time long for 7<=k).
 
-* Wilson theorem doesn't always hold for non-primes (example)
+  Conjecture: If p is a prime, p!=2, and 1<=k, then rpprod1(p**k) = -1 (p**k)
+
+  What conjecture for composites?
+
+** solutions of x**2 = 1 (mod n)
+*** non_trivial_squareroots_1 code
+def non_trivial_squareroots_1(n):
+ import numtheory1
+ rps =  numtheory1.relprimes(n)
+ ans = []
+ for x in rps:
+  if x in [1,n-1]: # trivial roots
+   continue
+  q,r = divmod(x*x,n)
+  if r == 1:
+   ans.append(x)
+ return ans
+*** powers of 2
+ [(k,non_trivial_squareroots_1(2**k)) for k in range(2,11)]
+ [(2, []), (3, [3, 5]), (4, [7, 9]), (5, [15, 17]), (6, [31, 33]), (7, [63, 65]),
+ (8, [127, 129]), (9, [255, 257]), (10, [511, 513])]
+  n = 2**k
+  m = 2**(k-1)
+  m+1, m-1 are the non-trivial roots of x**2 = 1 (n)
+
+  x = m-1;  n - x = 2*m - (m-1) = m+1
+  x = m+1; n - x = 2*m - (m+1) =  m-1.
+
+  x*(n-x) = -(x**2) (mod n).
+  If x**2 = 1 (mod n), then x*(n-x) = -1 (mod n).
+  if 2 < k, and x**2 = 1 (n), then n-x != x (mod n)
+  
+*** powers of prime != 2
+ [(k,non_trivial_squareroots_1(3**k)) for k in range(2,11)]
+  no non-trivial square roots of 1 mod 3**k
+ [(k,non_trivial_squareroots_1(5**k)) for k in range(2,11)]
+ [(k,non_trivial_squareroots_1(7**k)) for k in range(2,7)]
+ [(k,non_trivial_squareroots_1(11**k)) for k in range(2,7)]
+
+** 2*(p**k), 1<=k, p an odd prime
+ conjecture: x != inverse(x) unless x is 1 or n-1
+*** test_autoinverses_2_pk(10,[1,2,3]) confirms conjecture
+[] {2: 1, 11: 3}
+[] {2: 1, 79: 1}
+[] {2: 1, 73: 3}
+[] {2: 1, 97: 2}
+[] {2: 1, 31: 3}
+[] {2: 1, 7: 2}
+[] {2: 1, 89: 1}
+[] {2: 1, 59: 2}
+[] {2: 1, 89: 2}
+[] {2: 1, 19: 1}
+[] {2: 1, 73: 2}
+*** code
+def autoinverses(n):
+ import numtheory1
+ rps = numtheory1.relprimes(n)
+ ans = []
+ for x in rps:
+  if x in [1,n-1]:
+   continue
+  y = numtheory1.a_inverse(x,n)
+  if y == x:
+   ans.append(x)
+ return ans
+
+def test_autoinverses_2_pk(mtrial,ks):
+ from primes_lt_1000 import primes_lt_1000 # 168
+ primes = [x for x in primes_lt_1000 if 2 < x < 100] # 24
+ import random
+ ntrial = 0
+ while True:
+  if ntrial > mtrial:
+   break
+  ntrial = ntrial + 1
+  k = random.choice(ks)
+  p = random.choice(primes)
+  n = 2*(p**k)
+  autos = autoinverses(n)
+  pfacts = prime.prime_factors(n)
+  if pfacts == None:
+   pfacts = (None,p,k)
+  print(autos,pfacts)
+
+** 4*(p**k), 1<=k, p an odd prime
+ n = 4*(p**k)
+ conjecture: 
+ a) there are two (non-trivial) solutions to x**2 = 1 (mod n).
+ b) The product of these two = -1 (mod n)
+ In fact these two are 2*(p**k) + 1 and 2*(p**k) - 1
+*** test result
+test_autoinverses_4_pk(10,[1,3])
+[121, 123] {2: 2, 61: 1} -1
+[24333, 24335] {2: 2, 23: 3} -1
+[45, 47] {2: 2, 23: 1} -1
+[453961, 453963] {2: 2, 61: 3} -1
+[59581, 59583] {2: 2, 31: 3} -1
+[145, 147] {2: 2, 73: 1} -1
+[4393, 4395] {2: 2, 13: 3} -1
+[453961, 453963] {2: 2, 61: 3} -1
+[9825, 9827] {2: 2, 17: 3} -1
+[410757, 410759] {2: 2, 59: 3} -1
+[2661, 2663] {2: 2, 11: 3} -1
+*** code
+def test_autoinverses_4_pk(mtrial,ks):
+ # n = 4*(p**k). Expect there to be 2 non-trivial x with x**2 = 1 (mod n)
+ # also, the product of these 2 is -1 (mod n)
+ from primes_lt_1000 import primes_lt_1000 # 168
+ primes = [x for x in primes_lt_1000 if 2 < x < 100] # 24
+ import random, math
+ ntrial = 0
+ while True:
+  if ntrial > mtrial:
+   break
+  ntrial = ntrial + 1
+  k = random.choice(ks)
+  p = random.choice(primes)
+  n = 4*(p**k)
+  autos = autoinverses(n)
+  pfacts = prime.prime_factors(n)
+  if pfacts == None:
+   print(autos,(None,p,k))
+  else:
+   prodautos = math.prod(autos) % n
+   if prodautos == (n-1):
+    prodautos = -1
+   print(autos,pfacts,prodautos)
+
+** rpprod(n) for some composite numbers
 For p a prime,  the product of relprimes(p) = p-1 mod (p).
 But this does not hold for the general non-prime n.
 e.g. relprimes(8) = {1,3,5,7}, product = 1 != -1 (mod 8). (wilson theorem false)
@@ -1632,29 +2437,479 @@ This is verified for 3<=n<1000:
 f = lambda n: functools.reduce(operator.mul,relprimes(n)) % n
 [n for n in range(3,1000) if f(n) not in [1,n-1]]
 >>> []   
-* Zmod.relprimes(base)
-* Cosets of subgroup are partition of a group (Lagrange)
- G any group, H any subgroup.
- Coset(x,H) = {x*y for y in H}
- C = Cosets(H) = {Coset(x,H) for x in G}.
- Coset(x,H) is subset of G and contains x*e = x, so is not empty.
- Suppose x and y in G and z in Coset(x,H) and z in Coset(y,H).
- Choose u in H with z = x*u and Choose v in H with z = y*v.
-  So, x*u = y*v, so x = y*v*w  (where w = u-inverse; so w in H
- Now if a is in Coset(x,H) with a = x*b (b in H) then
-  a = (y*v*w)*b = y*(v*w*b)  and v*w*b in H. So a is in Coset(y,H).
- So Coset(x,H) is subset of Coset(y,H). 
- Similarly, Coset(y,H) is subset of Coset(x,H).
- Thus, Coset(x,H) = Coset(y,H).
- Thus, if c1 and c2 are in C, then either c1 = c2 or c1 and c2 are disjoint.
- Finally, if x is in G, then e is in H so x*e is in Coset(x,H).
- So, Union({c in C}) = G.
- Thus, C is a partition of G
 
-Corollary:  If G is a finite group and H is a subgroup of G, then
+
+* Gauss-Wilson 1a : rpprod(4) = -1; rpprod(2) = 1
+  For 1<=n, rpprod(n) = product (modulo n) of relprimes(n).
+  If n = 4, then rpprod(n) = -1.
+   Proof: relprimes(4) = {1, 3}.  rpprod(4) = 1*3 = 3 (mod 4) = -1 (mod 4).
+  if n = 2, then rpprod(n) = 1
+   Proof: relprimes(2) = {1}. 
+* square roots of 1 mod power of 2.
+
+ Proof by induction on k. For 2<=k,
+  eqn(k) = A(x, If 1 <= x < 2**(k+1), then Rem(x*x,2**(k+1)) = 1 Iff
+  (with n = 2**(k+1))
+   x = 1 or x = n-1 or x = n/2 - 1 or x = n/2 + 1)
+
+ 
+*** eqn(2)
+  k = 2. k+1 = 3, n = 2**(k+1) = 2**3 = 8.
+  1<=x<2**3 = 8
+  Rem(x**2,8) = 1:   So gcd(x,2) = 1. So x must be among 1,3,5,7
+  In fact Rem(1**2,8) = 1, Rem(3**2,8) = 1, Rem(5**2,8) = 1.
+  m = n/2 = 2**k = 4
+  m-1 = 3, m+1 = 5.
+  
+*** 2<=k and eqn(k) implies eqn(k+1).
+  Let n = 2**((k+1)+1) = 2**(k+2)
+  Let m = 2**(k+1).  
+  So, n = 2*m
+  Let s1 = S(x, 1<=x<n and Rem(x*x,n) = 1)
+  Let s2 = {1, n-1, n/2 - 1, n/2 + 1} = {1,n-1,m-1,m+1}
+  To show s1 = s2.
+**** If x is in s2, then x is in s1.
+  (a) 1*1 = 1, so Rem(1*1,n) = 1
+  (b) (n-1)*(n-1) = n*n - 2*n + 1. So Rem((n-1)**2,n) = 1.
+  (c) x = n/2 - 1. x**2 = (n/2)*(n/2) - 2*(n/2)*1 + 1
+      n/2 = 2**(k+1)
+      (n/2)*(n/2) = (2**(k+1))*(2**(k+1)) = 2**((k+1)+(k+1))
+       = 2**((k+2+k)) = (2**(k+2))*(2**k) = n*(2**k)
+      2*(n/2) = n
+      x**2 = n*(2**k) + n + 1 
+      Thus, Rem(x**2,n) = 1.  This x is in s1
+  (d) x = n/2 + 1.  Similarly to (c), x is in s1.
+**** if x is in s1, then x is in s2.
+  Assumption 1<=x<n and Rem(x*x,n) = 1.
+  n = 2**(k+2) = 2**((k+1)+1) = (2**(k+1))*(2**1) = 2*m
+  Let y = Rem(x,m).  Thus, 
+  There is q with 
+   x = m*q + y, and 0<=q and y<m.
+  Rem(y*y,m) = Rem(x*x,m).
+  Since Rem(x*x,n) = 1 and
+   since m|n, also Rem(x*x-1,m) = 0, or Rem(x*x,m) = 1.
+  Thus, Rem(y*y,m) = 1.
+  The condition x < n imposes constraints on q - namely q can only be 0 or 1
+   m*q + y < n.  If 2<=q, then m*q + y <= m*2 + y = n + y.
+   Now y != 0, since Rem(y*y,m) = 1.  
+   Thus, if 2<=q, then m*q + y > n, i.e., x > n, contrary to assumption.
+
+  By inductive hypothesis, y is one of s2(m) = {1, m-1, m/2 - 1, m/2 + 1}
+  For each of these values of y, we show the corresponding values of x are in 
+   s2  = {1, n-1, n/2-1, n/2+1} = {1, n-1, m-1, m+1}.
+  
+  Note, Since 1<=k, 1 < 2**(k+1), i.e. 1<m.
+***** If y = 1 , then  x = 1 or m+1, so x in s2.
+  x = m*q + y = m*q + 1.
+  x < n,  m*q + 1 < n . What values of q are possible?
+  q = 0.  Then x = y = 1, so x is in s2
+  q = 1. x = m+1.  So x is in s2.
+***** if y = m-1, then x = m-1 or n-1, so x is in s2
+  x = m*q + (m-1),  
+  q = 0.  x = m-1.  So x is in s2.
+  q = 1. x = m + m - 1. 
+           = 2*m - 1 = n - 1 
+   So this case for q does not generate an x.
+***** If y = m/2 - 1, then Rem(x*x,n) != 1
+      x = m*q + 1 = m*q + (m/2) - 1.
+******  Case q = 0 not possible as Rem(x*x,n) != 1
+   Then x = (m/2) - 1.
+   x*x = (m/2)*(m/2) - m + 1
+   m/2 = (2**(k+1))/2 = 2**k
+   (m/2)*(m/2) = (2**k)*(2**k) = 2**(k+k) = (2**(k+1))*(2**(k-1)) 
+     = m*(2**(k-1))
+   x*x = m*( (2**(k-1)) - 1) + 1.
+   Now 2<=k so 1<=k-1. So 2**(k-1) != 1.  Thus 2 does not divide  2**(k-1) - 1
+   Thus n does not divide x*x - 1.
+   Thus Not Rem(x*x,n) = 1.
+******  Case q = 1, as Rem(x*x,n) != 1
+   Let u = m/2 = 2**k
+   m = 2*(m/2)
+   x = m + (m/2) - 1. = 3u - 1
+    x*x = 9u*u - 6u + 1.  Is it possible that  n | x*x - 1 ?
+    x*x - 1 = 9*u*u - 6u - 2.
+    u*u = (2**k)*(2**k) = 2**(k+k).
+    Since 2<=k,
+     k+k = (k+2) + (k-2) 
+     2**(k+k) = (2**(k+2)) * (2*(k-2)) =  n*(2*(k-2))
+    Thus x*x - 1 = 9*n*(2*(k-2)) - (2*(3u+1))
+    Thus, n | (x*x - 1) Iff n | (2*(3u+1)).
+    But n = 2m, so n|(2*(3u+1)) iff m | (3u+1)
+    If m | (3u+1), then (since 2|m) we would have 2|(3u+1).
+    But, since u is even, then also 3u is even.  Thus 3u+1 is odd;
+    so 2 does not divide 3u+1.
+    Thus n does not divide 2*(3u+1).
+    
+     
+    6u = 3*(2*u) = 3*m. Now gcd(3*m,n) = gcd(3*m,2*m) = m.
+***** If y = m/2 + 1, then Rem(x*x,n) != 1
+   x = m*q + y = m*q + (m/2) + 1
+******  Case q = 0 not possible as Rem(x*x,n) != 1
+   Then x = (m/2) + 1.
+   x*x = (m/2)*(m/2) + m + 1
+   m/2 = (2**(k+1))/2 = 2**k
+   (m/2)*(m/2) = (2**k)*(2**k) = 2**(k+k) = (2**(k+1))*(2**(k-1)) 
+     = m*(2**(k-1))
+   x*x = m*( (2**(k-1)) + 1) + 1.
+   Now 2<=k so 1<=k-1. So 2 | 2**(k-1)  Thus 2 does not divide  2**(k-1) + 1
+   Thus n does not divide x**2 - 1.
+   Thus Not Rem(x*x,n) = 1.
+  
+******  Case q = 1 Then Rem(x*x,n) != 1
+   x = m*q + y = m + (m/2) + 1.
+   Let u = m/2 = 2**k
+   m = 2*(m/2) = 2*u
+   x = m + (m/2) + 1 = 3u + 1
+   x*x - 1 = 9u*u + 6u 
+   Is it possible that  n | x*x - 1 ?    
+    u*u = (2**k)*(2**k) = 2**(k+k).
+    Since 2<=k, k+k = (k+2) + (k-2). Thus
+    u*u =  2**(k+k) = (2**(k+2)) * (2*(k-2)) =  n*(2*(k-2))
+    Thus, n | u*u.
+   Is it possible that n | 6u ? No
+    6u = 3*2*u = 3*m; Recall that n = 2*m
+    Does 2*m | 3*m?  No. 
+     Suppose 3*m = 2*m*t for some 0<=t in N
+     Thus, 3 = 2*t.  But this is not possible.
+ 
+**** Thus, if x is in s1 for every value of y, x is in s2. T 
+**** Thus s1 = s2. QED
+
+*** By induction, 2<=k implies eqn(k).
+* Gauss-Wilson 1b : if n=2**k where 3<=k, then rpprod(n) = 1
+ prod(relprimes(2**(k+1))) = 1 if 2<=k
+  For 2<=n, let rp(n) = Rem(prod(relprimes(n)),n)
+  Restrict to cases where n=2**k (1<=k).
+  
+  rp(2**1) = 1 (and = -1)
+  rp(2**2) = -1 (== 3)
+  3<=k, rp(2**k) = -1 (= 2**k - 1)  Checked for k = 3...11
+  k = 3. n = 2**k = 8
+  relprimes(8) = 1,3,5,7
+  1*3*5*7 = 
+  The objective here is to prove this result for 3<=k.
+  The proof devised is similar to the proof of Wilson's theorem (for prime 'n')
+  a) partition 'n' into subsets s(x) = {x,inverse(x)}.
+  b) Then rp(n) = prod(prod(s(x)))
+  c) When x!=inverse(x),  prod(s(x)) = 1.
+  d) When x = inverse(x), prod(s(x)) = x.
+  Thus, rp(n) = prod(x where x=inverse(x)).
+
+  Now, x = inverse(x) iff x**2 = 1 (mod n).
+
+  We showed above (for n=2**k, 3<=k) that 
+   x = inverse(x) precisely when x has one of 4 distinct values:
+   x=1, x = n-1,  x = n/2 - 1, x = n/2 + 1. 
+     This result believed to be a special case of Hensel Lemma.
+   Then rp(n) = Rem(1*(n-1)*(n/2 - 1)*(n/2 + 1), n) 
+   
+   Let m = n/2 = 2**k
+   (m-1)*(m+1) = m*m - 1 .
+   m*m = (2**k)*(2**k) = 2**(k+k) 
+   And, k+1 <= k+k, so n | m*m.
+   Thus, Rem((n/2 + 1)*(n/2 - 1), n) = 0
+   Thus Rem((m-1)*(m+1),n) = -1
+   Thus,Rem(1*(n-1)*(n/2 + 1)*(n/2 - 1),n) = Rem(1*-1*-1,n) = 1.
+   Thus, rp(n) = 1 (mod n).
+
+* Gauss-Wilson 1c : if n=p where p is prime and !=2, then rpprod(n) = -1
+  If n is a prime, then rpprod(n) = -1 
+  By Wilson's theorem, (n-1)! = -1 (mod n).
+  Also, relprimes(n) = {1,...,n-1} since n is prime.
+  So rpprod(n) = (n-1)! (mod n).
+* square roots of 1 mod odd prime power.
+if 1<=k and p is an odd prime and n = p**k, and if 
+  0 < x < n and n divides (x**2 - 1), then x = 1 or x = n-1.
+Proof by induction on k.
+** k = 1. If x != 1, then we show x = n-1.
+ p divides x**2 - 1 = (x+1)*(x-1). Since 1<x<p, p does not divide x-1.
+ Thus, since p is a prime, p divides x+1. So, there is t with
+ x+1 = p*t . Now t != 0. If t = 1, then x = p - 1 (as was to be shown).
+ And if 2<=t, then p*2 <= x+1 < p + 1, so p+p < p+1, so p < 1, which is false.
+ Thus done.
+** Assume for k, and prove for k+1. 
+   Assume 0 < x < p**(k+1), and p**(k+1) | (x**2 - 1).
+   Let n = p**(k+1)
+   To show x = 1 or x = n - 1.
+
+   Let m = p**k. Since m | n, then also m | (x**2 - 1).
+   Set y = Rem(x,m), t = Quo(x,m). 
+   Then x = m*t + y, 0<=t, and 0<=y<m.
+
+   x**2 - 1 = m*m*t*t + 2*m*t*y + y**2 - 1.
+   Thus, m also divides (y**2 - 1). 
+   By induction, y is either 1 or m-1.
+
+** Case y = 1.
+   Thus y**2 - 1 = 0. 
+*** Case t = 0  implies x = 1
+   Thus x = y = 1. So done
+*** Case t != 0 Cannot happen
+   Since 1<=k, p | m.  Thus n | m*m*. Thus p*m | 2*m*t.
+   Thus p|2*t.  Since p is odd prime and t!=0,  p|t.  
+   Thus p<=t.
+   so n+1 = m*p + 1 <= m*t + 1 = x, contradicting assumption x < n.
+** Case y = m-1
+   x = m*t + m-1 = m*(t+1) - 1.
+   Thus x**2  = m*m*(t+1)*(t+1) - 2*m*(t+1) + 1
+   Thus x**2 - 1 = m*m*(t+1)*(t+1) - 2*m*(t+1).
+   Recall n = m*p
+   Since n | x**2 - 1 and since n | m*m, then also n | 2*m*(t+1)
+   Thus p |2*(t+1).
+   Since p is odd prime, p|(t+1).
+*** Case t = 0 cannot happen
+   For then p | 1, which fails since 1<p (as p is a prime)
+*** Case t = 1 cannot happen
+   For then p | 2, which fails since 2<=p (as p is ODD prime)
+*** Case t = p-1 implies x = n-1
+   x = m*((p-1)+1) - 1 = m*p - 1 = n - 1.
+*** Case 2<=t<p-1 Cannot happen 
+    t+1 = u*p, where u = Quo(t+1,p) (since p | t+1).
+    Note u != 0. Since 0<t+1.
+    x = m*u*p - 1 = n*u - 1.
+    So n*u - 1 < n, or n*u < n+1.
+    If 1<u, then 2<=u, so n*2 <= n*u < n+1
+    Or, n+n < n+1.  So n < 1.  Which is false since n != 0.
+*** p < t cannot happen
+    Assume p <= t
+    m*(p+1) - 1 <=  m*(t+1) - 1 = x.  
+    But m*(p+1) - 1 = n + m - 1 > n  
+     since m = p**k, 1<=k, 2<p, then m-1>0
+    Thus n < x, contradicting assumption x < n.
+
+*** Conclude x = n-1  (in the case t = p-1)
+** Conclude y = 1 or m-1, as intended. QED 
+** Conclude result for all 1<=k by Induction schema.
+** A slightly more elegant proof
+Ref: https://math.stackexchange.com/questions/2851910/number-of-square-roots-of-unity-modulo-a-prime-power
+This proof is similar, but uses modular arithmetic more directly.
+It also does not restrict the size of x.
+if 1<=k and p is an odd prime and n = p**k, and if x is in N and
+  x**2 = 1 (mod n), then x = 1 or -1 (mod n).
+
+As before, the k=1 case is true.
+Make the inductive hypothesis.
+Let n = 2**(k+1)
+Assume x**2 = 1 (mod n).
+Let m = p**k.
+Note n = p*m
+Since m | n, then also x**2 = 1 (mod m).
+By inductive assumption, x = +1 (mod m) or x = -1 (mod m)
+So x = m*t + 1, or x = m*s - 1  (for some s and t)
+** Case x = m*t + 1. Then x = 1 (mod n)
+Now 0<=t.  If t = 0, then x = 1 (mod n).
+Assume t != 0.
+Now x**2 -1  = m*m*t*t + 2*m*t .
+Now m*m*t*t + 2*m*t = 0 (mod n)
+Now, n | m*m so 2*m*t = 0 (mod n).
+Thus p*m | 2*m*t, hence p | 2*t, hence p|t (since p is odd prime)
+Say t = u*p  , so u!=0.
+And x = m*u*p + 1 = n*u + 1;  Conclude that x = 1 (mod n).
+** Case x = m*s - 1 (x = -1 (mod n))
+Now 0 <= s
+If s = 0, then x = -1 (mod n).
+Assume s != 0.
+Now x**2 - 1  = m*m*s*s - 2*m*s .
+Now m*m*s*s - 2*m*s = 0 (mod n)
+Now, n | m*m so 2*m*s = 0 (mod n).
+Thus p*m | 2*m*s, hence p | 2*s, hence p|s (since p is odd prime)
+Say s = v*p  , so v!=0.
+And x = m*v*p - 1 = n*v + 1;  Conclude that x = 1 (mod n).
+* Gauss-Wilson 1d : if n = p**k where p is prime, p!=2 and 1<=k, rpprod(n) = -1
+ prod(relprimes(p**k)) = -1 if p is an odd prime and 1<=k.
+ Case k = 1 is Wilson's Theorem.
+ We Have shown x**2 = 1 (mod p**k) iff x = 1 (mod n) or x = -1 (mod n).
+
+ The usual Wilson partition of relprimes(p**k) then implies
+  prod(relprimes(p**k)) = 1*(n-1) = n-1 = -1 (mod n)
+* TODO <<<<<< Gauss generalization 1c of Wilson's Theorem
+https://sites.math.washington.edu/~morrow/336_09/papers/Andrew.pdf
+  If n is a prime, then rpprod(n) = -1 
+  By Wilson's theorem, (n-1)! = -1 (mod n).
+  Also, relprimes(n) = {1,...,n-1} since n is prime.
+  So rpprod(n) = (n-1)! (mod n).
+
+  If p is a prime and 1<=k, then rpprod(p**k) = -1 (mod p**k).
+* Canonical enumeration of carprod(m,n)
+  Assume 0<m, 0<n.
+  Let p = carprod(m,n) 
+  We know Ncard(m) = m, Ncard(n) = n
+  Define g: p -> N by g(i,j) = i + m*j, for (i,j) in p.
+  Define function h0 on N by h(k) = (Rem(k,m),Quo(k,m)).
+  Define h = restriction(h0,m*n)
+  To show: h is bijection from m*n to p.
+
+** g : p -> m*n is a bijection.
+** Ncard(p) = m*n
+** if k is in N, Rem(k,m) < m, and Quo(k,m) is in N.
+   Basic properties of Euclidean division
+** h0 is function from N to carprod(m,N).
+   Immediate from preceding and definition of h0.
+** if k is in N, then k = m*Quo(k,m) + Rem(k,m)
+   Basic property of Euclidean division.
+** if k is in m*n, then Quo(k,m) < n.
+   k is in N, and k < m*n.
+   By Euclidean division of k by m,
+    k = m*Quo(k,m) + Rem(k,m)
+   0 <= Rem(k,m) < m
+   So m*Quo(k,m) <= k.
+   So m*Quo(k,m) < m*n.  (since k < m*n)
+   0 <= Quo(k,m)
+*** If Quo(k,m) = 0, then Quo(k,m) < n 
+    since we assume 0 < n
+*** if Quo(k,m) != 0, then Quo(k,m) < n
+    0 < Quo(k,m) and (by assumption) 0 < m.
+    Thus m*Quo(k,m) < m*n implies Quo(k,m) < n.
+*** Thus Quo(k,m) < n
+    From two preceding cases
+**
+   
+  Then if k is in m*n, 
+** h is function from m*n to p
+   Since m*n is in N, Also m*n is a subset of N (by our definition of N)
+   Thus, h is a function from m*n to carprod(m,N).
+   By preceding, if k is in m*n, then Quo(k,m) is in n.
+   Thus, h is function from m*n to carprod(m,n)
+** For (i,j) in p,  h(g(i,j)) = (i,j).
+   By assumption, 0 <= i < m, and 0 <= j < n
+   Let k = g(i,j) = i + m*j.
+   Since i < m, we know that i = Rem(k,m) and j = Quo(k,m).
+   We also have h(k) = (Rem(k,m),Quo(k,m)) = (i,j).
+** for k in m*n, g(h(k)) = k.
+   g(h(k)) = g(Rem(k,m),Quo(k,m))
+     = Rem(k,m) + m*Quo(k,m)
+   Since k is in m*n, k is in N. So by Euclidean division
+   k = m*Quo(k,m) + Rem(k,m)
+   Thus g(h(k)) = k.
+** g = inverse(h) and h = inverse(g) and g is a bijection and h is bijection.
+  Playing with definitions of 'inverse function' and 'bijection'
+** h is an enumeration of p, and Ncard(p) = m*n
+  m*n is in N.
+  h is a bijection from m*n to p.
+
+  An 'enumeration' of a finite set 's' is, by definition, a bijection 
+  f: Ncard(s) -> s.
+
+  Thus, Ncard(p) = m*n. and h is an enumeration of p.
+* carprodF : cartesian product of functions.
+  Let f: m -> a and g : n -> b be two functions (m and n are just sets).
+  Assume m and n are non-empty.  (therefore, also 'a' and 'b' are non-empty)
+  We can define a function carprodF(f,g) : carprod(m,n) -> carprod(a,b) by
+    carprodF(f,g)((i,j)) = (f(i),g(j)) for i in m, j in n.
+  Let h = cardprodF(f,g).
+  If f and g are bijections, then h is a bijection.
+  and inverse(carprodF(f,g)) = carprodF(inverse(f),inverse(g)).
+  Proof should be routine.
+* cumulative product of an enumeration.
+  Let A be a non-empty set on which is defined a binary operation which
+   is associative and commutative (Notation: x*y)
+  Let m = Ncard(A). Let f: m -> A be a bijection.
+  Define prod(f) to be cumulative product.
+   
+   Informally, if 
+    m = 1,  prod(f) = f[0]
+    m = 2,  prod(f) = f[0]*f[1]
+    m = 3.  prod(f) = (f[0]*f[1])*f[2]
+    etc.
+  When the binary operation is commutative and associative, 
+   and if f: m -> A and g: m -> A are bijections,
+   Then prod(f) = prod(g).
+  Thus, we may talk about cumprod(A), which is prod(f) where f is any
+  bijection.
+
+* prod(carprod(A,B)) = (prod(A)**NCard(B), prod(B)**Ncard(A))
+  The proof below is close to complete. But not quite complete.
+  Assume: 'A' is a finite nonempty set, 
+          'B' is a finite nonempty set.
+  There is some associative, commutative binary operation on A,
+  and similarly for B.
+  Let m = Ncard(A), n = Ncard(b).
+  Choose bijection f: m -> A, and bijection g: n -> B.
+  Let H = carProdF(f,g). So H is bijection carprod(m,n) -> carprod(A,B).
+  Let P : m*n -> carprod(m,n) be the canonical enumeration of carprod(m,n).
+  Let G = H#P: m*n -> carprod(A,B), composition of H with P. 
+  For k<m*n,
+    G(k) = H(P(k))
+         = H((Rem(k,m),Quo(k,m)))
+         = (f(Rem(k,m)) , g(Quo(k,m)))
+
+  Then G is a bijection (since a composition of bijections).
+  Let C = carprod(A,b).
+  Then prod(C) = prod(G) (since G is an enumeration of c).
+   = G(0)*...G(m*n - 1).
+  
+  Define a partition E of C as follows.
+    Let section2 be function from B to powerset(c), whose value at b in B is
+      section2(b) = {(a,b) where a is in A}.
+    Let E = range(section2).
+    E is a partition of C.
+    Let e in E.  Choose b in B so e = section2(b).
+     Pick j in n (0 <= j < n) so  b = g(j).
+     Define a function q with domain 'm', whose value at 'i' in 'm' is
+      q(i) = (f(i),b).
+     Then q is a bijection from m to e.
+     Thus prod(e) = prod(q) = (f(0),b)*...*(f(m-1),b) =
+       ( f(0)*...*f(m-1), b*...*b) =
+       (prod(A), b**m)  = (prod(A),g(j)**m)
+
+    Thus, prod(E) = (prod(A),g(0)**m) *...* (prod(A),g(n-1)**m) 
+                  = (prod(A)*...*prod(A), g(0)**m * ... * g(n-1)**m )
+                  = (prod(A)**n , (g(0)*...*g(n-1))**m)
+                  = (prod(A)**n , prod(B)**m)
+     
+* TODO START HERE Gauss-Wilson 1e: gcd(m,n) = 1, 1<m, 1<n, then CRF(m,n)(rpprod(m*n)) = 
+  Let F = CRF(m,n) be the Chinese remainder isomophism: m*n -> carprod(m,n).
+  Then, F(rpprod(m*n)) = (rpprod(m)**ephi(n), rpprod(n)**ephi(m))
+  Let X = m*n.
+  By statement (9) of CRF theorem above,
+  image(F,relprimes(X)) = carprod(relprimes(m),relprimes(n)) 
+   rpprod(X) = prod(relprimes(X))  by definition of rpprod
+   F(rpprod(X)) = F(prod(relprimes(X)))
+     = prod(image(F,relprimes(X)))  since F is ring morphism [Needs lemma!]
+     = prod(carprod(relprimes(m),relprimes(n)))
+     = (prod(relprimes(m))**NCard(relprimes(n)),
+        prod(relprimes(n))**NCard(relprimes(m)))
+     = (rpprod(m)**ephi(n), rpprod(n)**ephi(m))
+         by definitions of rpprod ephi.
+       
+* Cosets of subgroup partition the group (Lagrange)
+ G any group, H any subgroup.
+ For x in G, define Coset(x,H) = {x*y for y in H}
+ Let C = Cosets(H) = {Coset(x,H) for x in G}.
+ Coset(x,H) is subset of G and contains x*e = x, so is not empty.
+** (a) if y in G, and x is in Coset(y,H) and c is in H, then x*c is in Coset(y,H)
+ Choose u in H with x = y*u.  Then 
+ x*c = (y*u)*c = y*(u*c), and u*c is in H
+ Thus, y*(u*c) is in Coset(y,H). Hence x*c is in Coset(y,H)
+** (b) if y in G and x in Coset(y,H), then leq(Coset(x,H),Coset(y,H))
+   easily from (a)
+** (c) if x and y in G, and z in Coset(x,H) and Coset(y,H), then leq(Coset(x,H),Coset(y,H))
+ Choose u in H with z = x*u and choose v in H with z = y*v.
+  So, x*u = y*v, so x = y*v*inverse(u).  
+
+  Since H is a subgroup, v*inverse(u) is in H.
+  Thus, y*(v*inverse()) is in Coset(y,H).
+  Thus, x is in Coset(y,H).
+ By (b), conclude leq(Coset(x,H),Coset(y,H))
+** (d) if x and y in G, and z in Coset(x,H) and Coset(y,H), then eq(Coset(x,H),Coset(y,H))
+  Corollary of (c)
+** (e) If c1 and c2 are in C, and isect(c1,c2)!= 0, then c1 = c2.
+  From (d)
+ Now if a is in Coset(x,H), choose c in H with a = x*c.
+** union(C) = G.
+ Finally, if x is in G, then e is in H so x*e is in Coset(x,H).
+ So, union(C) = G.
+** Thus, C is a partition of G
+
+* Corollary:  If G is a finite group and H is a subgroup of G, then
  NCard(H) divides NCard(G).
  Proof: Since C is partition of G, Sum(NCard(c): c in C) = NCard(G)
- Also if c is in C, then NCard(c) = NCard(H).  Also, C is finite.
+ Also if c is in C, then NCard(c) = NCard(H)
+  Choose x in G so c = Coset(x,H).
+  Define f: H -> c by f(h) = x*h.
+  Then f is a bijection.
+ Thus, NCard(H) = NCard(c).
+Also, C is finite.
  Thus NCard(C)*NCard(H) = Sum(NCard(c): c in C) = NCard(G).
  So NCard(C) divides Ncard(G).
 
@@ -1667,12 +2922,23 @@ Corollary:  If G is a finite group and H is a subgroup of G, then
   So x**1 = x, and x**2 = x*x.
 ** (0a) x**(j+k) = (x**j)*(x**k)
 ** (0b) x**(j*k) = (x**j)**k
-** (1) ord(x,G)
- Define the order of an element x in G as
-  ord(x,G) = Nmin(S(k, 1<=k and x**k = e))
- Since G is assumed finite, ord(x,G) is well defined element of N*,
- and x**ord(x) = e, and 1<=k<ord(x,G) implies x**k != e.
-  So ord(e,G) = 1.
+** orders(x,G) = S(k, 1<=k and x**k = e) is an Nideal
+ Let S = orders(x,G).
+ define function f: N* -> G  by f(k) = x**k.
+ Since G is finite, f is not injective.  Choose 1<=j < k so that
+ f(j) = f(k), thus x**j = x**k.
+ Let i be the element of N* such that j+i = k
+  Then x**k = (x**j)*(x**i).
+  Thus x**j = (x**j)*(x**i),  Thus x**i = e.
+  Thus i is in S.
+ Thus S is not empty.
+ If j and k are in S, then x**(j+k) = (x**j)*(x**k) = e*e = e, so j+k is in S.
+ If j is in S, k in N* and j+k in S, then
+  x**j = e, x**(j+k) = e.  So x**k = e. Thus k is in S.
+ Thus, NidealQ(orders(x,G)).
+** Define order of x in G = ord(x,G) = Nmin(orders(x,G))
+ ord(x,G) is in orders(x,G), and k in orders(x,G) Iff ord(x,G) | k.
+
 ** (2) For 1<=k, x**k = x**Rem(k,ord(x))
    Let ox = ord(x)
    By division of k by ox in N, k = ox*q + r,
@@ -1691,110 +2957,93 @@ Corollary:  If G is a finite group and H is a subgroup of G, then
     e = x**u. By minimality of ox, ox<=u. contradiction.
     Thus r = s. QED.
 ** (3b) For 1<=k,  x**k = e iff ox divides k.
-   By (3a), 
-    if 1<=ox and 1<=k, then x**ox = x**k iff Rem(ox,ox) = Rem(k,ox).
-   But Rem(ox,ox) = 0, and x**ox = e
-   so x**k = e Iff Rem(k,ox) = 0
-   But (since k!=0), then Rem(k,ox) = 0 iff ox divides k.
-   Thus, x**k = e Iff ox divides k. QED
+   Since orders(x,G) is an Nideal.
 
 ** (3c) for 1<=k,  x**(k+1) = x Iff ox divides k.
    Proof: by 3b,  x**k = e iff ox divides k.
    x**(k+1) = (x**k) * (x**1) = (x**k) * x.
-   If x**(k+1) = x, then e*x = (x**k)*x, so x**k = e
-   if x**k = e, then x**(k+1) = e*x = e.
+    If x**(k+1) = x, then e*x = (x**k)*x, so x**k = e
+    if x**k = e, then x**(k+1) = e*x = x.
    Thus, x**(k+1) = x iff x**k = e.
    So x**(k+1) = x iff ox divides k
 ** (4) Define : G is cyclic iff there is x in G with ord(x) = Card(G).
-** (5) Define : for g in G, gen(x) = {x**k for k in N}.
-          Since x*0 = e, and x**(k1+k2) = (x**k1) * (x**k2))
+** (5) Define : for x in G, gen(x) = {x**k for k in N}. gen(x) is subgroup of G
+          Since x**0 = e, and x**(k1+k2) = (x**k1) * (x**k2))
           And since we assume G is finite, then
           gen(x) = S(x**k, 1<=k<=ord(x)), and
            if 1<=k<=ord(x), inv(x) = x**(ox-k)
              (x**k) * (x**(ox-k)) = x**ox = e, 
           So gen(x) is a subgroup of G.
 ** (6) if 1<=m and gcd(m,ox) = 1, then gen(x**m) = gen(x).
-  a. If y is in gen(x**m), then y is in gen(x).
+*** a. If y is in gen(x**m), then y is in gen(x).
    Easy.  There is k in N with y = (x**m)**k = x**(m*k), so y is in gen(x).
-  b. x is in gen(x**m)
+*** b. x is in gen(x**m)
    divide m by ox:  m = ox*q + r, 0<=r<ox.
    Case r = 0: m = ox*q.  So gcd(m,ox) = ox.  Thus, ox = 1. 
     Thus e = x**ox = x**1 = x.  Thus gen(x) = {e}. And x**m = e**m = e
     So gen(x**m) = {e} . So gen(x**m) = gen(x)
    Case r!= 0:
-   Rem(m,ox) = Rem(r,ox). So x**m == x**r.
+    Rem(m,ox) = Rem(r,ox). So x**m == x**r, by 3a
 
     1 = gcd(m,ox) = gcd(ox,r).  Since r < ox, r is in relprimes(ox).
     Thus, there is s in relprimes(ox) with r*s = 1 (mod ox).
     Thus, x**(r*s) = x**1 = x 
-    and x**(r*s) = (x**r)**s
-    x**m = x**(ox*q + r) = (x**(ox*q)) * (x**r) = ((x**ox)**q) * (x**r) =
-         = (e**q) * (x**r) = e * (x**r) = x**r.
-    
-    Now  x = x**(r*s) = (x**r)**s = (x**m)**s, 
+      and x**(r*s) = (x**r)**s = (x**m)**s
+    So, x = (x**m)**s.  Now (x**m)**s is in gen(x**m).
     Thus, x is in gen(x**m)
-  c. If y is in gen(x), then y is in gen(x**m).
+*** c. If y is in gen(x), then y is in gen(x**m).
    By (b), we may choose s in N with x = (x**m)**s.
    And there is k in N with y = x**k
    Thus, y = ((x**m)**s)**k = (x**m)**(s*k), so y is in gen(x**m).
-  a. and c. provide proof.
+*** From a and c, gem(x**m) = gen(x)
 ** (7) if 1<=m and gen(x**m) = gen(x), then gcd(m,ox) = 1.
-  [Is this proof more complicated than it needs to be?]
-  Let g = gcd(m,ox), and assume 1<g.
-  g divides m:  m = g*r (1<=r)
-  g divides ox: ox = g*s (1<=s)
-  Also, gcd(r,s) = 1.
-  If m = 1 or ox = 1, then gcd(m,ox) = 1.
-  Suppose 1 < m and 1 < ox.
-  Let t = Rem(m,ox). So m = ox*q + t and 0<=t<ox.
-   Case t = 0: then m = ox*q, so x**m = x**(ox*q) = (x**ox)**q = e**q = e.
-    Thus gen(x**m) = gen(e) = {e}. So gen(x) = {e}, so x = e, and so
-    ox = 1. So gcd(m,ox) = 1.
-   Case t = 1.
-    gcd(m,ox) = gcd(ox,t) = gcd(ox,1) = 1.  QED
-   Case 1 < t:
-    x**m = x**(ox*q + t) = (x**(ox*q))* x**t = x**t.
-    By (3a), Rem(m,ox) = Rem(t,ox), and Rem(t,ox) = t since t < ox.
-    So Rem(m,ox) = t.
-    
-    Since x is in gen(x), it is in gen(x**t), so there is k with 1<=k and
-    x = (x**t)**k = x**(t*k)  and x = x**1
-    Since 1<t and 1<=k, then also 1<t*k.
-    Thus there is u in N with 1+u = t*k, and 1<=u.
-    By (3c), x**(u+1) = x IFF ox divides u.
-    And x**(u+1) = x**(1+u) = x**(t*k) = x (from recent step).
-    So, ox divides u.  
-    If d is in comdivs(m,ox), then d = 1
-     Suppose d in comdivs(m,ox). Then d divides m, and d divides ox.
-     since m = ox*q + t, so also d divides t.  
-     But ox divides u. So also d divides u.
-     And further d divides t*k. so d divides 1+u. 
-     But this implies d divides 1.  So d = 1.
-    Thus, gcd(m,ox) = 1. QED
+  Since x is in gen(x), x is in gen(x**m)
+  Choose 1<=k with x = (x**m)**k = x**(m*k) 
+  Also x**1 = x.  Thus x**1 = x**(m*k).
+  By (3a), Rem(1,ox) = Rem(m*k,ox).
+*** case 1: ox = 1
+  Thus, gcd(m,ox) = gcd(m,1) = 1
+*** case 2: ox != 1
+  Thus, 1<ox.
+  Divide 1 by ox: Since 1 < ox, 1 = Rem(1,ox).
+  Thus, Rem(m*k,ox) = 1.
+  So m*k = ox*q + 1 where q = Quo(m*k,ox).
+  Thus, gcd(m,ox) = 1.
 ** (8) if x is in G, then NCard(y in G with gen(y) = gen(x)) = ephi(ord(x))
-   Proof: Let S = {y in G with gen(y) = gen(x)}.
+   Let S = {y in G with gen(y) = gen(x)}.
    Let S1 = {x**m for m in relprimes(ox)}.
-   Suppose  y is in S. There is m (1<=m<=ox) with y = x**m.
+*** a. if y is in S, then y is in S1
+   Since y is in gen(y), then also y is in gen(x).
+   There is m (1<=m<=ox) with y = x**m.
     Now gen(x**m) = gen(x). By (7), gcd(m,ox) = 1.  Since 1<=m<=ox, 
     m is in relprimes(ox).  Thus y is in S1.
-   Suppose y is in S1, and choose m in relprimes(ox) so y = x**m.
-    Thus 1<=m<=ox and gcd(m,ox) = 1. By (6), gen(x**m) = gen(x). 
+*** b. If y is in S1, then y is in S
+   Choose m in relprimes(ox) so that y = x**m.
+    Thus 1<=m<=ox and gcd(m,ox) = 1. 
+    By (6), gen(x**m) = gen(x). 
     So gen(y) = gen(x). So y is in S.
-   Thus S = S1, so NCard(S) = NCard(S1).
-   Suppose m and n are in relprimes(ox), and x**m = x**n.
-   If m < n, choose k so m+k = n.  Since 1<=m<=ox and 1<=n<=ox, then
+*** S = S1 
+   from a, b.
+*** NCard(S) = NCard(S1).
+*** if m and n are in relprimes(ox), and x**m = x**n, then m = n.
+**** case m < n not possible
+   choose k in N* so m+k = n.  Since 1<=m<=ox and 1<=n<=ox, then
     0 < k < ox.  
     x**n = x**(m+k) = (x**m)*(x**k). So x**k = e. 
     But this contradicts the minimality of ox.  
-   Conclude n <= m.
-   Similarly, m <= n.  Thus m = n.
-   Thus NCard(S1) = NCard(relprimes(ox)), which, by definiton of ephi,
-   is ephi(ox)). QED
+**** Similarly, n < m not possible.
+**** Thus m = n.
+*** The function f: relprimes(ox) -> G defined by f(m) = x**m is bijection
+   Thus NCard(S1) = NCard(relprimes(ox)) = ephi(ox),QED
 ** (9) ord(x,G) divides NCard(G).
   NCard(gen(x)) = ord(x,G).  And gen(x) is a subgroup of G.
   Now Lagrange theorem on Coset partitions yields NCard(gen(x)) divides
-  NCard(G), so Ord(x,G) divdes NCard(G).
+  NCard(G), so ord(x,G) divdes NCard(G).
   
+* 
+* -------------------------------------------------------------
+* primitive roots
+* -------------------------------------------------------------
 * Primitive root examples
  Ref: https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n
  We know that relprimes(n) is a group (under multiplication modulo n) for 1<n.
@@ -1835,9 +3084,6 @@ def testpr(n,dbg=False):
    if dbg: print('order of %s = %s (mod %s)' %(k,e,n))
  print('%s has %s primitive roots: %s' %(n,numpr,primroots))
  return primroots
-* -------------------------------------------------------------
-* primitive roots
-* -------------------------------------------------------------
 * relprimes(p) has a primitive root if p is a prime.
  Recall definition of relprimes(n), defined for 1<=n.
   relprimes(n) =  S(k, 1<=k<=n and  gcd(k,n) = 1.
@@ -2085,7 +3331,7 @@ NOTE: Another proof is given under (18) of a section below
      (p**2 divides r*e - 1, p divides p**2, so p divides r**e - 1.)
     Thus p-1 divides e. [Cf. (3b) of 'order of finite group element']
 ** (2) if p is a prime and 1<=a and a|e and e|a*p, then e = a or e = a*p
-   Proof: Let s and t be quotients, so 
+   Proof: Let s and t be Quotients, so 
    e = a*s, a*p = e*t
    Thus a*p = a*s*t.  So p = s*t.
    Thus either (s=1 and t=p) or (s=p and t=1), since p is prime.
@@ -2234,7 +3480,7 @@ Let G = relprimes(n) = {a, 1<=a<=n and gcd(a,n) = 1}.
 
 **  (1) Units(R) = G.
    (a) a in Units(R). Note a != 0. b in R and a*b = 1 (mod n).
-      Note n | (a*b - 1). Le q be the quotient:  n*q = a*b - 1.
+      Note n | (a*b - 1). Le q be the Quotient:  n*q = a*b - 1.
       Then a*b = 1 + n*q.
       Let d | a and d | n.  Then d|1 so d = 1. Thus gcd(a,n) = 1. Thus a is in G.
    (b) a in G.  Then 1<=a<n and gcd(a,n) = 1.
@@ -3151,7 +4397,7 @@ f,g primitive in Z[X] implies f*g is primitive.
 Let h = f*g.
 Otherwise, there is a prime p in Z that divides all coefficients of h.
 I=<p>  is the ideal of Z generated by p.
-W = Z/I is the quotient ring.  Which we know to be a field.
+W = Z/I is the Quotient ring.  Which we know to be a field.
 An element of Z/I is the coset x+I = {x+i, i in I}, where x is in Z.
 The function r: Z->Z/I is x->x+I; it is a surjective ring homomorphism.
 r 'induces' a function R of polynomial rings Z[X] -> W[X] so that, for
