@@ -380,7 +380,7 @@ def eltOrder(a,n):
 
 def ordPartition(n):
  """ 'n' integer, 1<=n
-  For a in relprimes(n), find ordElement(a)
+  For a in relprimes(n), find eltOrder(a,n).
   return a dictionary ordpart.  A number d is a key of ordpart
   iff there is a in relprimes(n) with d = ordElement(a).
   ordpart[d] = Set of all a in relprimes(n) such that ordElement(a) = d.
@@ -395,6 +395,15 @@ def ordPartition(n):
    ordpart[d] = []
   ordpart[d].append(a)
  return ordpart
+
+def eltsOfOrder(d,n):
+ return [i for i in relprimes(n) if eltOrder(i,n) == d]
+
+def eltsOfOrderF(n):
+ f = {}
+ for d in divisors(ephi(n)):
+  f[d] = eltsOfOrder(d,n)
+ return f
 
 def test1():
  import sys
