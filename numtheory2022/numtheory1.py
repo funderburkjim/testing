@@ -397,13 +397,71 @@ def ordPartition(n):
  return ordpart
 
 def eltsOfOrder(d,n):
+ """ return list of elements of relprimes(n) whose order is d
+ """
  return [i for i in relprimes(n) if eltOrder(i,n) == d]
 
 def eltsOfOrderF(n):
+ """ Return a function (Python dictionary) whose 
+     domain is divisors(ephi(n)) and whose value at d is
+     eltsOfOrder(d,n)
+ """
  f = {}
  for d in divisors(ephi(n)):
   f[d] = eltsOfOrder(d,n)
  return f
+
+def eltsOfOrderSizeF(n):
+ """ Return a function (Python dictionary) whose 
+     domain is divisors(ephi(n)) and whose value at d is
+     NCard(eltsOfOrder(d,n))
+ """
+ f = {}
+ for d in divisors(ephi(n)):
+  f[d] = len(eltsOfOrder(d,n))
+ return f
+
+def primRoots(n):
+ """ Return list of primitive roots of n
+ """
+ rp = relprimes(n)
+ nrp = len(rp)
+ primroots = []
+ for k in rp:
+  e = eltOrder(k,n)
+  if e == nrp:
+   primroots.append(k)
+ return primroots
+
+def primRootQ(x,n):
+ """ Return True or False according to whether
+  x is a primitive root of n
+ """
+ rps = relprimes(n)
+ ox = eltOrder(x,n)
+ return ox == len(rps)
+
+def primRootIndex(a,r,n):
+ """ Return the smallest k (1 <= k <= ephi(n)) and
+  r**k = a (mod n)
+  Requirements:
+  primRootQ(r,n), gcd(a,n) = 1
+  Otherwise, return None
+ """
+ if gcd(a,n) != 1:
+  return None
+ if not primRootQ(r,n):
+  return None
+ rps = relprimes(n)
+ nrps = len(relprimes(n))  # ephi(n)
+ rtok = r  # r**k
+ b = a % n 
+ for k in range(1,nrps+1):
+  if rtok == b:
+   return k
+  rtok = (rtok*r) % n
+ # unexpected:
+ return None
 
 def test1():
  import sys
