@@ -1,5 +1,6 @@
 Python number theory modules. 
 Begun March, 2022
+* misc: https://www.codeconvert.ai/  11-18-2023
 * note on importllib
 In interactive session,
 import numtheory1
@@ -248,6 +249,8 @@ This for efficiency. Faster to use set membership than iteration.
  Uses numtheory1.pos_squareroots_mod
       isPrime
  p and q distinct odd primes
+ Note: p is semi-odd/semi-even iff (p-1)/2 is odd/even
+       iff Rem(p-1,4) is (1 or 3)/(0 or 2).
  return a string with 4 parts:
  - p is semi-odd/semi-even
  - q is semi-odd/semi-even
@@ -261,6 +264,23 @@ This allows us to confirm the quadratic reciprocity theorem, which asserts:
   p is a square mod q IFF q is not a square mod p 
   AND
   p is not a square mod q IFF q is a square mod p
+** qr_rec  Displays the rectangles used in Burton's Quad Reciprocity proof
+Also displays the qrinfo message
+*** sample qr_rec(7,11)
+python test_qr_rec.py 7 11
+  5 -  -  - #- 3
+  4 -  -  + #- 2
+  3 -  +  + #- 1
+  2 -  +  + #- 1
+  1 +  +  + #- 0
+    1  2  3
+#+  1  3  4
+p = 7, halfp = 3, #+ = 8
+q = 11, halfq = 5, #- = 7
+7 is semi-odd
+ 11 is semi-odd
+ 7 is not a square (mod 11)
+ 11 is a square of 2 (mod 7)
 
 * Zmod.py
 Models modular arithmetic with the Zmod class. Also polynomials.
@@ -5585,7 +5605,7 @@ Then, choose a prime 'p' so that p divides all (non-zero) coefficients of f*g.
 * Quadratic reciprocity
 * ************************************************************
 * Quadratic residue QR(a,p), Euler criterion
-** define QR(a,p):
+** define QR(a,p) 'a is Quadratic residue of p'
   QR(a,p) iff p is odd prime, a is in N*, gcd(a,p) = 1 and there
     is x in N* such that x**2 = a (mod p)
 ** primitive root criterion for quadratic residue
@@ -5648,7 +5668,7 @@ Then, choose a prime 'p' so that p divides all (non-zero) coefficients of f*g.
 ** define QRs(p)
    Assume p is odd prime.
    QRs(p) = {a in relprimes(p) and QR(a,p)}
-** Number of quadratic residues
+** Number of quadratic residues:  Card(Qrs(p)) = (p-1)/2
    Assume p is odd prime.
    Card(Qrs(p)) = (p-1)/2.
 ** Proof 1
@@ -5673,6 +5693,7 @@ Then, choose a prime 'p' so that p divides all (non-zero) coefficients of f*g.
   By '-1' we mean the additive inverse of '1' in Nring(p),
     i.e., the element p-1 of Nring(p).
 **  Legsym(a,p) = a**Quo(p-1,2) in Nring(p)
+   Restatement of Euler Quadratic residue criterion
 **  Case QR(a,p):
     Legsym(a,p) = 1
     a**Quo(p-1,2) = 1 in Nring(p)  (Euler criterion)
@@ -5684,13 +5705,305 @@ Then, choose a prime 'p' so that p divides all (non-zero) coefficients of f*g.
     Thus, a**Quo(p-1,2) != 1
     Thus, a**Quo(p-1,2) = -1 in Nring(p)
     Thus Legsym(a,p) = a**Quo(p-1,2) in Nring(p)
-* Gauss Lemma (Quadratic residue criterion)
+* burton_qr(a,b) lemma
+ 04-27-2024
+ This is one essential part of Burton's proof of the 
+ Gauss Quadratic Reciprocity theorem (ref. Lemma, p. 200)
+ In GQR, we assume a and b are distinct odd primes.
+ This 'lemma' we have more generally that a and b are
+   relatively prime odd integers.
+ If a and b are odd positive integers which are relatively prime, then
+ (*) Quo(a,2)*Quo(b,2) = Sum(Quo(k*b,a) k=1 to Quo(a,2)) +
+                         Sum(Quo(k*a,b) k=1 to Quo(b,2))
+ Examples: 
+ python burton_qr.py 1 1
+  both sides 0
+ python burton_qr.py 5 7
+  Both sides = 6
+ python burton_qr.py 15 77
+  Both sides = 266
+ Proof:
+ Assumptions: 1<=a, 1<=b, a odd, b odd, gcd(a,b) = 1.
+ Let a2 = Quo(a,2), b2 = Quo(b,2)
+ Let U(a,b) = {(x,y): 1<=x, 1<=y, 2*x < a, 2*y < b}
+ Let S(a,b) = {(x,y): (x,y) in U(a,b) and a*y < b*x}
+ Let T(a,b) = {(x,y): (x,y) in U(a,b) and a*y > b*x}
+ Let D(a,b) = {(x,y): (x,y) in U(a,b) and a*y = b*x}
+ Let S(a,b,x) = {(x,y) in S(a,b)}.
+ Let Z(a,b,x) = {y: (x,y) in S(a,b,x)}
+ Let W(a,b,x) = {y: 1 <= y <= Quo(x*b,a)}
+** (1) U = union(S,T,D), and S,T,D are mutually disjoint.
+** (2) D(a,b) = 0 (empty set)
+  Assume (x,y) in D(a,b). We arrive at contradiction
+  a*y = b*x.  
+  a divides b*x.  
+  a divides x, since gcd(a,b)=1
+  Thus a <= x.  
+  2*x < a since (x,y) in U.
+  x < a 
+  Contradiction to a <= x.
+  QED
+** (3) S(a,b) = Union(S(a,b,x) for 1<=x and 2*x < a)
+   This is a disjoint union.
+** (4) NCard(S(a,b)) = Sum(NCard(S(a,b,x) for 1<=x and 2*x < a)
+   Because disjoint union
+** (5) NCard(S(a,b,x)) = NCard(Z(a,b,x))
+   (x,y) -> y is a bijection
+** (6) if 1<=x and 2*x < a, then Z(a,b,x) = {y: 1<=y and 2*y < b and a*y < b*x} 
+  'obvious'
+** (7) if 1<=x and 2*x < a, and y in Z(a,b,x) and 1<=u<=y, then  u in Z(a,b,x)
+   1 <= y, 2*y < b, a*y < b*x  since y in Z(a,b,x) by (6)
+   u in Z(a,b,x) iff 1<=u, 2*u < b, and a*u < b*x.
+   - 1 <= u and u <= y Assumptions 
+   - 2*u <= 2*y < b, so 2*u < b.
+   - a*u <= a*y < b*x, so a*u < b*x
+   Thus, u is in Z(a,b,x)
+** (8) if 1<=x and 2*x < a, then 1 in Z(a,b,x) iff 2 < b and a < b*x 
+   By (6).
+** (9) if 1<=x and 2*x < a and Z(a,b,x) is not empty, then 1 in Z(a,b,x)
+   Choose y in Z(a,b,x).  Then 1 <= 1 <= y, Apply (7) with u=1
+** (10) if 1 <= x and 2*x < a and Quo(x*b,a) = 0, then Z(a,b,x) = 0 (empty set)
+   x*b = Quo(x*b,a)*a + Rem(x*b,a), and 0 <= Rem(x*b,a) < a
+   x*b = Rem(x*b,a)  since Quo(x*b,a) = 0
+   Assume Z(a,b,x) is non-empty, and derive a contradiction
+   1 in Z(a,b,x) by (9)
+   2 < b and a < b*x by (8)
+   a < Rem(x*b,a)  since x = Rem(x*b,a)
+   contradiction to Rem(x*b,a) < a.
+   Thus, Z(a,b,x) is empty
+** (11) if 1 <= x and 2*x < a and Quo(x*b,a) != 0, then Quo(x*b,a) is in Z(a,b,x)
+   Let Q = Quo(x*b,a), and R = Rem(x*b,a).
+   Q in Z(a,b,x) iff 1<=Q and 2*Q < b and a*Q < b*x, by (6)
+   x*b = Q*a + R, 0 <= R < a.
+*** (a) 1 <= Q 
+     since Q != 0
+*** (b) R != 0
+   Otherwise, Assume R = 0 x*b = Q*a. and derive contradiction
+   a divides x*b
+   a divides x since gcd(a,b) = 1
+   a <= x since a divides x
+   x < 2*x since 1 <= x
+   2*x < a assumed
+   a < a  from previous three
+   A contradiction.
+*** (c) a*Q < b*x. 
+    0 < R by previous
+    Q*a < Q*a + 4
+    Q*a < x*b
+    a*Q < b*x
+*** (d) 2*Q < b
+    2*x < a assumed
+    2*x*Q < a*Q  since 0 < 2*x and 0 < Q 
+    2*x*Q < b*x by (c) and previous
+    2*Q < b by previous, since 0 < x
+*** Thus Q is in Z(a,b,x)  
+** (12) if 1 <= x and 2*x < a then Quo(x*b,a) = 0 IFF Z(a,b,x) = 0 (empty set)
+   if Q = 0, then Z is empty set (10)
+   if Q != 0, then Q is in Z, so Z is not empty.
+** (13) if 1 <= x and 2*x < a and Quo(x*b,a) = 0, then Quo(x*b,a) = NCard(Z(a,b,x))
+    Z is empty by (12)
+    NCard(Z) = 0  (cardinality of empty set is 0)
+    Q = NCard(Z)
+** (14) if 1 <= x and 2*x < a and y in Z(a,b,x), then y <= Quo(x*b,a)
+   1<=y and 2*y < b and a*y < b*x from (6)
+   Let Q = Quo(x*b,a), and R = Rem(x*b,a).
+   x*b = Q*a + R, 0 <= R < a.
+   Z(a,b,x) is not empty.  Since y assumed in Z(a,b,x)
+   Q != 0 by (12)
+*** Suppose Q < y and derive contradiction
+   Q+1 <= y
+   a*(Q+1) <= a*y
+   a*Q + a <= a*y
+   a*Q + a < b*x
+   a*Q + a < Q*a + R   since b*x = 
+   a < R cancel a*Q
+   Contradicts R < a
+*** y <= Q. QED
+   
+** (15) if 1 <= x and 2*x < a, then Z(a,b,x) = W(a,b,x)
+*** if y in Z then y in W
+   1<= y, 2*y < b, a*y < b*x
+   y <= Q (14)
+   y in W 
+*** if y in W then y in Z
+  1 <= y <= Q
+  Q != 0
+  Q in Z
+  y in Z  Apply (7) with y -> Q and u -> y
+** (16) if n in N, then n = NCard({y, 1<=y<=n})
+   Assume n in N. 
+   Let V = {y, 1<=y<=n}.
+*** (a) if n = 0, then NCard(V) = n
+   assume n = 0
+   if y is in V, then 1 <= 0. But 0 < 1, so y is not in V.
+   Thus V = 0 (empty set).
+   And NCard(V) = NCard(0) = 0 = n
+*** (b) if n != 0, then NCard(V) = n
+    function f: N to N, f(k) = k + 1
+    f is injection
+    n is subset of N
+    
+**** if x in n, then f(x) in V
+    x in n. 
+    0 <= x < n
+    f(0) <= f(x) < f(n)
+    1 <= f(x) < n+1
+    f(x) <= n
+    f(x) in V
+**** if y in V, then y in image(f,n)
+    1 <= y <= n
+    0 < y
+    There is x with 0<=x and x+1 = y, since 0 < y
+     f(x) = x+1
+     x < n
+     x is in n
+     f(x) in image(f,n)
+     y in image(f,n)
+
+    n = NCard(n) = NCard(image(f,n)) 
+    image(f,n) = V
+**** image(f,n) = V    
+**** NCard(n) = NCard(image(f,n)) since n is finite
+**** n = NCard(n)
+**** NCard(V) = n
+  from previous
+*** n = NCard(V)
+   from (a) and (b)
+** (17) if 1 <= x and 2*x < a, then NCard(Z(a,b,x)) = Quo(x*b,a)
+   Quo(x*b,a) in N.
+   Quo(x*b,a) = NCard(W) (16) with n -> Quo(x*b,a)
+   Z = W (15)
+   NCard(Z) = NCard(W)
+   NCard(Z) = Q  
+** (18) if 1 <= x and 2*x < a, then NCard(S(a,b,x)) = Quo(x*b,a)
+   NCard(S(a,b,x)) = NCard(Z(a,b,x)) (5)
+   NCard(Z(a,b,x)) = Quo(x*b,a) (17)
+   NCard(S(a,b,x)) = Quo(x*b,a)
+** (19) NCard(S(a,b)) = Sum (1<=x and 2*x < a, Quo(x*b,a)) (4)
+      NCard(S(a,b)) = Sum (1<=x and 2*x < a, NCard(S(a,b,x))) (4)
+                    = Sum (1<=x and 2*x < a, Quo(x*b,a)) by 18)
+** ******************Next phase**********************************
+** (20) NCard(T(a,b)) = NCard(S(b,a))
+  Let f: NxN to NxN function by formula f( (x,y)) = (y,x).
+  f is a bijection . inverse(f) = f.
+  T(a,b) is finite subset of NxN
+  NCard(T(a,b)) = NCard(image(f,T(a,b)))
+   (x,y) in T(a,b) IFF (1<=x, 1<=y, 2*x < a, 2*y < b, a*y > b*x)
+   (y,x) in S(b,a) IFF (1<=y, 1<=x, 2*y < b, 2*x < a, b*x < a*y)
+  Thus (x,y) in T(a,b) IFF f((x,y)) in S(b,a)
+  image(f,T(a,b)) = S(b,a)
+  NCard(image(f,T(a,b))) = NCard(S(b,a))
+** (21) NCard(T(a,b)) = Sum (1<=y and 2*y < b, Quo(y*a,b))
+** ******************Next phase**********************************
+  
+** (22) If a is odd, then 1<=x and 2*x < a IFF 1<=x<=a2
+    Assume 1<=x.
+    Recall a2 = Quo(a,2)
+    Since a is odd,
+    a = 2*Quo(a,2) + 1
+*** if 2*x < a, then x <= a2
+    2*x < 2*a2 + 1
+    2*x <= 2*a2
+    x <= a2
+*** if x <= a2, then 2*x < a 
+    x <= a2
+    2*x <= 2*a2 < 2*a2 + 1 = a
+    2*x < a
+*** 2*x < a IFF x <= a2
+** (23) if b is odd, then 1<= y and 2*y < b IFF 1<=y<=b2
+   Corollary of (22)
+** (24) If a is odd and b is odd, then NCard(U(a,b)) = a2*b2
+   U(a,b) = {(x,y): 1<=x<=a2 and 1<=y<=b2} by (22) and (23)
+          = product({x: 1<=x<=a2}, {y: 1<=y<=b2})
+   NCard(U(a,b)) = NCard({x: 1<=x<=a2}) * NCard({y: 1<=y<=b2})
+   NCard({x: 1<=x<=a2}) = a2 by (16), since a2 in N
+   NCard({y: 1<=y<=b2}) = b2 by (16), since b2 in N
+   NCard(U(a,b)) = a2*b2 by previous.
+** (25) NCard(U(a,b)) = NCard(S(a,b)) + NCard(T(a,b)) 
+    From (1) and (2), assuming a odd, b odd, gcd(a,b) = 1
+** (26) Formula (*) holds
+   (a) a2*b2 = NCard(U(a,b)) from (24)
+   (b) NCard(U(a,b)) = NCard(S(a,b)) + NCard(T(a,b)) (25)
+   NCard(S(a,b)) = Sum (1<=x and 2*x < a, Quo(x*b,a)) (19)
+   (c)               = Sum(Quo(k*b,a) 1<=k<=a2) (22)
+   NCard(T(a,b)) = Sum (1<=y and 2*y < b, Quo(y*a,b)) (21)
+   (d)              = Sum (1<=y<=b2, Quo(y*a,b)) (19)
+   (e) NCard(S(a,b)) + NCard(T(a,b)) = 
+     Sum(Quo(k*b,a) k=1 to Quo(a,2)) + Sum(Quo(k*a,b) k=1 to Quo(b,2)) (c) (d)
+   Formula (*) from (a), (b) and (e)
+   QED
+* Eisenstein Lemma
+Eisenstein's Lemma
+Ref: https://en.wikipedia.org/wiki/Proofs_of_quadratic_reciprocity
+This is similar to the burton approach
+Given odd prime p and 1<=a with gcd(a,p) = 1
+
+** code Example
+from burton_qr import EisenLemma
+a1,a2 = EisenLemma(7,11)
+a1 = [3, 6, 9, 1, 4]
+a2 = [8, 6, 2, 10, 4]
+** (1) if 1<n, 1<=r, and r even then Rem((n-1)^r,n) = 1, if odd Rem((n-1)^r,n) = n-1
+ if 1 < n and 1<=r and r is even, then Rem((n-1)^r,n) = 1
+ if 1 < n and 1<=r and r is odd, then Rem((n-1)^r,n) = (n-1)
+
+ Proof:
+  Since 1 < n, (n-1) is the unique element 'c' such that c+1 = n.
+  n*n + 1 = (c+1)*(c+1) + 1 
+    = c*c + c + c + 1 + 1 = c*c + 2*c + 2 = c*c + 2*(c+1) = c*c + 2*n
+  Thus, 1 = (n*n + 1) (mod n)
+     = (c*c + 2*n) (mod n)
+     = c*c (mod n)
+  Now, use induction on 1<=k to show c^(2*k) = 1 (mod n)
+  For k=1, we use prior c*c = 1 (mod n)
+  Assume c^(2*k) = 1 (mod n). Then
+   c^(2*(k+1)) = c^(2*k) * c^2 
+     = 1 * c^2 (mod n) by inductive hyp
+     = c^2 
+     = 1 (mod n) by case k = 1
+  if 1<=k, then
+   c^((2*k)+1) = c^(2*k) * c
+    = 1*c (mod n)
+    = c
+  So if r is odd, then c^r = c (mod n)
+  QED
+** (2) if 1 < n and 0 < a < n, then Rem((n-1)*a,n) = n - a
+  c + 1 = n  (c = n - 1)
+  TO show c*a + a = 0 (mod n)
+  c*a + a = a*(c+1) = a*n
+ Thus Rem(c*a + a,n) = 0
+ 0 = Rem(c*a + a,n) = Rem(Rem(c*a,n) + Rem(a,n),n)
+   = Rem(Rem(c*a,n) + a,n)
+ Thus, there is k with Rem(c*a,n) + a = n*k.
+  But Rem(c*a,n) < n and a < n, so k < 2. 
+  Since 1 <= a, k != 0.  Thus k = 1, so
+  Rem(c*a,n) + a = n
+ Thus, Rem(c*a,n) = n - a  (definition of '-' mod n)
+** (3) if 'p' is oddm, a is odd, and gcd(a,p) = 1, then define E on even positive numbers < p.
+ Let R = Rem(k*a,p)
+ Let E(k) = Rem(((p-1)^R) * R,p) for k=2,4,...,p-1
+***  When R is even, then E(k) = R
+   Rem((p-1)^R,p) = 1 by (1)
+   So E(k) = Rem(1*R,p) = Rem(R,p) = R  (since R is remainder.
+***  When R is odd, then  E(k) = p - R
+   Rem((p-1)^R,p) = p - 1 by (1)
+   So E(k) = Rem((p-1)*R,p)
+    To apply (2), we need 0 < R < p.
+    R < p by division algorith.
+    Since gcd(a,p) = 1, and 1 <= k < p, then Rem(k*a,p) != 0
+   Rem((p-1)*R,p) = p - R  (by 2)
+   So E(k) = p - R
+*** E(k) is even
+*** E is one-to-one function
+
+* Gauss Quadratic 1st residue criterion
   Assume p is odd prime and gcd(a,p) = 1.
   Let p1 = p-1, p2 = p1/2. So p1 = 2*p2 (since p odd)
   Let S0 = {k in relprimes(p) and k<=p2} = {1,...,p2}.  NCard(S0) = p2 
   Let Q2 = {k in S0 and NRem(a*k,p) > p2}
   Let n2 = NCard(Q2)
   Then Legsym(a,p) = (-1)**n2 (in NRing(p))
+   (i.e., QR(a,p) iff n2 is even)
  Proof:
   Let Q1 = {k in S0 and NRem(a*k,p) <= p2}
   union(Q1,Q2) = S0, and isect(Q1,Q2) = 0
@@ -5708,7 +6021,7 @@ Then, choose a prime 'p' so that p divides all (non-zero) coefficients of f*g.
    Let PF1 = NProd(image(F,Q1)) in NProd(p)
    Let PF2 = NProd(image(F,Q2)) in NProd(p)
 
-** E(a) = 1 iff 'a' is a quadratic residue of p (Euler criterion)
+** Ea = 1 iff 'a' is a quadratic residue of p (Euler criterion)
 ** Prod(Q1)*Prod(Q2) = P0
    since union(Q1,Q2) = S0 and isect(Q1,Q2) = 0
 ** Pa = Ea * P0 in Nring(p)
@@ -5774,7 +6087,7 @@ Then, choose a prime 'p' so that p divides all (non-zero) coefficients of f*g.
    Ea = ((-1)**n2)  (mod p)
 ** Legsym(a,p) = ((-1)**n2) in Nring(p)
   Legsym(a,p) = a**Quo(p-1,2) in Nring(p) = Ea = ((-1)**n2) in Nring(p)
-* consequences of Gauss Lemma on quadratic residues
+* consequences of Gauss Quadratic residue criterion
 ** Criterion for QR(2,p)
   Theorem: If p is an odd prime, then QR(2,p) iff p = +1 or -1 (mod 8).
   Note gcd(2,p) = 1 since p is odd. 
@@ -5782,8 +6095,8 @@ Then, choose a prime 'p' so that p divides all (non-zero) coefficients of f*g.
   Let S0 = {k in relprimes(p) and k<=p2} = {1,...,p2}.  NCard(S0) = p2 
   Let Q2 = {k in S0 and NRem(2*k,p) > p2}
   Let n2 = NCard(Q2)
-  Then Legsym(2,p) = (-1)**n2 (in NRing(p))
-  For k in s2, 2*k <= 2*p2 = p1 < p, So NRem(2*k,p) = 2*k.
+  Then Legsym(2,p) = (-1)**n2 (in NRing(p)) (Gauss QR criterion)
+  For k in S0, 2*k <= 2*p2 = p1 < p, So NRem(2*k,p) = 2*k.
   Thus, Q2 = {k, 1<=k<=p2 and 2*k > p2}
   Q1 = {k, 1<=k<=p2 and 2*k <= p2}
 *** Q1 = {k, 1<=k<=Quo(p2,2)}
@@ -5817,8 +6130,42 @@ Then, choose a prime 'p' so that p divides all (non-zero) coefficients of f*g.
     Thus 1 < 2 <= 2*j which contradicts 2*j <= 1.
    Thus, k<=q.
 *** n1 = Quo(p2,2), n2 = p2 - Quo(p2,2)
+  Obvious from preceding
 *** QR(2,p) iff p2 - Quo(p2,2) is even.
+*** p2 - Quo(p2,2) is even iff Rem(p,8) is 1 or 7
+ Divide p by 8, getting quotient q and remainder r (r < 8)
+ p = 8*q + r
+ Since p is Odd, r is also odd, so r is one of 1, 3, 5, 7
+**** If r = 1, then p2 - Quo(p2,2) is even
+  p = 8*q + 1, p1 = 8*q, p2 = 4*q
+  Quo(p2,2) = 2*q. 
+  p2 - Quo(p2,2) = 4*q - 2*q = 2*q
+  p2 - Quo(p2,2) is even
+**** if r = 3, then p2 - Quo(p2,2) is odd
+  p = 8*q + 3, p1 = 8*q + 2, p2 = 4*q + 1
+  p2 = 2*(2*q) + 1 and 1 < 2, so Quo(p2,2) = 2*q.
+  p2 - Quo(p2,2) = 4*q + 1 - 2*q = 2*q + 1
+  Thus p2 - Quo(p2,2) is odd.
+**** if r = 5, then p2 - Quo(p2,2) is odd
+  p = 8*q + 5, p1 = 8*q + 4, p2 = 4*q + 2
+  p2 = 2*(2*q + 1) + 0
+  Quo(p2,2) = 2*q + 1
+  p2 - Quo(p2,2) = 4*q + 2 - (2*q + 1)
+  p2 - Quo(p2,2)  = 2*q + 1
+  p2 - Quo(p2,2) is odd
+  2 is not a quadratic residue of p
+**** if r = 7, then p2 - Quo(p2,2) is even
+  p = 8*q + 7,  p1 = 8*q + 6, p2 = 4*q + 3
+  p2 = 4*q + 2 + 1 = 2*(2*q + 1) + 1
+  Quo(p2,2) = 2*q + 1
+  p2 - Quo(p2,2) = 4*q + 3 - (2*q + 1)
+   = 2*q + 2 = 2*(q+1)
+  Thus p2 - Quo(p2,2) is even.
+  Thus QR(2,p)
 
 
    
    
+**** QR(2,p) iff r = 1 or 7 mod 8
+  Obvious now
+** xxx

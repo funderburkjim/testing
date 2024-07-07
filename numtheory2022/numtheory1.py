@@ -463,6 +463,25 @@ def primRootIndex(a,r,n):
  # unexpected:
  return None
 
+def QuadResReps(p):
+ """ return list of squares mod p, for p an odd prime
+     a^2 mod o for a = 1,...,(p-1)/2
+ """
+ from prime import isPrime_basic
+ if not isPrime_basic(p):
+  print('QuadResreps: %s is not a prime' %p)
+  return []
+ q,r = divmod(p,2)
+ if r != 1:
+  print('QuadResreps: %s is not odd' %p)
+  return []
+ q,r = divmod(p-1,2) # Quotient of p-1 by 2
+ ans = []
+ for a in range(1,q+1):
+  q1,qres = divmod(a*a,p)
+  ans.append(qres)
+ return ans
+
 def test1():
  import sys
  a = int(sys.argv[1])
@@ -516,6 +535,7 @@ test2: m = 10000. all of 49975003 tests passed
  else:
   print('test2: m = %s. %s test failed out of %s' %(m,ntot-nok,ntot))
 
+ 
 if __name__ == "__main__":
  #test1()
  test2()

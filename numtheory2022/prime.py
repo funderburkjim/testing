@@ -146,7 +146,125 @@ def qrinfo(p,q):
   ans4 = '%s is not a square (mod %s)' %(q,p)
  ans = ', '. join([ans1,ans2,ans3,ans4])
  return ans
- 
+
+
+def qr_rec(p,q,ltcode='+',gtcode='-'):
+ from numtheory1 import pos_squareroots_mod
+ if not isPrime(p):
+  print('%s not a prime' %p)
+  return
+ if (p % 2) == 0:
+  return '%s not odd' % p
+ if not isPrime(q):
+  return '%s not a prime' %q
+ if (q % 2) == 0:
+  return '%s not odd' % q
+ if (p == q):
+  return '%s and %s are not distinct' %(p,q)
+ halfp = (p-1) // 2
+ halfq = (q-1) // 2
+
+ import itertools
+ pcoords = range(1,halfp + 1)
+ qcoords = range(1,halfq + 1)
+ # cartesian product [1..halfp] X [1..halfq]
+ cp = list(itertools.product(pcoords,qcoords))
+ def flabel(pair,p,q):
+  x,y = pair
+  if (p*y == q*x):
+   return "="
+  elif (p*y < q*x):
+   return ltcode
+  else:
+   return gtcode
+ #
+ def make_lines(p,q):
+  ans = []
+  for y0 in range(1,1 + halfq):
+   y0line = [(x,y,flabel((x,y),p,q)) for (x,y) in cp if y == y0]
+   ans.append(y0line)
+  return ans
+ ans1 = make_lines(p,q)
+ # Example: so far
+ # qr_rec(5,7)
+ # [[(1,1,'^'),(2,1,'^')],[(1,2,'>'),(2,2,'^')],[(1,3,'>'),(2,3,'>')]]
+
+ # column totals (# of py < qx)
+ coltots = []
+ for x in range(1, 1 + halfp):
+  tot = 0
+  for y in range(1, 1 + halfq):
+   # cf. flabel function
+   if (p*y < q*x) :
+    tot = tot + 1
+  coltots.append(tot)
+ # row totals (# of py > qx)
+ rowtots = []
+ for y in range(1, 1 + halfq):
+  tot = 0
+  for x in range(1, 1 + halfp):
+   # cf. flabel function
+   if (p*y > q*x) :
+    tot = tot + 1
+  rowtots.append(tot)
+  # ans2 = ans1[::-1]
+ def make_lines1(p,q):
+  lines = make_lines(p,q)
+  ans = []
+  for iline,line in enumerate(lines):
+   newline = [code for (x,y,code) in line]
+   text = '  '.join(newline)
+   text1 = '%3d %s #- %d' %(iline+1,text, rowtots[iline])
+   ans.append(text1)
+  ansrev = ans[::-1]  # reverse
+  
+  # add a line for the 'p' (x-coord)
+  xcoord = []
+  for i in range(0,1+halfp):
+   if i == 0:
+    xcoord.append('  ') # don't show the 0
+   else:
+    xcoord.append('%3d' % i)
+  xcoord1 = ''.join(xcoord)
+  ansrev.append(xcoord1)
+  # add a line for number of '+' in columns
+  colwork = []
+  for coltot in coltots:
+   colwork.append('%3d' % coltot)
+  colwork1 = ''.join(colwork)
+  colwork1 = '#+' + colwork1
+  ansrev.append(colwork1)
+  # sum summary
+  arow = sum(rowtots)
+  acol = sum(coltots)
+  outarr = []
+  outarr.append('p = %s, halfp = %s, #+ = %s' % (p,halfp,acol))
+  outarr.append('q = %s, halfq = %s, #- = %s' % (q,halfq,arow))
+
+  a = qrinfo(p,q).split(',')
+  for x in a:
+   outarr.append(x)
+  for out in outarr:
+   ansrev.append(out)
+  # a bit more
+  temptxt = """
+the quadratic reciprocity theorem can be phrased:
+
+ IF either p or q is semi-even, THEN
+  p is a square mod q IFF q is a square mod p
+ IF both p and q are semi-odd, THEN
+  p is a square mod q IFF q is not a square mod p 
+  AND
+  p is not a square mod q IFF q is a square mod p
+"""
+  for line in temptxt.splitlines():
+   ansrev.append(line)
+  ansall = '\n'.join(ansrev)
+  print(ansall)
+  return
+
+ make_lines1(p,q)
+ #return ans
 if __name__ == "__main__":
  #test1(10)
  pass

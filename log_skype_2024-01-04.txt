@@ -1,0 +1,283 @@
+Transcript of Skype chat comments based on
+ meeting of Marcis, et.al., of 12-04-2024.
+ There is also a video of meeting downloaded
+ into UzaSanskritClass/skype-20240104_Meeting_Recording.mp4
+
+Mārcis, 9:54 AM
+Greetings! Ready for a call today? We can start even before @Jim can join at 20:00 Moscow time.
+Mārcis Gasūns added Ксения Сурикова-Вознесенская to this conversation
+
+Nagabhushana, 9:56 AM
+Sure, but I can just be "a listener" for today!
+
+Nagabhushana, 10:08 AM
+Hi Anna, how are you doing?
+
+ртеменко Анатолий joined this conversation
+
+Anna, 10:09 AM
+Hello, I am fine)))) thanks
+
+Nagabhushana, 10:11 AM
+were you able to work on BHS-4 task?
+
+anna, 10:12 AM
+I am working on this task all last weeks (and just now as well)))
+
+Mārcis, 10:12 AM
+
+Sure, but I can just be "a listener" for today!
+Nagabhushana Rao K, Today at 9:56 AM
+
+Is @dhaval around?
+
+
+I am working on this task all last weeks (and just now as well)))
+anna rybakova, Today at 10:12 AM
+There is only a question- when I will finish. To be honest this work is going in much slower motion than I expected. I think tomorrow or the day after tomorrow I will send the 1st part of this file with some notes for discussion.
+
+agabhushana, 10:15 AM
+@Marcis, would you introduce Ksenia?
+
+Nagabhushana, 10:15 AM
+@Marcis, would you introduce Ksenia?
+
+anna, 10:15 AM
+
+Will you be able to join today?
+Mārcis Gasūns, Today at 10:13 AM
+Yes, I am here
+
+Nagabhushana, 10:16 AM
+That's alright, @Anna, things are not at all demanding at CDSL. We can take time and do good enough work at the first instance itself.
+
+Mārcis, 10:19 AM
+
+@Marcis, would you introduce Ksenia?
+Nagabhushana Rao K, Today at 10:15 AM
+Yes, she is a nonSanskritist yet (only Devanagari for now) and a nonCoder, but she is the person who is always behind me, helps me bridge different places, people and ideas together. And as I believe we do lack some planning at least, so is her help for me badly wanted. So we have two Russian women here now, so Anna does not remain as lonely as she was.
+
+Nagabhushana, 10:22 AM
+As I see, there were plans before too, only NOT being executed as estimated (for whatever reasons)!!
+
+Mārcis, 10:29 AM
+
+As I see, there were plans before too
+Nagabhushana Rao K, Today at 10:22 AM
+Oh yes, but at least there we have a common thread
+
+Mārcis, 10:29 AM
+
+As I see, there were plans before too
+Nagabhushana Rao K, Today at 10:22 AM
+Oh yes, but at least there we have a common thread
+
+Life can not fit in a square. That does not mean we should not try to understand what the final flow should reach at least once per year and that time of the year has come again.
+
+Nagabhushana, 10:33 AM
+Hi, Marcis!
+
+yes
+
+I did.
+
+kind of!!
+
+I won't. Waiting for Anna to come out with what she could.
+
+I know, and I asked her to take up this task.
+
+(I would've posted my work long back, had Jim not 'preferred' to let someone else do it.)
+
+Anna, 10:49 AM
+tagcount_ls_anna.txt  (download)
+
+Nagabhushana, 10:49 AM
+yes
+
+
+anna, 10:49 AM
+BHS comments.docs  (download)
+
+Nagabhushana, 10:52 AM
+got it, Anna.
+
+I think-- the author, title and year are enough.
+
+but, having more details might help sometimes! So pl. continue in the same manner.
+
+that's right. we should give the actual source where the person has mentioned the 'citation'.
+
+it could be a book, or an article in some magazine.
+
+No, let's use Anna's work only.
+
+[I will update that wherever necessary.]
+
+Mārcis, 10:57 AM
+
+No, let's use Anna's work only.
+Nagabhushana Rao K, Today at 10:57 AM
+understood
+
+Nagabhushana, 10:59 AM
+yes, it is challenging enough.
+
+and a gratifying task!
+
+I did such a work for Grassmann.
+
+I did that in many works, MW, Apte, PWG, pwk, GRA, BEN, INM, ...
+
+Nagabhushana, 11:09 AM
+yes
+
+yes, pl. continue it Anna.
+
+dhaval, 11:13 AM
+hi
+
+Nagabhushana, 11:24 AM
+yes
+
+not guilty, I had raised the issue, and worked with Jim to successfully complete the task.
+
+namaste
+
+there are just 3 or 4 issues, that are remaining on Usha's end.
+
+I do.
+
+but is she ready to spend time now?
+
+I understand she is occupied otherwise.
+
+good to hear it.
+
+we can revive the issues.
+
+sure; as she asked, I can help her separately.
+
+some throat  problem.
+
+I've Usha's WhatsApp contact also. (We both can work together, if she is willing.)
+
+Mārcis, 11:37 AM
+jala PWG https://funderburkjim.github.io/boesp-prep/web1/boesp.html?6919 Indische Sprüche
+https://funderburkjim.github.io/boesp-prep/web1/boesp.html?6919
+
+I am just waiting for his 'paper' of how he waats to have them 'handled', as he said; its unfortunate if he is spending such a long time doing the 'work' itself on his own.
+
+he need not spend that many days.
+
+Nagabhushana, 11:42 AM
+this is what Jim said 2 weeks ago--
+
+The 'v2' (sub-hws) task that you are working on needs to be in another issue, which I'll open soon. Our target should be like 'mw' -- Since we don't have any other 'sub-hw' dictionaries, we need to think carefully how to proceed. I'll elaborate on this when I open that other issue.
+
+
+Dhaval, 11:44 AM
+todo list in 2021 (in descending order of importance) 
+https://github.com/sanskrit-lexicon/COLOGNE/issues/325
+
+Usha, 11:45 AM
+Hari om to Jim. 
+
+Listen only mode for now
+
+Nagabhushana, 11:49 AM
+what I've is for AP57, not AP90.
+
+I wanted to do it for AP90, only after 'proofing' the heaswords portion.
+
+In fact, I have a solution to derive AP90 form AP57!!
+
+as I've the list of differences between the two.
+
+Mārcis, 12:13 PM
+https://sanskrit-lexicon.uni-koeln.de/simple/MW/akz
+
+Nagabhushana, 12:44 PM
+thats correct.
+
+the italics "speak" about the meaning.
+
+in PWG and pwk.
+
+Usha, 12:49 PM
+I have to leave now. Sorry
+
+Shubhratri 
+
+
+Dhaval, 12:49 PM
+shubhratri
+
+Nagabhushana, 12:56 PM
+Dhaval, we can use Ambuda's padaccheda for these S2S works' text.
+
+
+Dhaval, 12:56 PM
+yes
+
+
+Nagabhushana, 12:56 PM
+split all the words and then use some list to identify erratic words.
+
+
+sandhi and samAsa as well.
+
+agabhushana, 1:04 PM
+right, apart from splits, Ambuda has noun-declensions and verb-inflections also; which arrive at the 'entry' word.
+
+
+he is generating all these using the Panini rules ab-initio!!
+
+and various other works like Siddhantakaumudi etc. that are based on Panini.
+
+its done on-the-fly.
+
+kRudanta, taddhita, ... all sorts of derivations are done here!
+
+this is almost robust, very few errors are present; and he is in the process of resolving all those.
+
+Dhaval, 1:17 PM
+https://ambuda.org/tools/dictionaries/
+https://ambuda.org/texts/ramayanam/1.39
+
+Nagabhushana, 1:19 PM
+exactly! proofed dictionaries are the 'final' need.
+
+I am thinking of doing AP, MW, PWG, pwk, SKD and VCP.
+
+I am now on HWs of VCP and SKD.
+also the body matter occassionally.
+
+Dhaval, 1:30 PM
+Nagabhushana, I would love to see MW, VCP and SKD data corrected
+
+Nagabhushana, 1:31 PM
+sure, in next few months you can see SKD and VCP in a better form, than at present.
+
+I thought of taking up MW first, but felt these two S2S works are more important (at least for us Indians).
+
+I have SKD also
+
+done by RSS, Delhi (VCP was done at RSS. Tirupati)
+
+Rastriya Sanskrit Samsthan.
+
+National Sanskrit University.
+
+it is a second source of digital text
+
+Dhaval, I see errors in the VCP comparision done by you.
+
+I had passed on SKD (CD data) to Marcis.
+
+Mārcis Gasūns has removed dhaval from this conversation
+ 1h 59m 0s
+
+1:42PM Call ended 1h 59m 0s
+
+
