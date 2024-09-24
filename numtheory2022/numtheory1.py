@@ -465,7 +465,7 @@ def primRootIndex(a,r,n):
 
 def QuadResReps(p):
  """ return list of squares mod p, for p an odd prime
-     a^2 mod o for a = 1,...,(p-1)/2
+     a^2 mod p for a = 1,...,(p-1)/2
  """
  from prime import isPrime_basic
  if not isPrime_basic(p):
